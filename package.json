@@ -1,13 +1,13 @@
-{
-  "name": "oceanpower-ai-sales-assistant",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Oceanpower international website and catalogue-grounded AI sales assistant pilot",
-  "scripts": {
-    "start": "node server.js",
-    "check": "node --check server.js && node --check script.js"
-  },
-  "engines": {
-    "node": ">=20"
-  }
+﻿{
+    "name":  "oceanpower-ai-sales-assistant",
+    "version":  "0.1.0",
+    "private":  true,
+    "description":  "Oceanpower international website and catalogue-grounded AI sales assistant pilot",
+    "scripts":  {
+                    "start":  "node server.js",
+                    "check":  "node --check server.js \u0026\u0026 node --check script.js \u0026\u0026 node --check rfq.js \u0026\u0026 node --check translations.js \u0026\u0026 node --check specifications.js \u0026\u0026 node --check navigation.js"
+                },
+    "engines":  {
+                    "node":  "\u003e=20"
+                }
 }

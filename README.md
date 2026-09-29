@@ -1,4 +1,4 @@
-# Oceanpower International Website Prototype
+﻿# Oceanpower International Website Prototype
 
 A front-end concept site for **Jiangsu Oceanpower New Material Technology Co., Ltd.** The prototype reframes Oceanpower for overseas marketing: a premium "Digital Materials Lab" visual direction, bilingual English/Chinese content, and an AI sales-concierge demonstration.
 
@@ -14,35 +14,34 @@ A front-end concept site for **Jiangsu Oceanpower New Material Technology Co., L
   - Southeast Asian distributor - partnership qualification.
 - A visual sales path from discovery to qualified lead and sales review.
 
-## Current pilot status
+## Important: prototype status
 
-The AI concierge now has a working same-domain API layer with two modes:
-
-- **Catalogue demo:** works immediately and answers common questions from approved catalogue facts.
-- **Knowledge-base mode:** connects server-side to MaxKB, FastGPT, or another OpenAI-compatible application endpoint when credentials are configured.
-
-It does not yet save leads, access a CRM, send emails, or generate real quotes. Those actions remain human-reviewed.
+The AI concierge is currently a **front-end demonstration**, not a live AI service. It uses predefined English and Chinese responses to show how a real qualification conversation could work. It does not send emails, save leads, access a CRM, or generate real quotes.
 
 The site is safe to present as a concept. Do not present it as a live technical-advice or quotation system until the production workflow is connected and approved.
 
 ## Open the site
 
-Run the included Node server so the chat API and website use the same domain:
+This is a static website with no installation step.
 
-1. Open PowerShell in the `intern` website folder.
-2. Run `npm start`.
-3. Open `http://localhost:8000`.
-4. Click **中文** in the header to switch the key website content and assistant to Chinese. Click **EN** to switch back.
-5. Click **AI Sales Concierge** at the lower-right corner to test the assistant.
-6. Scroll to **Live Demo Mode** and select a buyer scenario.
+1. Open `index.html` in a modern browser.
+2. Click **中文** in the header to switch the full website interface and AI demo to Chinese. Click **EN** to switch back.
+3. Click **AI Sales Concierge** at the lower-right corner to test the assistant.
+4. Open **Explore the guided buyer demo** to visit `demo.html` and select a buyer scenario.
 
-The site starts in catalogue-demo mode. To connect MaxKB or another compatible knowledge service:
+For a simple local web-server preview, run either of the following from this folder:
 
-1. Copy `.env.example` to `.env`.
-2. Set `CHAT_API_URL` and `CHAT_API_KEY` in `.env`.
-3. Restart `npm start`.
+```powershell
+py -m http.server 8000
+```
 
-Never put the API key in `script.js` or `index.html`.
+or
+
+```powershell
+npx serve .
+```
+
+Then visit the URL printed in the terminal, usually `http://localhost:8000`.
 
 ## Project files
 
@@ -52,9 +51,6 @@ Never put the API key in `script.js` or `index.html`.
 | `styles.css` | Main responsive layout and core Oceanpower visual system. |
 | `lab.css` | Digital Materials Lab visual layer: glass panels, clean surfaces, and demo-mode styling. |
 | `script.js` | Mobile menu, language switching, AI demo responses, and buyer-journey interactions. |
-| `server.js` | Static server, protected AI proxy, rate limit, provider adapter, and local catalogue fallback. |
-| `knowledge/oceanpower-approved-knowledge.md` | Draft catalogue-grounded content to import into MaxKB after engineering review. |
-| `docs/OCEANPOWER_AI_CHATBOT_PROPOSAL.md` | Management proposal, platform comparison, cost model, architecture, and rollout plan. |
 | `assets/` | Images extracted from the supplied Oceanpower FRP Rebar Catalog. |
 | `Oceanpower New Material---FRP Rebar Catalog.pdf` | Original supplied catalog source. |
 
@@ -70,7 +66,7 @@ Use this sequence when showing the prototype to management:
 2. Switch from English to Chinese, showing that local staff can use the same site.
 3. Show products and engineering performance as proof of technical capability.
 4. Open the AI Sales Concierge and choose **Tunnel project** or type a question.
-5. Scroll to **Live Demo Mode** and select the Middle East coastal-bridge scenario.
+5. Open the separate buyer demo page and select the Middle East coastal-bridge scenario.
 6. Explain that the final conversation creates a structured RFQ for sales review instead of leaving the visitor with a generic contact form.
 
 ## Production AI plan
@@ -126,7 +122,7 @@ Before the site is public, complete these checks:
 - No backend, database, authentication, or persistent lead storage.
 - No live document retrieval or real AI API connection.
 - No automated CRM, email, WhatsApp, or WeCom handoff.
-- The language switch covers the key customer-facing content and AI demo. A production release should translate every piece of visible content, metadata, downloadable asset, form, and error message.
+- The website interface, metadata, image descriptions, form validation, RFQ briefs, and generated demo replies support English and Chinese. User-entered text is preserved in its original language; supplied catalogue files are not translated.
 
 ## Contact details currently shown
 
@@ -137,3 +133,31 @@ The prototype contains contact details from the provided catalog. Reconfirm them
 - Telephone: 0086-87618886
 - Fax: 0086-87618882
 - Website shown in catalog: `www.jsopmaterial.com`
+
+
+## Quote request flow
+
+One native modal dialog (`#rfq-drawer`) is shared by the navigation, specification card, bottom CTA, RFQ builder, CFRP card and chat entry points. `rfq.js` owns its form/review state, inline field validation, focus cycling, Escape/backdrop dismissal, scroll lock and focus restoration. A closed dialog is removed from keyboard navigation; `showModal()` makes the background inert. Hidden mobile-menu/chat triggers return focus to their visible launcher instead.
+
+The drawer uses two form columns on desktop and one at 850px and below. It retains the existing navy, aqua, Manrope and DM Mono design system. The bottom of the page now has a compact CTA, not a second form. Reduced-motion preferences disable its short entrance animation.
+
+Review RFQ shows a structured summary. Edit details preserves entered values. Send enquiry opens a prefilled email to info@jsopmaterial.com; the visitor must send it in their email app. Download brief remains available as a fallback. No email delivery service, database or CRM submission has been added, and no success/submitted state is claimed. The final engineering-review note is displayed beside the handoff actions. All new interface copy and errors support English and Chinese.
+
+The GFRP card retains the approved values and semantic row/column headers, with refined hierarchy, numeric alignment and contained horizontal scrolling. The surrounding performance gradient and heading are unchanged.
+
+### Verification
+
+- `npm run check` checks all four JavaScript files.
+- DOM integration checks exercised the shared entry points, validation, review/edit, safe text rendering, encoded email draft, bilingual state, focus cycling/return, dismissal and scroll restoration.
+- Source-level responsive checks cover 1440, 1024, 768, 390 and 360px. A connected browser was unavailable during implementation; visually confirm those sizes, native keyboard/scroll behavior and the operating system's email handoff before release.
+- Direct server submission would require an approved destination, email/CRM service and delivery/error handling; the current email-draft flow needs none of these.
+
+## Buyer experience and partner artwork
+
+- The homepage now places Applications directly after Performance. Scripted buyer journeys are retained on `demo.html`, linked from the sales-assistance section. Both pages share the same chat, RFQ, translation and navigation scripts.
+- Product cards use photograph-only crops from the supplied catalogue. GFRP and BFRP show the material; CFRP shows the catalogue's carbon-fiber production equipment. Original catalogue images remain available in `assets/`.
+- The partner panels reproduce the source artwork from PDF page 20 (printed pages 35–36). These are catalogue-listed organisations, not newly verified endorsements. Links open the source document.
+- Material tabs are sticky below the site header within the specification card. Header links expose the active location through `aria-current`.
+- Closed chat is hidden and inert. Escape/Close returns focus to the opener; opening an RFQ closes chat. The mobile launcher is compact and is hidden near specification/contact/footer actions when not focused or open.
+- Hero secondary text uses navy/deep teal for contrast on its light background. Contact telephone and footer contact links are interactive.
+- Syntax and simulated DOM checks passed on both pages, including chat focus, RFQ handoff, launcher suppression, translations and asset references. Live browser visual testing remains pending.
