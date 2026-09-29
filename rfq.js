@@ -13,9 +13,11 @@
     { id: 'dimensions', required: true, label: { en: 'Diameter / dimensions with units', zh: '直径 / 尺寸（含单位）' }, question: { en: 'What diameter or dimensions do you need? Please include units.', zh: '您需要什么直径或尺寸？请注明单位。' } },
     { id: 'quantity', required: true, label: { en: 'Quantity with unit', zh: '数量（含单位）' }, question: { en: 'What quantity do you need? Please include metres, pieces, or tonnes.', zh: '您需要多少？请注明米、根、件或吨等单位。' } },
     { id: 'destination', required: true, label: { en: 'Destination', zh: '交付目的地' }, question: { en: 'What is the destination country, city, or port?', zh: '交付目的地是哪个国家、城市或港口？' } },
-    { id: 'delivery', required: true, label: { en: 'Requested delivery timeframe', zh: '期望交付日期 / 时间范围' }, question: { en: 'When would you like delivery? This records your request, not a delivery commitment.', zh: '您期望何时交付？这里仅记录您的期望，交期需由销售确认。' } },
-    { id: 'company', required: false, label: { en: 'Company (optional)', zh: '公司（选填）' } },
-    { id: 'contact', required: false, label: { en: 'Contact (optional)', zh: '联系方式（选填）' } },
+    { id: 'delivery', required: true, label: { en: 'Preferred delivery date', zh: '期望交付日期' }, question: { en: 'When would you like delivery? This records your request, not a delivery commitment.', zh: '您期望何时交付？这里仅记录您的期望，交期需由销售确认。' } },
+    { id: 'name', required: false, reviewRequired: true, label: { en: 'Your name (required)', zh: '您的姓名（必填）' } },
+    { id: 'contact', required: false, reviewRequired: true, label: { en: 'Business email (required)', zh: '工作邮箱（必填）' } },
+    { id: 'company', required: false, label: { en: 'Company name (optional)', zh: '公司名称（选填）' } },
+    { id: 'phone', required: false, label: { en: 'Phone / WhatsApp (optional)', zh: '电话 / WhatsApp（选填）' } },
   ];
 
   const familyLabels = {

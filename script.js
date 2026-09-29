@@ -1,4 +1,4 @@
-const header = document.querySelector('.site-header');
+﻿const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
 const chatPanel = document.querySelector('.chat-panel');
 const chatLauncher = document.querySelector('.chat-launcher');
@@ -159,18 +159,7 @@ async function askAssistant(message) {
   addMessage(message, 'user');
   const previousHistory = state.history.slice();
   state.history.push({ role: 'user', content: message });
-  const starting = rfqEngine.isStartRequest(message) && !rfq.isActive();
-  if (starting) rfq.begin();
-  if (rfq.isActive()) {
-    const result = rfq.handle(message);
-    if (result.handled || starting) {
-      const answer = `${starting ? uiCopy().rfqIntro : result.changed.length ? uiCopy().rfqUpdated : ''}\n${rfq.question()}`.trim();
-      addMessage(answer, 'bot');
-      state.history.push({ role: 'assistant', content: answer });
-      chatInput?.focus();
-      return;
-    }
-  }
+  if (rfqEngine.isStartRequest(message)) { startEnquiry(); return; }
   setPending(true);
   const requestId = ++state.requestId;
   state.controller = new AbortController();
@@ -187,7 +176,7 @@ async function askAssistant(message) {
     waiting.remove();
     const notice = [data.notice, data.citationNotice].filter(Boolean).join(' ');
     addMessage(data.answer, 'bot', { sources: data.sources, sourceStatus: data.sourceStatus, notice });
-    const nextQuestion = rfq.isActive() ? rfq.question() : data.nextQuestion;
+    const nextQuestion = data.nextQuestion;
     if (nextQuestion) addMessage(nextQuestion, 'bot');
     state.history.push({ role: 'assistant', content: [data.answer, nextQuestion].filter(Boolean).join('\n') });
     state.mode = data.mode || state.mode;
@@ -197,7 +186,7 @@ async function askAssistant(message) {
     if (requestId !== state.requestId) return;
     waiting.remove();
     addMessage(uiCopy().error, 'bot').classList.add('message-error');
-    if (rfq.isActive()) addMessage(rfq.question(), 'bot');
+
     console.error('[Oceanpower chat]', error);
     state.mode = 'unavailable';
     state.serviceIssue = null;
@@ -206,20 +195,26 @@ async function askAssistant(message) {
     if (requestId === state.requestId) {
       state.controller = null;
       setPending(false);
-      chatInput?.focus();
+      if (!chatPanel.hidden && rfq.getView() === 'chat') chatInput?.focus();
     }
   }
 }
 
-function openChat(prompt) {
-  state.lastFocused = document.activeElement;
+function openChat(prompt, view = 'chat') {
+  if (chatPanel.hidden) state.lastFocused = document.activeElement;
+  rfq.setView(view);
+  updateWorkspaceHeading();
   chatPanel.hidden = false;
   chatPanel.inert = false;
   chatPanel.classList.add('open');
   chatPanel.setAttribute('aria-hidden', 'false');
   chatLauncher.setAttribute('aria-expanded', 'true');
   document.dispatchEvent(new CustomEvent('oceanpower:chatstate'));
-  if (prompt) askAssistant(prompt); else chatInput?.focus();
+  if (view === 'rfq') {
+    document.querySelector('.chat-workspace').scrollTop = 0;
+    document.querySelector('.rfq-section').scrollTop = 0;
+    document.querySelector('.rfq-fields input')?.focus({ preventScroll: true });
+  } else if (prompt) askAssistant(prompt); else chatInput?.focus();
 }
 
 function closeChat() {
@@ -263,17 +258,15 @@ function resetChat() {
   showWelcome();
 }
 
-function startEnquiry() {
-  openChat();
-  rfq.begin();
-  const message = `${uiCopy().rfqIntro}\n${rfq.question()}`;
-  addMessage(message, 'bot');
-  state.history.push({ role: 'assistant', content: message });
+function startEnquiry(event) {
+  rfq.begin(event?.currentTarget?.dataset?.product);
+  openChat(null, 'rfq');
 }
 
 document.querySelector('.prepare-enquiry')?.addEventListener('click', startEnquiry);
 document.querySelectorAll('[data-rfq-start]').forEach((button) => button.addEventListener('click', startEnquiry));
 document.addEventListener('rfq-prompt', () => {
+  if (rfq.getView() !== 'chat') return;
   const message = rfq.question();
   addMessage(message, 'bot');
   state.history.push({ role: 'assistant', content: message });
@@ -288,7 +281,8 @@ function bindPromptButtons(root = document) {
 }
 
 function updateModeLabel() {
-  if (!chatMode) return;
+  updateWorkspaceHeading();
+  if (!chatMode || rfq.getView() === 'rfq') return;
   if (state.mode === 'unavailable') chatMode.textContent = uiCopy().serviceOffline;
   else if (state.mode === 'knowledge-base') chatMode.textContent = uiCopy().serviceLive;
   else if (state.serviceIssue === 'configuration') chatMode.textContent = uiCopy().serviceConfig;
@@ -335,6 +329,10 @@ function setLanguage(language) {
     if (textNode) textNode.textContent = language === 'zh' ? '准备询价 ' : 'Prepare enquiry ';
   });
   languageToggle.textContent = language === 'zh' ? 'EN' : '中文';
+  const catalogueLink = document.querySelector('[data-catalogue-link]');
+  const catalogueNote = document.querySelector('[data-catalogue-note]');
+  if (catalogueLink) catalogueLink.textContent = language === 'zh' ? '查看完整产品目录 (PDF) ↗' : 'View full catalogue (PDF) ↗';
+  if (catalogueNote) catalogueNote.textContent = language === 'zh' ? '产品规格及公司资料 · 在新标签页打开' : 'Product specifications and company records · Opens a new tab';
   updateMenuLabel();
   if (chatInput) chatInput.placeholder = content.placeholder;
   if (chatReset) chatReset.textContent = content.newChat;
@@ -343,6 +341,7 @@ function setLanguage(language) {
   try { localStorage.setItem('oceanpower-language', language); } catch { /* Use the page language when storage is unavailable. */ }
   updateModeLabel();
   rfq.localise();
+  updateWorkspaceHeading();
   document.dispatchEvent(new CustomEvent('oceanpower:languagechange'));
   if (!state.history.length && !rfq.isActive()) showWelcome();
 }
@@ -359,3 +358,12 @@ document.querySelectorAll('[data-scenario]').forEach((button) => button.addEvent
 
 bindPromptButtons();
 checkService();
+
+function updateWorkspaceHeading() {
+  const enquiry = rfq.getView() === 'rfq';
+  const zh = currentLanguage() === 'zh';
+  document.querySelector('.chat-header b').textContent = enquiry ? (zh ? '准备询价' : 'Prepare enquiry') : 'Oceanpower AI';
+  document.querySelector('.chat-header small').hidden = enquiry;
+  chatPanel.setAttribute('aria-label', enquiry ? (zh ? '询价草稿' : 'Enquiry draft') : 'Oceanpower AI Sales Concierge');
+}
+
