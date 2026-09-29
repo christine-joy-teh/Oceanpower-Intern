@@ -566,7 +566,8 @@ function serveStatic(request, response) {
       '.pdf': 'application/pdf',
     }[path.extname(filePath).toLowerCase()] || 'application/octet-stream';
     setSecurityHeaders(response);
-    response.writeHead(200, { 'Content-Type': type, 'Cache-Control': type.includes('html') ? 'no-cache' : 'public, max-age=3600' });
+    const developmentSource = type.startsWith('text/html') || type.startsWith('text/css') || type.startsWith('text/javascript');
+    response.writeHead(200, { 'Content-Type': type, 'Cache-Control': developmentSource ? 'no-cache' : 'public, max-age=3600' });
     if (request.method === 'HEAD') return response.end();
     fs.createReadStream(filePath).pipe(response);
   });

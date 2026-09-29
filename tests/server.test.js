@@ -117,6 +117,7 @@ test('only intended public files and assets are served', async (t) => {
   const head = await fetch(`${app.baseUrl}/script.js`, { method: 'HEAD' });
   assert.equal(head.status, 200);
   assert.equal(await head.text(), '');
+  assert.match(head.headers.get('cache-control'), /no-cache/);
   assert.equal((await fetch(`${app.baseUrl}/api/health`)).status, 200);
 });
 
