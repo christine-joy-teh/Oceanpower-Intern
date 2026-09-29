@@ -17,7 +17,7 @@
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
       <nav><a href="#solutions">Products</a><a href="#performance">Performance</a><a href="#applications">Applications</a><a href="#company">Company</a></nav>
       <button class="language-toggle" aria-label="Switch language">中文</button>
-      <a class="header-cta" href="#contact">Request a quote <span>↗</span></a>
+      <button class="header-cta" type="button" data-rfq-start>Prepare enquiry <span>→</span></button>
     </header>
 
     <main id="top">
@@ -56,7 +56,7 @@
         <div class="sales-suite-grid">
           <article><span class="suite-number">01</span><h3>AI Sales Concierge</h3><p>Demonstrates product, performance and application answers using Oceanpower’s draft catalogue content.</p><button class="suite-action" data-chat-prompt="I need help selecting FRP rebar for my project.">Ask a project question <b>→</b></button></article>
           <article><span class="suite-number">02</span><h3>Smart Product Match</h3><p>Qualifies the project environment, reinforcement type and target diameter to guide buyers to the best-fit system.</p><button class="suite-action" data-chat-prompt="Help me match an FRP product to my application.">Find my product <b>→</b></button></article>
-          <article><span class="suite-number">03</span><h3>RFQ Brief Builder</h3><p>Collects the essentials sales engineers need before a response: application, material, diameter and contact details.</p><button class="suite-action" data-chat-prompt="I want to prepare an RFQ.">Build an RFQ brief <b>→</b></button></article>
+          <article><span class="suite-number">03</span><h3>RFQ Brief Builder</h3><p>Collects a provisional project brief for staff review without sending customer data.</p><button class="suite-action" type="button" data-rfq-start>Prepare enquiry <b>→</b></button></article>
         </div>
         <p class="sales-footnote">Designed for a production connection to Oceanpower’s CRM and n8n sales workflow, with internal approval before any quote or customer-facing email is sent.</p>
       </section>
@@ -79,10 +79,23 @@
     <button class="chat-launcher" aria-label="Open Oceanpower AI Sales Concierge"><span class="chat-spark">AI</span><span>Sales Concierge</span></button>
     <aside class="chat-panel" aria-label="Oceanpower AI Sales Concierge" aria-hidden="true">
       <div class="chat-header"><div><span class="online-dot"></span><b>Oceanpower AI</b><small><span class="chat-mode">Checking service</span> · AI-generated</small></div><button class="chat-close" aria-label="Close chat">×</button></div>
-      <div class="chat-stream" aria-live="polite" aria-busy="false"><div class="bot-message">Welcome to Oceanpower. I can answer catalogue-based questions about GFRP, BFRP, CFRP and rockbolt systems, or help prepare an RFQ for human review.</div><div class="quick-replies"><button data-prompt="Which FRP product should I consider for a metro tunnel?">Tunnel project</button><button data-prompt="Show me GFRP performance data">GFRP data</button><button data-prompt="I need an RFQ">Prepare an RFQ</button></div></div>
-      <form class="chat-form"><label class="sr-only" for="chat-question">Your project question</label><input id="chat-question" maxlength="2000" autocomplete="off" placeholder="Ask about your project..." /><button aria-label="Send question" type="submit">↑</button></form>
-      <div class="chat-footer"><p class="chat-disclaimer">AI-generated catalogue guidance. An Oceanpower engineer must confirm final specifications and quotations.</p><button class="chat-reset" type="button">New chat</button></div>
+      <div class="chat-workspace">
+        <div class="chat-conversation">
+          <div class="chat-stream" aria-live="polite" aria-busy="false"></div>
+          <form class="chat-form"><label class="sr-only" for="chat-question">Your project question</label><input id="chat-question" maxlength="2000" autocomplete="off" placeholder="Ask about your project..." /><button aria-label="Send question" type="submit">↑</button></form>
+          <div class="chat-footer"><p class="chat-disclaimer">AI-generated catalogue guidance. An Oceanpower engineer must confirm final specifications and quotations.</p><button class="chat-reset" type="button">New chat</button></div>
+        </div>
+        <section class="rfq-draft" aria-labelledby="rfq-draft-title" hidden>
+          <div class="rfq-draft-head"><div><span class="rfq-kicker">PILOT RFQ</span><h2 id="rfq-draft-title">Enquiry draft</h2></div><span class="rfq-status" role="status">In progress</span></div>
+          <p class="rfq-intro">Edit any field. Provisional requirements are kept in this browser tab only.</p>
+          <div class="rfq-fields"></div>
+          <div class="rfq-gaps" role="status"></div>
+          <div class="rfq-actions"><button class="rfq-copy" type="button">Copy enquiry</button><button class="rfq-confirm" type="button">Confirm for staff review</button></div>
+          <p class="rfq-send-note">Nothing has been sent to Oceanpower.</p>
+        </section>
+      </div>
     </aside>
+    <script src="rfq.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

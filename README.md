@@ -8,6 +8,7 @@ A front-end concept site for **Jiangsu Oceanpower New Material Technology Co., L
 - A Chinese/English language switch in the top navigation. The choice is remembered in the browser.
 - Catalog-based GFRP, BFRP, and CFRP product messaging and GFRP performance figures.
 - A lightweight AI Sales Concierge demo with product questions, project matching, and RFQ guidance.
+- An editable bilingual RFQ draft that collects provisional project requirements in memory and marks them ready for staff review without sending them.
 - Three clickable international buyer journeys:
   - German infrastructure engineer - technical tunnel inquiry.
   - Middle East coastal bridge contractor - corrosion-focused RFQ.
@@ -22,6 +23,8 @@ The AI concierge now has a working same-domain API layer with two modes:
 - **Direct AI mode:** connects server-side to Qwen or another OpenAI-compatible endpoint and includes the approved Oceanpower knowledge file in the protected system prompt. MaxKB is optional rather than required for the pilot.
 
 It does not yet save leads, access a CRM, send emails, or generate real quotes. Those actions remain human-reviewed.
+
+The enquiry pilot works without an AI key. Its provisional fields are defined together in `rfq.js`; the conversation and editable summary use the same in-memory draft. Closing the panel or switching language preserves the draft, while reset or page reload clears it.
 
 The site is safe to present as a concept. Do not present it as a live technical-advice or quotation system until the production workflow is connected and approved.
 
@@ -53,7 +56,9 @@ Never put the API key in `script.js` or `index.html`.
 | `styles.css` | Main responsive layout and core Oceanpower visual system. |
 | `lab.css` | Digital Materials Lab visual layer: glass panels, clean surfaces, and demo-mode styling. |
 | `script.js` | Mobile menu, language switching, AI demo responses, and buyer-journey interactions. |
+| `rfq.js` | Provisional RFQ field definitions, deterministic extraction, corrections, unknown states, formatting, and confirmation. |
 | `server.js` | Static server, protected AI proxy, rate limit, provider adapter, and local catalogue fallback. |
+| `tests/` | Server regressions, RFQ state tests, and the local headless-browser demonstration flow. |
 | `knowledge/oceanpower-approved-knowledge.md` | Draft catalogue-grounded content to import into MaxKB after engineering review. |
 | `docs/OCEANPOWER_AI_CHATBOT_PROPOSAL.md` | Management proposal, platform comparison, cost model, architecture, and rollout plan. |
 | `assets/` | Images extracted from the supplied Oceanpower FRP Rebar Catalog. |
@@ -124,9 +129,10 @@ Before the site is public, complete these checks:
 
 ## Current limitations
 
-- No backend, database, authentication, or persistent lead storage.
-- No live document retrieval or real AI API connection.
+- A local Node.js API/static server exists, but there is no database, authentication, or persistent lead storage.
+- No live document retrieval or vector search. An optional provider API path exists, but it is not verified as a production integration.
 - No automated CRM, email, WhatsApp, or WeCom handoff.
+- RFQ fields and validation rules are provisional pilot defaults pending management and sales input.
 - The language switch covers the key customer-facing content and AI demo. A production release should translate every piece of visible content, metadata, downloadable asset, form, and error message.
 
 ## Contact details currently shown

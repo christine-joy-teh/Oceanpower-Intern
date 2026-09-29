@@ -22,6 +22,7 @@ const PUBLIC_FILES = new Map([
   ['/index.html', 'index.html'],
   ['/styles.css', 'styles.css'],
   ['/lab.css', 'lab.css'],
+  ['/rfq.js', 'rfq.js'],
   ['/script.js', 'script.js'],
 ]);
 const PUBLIC_ASSET_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.svg', '.webp']);

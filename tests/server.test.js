@@ -85,7 +85,7 @@ test('only intended public files and assets are served', async (t) => {
   const app = await startApp();
   t.after(() => app.stop());
 
-  for (const publicPath of ['/', '/index.html', '/styles.css', '/lab.css', '/script.js', '/assets/gfrp-rebar.jpg']) {
+  for (const publicPath of ['/', '/index.html', '/styles.css', '/lab.css', '/rfq.js', '/script.js', '/assets/gfrp-rebar.jpg']) {
     const response = await fetch(`${app.baseUrl}${publicPath}`);
     assert.equal(response.status, 200, publicPath);
   }
