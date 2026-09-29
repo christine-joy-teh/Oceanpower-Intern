@@ -94,6 +94,7 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-09-29 - Integrated catalogue credentials, partner artwork, fiber specification tabs and the separate buyer-demo page with the existing RFQ workspace.
 2026-09-29 - Refined explicit RFQ field states, mobile review, and manual-copy fallback.
 2026-09-29 - Added the bilingual, editable in-memory RFQ workspace and confirmation states.
 2026-09-22 - Added integration-ready catalogue-grounded AI sales assistant states and accessibility rules.

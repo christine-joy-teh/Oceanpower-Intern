@@ -5,7 +5,7 @@
   "description": "Oceanpower international website and catalogue-grounded AI sales assistant pilot",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check server.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
+    "check": "node --check server.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check translations.js && node --check specifications.js && node --check navigation.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
     "test": "node --test tests/server.test.js tests/rfq.test.js",
     "test:browser": "node tests/browser-rfq.e2e.js",
     "test:browser:playwright": "node tests/rfq.browser.js"

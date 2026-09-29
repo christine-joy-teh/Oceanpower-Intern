@@ -14,7 +14,7 @@ A front-end concept site for **Jiangsu Oceanpower New Material Technology Co., L
   - Southeast Asian distributor - partnership qualification.
 - A visual sales path from discovery to qualified lead and sales review.
 
-## Current pilot status
+## Important: prototype status
 
 The AI concierge now has a working same-domain API layer with two modes:
 
@@ -27,14 +27,12 @@ The site is safe to present as a concept. Do not present it as a live technical-
 
 ## Open the site
 
-Run the included Node server so the chat API and website use the same domain:
+This is a static website with no installation step.
 
-1. Open PowerShell in the `intern` website folder.
-2. Run `npm start`.
-3. Open `http://localhost:8000`.
-4. Click **中文** in the header to switch the key website content and assistant to Chinese. Click **EN** to switch back.
-5. Click **AI Sales Concierge** at the lower-right corner to test the assistant.
-6. Scroll to **Live Demo Mode** and select a buyer scenario.
+1. Open `index.html` in a modern browser.
+2. Click **中文** in the header to switch the full website interface and AI demo to Chinese. Click **EN** to switch back.
+3. Click **AI Sales Concierge** at the lower-right corner to test the assistant.
+4. Open **Explore the guided buyer demo** to visit `demo.html` and select a buyer scenario.
 
 The site starts in catalogue-demo mode; leave provider settings empty for this milestone. If a provider is later authorized:
 
@@ -43,7 +41,13 @@ The site starts in catalogue-demo mode; leave provider settings empty for this m
 3. Set `CHAT_MODEL` to a valid model identifier from that provider. The existing `knowledge/oceanpower-approved-knowledge.md` filename contains draft material despite its name.
 4. Restart `npm start`.
 
-Never put the API key in `script.js` or `index.html`.
+or
+
+```powershell
+npx serve .
+```
+
+Then visit the URL printed in the terminal, usually `http://localhost:8000`.
 
 ## Editable RFQ pilot
 
@@ -162,7 +166,7 @@ Before the site is public, complete these checks:
 - One product family/variant per draft. Multiple or ambiguous products require clarification or separate drafts. Requested dates are kept as entered, not interpreted as delivery commitments.
 - Confirmation does not send anything or establish that staff have received, reviewed, or approved the enquiry. Drafts disappear on reset or reload.
 - No automated CRM, email, WhatsApp, or WeCom handoff.
-- The language switch covers the key customer-facing content and AI demo. A production release should translate every piece of visible content, metadata, downloadable asset, form, and error message.
+- The website interface, metadata, image descriptions, form validation, RFQ briefs, and generated demo replies support English and Chinese. User-entered text is preserved in its original language; supplied catalogue files are not translated.
 
 ## Contact details currently shown
 
@@ -173,3 +177,29 @@ The prototype contains contact details from the provided catalog. Reconfirm them
 - Telephone: 0086-87618886
 - Fax: 0086-87618882
 - Website shown in catalog: `www.jsopmaterial.com`
+
+
+## Quote request flow
+
+The navigation, specification card, bottom CTA and RFQ builder all open the same chat workspace. `rfq.js` owns the deterministic in-memory draft state and `rfq-ui.js` owns the editable summary. Closing chat or switching language preserves the draft; reset or page reload clears it.
+
+The workspace uses conversation and summary columns on desktop and stacks them at 850px and below. Visitors can edit fields, mark details unknown, copy a plain-text brief and confirm it for staff review. Confirmation never claims that an email was sent or that staff received, reviewed or approved the enquiry. No email delivery service, database or CRM submission has been added.
+
+The GFRP card retains the approved values and semantic row/column headers, with refined hierarchy, numeric alignment and contained horizontal scrolling. The surrounding performance gradient and heading are unchanged.
+
+### Verification
+
+- `npm run check` checks the server, shared chat/RFQ scripts, translation/navigation/specification modules and tests.
+- `npm test` covers the RFQ state engine, local catalogue answers, provider safeguards and restricted public-file access.
+- `npm run test:browser` exercises the editable enquiry, bilingual preservation, copy fallback, interruption/resume behavior, reset and mobile layout with provider calls disabled.
+- Direct submission still requires an approved destination, email/CRM service and delivery/error handling.
+
+## Buyer experience and partner artwork
+
+- The homepage now places Applications directly after Performance. Scripted buyer journeys are retained on `demo.html`, linked from the sales-assistance section. Both pages share the same chat, RFQ, translation and navigation scripts.
+- Product cards use photograph-only crops from the supplied catalogue. GFRP and BFRP show the material; CFRP shows the catalogue's carbon-fiber production equipment. Original catalogue images remain available in `assets/`.
+- The partner panels reproduce the source artwork from PDF page 20 (printed pages 35–36). These are catalogue-listed organisations, not newly verified endorsements. Links open the source document.
+- Material tabs are sticky below the site header within the specification card. Header links expose the active location through `aria-current`.
+- Closed chat is hidden and inert. Escape/Close returns focus to the opener. The mobile launcher is compact and is hidden near specification/contact/footer actions when not focused or open.
+- Hero secondary text uses navy/deep teal for contrast on its light background. Contact telephone and footer contact links are interactive.
+- The homepage and buyer-demo page use the same protected catalogue API and editable RFQ implementation.

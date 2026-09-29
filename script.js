@@ -65,17 +65,42 @@ const scenarioCopy = {
 
 const currentLanguage = () => document.documentElement.lang === 'zh-CN' ? 'zh' : 'en';
 const uiCopy = () => copy[currentLanguage()];
+const translationMap = typeof chineseTranslations === 'undefined' ? {} : chineseTranslations;
+const staticText = [];
+const textWalker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT);
+while (textWalker.nextNode()) {
+  const node = textWalker.currentNode;
+  if (node.parentElement.closest('script,style,.chat-panel,.language-toggle,.menu-toggle')) continue;
+  const key = node.textContent.trim();
+  if (Object.hasOwn(translationMap, key)) staticText.push({ node, original: node.textContent, key });
+}
+const staticAttributes = [];
+for (const element of document.querySelectorAll('[aria-label],[alt],[placeholder],meta[name="description"]')) {
+  if (element.closest('.chat-panel')) continue;
+  for (const name of ['aria-label', 'alt', 'placeholder', 'content']) {
+    if (!element.hasAttribute(name)) continue;
+    const original = element.getAttribute(name);
+    if (Object.hasOwn(translationMap, original)) staticAttributes.push({ element, name, original });
+  }
+}
+const translateStatic = (text) => currentLanguage() === 'zh' ? (translationMap[text] || text) : text;
+function updateMenuLabel() {
+  if (!menuToggle) return;
+  const key = header.classList.contains('open') ? 'Close' : 'Menu';
+  menuToggle.textContent = translateStatic(key);
+  menuToggle.setAttribute('aria-label', translateStatic(`${key} navigation`));
+}
 
 menuToggle?.addEventListener('click', () => {
   const open = header.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', String(open));
-  menuToggle.textContent = open ? 'Close' : 'Menu';
+  updateMenuLabel();
 });
 
-document.querySelectorAll('nav a').forEach((link) => link.addEventListener('click', () => {
+document.querySelectorAll('nav a, nav [data-rfq-start]').forEach((link) => link.addEventListener('click', () => {
   header.classList.remove('open');
   menuToggle?.setAttribute('aria-expanded', 'false');
-  if (menuToggle) menuToggle.textContent = 'Menu';
+  updateMenuLabel();
 }));
 
 function addMessage(text, type, options = {}) {
@@ -188,14 +213,22 @@ async function askAssistant(message) {
 
 function openChat(prompt) {
   state.lastFocused = document.activeElement;
+  chatPanel.hidden = false;
+  chatPanel.inert = false;
   chatPanel.classList.add('open');
   chatPanel.setAttribute('aria-hidden', 'false');
+  chatLauncher.setAttribute('aria-expanded', 'true');
+  document.dispatchEvent(new CustomEvent('oceanpower:chatstate'));
   if (prompt) askAssistant(prompt); else chatInput?.focus();
 }
 
 function closeChat() {
   chatPanel.classList.remove('open');
   chatPanel.setAttribute('aria-hidden', 'true');
+  chatPanel.hidden = true;
+  chatPanel.inert = true;
+  chatLauncher.setAttribute('aria-expanded', 'false');
+  document.dispatchEvent(new CustomEvent('oceanpower:chatstate'));
   if (state.lastFocused instanceof HTMLElement) state.lastFocused.focus();
 }
 
@@ -295,29 +328,27 @@ document.addEventListener('keydown', (event) => {
 function setLanguage(language) {
   const content = copy[language];
   document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-  document.querySelectorAll('nav a').forEach((link, index) => { link.textContent = content.nav[index]; });
-  document.querySelector('.hero h1').innerHTML = content.heroTitle;
-  document.querySelector('.hero-text').textContent = content.heroText;
+  for (const { node, original, key } of staticText) node.textContent = language === 'zh' ? original.replace(key, translateStatic(key)) : original;
+  for (const { element, name, original } of staticAttributes) element.setAttribute(name, language === 'zh' ? translateStatic(original) : original);
   document.querySelectorAll('[data-rfq-start]').forEach((button) => {
     const textNode = [...button.childNodes].find((node) => node.nodeType === Node.TEXT_NODE);
     if (textNode) textNode.textContent = language === 'zh' ? '准备询价 ' : 'Prepare enquiry ';
   });
-  document.querySelector('.products .section-head h2').textContent = content.products;
-  document.querySelector('.intro-grid h2').textContent = content.company;
-  document.querySelector('.sales-suite-heading h2').textContent = content.intelligence;
-  document.querySelector('.contact h2').innerHTML = content.contact;
   languageToggle.textContent = language === 'zh' ? 'EN' : '中文';
+  updateMenuLabel();
   if (chatInput) chatInput.placeholder = content.placeholder;
   if (chatReset) chatReset.textContent = content.newChat;
   const disclaimer = document.querySelector('.chat-disclaimer');
   if (disclaimer) disclaimer.textContent = content.disclaimer;
-  localStorage.setItem('oceanpower-language', language);
+  try { localStorage.setItem('oceanpower-language', language); } catch { /* Use the page language when storage is unavailable. */ }
   updateModeLabel();
   rfq.localise();
+  document.dispatchEvent(new CustomEvent('oceanpower:languagechange'));
   if (!state.history.length && !rfq.isActive()) showWelcome();
 }
 
-const savedLanguage = localStorage.getItem('oceanpower-language') === 'zh' ? 'zh' : 'en';
+let savedLanguage = 'en';
+try { savedLanguage = localStorage.getItem('oceanpower-language') === 'zh' ? 'zh' : 'en'; } catch { /* Use English when storage is unavailable. */ }
 setLanguage(savedLanguage);
 languageToggle?.addEventListener('click', () => setLanguage(currentLanguage() === 'zh' ? 'en' : 'zh'));
 

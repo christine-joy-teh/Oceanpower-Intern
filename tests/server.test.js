@@ -85,7 +85,7 @@ test('only intended public files and assets are served', async (t) => {
   const app = await startApp();
   t.after(() => app.stop());
 
-  for (const publicPath of ['/', '/index.html', '/styles.css', '/lab.css', '/script.js', '/rfq.js', '/rfq-ui.js', '/assets/gfrp-rebar.jpg']) {
+  for (const publicPath of ['/', '/index.html', '/demo.html', '/styles.css', '/lab.css', '/script.js', '/rfq.js', '/rfq-ui.js', '/translations.js', '/specifications.js', '/navigation.js', '/catalogue.pdf', '/assets/gfrp-rebar.jpg']) {
     const response = await fetch(`${app.baseUrl}${publicPath}`);
     assert.equal(response.status, 200, publicPath);
   }
@@ -100,6 +100,7 @@ test('only intended public files and assets are served', async (t) => {
     '/README_REVIEW.md',
     '/knowledge/oceanpower-approved-knowledge.md',
     '/docs/README.md',
+    '/Understanding%20of%20Oceanpower%20Corporation.docx',
     '/Oceanpower%20New%20Material---FRP%20Rebar%20Catalog.pdf',
     '/%2e%2e/server.js',
     '/%252e%252e/server.js',

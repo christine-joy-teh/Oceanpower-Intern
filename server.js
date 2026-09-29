@@ -20,11 +20,16 @@ const rateLimits = new Map();
 const PUBLIC_FILES = new Map([
   ['/', 'index.html'],
   ['/index.html', 'index.html'],
+  ['/demo.html', 'demo.html'],
   ['/styles.css', 'styles.css'],
   ['/lab.css', 'lab.css'],
   ['/rfq.js', 'rfq.js'],
   ['/script.js', 'script.js'],
   ['/rfq-ui.js', 'rfq-ui.js'],
+  ['/translations.js', 'translations.js'],
+  ['/specifications.js', 'specifications.js'],
+  ['/navigation.js', 'navigation.js'],
+  ['/catalogue.pdf', 'Oceanpower New Material---FRP Rebar Catalog.pdf'],
 ]);
 const PUBLIC_ASSET_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.svg', '.webp']);
 const DRAFT_SOURCE_NOTE = 'Draft catalogue extraction; engineering and sales approval pending';

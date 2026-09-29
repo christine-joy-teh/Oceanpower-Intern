@@ -130,6 +130,13 @@ async function run() {
     await client.send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 950, deviceScaleFactor: 1, mobile: false });
     await client.send('Page.navigate', { url: `http://127.0.0.1:${appPort}/` });
     await waitFor(() => client.evaluate("document.readyState === 'complete' && Boolean(document.querySelector('[data-rfq-start]'))"));
+    assert.equal(await client.evaluate("document.querySelector('#credentials-title')?.textContent"), 'Recognition, documented.');
+    assert.equal(await client.evaluate("document.querySelectorAll('.spec-tabs [role=tab]').length"), 3);
+    await client.evaluate("document.querySelector('#tab-bfrp').click()");
+    assert.equal(await client.evaluate("document.querySelector('#spec-bfrp').hidden"), false);
+    assert.equal(await client.evaluate("document.querySelector('#spec-gfrp').hidden"), true);
+    assert.equal(await client.evaluate("fetch('/demo.html').then((response) => response.status)"), 200);
+    assert.equal(await client.evaluate("fetch('/catalogue.pdf', { method: 'HEAD' }).then((response) => response.status)"), 200);
     const submitMessage = async (message) => {
       await client.evaluate(`(() => { const input = document.querySelector('#chat-question'); input.value = ${JSON.stringify(message)}; document.querySelector('.chat-form').requestSubmit(); return true; })()`);
       await waitFor(() => client.evaluate("document.querySelector('.chat-stream').getAttribute('aria-busy') === 'false' && !document.querySelector('.chat-waiting')"));
@@ -150,6 +157,8 @@ async function run() {
     await waitFor(() => client.evaluate("document.querySelector('#rfq-quantity').value === '1,500 metres'"));
     await client.evaluate("document.querySelector('.language-toggle').click()");
     assert.equal(await client.evaluate('document.documentElement.lang'), 'zh-CN');
+    assert.equal(await client.evaluate("document.querySelector('#credentials-title').textContent"), '有据可查的认可。');
+    assert.equal(await client.evaluate("document.querySelector('nav a[href=\"#partners\"]').textContent"), '合作伙伴');
     assert.equal(await client.evaluate("document.querySelector('#rfq-quantity').value"), '1,500 metres');
 
     await client.evaluate("document.querySelector('.rfq-confirm').click()");
