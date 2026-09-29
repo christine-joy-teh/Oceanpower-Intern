@@ -81,21 +81,30 @@
       <div class="chat-header"><div><span class="online-dot"></span><b>Oceanpower AI</b><small><span class="chat-mode">Checking service</span> · AI-generated</small></div><button class="chat-close" aria-label="Close chat">×</button></div>
       <div class="chat-workspace">
         <div class="chat-conversation">
+          <div class="chat-tools"><button class="prepare-enquiry" type="button">Prepare enquiry</button></div>
           <div class="chat-stream" aria-live="polite" aria-busy="false"></div>
           <form class="chat-form"><label class="sr-only" for="chat-question">Your project question</label><input id="chat-question" maxlength="2000" autocomplete="off" placeholder="Ask about your project..." /><button aria-label="Send question" type="submit">↑</button></form>
           <div class="chat-footer"><p class="chat-disclaimer">AI-generated catalogue guidance. An Oceanpower engineer must confirm final specifications and quotations.</p><button class="chat-reset" type="button">New chat</button></div>
         </div>
-        <section class="rfq-draft" aria-labelledby="rfq-draft-title" hidden>
-          <div class="rfq-draft-head"><div><span class="rfq-kicker">PILOT RFQ</span><h2 id="rfq-draft-title">Enquiry draft</h2></div><span class="rfq-status" role="status">In progress</span></div>
-          <p class="rfq-intro">Edit any field. Provisional requirements are kept in this browser tab only.</p>
-          <div class="rfq-fields"></div>
-          <div class="rfq-gaps" role="status"></div>
-          <div class="rfq-actions"><button class="rfq-copy" type="button">Copy enquiry</button><button class="rfq-confirm" type="button">Confirm for staff review</button></div>
-          <p class="rfq-send-note">Nothing has been sent to Oceanpower.</p>
+        <section class="rfq-section" aria-label="Enquiry draft" hidden>
+          <details class="rfq-details">
+            <summary><span class="rfq-title">Enquiry draft</span><small class="rfq-progress"></small></summary>
+            <div class="rfq-content">
+              <p class="rfq-note"></p>
+              <p class="rfq-status" role="status"></p>
+              <p class="rfq-prompt"></p>
+              <div class="rfq-fields"></div>
+              <p class="rfq-caution"></p>
+              <div class="rfq-actions"><button class="rfq-copy" type="button">Copy enquiry</button><button class="rfq-confirm" type="button">Confirm draft for staff review</button></div>
+              <p class="rfq-copy-feedback" role="status"></p>
+              <textarea class="rfq-copy-manual" readonly hidden></textarea>
+            </div>
+          </details>
         </section>
       </div>
     </aside>
     <script src="rfq.js"></script>
+    <script src="rfq-ui.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,4 +1,40 @@
 /* Digital Materials Lab visual system */
+/* The enquiry editor retains the pilot's desktop columns and stacked mobile layout. */
+[hidden]{display:none!important}
+.chat-panel{display:flex;flex-direction:column;max-height:calc(100dvh - 108px);visibility:hidden}
+.chat-panel.open{visibility:visible}
+.chat-header,.chat-tools,.chat-form,.chat-footer{flex-shrink:0}
+.chat-workspace{overflow:auto;min-height:0;overscroll-behavior:contain}
+.chat-panel.has-rfq{width:min(860px,calc(100vw - 32px))}
+.has-rfq .chat-workspace{display:grid;grid-template-columns:minmax(330px,.92fr) minmax(380px,1.08fr);align-items:start}
+.chat-conversation{min-width:0}
+.chat-tools{padding:8px 13px;border-bottom:1px solid var(--line);background:#fff}
+.prepare-enquiry,.rfq-actions button,.rfq-unknown{font:700 12px Manrope,Arial,sans-serif;min-height:44px;border:1px solid #aabdc9;border-radius:3px;cursor:pointer;color:var(--ink);background:#fff;padding:8px 12px}
+.prepare-enquiry{width:100%;background:var(--aqua);border-color:var(--aqua)}
+.has-rfq .chat-stream{height:min(410px,52vh)}
+.rfq-section{border-left:1px solid var(--line);background:#f5faf9;max-height:min(660px,calc(100dvh - 230px));overflow:auto}
+.rfq-details>summary{cursor:pointer;min-height:56px;padding:14px 17px;color:var(--ink);font-size:13px;font-weight:800}
+.rfq-progress{display:block;margin:4px 0 0 16px;color:#40576a;font:10px 'DM Mono',monospace}
+.rfq-content{padding:0 17px 17px}
+.rfq-note,.rfq-caution,.rfq-copy-feedback{font-size:11px;line-height:1.6;color:#40576a}
+.rfq-status{font-size:12px;line-height:1.6;padding:10px;border-left:3px solid var(--blue);background:#fff}
+.rfq-status[data-confirmed=true]{border-color:var(--aqua)}
+.rfq-prompt{font-size:12px;font-weight:700;line-height:1.6}
+.rfq-field{margin:15px 0}
+.rfq-field label{display:block;font-size:12px;font-weight:700;margin-bottom:5px}
+.rfq-field-controls{display:flex;gap:6px}
+.rfq-field input{min-width:0;width:100%;min-height:44px;border:1px solid #9aafbd;border-radius:3px;padding:9px;background:#fff;color:var(--ink);font:12px Manrope,Arial,sans-serif}
+.rfq-field input[aria-invalid=true]{border-style:dashed;border-color:var(--blue)}
+.rfq-field small{display:block;margin-top:4px;color:#40576a;font-size:10px}
+.rfq-unknown{font-size:10px;padding:6px;flex-shrink:0}
+.rfq-optional{border-top:1px solid var(--line);padding-top:12px}
+.rfq-optional>summary{font-size:12px;font-weight:700;cursor:pointer;min-height:44px}
+.rfq-actions{display:flex;flex-wrap:wrap;gap:8px}
+.rfq-actions .rfq-confirm{background:var(--ink);color:#fff;flex:1}
+.rfq-actions button:disabled{opacity:.55;cursor:default}
+.rfq-copy-manual{width:100%;min-height:150px;font:11px Manrope,Arial,sans-serif;line-height:1.5}
+.chat-header :focus-visible{outline-color:var(--aqua)}
+@media(max-width:850px){.chat-panel{max-height:calc(100dvh - 88px)}.chat-panel.has-rfq{right:8px;width:calc(100vw - 16px)}.has-rfq .chat-workspace{display:block}.has-rfq .chat-stream{height:min(250px,31vh)}.rfq-section{border-left:0;border-top:1px solid var(--line);max-height:none}}
 /* Production chat states and accessibility */
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 *:focus-visible{outline:2px solid #0758d5;outline-offset:3px}
@@ -22,7 +58,3 @@ body{background:radial-gradient(circle at 87% 9%,rgba(25,219,199,.13),transparen
 .hero{background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(231,246,243,.8));color:var(--ink);border-bottom:1px solid rgba(6,27,61,.1)}.hero:before{content:'';position:absolute;width:580px;height:580px;border-radius:50%;right:-170px;top:-210px;background:radial-gradient(circle,rgba(25,219,199,.33),transparent 68%)}.hero-text{color:#40576a}.hero-visual{margin:45px 6vw 45px 0;min-height:470px;border:1px solid rgba(255,255,255,.8);box-shadow:0 25px 70px rgba(6,27,61,.12);border-radius:4px;overflow:hidden}.hero-visual:after{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(6,27,61,.62))}.hero-stats{background:rgba(255,255,255,.72);backdrop-filter:blur(14px);border-top:1px solid rgba(6,27,61,.1)}.hero-stats span{color:#415a6e}.products{background:rgba(232,244,241,.72)}.product-card{border:1px solid rgba(255,255,255,.86);box-shadow:0 16px 42px rgba(6,27,61,.09)}.performance{background:linear-gradient(125deg,#073e9d,#126fdf 53%,#21cdbf)}.spec-panel{box-shadow:0 25px 60px rgba(0,35,100,.24);border:1px solid rgba(255,255,255,.65)}.sales-suite,.intro,.applications{background:rgba(255,255,255,.46);backdrop-filter:blur(12px)}.sales-suite-grid article{transition:background .25s,padding .25s}.sales-suite-grid article:hover{background:rgba(25,219,199,.08)}.chat-panel{border:1px solid rgba(255,255,255,.9);border-radius:14px;overflow:hidden}.chat-launcher{background:linear-gradient(135deg,#15d7c3,#9cf4e9)}
 @media(max-width:850px){.language-toggle{margin-left:auto;margin-right:10px}.hero-visual{margin:0}.hero h1{color:var(--ink)}}
 .demo-mode{background:linear-gradient(145deg,#f9fffe,#e3f7f3);border-top:1px solid rgba(6,27,61,.08);border-bottom:1px solid rgba(6,27,61,.08)}.demo-intro{display:grid;grid-template-columns:1.05fr .75fr;gap:8vw;align-items:end}.demo-intro p:last-child{color:#52677b;line-height:1.8;font-size:15px;margin:0}.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:55px}.scenario-card{appearance:none;border:1px solid rgba(6,27,61,.12);background:rgba(255,255,255,.67);padding:26px;text-align:left;min-height:290px;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,background .25s}.scenario-card:hover{transform:translateY(-6px);background:#fff;box-shadow:0 18px 38px rgba(6,27,61,.11)}.scenario-region{font:10px 'DM Mono',monospace;color:var(--blue);letter-spacing:1.2px}.scenario-card strong{font-size:22px;line-height:1.15;letter-spacing:-.8px;margin:32px 0 12px}.scenario-card p{color:#52677b;line-height:1.65;font-size:13px;margin:0}.scenario-start{margin-top:auto;padding-top:22px;font-size:12px;font-weight:800}.scenario-start b{color:var(--blue);font-size:18px;margin-left:7px}.demo-flow{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(6,27,61,.13);margin-top:34px;padding-top:22px;color:#51677d;font:10px 'DM Mono',monospace;letter-spacing:.5px}.demo-flow b{color:var(--aqua);font-size:17px}@media(max-width:850px){.demo-intro,.scenario-grid{grid-template-columns:1fr}.scenario-grid{margin-top:35px}.scenario-card{min-height:230px}.demo-flow{display:none}}
-
-/* Editable pilot RFQ */
-.chat-panel.rfq-active{width:min(860px,calc(100vw - 32px))}.chat-workspace{display:block}.chat-panel.rfq-active .chat-workspace{display:grid;grid-template-columns:minmax(330px,.92fr) minmax(380px,1.08fr)}.chat-conversation{min-width:0}.rfq-draft[hidden]{display:none!important}.rfq-draft{background:#f8faf8;border-left:1px solid rgba(6,27,61,.12);padding:20px;max-height:518px;overflow:auto}.rfq-draft-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.rfq-kicker{display:block;color:var(--blue);font:500 9px 'DM Mono',monospace;letter-spacing:1.2px;margin-bottom:5px}.rfq-draft h2{font-size:22px;line-height:1.1;letter-spacing:-.7px;margin:0}.rfq-status{flex:none;border:1px solid rgba(6,27,61,.16);padding:6px 8px;color:#40576a;background:#fbfcfa;font:500 9px 'DM Mono',monospace}.rfq-status.is-ready{border-color:rgba(7,88,213,.34);color:var(--blue);background:rgba(7,88,213,.06)}.rfq-intro{color:#52677b;font-size:11px;line-height:1.55;margin:11px 0 15px;max-width:52ch}.rfq-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}.rfq-field{min-width:0}.rfq-field label{display:block;color:#40576a;font:500 9px 'DM Mono',monospace;line-height:1.35;margin-bottom:5px}.rfq-input-row{display:grid;grid-template-columns:1fr auto;gap:5px}.rfq-field input{width:100%;min-width:0;height:38px;border:1px solid #cbd6d6;background:#fdfefd;color:var(--ink);padding:8px;font:600 11px Manrope,sans-serif}.rfq-field input[aria-invalid="true"]{border-style:dashed;border-color:#708192}.rfq-unknown-toggle{width:38px;height:38px;border:1px solid #cbd6d6;background:#fdfefd;color:#52677b;cursor:pointer;font:700 11px 'DM Mono',monospace}.rfq-unknown-toggle[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--aqua)}.rfq-field input:focus-visible,.rfq-unknown-toggle:focus-visible,.rfq-actions button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.rfq-gaps{min-height:20px;margin-top:13px;padding-top:11px;border-top:1px solid rgba(6,27,61,.12);color:#52677b;font:500 9px/1.55 'DM Mono',monospace}.rfq-actions{display:grid;grid-template-columns:.8fr 1.2fr;gap:8px;margin-top:11px}.rfq-actions button{min-height:44px;border:1px solid var(--ink);padding:8px 10px;cursor:pointer;font:800 10px Manrope,sans-serif}.rfq-copy{background:transparent;color:var(--ink)}.rfq-confirm{background:var(--ink);color:var(--aqua)}.rfq-actions button:disabled{opacity:.45;cursor:not-allowed}.rfq-send-note{margin:9px 0 0;color:#52677b;font:500 9px/1.5 'DM Mono',monospace}.rfq-send-note.is-ready{color:var(--blue);font-weight:700}
-@media(max-width:850px){.chat-panel.rfq-active{right:8px;width:calc(100vw - 16px);max-height:calc(100dvh - 88px);overflow:auto}.chat-panel.rfq-active .chat-workspace{display:block}.chat-panel.rfq-active .chat-stream{height:min(250px,31vh)}.rfq-draft{border-left:0;border-top:1px solid rgba(6,27,61,.12);max-height:none}.rfq-fields{grid-template-columns:1fr}.rfq-input-row{grid-template-columns:1fr 44px}.rfq-field input,.rfq-unknown-toggle{min-height:44px}}

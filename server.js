@@ -24,6 +24,7 @@ const PUBLIC_FILES = new Map([
   ['/lab.css', 'lab.css'],
   ['/rfq.js', 'rfq.js'],
   ['/script.js', 'script.js'],
+  ['/rfq-ui.js', 'rfq-ui.js'],
 ]);
 const PUBLIC_ASSET_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.svg', '.webp']);
 const DRAFT_SOURCE_NOTE = 'Draft catalogue extraction; engineering and sales approval pending';

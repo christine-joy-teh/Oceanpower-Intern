@@ -98,12 +98,13 @@ class CdpClient {
 }
 
 async function run() {
-  const executable = EDGE_CANDIDATES.find((candidate) => fs.existsSync(candidate));
+  const executable = process.env.CHROMIUM_EXECUTABLE_PATH || EDGE_CANDIDATES.find((candidate) => fs.existsSync(candidate));
   if (!executable) throw new Error('Edge or Chrome was not found');
   const appPort = await freePort();
   const debugPort = await freePort();
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'oceanpower-browser-'));
   const screenshotPath = path.join(os.tmpdir(), `oceanpower-rfq-${Date.now()}.png`);
+  const mobileScreenshotPath = path.join(os.tmpdir(), `oceanpower-rfq-mobile-${Date.now()}.png`);
   const server = spawn(process.execPath, ['server.js'], {
     cwd: ROOT,
     env: { ...process.env, PORT: String(appPort), CHAT_API_URL: '', CHAT_API_KEY: '', CHAT_MODEL: '' },
@@ -129,44 +130,75 @@ async function run() {
     await client.send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 950, deviceScaleFactor: 1, mobile: false });
     await client.send('Page.navigate', { url: `http://127.0.0.1:${appPort}/` });
     await waitFor(() => client.evaluate("document.readyState === 'complete' && Boolean(document.querySelector('[data-rfq-start]'))"));
+    const submitMessage = async (message) => {
+      await client.evaluate(`(() => { const input = document.querySelector('#chat-question'); input.value = ${JSON.stringify(message)}; document.querySelector('.chat-form').requestSubmit(); return true; })()`);
+      await waitFor(() => client.evaluate("document.querySelector('.chat-stream').getAttribute('aria-busy') === 'false' && !document.querySelector('.chat-waiting')"));
+    };
 
     await client.evaluate("document.querySelector('[data-rfq-start]').click()");
-    await waitFor(() => client.evaluate("!document.querySelector('.rfq-draft').hidden"));
+    await waitFor(() => client.evaluate("!document.querySelector('.rfq-section').hidden"));
     const enquiry = 'Sand-coated GFRP rebar, 16 mm, 2,000 metres, for a coastal retaining wall in Johor, Malaysia. Requested delivery: November 2026.';
-    await client.evaluate(`(() => { const input = document.querySelector('#chat-question'); input.value = ${JSON.stringify(enquiry)}; document.querySelector('.chat-form').requestSubmit(); return true; })()`);
-    await waitFor(() => client.evaluate("document.querySelector('[data-rfq-field=quantity]').value === '2,000 metres'"));
-    assert.equal(await client.evaluate("document.querySelector('[data-rfq-field=destination]').value"), 'Johor, Malaysia');
-    assert.equal(await client.evaluate("document.querySelector('[data-rfq-field=requestedDelivery]').value"), 'November 2026');
-    await client.evaluate(`(() => { const input = document.querySelector('[data-rfq-field=company]'); input.value = 'Meridian Coastworks (demonstration)'; input.dispatchEvent(new Event('change', { bubbles: true })); return true; })()`);
-    assert.equal(await client.evaluate("document.querySelector('[data-rfq-field=company]').value"), 'Meridian Coastworks (demonstration)');
+    await submitMessage(enquiry);
+    await waitFor(() => client.evaluate("document.querySelector('#rfq-quantity').value === '2,000 metres'"));
+    assert.equal(await client.evaluate("document.querySelector('#rfq-destination').value"), 'Johor, Malaysia');
+    assert.equal(await client.evaluate("document.querySelector('#rfq-delivery').value"), 'November 2026');
+    await client.evaluate(`(() => { const input = document.querySelector('#rfq-company'); input.value = 'Meridian Coastworks (demonstration)'; input.dispatchEvent(new Event('input', { bubbles: true })); return true; })()`);
+    assert.equal(await client.evaluate("document.querySelector('#rfq-company').value"), 'Meridian Coastworks (demonstration)');
 
     const correction = 'Actually, make that 1,500 metres.';
-    await client.evaluate(`(() => { const input = document.querySelector('#chat-question'); input.value = ${JSON.stringify(correction)}; document.querySelector('.chat-form').requestSubmit(); return true; })()`);
-    await waitFor(() => client.evaluate("document.querySelector('[data-rfq-field=quantity]').value === '1,500 metres'"));
+    await submitMessage(correction);
+    await waitFor(() => client.evaluate("document.querySelector('#rfq-quantity').value === '1,500 metres'"));
     await client.evaluate("document.querySelector('.language-toggle').click()");
     assert.equal(await client.evaluate('document.documentElement.lang'), 'zh-CN');
-    assert.equal(await client.evaluate("document.querySelector('[data-rfq-field=quantity]').value"), '1,500 metres');
+    assert.equal(await client.evaluate("document.querySelector('#rfq-quantity').value"), '1,500 metres');
 
     await client.evaluate("document.querySelector('.rfq-confirm').click()");
     await waitFor(() => client.evaluate("document.querySelector('.rfq-status').textContent.includes('可供工作人员审核')"));
-    assert.match(await client.evaluate("document.querySelector('.rfq-send-note').textContent"), /尚未向 Oceanpower 发送/);
+    assert.match(await client.evaluate("document.querySelector('.rfq-status').textContent"), /尚未发送/);
     await client.evaluate("document.querySelector('.rfq-copy').click()");
-    await waitFor(() => client.evaluate("document.querySelector('.rfq-copy').textContent.includes('已复制')"));
+    await waitFor(() => client.evaluate("document.querySelector('.rfq-copy-feedback').textContent.includes('已复制') || !document.querySelector('.rfq-copy-manual').hidden"));
     await client.evaluate("document.querySelector('.chat-close').click(); document.querySelector('.chat-launcher').click()");
-    assert.equal(await client.evaluate("document.querySelector('[data-rfq-field=quantity]').value"), '1,500 metres');
+    assert.equal(await client.evaluate("document.querySelector('#rfq-quantity').value"), '1,500 metres');
 
     const screenshot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
     fs.writeFileSync(screenshotPath, Buffer.from(screenshot.data, 'base64'));
-    const exceptions = client.events.filter((event) => event.method === 'Runtime.exceptionThrown');
-    assert.equal(exceptions.length, 0, 'No uncaught browser exceptions');
+    await client.evaluate("document.querySelector('.chat-reset').click()");
+    assert.equal(await client.evaluate("document.querySelector('.rfq-section').hidden"), true);
+    if (await client.evaluate("document.documentElement.lang === 'zh-CN'")) await client.evaluate("document.querySelector('.language-toggle').click()");
+    await client.evaluate("document.querySelector('.prepare-enquiry').click()");
+    await submitMessage('I need 20 mm GFRP rockbolts');
+    assert.match(await client.evaluate("document.querySelector('.chat-stream').textContent"), /Which rockbolt variant/);
+    await submitMessage('the general solid one');
+    await submitMessage('What is its tensile strength?');
+    assert.match(await client.evaluate("document.querySelector('.chat-stream').textContent"), /700 MPa/);
+    assert.match(await client.evaluate("document.querySelector('.chat-stream .bot-message:last-of-type')?.textContent || document.querySelector('.chat-stream').textContent"), /What will the reinforcement be used for/);
+    await submitMessage('tunnel support');
+    await submitMessage('unknown');
+    await submitMessage('Singapore');
+    await submitMessage('unknown');
+    assert.match(await client.evaluate("document.querySelector('#rfq-quantity-status').textContent"), /Unknown/);
+    assert.match(await client.evaluate("document.querySelector('#rfq-delivery-status').textContent"), /Unknown/);
+    await client.evaluate("document.querySelector('.rfq-confirm').click()");
+    assert.match(await client.evaluate("document.querySelector('.rfq-status').textContent"), /Nothing has been sent/);
+    await client.evaluate("document.querySelector('.chat-reset').click()");
+    assert.equal(await client.evaluate("document.querySelector('.rfq-section').hidden"), true);
+    assert.doesNotMatch(await client.evaluate("document.querySelector('.chat-stream').textContent"), /Singapore|700 MPa/);
+
     await client.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+    await client.evaluate("document.querySelector('.prepare-enquiry').click()");
+    await submitMessage(enquiry);
+    await client.evaluate("document.querySelector('.rfq-confirm').click()");
     await waitFor(() => client.evaluate("document.querySelector('.chat-panel').getBoundingClientRect().width <= window.innerWidth"));
     assert.equal(await client.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), true);
     const mobileMetrics = await client.evaluate("({ innerWidth: window.innerWidth, panelWidth: document.querySelector('.chat-panel').getBoundingClientRect().width, media: matchMedia('(max-width: 850px)').matches })");
     assert.ok(mobileMetrics.panelWidth <= mobileMetrics.innerWidth, `RFQ panel ${mobileMetrics.panelWidth}px exceeds mobile viewport ${mobileMetrics.innerWidth}px (media matched: ${mobileMetrics.media})`);
+    const mobileScreenshot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+    fs.writeFileSync(mobileScreenshotPath, Buffer.from(mobileScreenshot.data, 'base64'));
     await client.evaluate("document.querySelector('.chat-reset').click()");
-    assert.equal(await client.evaluate("document.querySelector('.rfq-draft').hidden"), true);
-    console.log(`Browser RFQ flow passed. Screenshot: ${screenshotPath}`);
+    assert.equal(await client.evaluate("document.querySelector('.rfq-section').hidden"), true);
+    const exceptions = client.events.filter((event) => event.method === 'Runtime.exceptionThrown');
+    assert.equal(exceptions.length, 0, 'No uncaught browser exceptions');
+    console.log(`Browser RFQ flows passed. Screenshots: ${screenshotPath}, ${mobileScreenshotPath}`);
   } finally {
     client?.close();
     server.kill();
