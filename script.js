@@ -10,7 +10,7 @@ const chatInput = chatForm?.querySelector('input');
 const chatMode = document.querySelector('.chat-mode');
 const languageToggle = document.querySelector('.language-toggle');
 
-const state = { history: [], pending: false, mode: 'catalogue-demo', lastFocused: null };
+const state = { history: [], pending: false, mode: 'catalogue-demo', serviceIssue: null, lastFocused: null };
 
 const copy = {
   en: {
@@ -21,7 +21,8 @@ const copy = {
     intelligence: 'A faster path from project brief to the right reinforcement.', contact: "Let's reinforce<br />what's next.",
     welcome: 'Welcome to Oceanpower. I can answer catalogue-based questions about GFRP, BFRP, CFRP and rockbolt systems, or help prepare an RFQ for human review.',
     placeholder: 'Ask about your project...', quick: ['Tunnel project', 'GFRP data', 'Prepare an RFQ'],
-    serviceLive: 'Knowledge base online', serviceDemo: 'Catalogue demo', serviceOffline: 'Service unavailable',
+    serviceLive: 'Live AI · draft knowledge', serviceDemo: 'Catalogue demo', serviceFallback: 'Catalogue fallback', serviceConfig: 'Catalogue demo · configuration issue', serviceOffline: 'Service unavailable',
+    sourceDraft: 'Catalogue references · draft', sourceKnowledge: 'Pilot knowledge · draft', sourceProvider: 'Provider references · not verified', sourceDefault: 'Sources',
     waiting: 'Checking approved Oceanpower material',
     error: 'I could not reach the knowledge service. Please try again, or email info@jsopmaterial.com.',
     newChat: 'New chat',
@@ -34,7 +35,8 @@ const copy = {
     intelligence: '从项目需求到合适筋材，更快一步。', contact: '让我们一起加固<br />未来。',
     welcome: '欢迎来到 Oceanpower。我可以根据产品目录回答 GFRP、BFRP、CFRP 和锚杆系统的问题，或整理询价需求交由人工审核。',
     placeholder: '输入您的项目问题...', quick: ['隧道项目', 'GFRP 数据', '准备询价'],
-    serviceLive: '知识库已连接', serviceDemo: '目录演示模式', serviceOffline: '服务暂不可用',
+    serviceLive: '实时 AI · 草案知识', serviceDemo: '目录演示模式', serviceFallback: '目录备用模式', serviceConfig: '目录演示 · 配置问题', serviceOffline: '服务暂不可用',
+    sourceDraft: '目录参考 · 草案', sourceKnowledge: '试点知识 · 草案', sourceProvider: '模型服务参考 · 未核验', sourceDefault: '参考资料',
     waiting: '正在查询已批准的 Oceanpower 资料',
     error: '暂时无法连接知识服务。请重试，或发送邮件至 info@jsopmaterial.com。',
     newChat: '新对话', disclaimer: 'AI 生成的目录参考信息。最终技术规格和报价必须由 Oceanpower 工程师确认。',
@@ -79,7 +81,13 @@ function addMessage(text, type, options = {}) {
     const sources = document.createElement('div');
     sources.className = 'message-sources';
     const heading = document.createElement('span');
-    heading.textContent = currentLanguage() === 'zh' ? '参考资料' : 'Sources';
+    heading.textContent = options.sourceStatus === 'provider-reported-unverified'
+      ? uiCopy().sourceProvider
+      : options.sourceStatus === 'draft-knowledge-reference'
+        ? uiCopy().sourceKnowledge
+      : options.sourceStatus === 'catalogue-reference-draft'
+        ? uiCopy().sourceDraft
+        : uiCopy().sourceDefault;
     sources.append(heading);
     options.sources.forEach((source) => {
       const item = document.createElement('small');
@@ -131,16 +139,20 @@ async function askAssistant(message) {
     const data = await response.json().catch(() => ({}));
     if (!response.ok) throw new Error(data.error || `Request failed (${response.status})`);
     waiting.remove();
-    addMessage(data.answer, 'bot', { sources: data.sources, notice: data.notice });
+    const notice = [data.notice, data.citationNotice].filter(Boolean).join(' ');
+    addMessage(data.answer, 'bot', { sources: data.sources, sourceStatus: data.sourceStatus, notice });
     if (data.nextQuestion) addMessage(data.nextQuestion, 'bot');
     state.history.push({ role: 'assistant', content: [data.answer, data.nextQuestion].filter(Boolean).join('\n') });
     state.mode = data.mode || state.mode;
+    state.serviceIssue = data.serviceIssue || null;
     updateModeLabel();
   } catch (error) {
     waiting.remove();
     addMessage(uiCopy().error, 'bot').classList.add('message-error');
     console.error('[Oceanpower chat]', error);
-    if (chatMode) chatMode.textContent = uiCopy().serviceOffline;
+    state.mode = 'unavailable';
+    state.serviceIssue = null;
+    updateModeLabel();
   } finally {
     setPending(false);
     chatInput?.focus();
@@ -190,14 +202,21 @@ function bindPromptButtons(root = document) {
 }
 
 function updateModeLabel() {
-  if (chatMode) chatMode.textContent = state.mode === 'knowledge-base' ? uiCopy().serviceLive : uiCopy().serviceDemo;
+  if (!chatMode) return;
+  if (state.mode === 'unavailable') chatMode.textContent = uiCopy().serviceOffline;
+  else if (state.mode === 'knowledge-base') chatMode.textContent = uiCopy().serviceLive;
+  else if (state.serviceIssue === 'configuration') chatMode.textContent = uiCopy().serviceConfig;
+  else if (state.serviceIssue === 'provider-fallback') chatMode.textContent = uiCopy().serviceFallback;
+  else chatMode.textContent = uiCopy().serviceDemo;
 }
 
 async function checkService() {
   try {
     const response = await fetch('/api/health', { cache: 'no-store' });
     if (!response.ok) throw new Error('Health check failed');
-    state.mode = (await response.json()).mode;
+    const data = await response.json();
+    state.mode = data.mode;
+    state.serviceIssue = data.serviceIssue || null;
     updateModeLabel();
   } catch {
     state.mode = 'unavailable';

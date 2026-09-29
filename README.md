@@ -19,7 +19,7 @@ A front-end concept site for **Jiangsu Oceanpower New Material Technology Co., L
 The AI concierge now has a working same-domain API layer with two modes:
 
 - **Catalogue demo:** works immediately and answers common questions from approved catalogue facts.
-- **Knowledge-base mode:** connects server-side to MaxKB, FastGPT, or another OpenAI-compatible application endpoint when credentials are configured.
+- **Direct AI mode:** connects server-side to Qwen or another OpenAI-compatible endpoint and includes the approved Oceanpower knowledge file in the protected system prompt. MaxKB is optional rather than required for the pilot.
 
 It does not yet save leads, access a CRM, send emails, or generate real quotes. Those actions remain human-reviewed.
 
@@ -36,11 +36,12 @@ Run the included Node server so the chat API and website use the same domain:
 5. Click **AI Sales Concierge** at the lower-right corner to test the assistant.
 6. Scroll to **Live Demo Mode** and select a buyer scenario.
 
-The site starts in catalogue-demo mode. To connect MaxKB or another compatible knowledge service:
+The site starts in catalogue-demo mode. To connect Qwen directly without MaxKB:
 
 1. Copy `.env.example` to `.env`.
-2. Set `CHAT_API_URL` and `CHAT_API_KEY` in `.env`.
-3. Restart `npm start`.
+2. Set the Alibaba Cloud Model Studio China-region `CHAT_API_URL` and `CHAT_API_KEY` in `.env`.
+3. Set `CHAT_MODEL=qwen-flash` and keep `CHAT_KNOWLEDGE_FILE=knowledge/oceanpower-approved-knowledge.md`.
+4. Restart `npm start`.
 
 Never put the API key in `script.js` or `index.html`.
 
