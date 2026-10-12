@@ -33,7 +33,7 @@
   const locale = () => document.documentElement.lang === 'zh-CN' ? 'zh' : 'en';
   const copy = {
     en: {
-      start: 'Prepare enquiry', resume: 'Continue enquiry', heading: 'Enquiry draft',
+      start: 'Prepare enquiry draft', resume: 'Continue enquiry', heading: 'Enquiry draft',
       note: 'Provisional pilot fields. Use fictional details for this demo. This draft lasts only until the page reloads.',
       unknown: 'Unknown', missing: 'Missing', unresolved: 'Needs clarification', known: 'Recorded',
       unknownStatus: 'Unknown · follow-up needed', copy: 'Copy enquiry', copied: 'Enquiry copied. Nothing has been sent.',
@@ -47,7 +47,7 @@
       textLabel: 'Enquiry text for manual copying', progress: 'required fields recorded',
     },
     zh: {
-      start: '准备询价', resume: '继续询价', heading: '询价草稿',
+      start: '准备询价草稿', resume: '继续询价', heading: '询价草稿',
       note: '试点暂定字段。演示请使用虚构信息。刷新页面后草稿将清空。',
       unknown: '未知', missing: '待补充', unresolved: '需要澄清', known: '已记录',
       unknownStatus: '未知 · 待跟进', copy: '复制询价', copied: '询价已复制，尚未发送。',
@@ -437,11 +437,13 @@
     isActive: () => draft.active,
     getView: () => view,
     setView(next) { countryPicker.close(); view = next === 'rfq' ? 'rfq' : 'chat'; render(); },
-    begin(product) {
+    begin(product, { preserveProduct = false } = {}) {
       demoSubmitted = false;
       draft = engine.start(draft);
       reviewing = false;
-      if (product) draft = engine.edit(draft, 'product', product === 'GFRP' ? 'GFRP sand-coated rebar' : `${product} rebar`);
+      if (product && (!preserveProduct || draft.fields.product.status === 'missing')) {
+        draft = engine.edit(draft, 'product', product === 'GFRP' ? 'GFRP sand-coated rebar' : `${product} rebar`);
+      }
       render();
       details.open = true;
     },

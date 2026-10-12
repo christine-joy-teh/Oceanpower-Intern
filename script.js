@@ -11,6 +11,7 @@ const chatMode = document.querySelector('.chat-mode');
 const languageToggle = document.querySelector('.language-toggle');
 const rfq = globalThis.OceanpowerRFQUI;
 const rfqEngine = globalThis.OceanpowerRFQ;
+const backgroundInert = new Map();
 
 const state = { history: [], pending: false, mode: 'catalogue-demo', serviceIssue: null, lastFocused: null, requestId: 0, controller: null };
 
@@ -205,6 +206,13 @@ function openChat(prompt, view = 'chat') {
   rfq.setView(view);
   updateWorkspaceHeading();
   chatPanel.hidden = false;
+  chatPanel.setAttribute('role', 'dialog');
+  chatPanel.setAttribute('aria-modal', 'true');
+  for (const element of document.body.children) {
+    if (element === chatPanel || element.tagName === 'SCRIPT' || backgroundInert.has(element)) continue;
+    backgroundInert.set(element, element.inert);
+    element.inert = true;
+  }
   chatPanel.inert = false;
   chatPanel.classList.add('open');
   chatPanel.setAttribute('aria-hidden', 'false');
@@ -221,6 +229,9 @@ function closeChat() {
   chatPanel.classList.remove('open');
   chatPanel.setAttribute('aria-hidden', 'true');
   chatPanel.hidden = true;
+  chatPanel.removeAttribute('aria-modal');
+  for (const [element, wasInert] of backgroundInert) element.inert = wasInert;
+  backgroundInert.clear();
   chatPanel.inert = true;
   chatLauncher.setAttribute('aria-expanded', 'false');
   document.dispatchEvent(new CustomEvent('oceanpower:chatstate'));
@@ -244,7 +255,7 @@ function showWelcome() {
   });
   chatStream.append(quickReplies);
   bindPromptButtons(quickReplies);
-  chatInput?.focus();
+  if (!chatPanel.hidden && rfq.getView() === 'chat') chatInput?.focus();
 }
 
 function resetChat() {
@@ -259,7 +270,9 @@ function resetChat() {
 }
 
 function startEnquiry(event) {
-  rfq.begin(event?.currentTarget?.dataset?.product);
+  const selectedProduct = event?.currentTarget?.dataset?.product;
+  const pageProduct = document.body.dataset.product;
+  rfq.begin(selectedProduct || pageProduct, { preserveProduct: !selectedProduct });
   openChat(null, 'rfq');
 }
 
@@ -316,7 +329,25 @@ chatForm?.addEventListener('submit', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && chatPanel.classList.contains('open')) closeChat();
+  if (event.key === 'Escape') {
+    if (!chatPanel.hidden) { event.preventDefault(); closeChat(); }
+    else if (header.classList.contains('open')) {
+      header.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+      updateMenuLabel();
+      menuToggle?.focus();
+    }
+  }
+  if (event.key !== 'Tab' || chatPanel.hidden) return;
+  const controls = [...chatPanel.querySelectorAll('a[href],button,input,select,textarea,summary,[tabindex]')]
+    .filter(element => !element.disabled && element.tabIndex >= 0 && element.getClientRects().length > 0);
+  const first = controls[0], last = controls[controls.length - 1];
+  if (!first) { event.preventDefault(); chatClose?.focus(); return; }
+  if (event.shiftKey && (document.activeElement === first || !chatPanel.contains(document.activeElement))) {
+    event.preventDefault(); last.focus();
+  } else if (!event.shiftKey && (document.activeElement === last || !chatPanel.contains(document.activeElement))) {
+    event.preventDefault(); first.focus();
+  }
 });
 
 function setLanguage(language) {
@@ -326,7 +357,7 @@ function setLanguage(language) {
   for (const { element, name, original } of staticAttributes) element.setAttribute(name, language === 'zh' ? translateStatic(original) : original);
   document.querySelectorAll('[data-rfq-start]').forEach((button) => {
     const textNode = [...button.childNodes].find((node) => node.nodeType === Node.TEXT_NODE);
-    if (textNode) textNode.textContent = language === 'zh' ? '准备询价 ' : 'Prepare enquiry ';
+    if (textNode) textNode.textContent = language === 'zh' ? '准备询价草稿 ' : 'Prepare enquiry draft ';
   });
   languageToggle.textContent = language === 'zh' ? 'EN' : '中文';
   const catalogueLink = document.querySelector('[data-catalogue-link]');
