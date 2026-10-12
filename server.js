@@ -427,8 +427,8 @@ function localAnswer(message, locale = 'en') {
 
 async function remoteAnswer(message, history, locale) {
   const messages = [
-    { role: 'system', content: GROUNDED_SYSTEM_PROMPT },
-    ...history.slice(-8).map(({ role, content }) => ({ role, content: String(content).slice(0, 2500) })),
+    { role: 'system', content: GROUNDED_SYSTEM_PROMPT + '\nReply in the selected website language: ' + ({zh:'Chinese',en:'English',es:'Spanish',fr:'French'}[locale.split('-')[0]] || 'English') + '.' },
+    ...history.filter(item => item && ['user', 'assistant'].includes(item.role) && typeof item.content === 'string').slice(-8).map(({ role, content }) => ({ role, content: content.slice(0, 2500) })),
     { role: 'user', content: message },
   ];
   const upstream = await fetch(CHAT_API_URL, {
@@ -576,7 +576,10 @@ function serveStatic(request, response) {
   });
 }
 
-const server = http.createServer(async (request, response) => {
+function handleApi(request, response, next = () => sendJson(response, 404, { error: 'Not found' })) {
+  if (request.url?.startsWith('/api/') && process.env.CHAT_BACKEND_TOKEN && request.headers.authorization !== 'Bearer ' + process.env.CHAT_BACKEND_TOKEN) {
+    return sendJson(response, 401, { error: 'Unauthorized' });
+  }
   if (request.method === 'GET' && request.url === '/api/health') {
     const notice = configurationNotice('en');
     return sendJson(response, 200, {
@@ -586,11 +589,18 @@ const server = http.createServer(async (request, response) => {
     });
   }
   if (request.method === 'POST' && request.url === '/api/chat') return handleChat(request, response);
+  if (request.url === '/api/chat' || request.url === '/api/health') return sendJson(response, 405, { error: 'Method not allowed' });
+  return next();
+}
+
+const server = http.createServer((request, response) => handleApi(request, response, () => {
   if (request.method === 'GET' || request.method === 'HEAD') return serveStatic(request, response);
   return sendJson(response, 405, { error: 'Method not allowed' });
-});
+}));
 
-server.listen(PORT, () => {
+module.exports = { handleApi };
+
+if (require.main === module) server.listen(PORT, () => {
   const mode = LIVE_AI_READY ? 'knowledge-base API' : 'catalogue demo';
   console.log(`Oceanpower website running at http://localhost:${PORT} (${mode})`);
   const notice = configurationNotice('en');

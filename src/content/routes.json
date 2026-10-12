@@ -1,0 +1,29 @@
+{
+  "locales": [
+    "zh",
+    "en",
+    "es",
+    "fr"
+  ],
+  "routes": [
+    "",
+    "about",
+    "business",
+    "business/new-material",
+    "business/food",
+    "business/environment",
+    "business/information",
+    "news",
+    "contact",
+    "products/gfrp",
+    "products/bfrp",
+    "products/cfrp",
+    "demo"
+  ],
+  "pending": [
+    "business/food",
+    "business/environment",
+    "business/information",
+    "news"
+  ]
+}

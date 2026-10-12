@@ -4,13 +4,32 @@
   "private": true,
   "description": "Oceanpower international website and catalogue-grounded AI sales assistant pilot",
   "scripts": {
-    "start": "node server.js",
+    "start": "astro dev --host 127.0.0.1 --port 8000",
     "check": "node --check server.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check translations.js && node --check specifications.js && node --check navigation.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
-    "test": "node --test tests/server.test.js tests/rfq.test.js",
+    "test": "node --test tests/server.test.js tests/rfq.test.js tests/chat-integration.test.mjs",
     "test:browser": "node tests/browser-rfq.e2e.js",
-    "test:browser:playwright": "node tests/rfq.browser.js"
+    "test:browser:playwright": "node tests/rfq.browser.js",
+    "start:legacy": "node server.js",
+    "dev": "astro dev --host 127.0.0.1 --port 4321",
+    "build": "node tools/prepare-public.mjs && astro check && astro build && node tools/validate-build.mjs",
+    "preview": "node tools/preview.mjs",
+    "check:legacy": "node --check server.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check translations.js && node --check specifications.js && node --check navigation.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
+    "test:site": "node tools/site-browser.mjs",
+    "predev": "node tools/prepare-public.mjs",
+    "prestart": "node tools/prepare-public.mjs",
+    "prepreview": "node tools/prepare-public.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@tailwindcss/postcss": "^4.3.3",
+    "astro": "^7.3.8",
+    "autoprefixer": "^10.6.1",
+    "cheerio": "^1.2.0",
+    "playwright": "^1.64.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
   }
 }

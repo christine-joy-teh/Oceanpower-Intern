@@ -1,0 +1,7 @@
+---
+import { t } from '../i18n/ui';
+import { urlFor, type Locale } from '../lib/routes';
+interface Props { locale: Locale; }
+const {locale}=Astro.props;
+---
+<footer><span>© Oceanpower New Material Technology Co., Ltd.</span><a href={urlFor(locale,'contact')}>{t('Contact',locale)}</a><span>{t('Prototype · Content requires company review',locale)}</span></footer>

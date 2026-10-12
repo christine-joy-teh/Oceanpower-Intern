@@ -28,6 +28,7 @@ async function startApp(overrides = {}) {
       PORT: String(port),
       CHAT_API_URL: '',
       CHAT_API_KEY: '',
+      CHAT_BACKEND_TOKEN: '',
       CHAT_MODEL: '',
       CHAT_KNOWLEDGE_FILE: 'knowledge/oceanpower-approved-knowledge.md',
       ALLOWED_ORIGINS: '',

@@ -1,0 +1,7 @@
+---
+import { fragment } from '../lib/content';
+import type { Locale } from '../lib/routes';
+interface Props { page?:'index'|'gfrp'|'bfrp'|'cfrp'|'demo'; selector:string; locale:Locale; }
+const {page='index',selector,locale}=Astro.props;
+---
+<Fragment set:html={fragment(page,selector,locale)}/>

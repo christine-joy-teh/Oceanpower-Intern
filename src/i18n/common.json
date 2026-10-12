@@ -1,0 +1,524 @@
+{
+  "Home": {
+    "en": "Home",
+    "zh": "首页",
+    "es": "Inicio",
+    "fr": "Accueil"
+  },
+  "About": {
+    "en": "About",
+    "zh": "关于海川",
+    "es": "Acerca de Oceanpower",
+    "fr": "À propos d’Oceanpower"
+  },
+  "Business": {
+    "en": "Business",
+    "zh": "业务总览",
+    "es": "Actividades",
+    "fr": "Activités"
+  },
+  "New materials": {
+    "en": "New materials",
+    "zh": "海川新材",
+    "es": "Nuevos materiales",
+    "fr": "Nouveaux matériaux"
+  },
+  "Food": {
+    "en": "Food",
+    "zh": "海川食品",
+    "es": "Alimentación",
+    "fr": "Alimentation"
+  },
+  "Environment": {
+    "en": "Environment",
+    "zh": "海川环境",
+    "es": "Medioambiente",
+    "fr": "Environnement"
+  },
+  "Information": {
+    "en": "Information",
+    "zh": "海川信息",
+    "es": "Información",
+    "fr": "Information"
+  },
+  "News": {
+    "en": "News",
+    "zh": "新闻动态",
+    "es": "Noticias",
+    "fr": "Actualités"
+  },
+  "Contact": {
+    "en": "Contact",
+    "zh": "联系我们",
+    "es": "Contacto",
+    "fr": "Contact"
+  },
+  "Products": {
+    "en": "Products",
+    "zh": "产品",
+    "es": "Productos",
+    "fr": "Produits"
+  },
+  "Applications": {
+    "en": "Applications",
+    "zh": "应用领域",
+    "es": "Aplicaciones",
+    "fr": "Applications"
+  },
+  "Language": {
+    "en": "Language",
+    "zh": "语言",
+    "es": "Idioma",
+    "fr": "Langue"
+  },
+  "Main navigation": {
+    "en": "Main navigation",
+    "zh": "主导航",
+    "es": "Navegación principal",
+    "fr": "Navigation principale"
+  },
+  "Menu": {
+    "en": "Menu",
+    "zh": "菜单",
+    "es": "Menú",
+    "fr": "Menu"
+  },
+  "Close": {
+    "en": "Close",
+    "zh": "关闭",
+    "es": "Cerrar",
+    "fr": "Fermer"
+  },
+  "Skip to main content": {
+    "en": "Skip to main content",
+    "zh": "跳至主要内容",
+    "es": "Saltar al contenido",
+    "fr": "Aller au contenu"
+  },
+  "Content awaiting review": {
+    "en": "Content awaiting review",
+    "zh": "内容待审核",
+    "es": "Contenido pendiente de revisión",
+    "fr": "Contenu en attente de validation"
+  },
+  "This route follows the supplied website plan. Approved content has not yet been provided.": {
+    "en": "This route follows the supplied website plan. Approved content has not yet been provided.",
+    "zh": "本页面遵循网站结构方案，尚未提供已审核内容。",
+    "es": "Esta página sigue el plan del sitio. Aún no se ha facilitado contenido aprobado.",
+    "fr": "Cette page suit le plan du site. Aucun contenu validé n’a encore été fourni."
+  },
+  "Browse the four business areas in the website plan. Only the new-material content is available in this demo.": {
+    "en": "Browse the four business areas in the website plan. Only the new-material content is available in this demo.",
+    "zh": "浏览方案中的四个业务板块。本演示目前仅提供新材料相关内容。",
+    "es": "Explore las cuatro áreas del plan. Solo el contenido de nuevos materiales está disponible en esta demostración.",
+    "fr": "Découvrez les quatre activités du plan. Seul le contenu sur les nouveaux matériaux est disponible dans cette démonstration."
+  },
+  "Catalogue image": {
+    "en": "Catalogue image",
+    "zh": "目录图片",
+    "es": "Imagen del catálogo",
+    "fr": "Image du catalogue"
+  },
+  "Oceanpower website demo": {
+    "en": "Oceanpower website demo",
+    "zh": "Oceanpower 网站演示",
+    "es": "Demostración del sitio Oceanpower",
+    "fr": "Démonstration du site Oceanpower"
+  },
+  "Prototype · Content requires company review": {
+    "en": "Prototype · Content requires company review",
+    "zh": "演示版 · 内容须经公司审核",
+    "es": "Prototipo · Contenido pendiente de revisión por la empresa",
+    "fr": "Prototype · Contenu à valider par l’entreprise"
+  },
+  "Catalogue assistant": {
+    "en": "Catalogue assistant",
+    "zh": "目录助手",
+    "es": "Asistente de catálogo",
+    "fr": "Assistant catalogue"
+  },
+  "Catalogue demo · No live AI connection": {
+    "en": "Catalogue demo · No live AI connection",
+    "zh": "目录演示 · 未连接实时 AI",
+    "es": "Demo de catálogo · Sin conexión a IA",
+    "fr": "Démo catalogue · Sans connexion IA"
+  },
+  "Your project question": {
+    "en": "Your project question",
+    "zh": "您的项目问题",
+    "es": "Su pregunta sobre el proyecto",
+    "fr": "Votre question sur le projet"
+  },
+  "Ask a question": {
+    "en": "Ask a question",
+    "zh": "输入问题",
+    "es": "Escriba una pregunta",
+    "fr": "Posez une question"
+  },
+  "Send question": {
+    "en": "Send question",
+    "zh": "发送问题",
+    "es": "Enviar pregunta",
+    "fr": "Envoyer la question"
+  },
+  "Choose a product to view its catalogue specifications. Final selection requires engineering review.": {
+    "en": "Choose a product to view its catalogue specifications. Final selection requires engineering review.",
+    "zh": "选择产品查看目录参数。最终选型须经工程师审核。",
+    "es": "Elija un producto para consultar sus especificaciones. La selección final requiere revisión técnica.",
+    "fr": "Choisissez un produit pour consulter ses caractéristiques. Le choix final nécessite une validation technique."
+  },
+  "I cannot confirm that from the supplied catalogue. Please contact Oceanpower for a technical review.": {
+    "en": "I cannot confirm that from the supplied catalogue. Please contact Oceanpower for a technical review.",
+    "zh": "现有目录资料无法确认此问题。请联系 Oceanpower 进行技术审核。",
+    "es": "El catálogo facilitado no permite confirmarlo. Contacte con Oceanpower para una revisión técnica.",
+    "fr": "Le catalogue fourni ne permet pas de le confirmer. Contactez Oceanpower pour un examen technique."
+  },
+  "Enquiry draft": {
+    "en": "Enquiry draft",
+    "zh": "询价草稿",
+    "es": "Borrador de consulta",
+    "fr": "Brouillon de demande"
+  },
+  "Project requirements": {
+    "en": "Project requirements",
+    "zh": "项目需求",
+    "es": "Requisitos del proyecto",
+    "fr": "Besoins du projet"
+  },
+  "Application / project use": {
+    "en": "Application / project use",
+    "zh": "应用场景",
+    "es": "Aplicación del proyecto",
+    "fr": "Application du projet"
+  },
+  "Product": {
+    "en": "Product",
+    "zh": "产品",
+    "es": "Producto",
+    "fr": "Produit"
+  },
+  "Diameter / dimensions": {
+    "en": "Diameter / dimensions",
+    "zh": "直径或尺寸",
+    "es": "Diámetro o dimensiones",
+    "fr": "Diamètre ou dimensions"
+  },
+  "Quantity and unit": {
+    "en": "Quantity and unit",
+    "zh": "数量及单位",
+    "es": "Cantidad y unidad",
+    "fr": "Quantité et unité"
+  },
+  "Delivery country or port": {
+    "en": "Delivery country or port",
+    "zh": "交付国家或港口",
+    "es": "País o puerto de entrega",
+    "fr": "Pays ou port de livraison"
+  },
+  "Preferred delivery date": {
+    "en": "Preferred delivery date",
+    "zh": "期望交付日期",
+    "es": "Fecha de entrega deseada",
+    "fr": "Date de livraison souhaitée"
+  },
+  "Your name": {
+    "en": "Your name",
+    "zh": "您的姓名",
+    "es": "Su nombre",
+    "fr": "Votre nom"
+  },
+  "Business email": {
+    "en": "Business email",
+    "zh": "工作邮箱",
+    "es": "Correo profesional",
+    "fr": "Adresse professionnelle"
+  },
+  "Company (optional)": {
+    "en": "Company (optional)",
+    "zh": "公司（选填）",
+    "es": "Empresa (opcional)",
+    "fr": "Entreprise (facultatif)"
+  },
+  "Not sure yet": {
+    "en": "Not sure yet",
+    "zh": "暂不确定",
+    "es": "Por confirmar",
+    "fr": "À confirmer"
+  },
+  "Review enquiry": {
+    "en": "Review enquiry",
+    "zh": "检查询价",
+    "es": "Revisar consulta",
+    "fr": "Vérifier la demande"
+  },
+  "Edit details": {
+    "en": "Edit details",
+    "zh": "修改资料",
+    "es": "Editar datos",
+    "fr": "Modifier les informations"
+  },
+  "Copy enquiry": {
+    "en": "Copy enquiry",
+    "zh": "复制询价",
+    "es": "Copiar consulta",
+    "fr": "Copier la demande"
+  },
+  "Complete demo": {
+    "en": "Complete demo",
+    "zh": "完成演示",
+    "es": "Completar demostración",
+    "fr": "Terminer la démonstration"
+  },
+  "Demo completed. Nothing has been sent.": {
+    "en": "Demo completed. Nothing has been sent.",
+    "zh": "演示已完成，未发送任何资料。",
+    "es": "Demostración completada. No se ha enviado nada.",
+    "fr": "Démonstration terminée. Rien n’a été envoyé."
+  },
+  "Copied. Nothing has been sent.": {
+    "en": "Copied. Nothing has been sent.",
+    "zh": "已复制，未发送任何资料。",
+    "es": "Copiado. No se ha enviado nada.",
+    "fr": "Copié. Rien n’a été envoyé."
+  },
+  "Select and copy the text below.": {
+    "en": "Select and copy the text below.",
+    "zh": "请选中并复制下方文字。",
+    "es": "Seleccione y copie el texto siguiente.",
+    "fr": "Sélectionnez et copiez le texte ci-dessous."
+  },
+  "Use fictional details. This draft stays in this page and is cleared when you leave or reload. No enquiry is sent.": {
+    "en": "Use fictional details. This draft stays in this page and is cleared when you leave or reload. No enquiry is sent.",
+    "zh": "请使用虚构资料。草稿仅保留在当前页面，离开或刷新后清空，不会发送询价。",
+    "es": "Use datos ficticios. El borrador se borra al salir o recargar. No se envía ninguna consulta.",
+    "fr": "Utilisez des données fictives. Le brouillon est effacé en quittant ou rechargeant la page. Aucune demande n’est envoyée."
+  },
+  "All fields are required unless marked optional; you may mark project details as not sure yet.": {
+    "en": "All fields are required unless marked optional; you may mark project details as not sure yet.",
+    "zh": "除标注选填外均为必填；项目资料可标记暂不确定。",
+    "es": "Todos los campos son obligatorios salvo los opcionales; puede marcar los requisitos como pendientes.",
+    "fr": "Tous les champs sont obligatoires sauf mention contraire ; les besoins peuvent être indiqués comme à confirmer."
+  },
+  "Download catalogue": {
+    "en": "Download catalogue",
+    "zh": "下载目录",
+    "es": "Descargar catálogo",
+    "fr": "Télécharger le catalogue"
+  },
+  "Page not found": {
+    "en": "Page not found",
+    "zh": "未找到页面",
+    "es": "Página no encontrada",
+    "fr": "Page introuvable"
+  },
+  "Return home": {
+    "en": "Return home",
+    "zh": "返回首页",
+    "es": "Volver al inicio",
+    "fr": "Retour à l’accueil"
+  },
+  "NEW MATERIAL TECHNOLOGY": {
+    "en": "NEW MATERIAL TECHNOLOGY",
+    "zh": "新材料科技",
+    "es": "TECNOLOGÍA DE NUEVOS MATERIALES",
+    "fr": "TECHNOLOGIE DES NOUVEAUX MATÉRIAUX"
+  },
+  "AI Sales Concierge": {
+    "en": "Catalogue assistant",
+    "zh": "目录助手",
+    "es": "Asistente de catálogo",
+    "fr": "Assistant catalogue"
+  },
+  "Smart Product Match": {
+    "en": "Product guidance",
+    "zh": "产品参考",
+    "es": "Orientación de producto",
+    "fr": "Orientation produit"
+  },
+  "Qualifies the project environment, reinforcement type and target diameter to guide buyers to the best-fit system.": {
+    "en": "Compare catalogue properties and prepare your requirements for an engineering review.",
+    "zh": "对比目录参数并整理需求，以供工程师审核。",
+    "es": "Compare propiedades del catálogo y prepare sus requisitos para una revisión técnica.",
+    "fr": "Comparez les propriétés du catalogue et préparez vos besoins pour un examen technique."
+  },
+  "Close-up of Oceanpower glass-fiber reinforcement bars": {
+    "en": "Close-up of Oceanpower glass-fiber reinforcement bars",
+    "zh": "Oceanpower 玻璃纤维筋材特写",
+    "es": "Detalle de barras de fibra de vidrio Oceanpower",
+    "fr": "Gros plan des armatures en fibre de verre Oceanpower"
+  },
+  "Close-up of basalt-fiber reinforcement bars": {
+    "en": "Close-up of basalt-fiber reinforcement bars",
+    "zh": "玄武岩纤维筋材特写",
+    "es": "Detalle de barras de fibra de basalto",
+    "fr": "Gros plan des armatures en fibre de basalte"
+  },
+  "Carbon-fiber production equipment shown in the Oceanpower catalogue": {
+    "en": "Carbon-fiber production equipment shown in the Oceanpower catalogue",
+    "zh": "Oceanpower 目录中的碳纤维生产设备",
+    "es": "Equipo de producción de fibra de carbono del catálogo Oceanpower",
+    "fr": "Équipement de production de fibre de carbone du catalogue Oceanpower"
+  },
+  "FRP material comparison": {
+    "en": "FRP material comparison",
+    "zh": "FRP 材料对比",
+    "es": "Comparación de materiales FRP",
+    "fr": "Comparaison des matériaux FRP"
+  },
+  "Fiber specifications": {
+    "en": "Fiber specifications",
+    "zh": "纤维材料参数",
+    "es": "Características de las fibras",
+    "fr": "Caractéristiques des fibres"
+  },
+  "GFRP specifications": {
+    "en": "GFRP specifications",
+    "zh": "GFRP 参数",
+    "es": "Características GFRP",
+    "fr": "Caractéristiques GFRP"
+  },
+  "Oceanpower FRP rebar installed in metro and rail foundation projects": {
+    "en": "Oceanpower FRP rebar installed in metro and rail foundation projects",
+    "zh": "用于地铁及铁路基础工程的 Oceanpower FRP 筋材",
+    "es": "Armaduras FRP Oceanpower utilizadas en proyectos de metro y cimentaciones ferroviarias",
+    "fr": "Armatures FRP Oceanpower utilisées dans des projets de métro et de fondations ferroviaires"
+  },
+  "Company information": {
+    "en": "Company information",
+    "zh": "公司资料",
+    "es": "Información de la empresa",
+    "fr": "Informations sur l’entreprise"
+  },
+  "View High-Tech Enterprise record in the catalogue (opens a new tab)": {
+    "en": "View High-Tech Enterprise record in the catalogue (opens a new tab)",
+    "zh": "查看目录中的高新技术企业记录（新标签页）",
+    "es": "Ver reconocimiento de empresa de alta tecnología (otra pestaña)",
+    "fr": "Voir la distinction d’entreprise de haute technologie (nouvel onglet)"
+  },
+  "High-Tech Enterprise certificate reproduced in the Oceanpower catalogue": {
+    "en": "High-Tech Enterprise certificate reproduced in the Oceanpower catalogue",
+    "zh": "Oceanpower 目录中的高新技术企业证书",
+    "es": "Certificado de empresa de alta tecnología del catálogo Oceanpower",
+    "fr": "Certificat d’entreprise de haute technologie du catalogue Oceanpower"
+  },
+  "View Oceanpower test laboratory record in the catalogue (opens a new tab)": {
+    "en": "View Oceanpower test laboratory record in the catalogue (opens a new tab)",
+    "zh": "查看目录中的 Oceanpower 实验室记录（新标签页）",
+    "es": "Ver documento del laboratorio Oceanpower (otra pestaña)",
+    "fr": "Voir le document du laboratoire Oceanpower (nouvel onglet)"
+  },
+  "Oceanpower testing centre plaque displaying the CNAS mark": {
+    "en": "Oceanpower testing centre plaque displaying the CNAS mark",
+    "zh": "带 CNAS 标志的 Oceanpower 检测中心牌匾",
+    "es": "Placa del centro de ensayos Oceanpower con la marca CNAS",
+    "fr": "Plaque du centre d’essais Oceanpower portant la marque CNAS"
+  },
+  "View quality management record in the catalogue (opens a new tab)": {
+    "en": "View quality management record in the catalogue (opens a new tab)",
+    "zh": "查看目录中的质量管理记录（新标签页）",
+    "es": "Ver documento de gestión de calidad (otra pestaña)",
+    "fr": "Voir le document de management de la qualité (nouvel onglet)"
+  },
+  "Jiangsu Oceanpower quality management certificate reproduced in the catalogue": {
+    "en": "Jiangsu Oceanpower quality management certificate reproduced in the catalogue",
+    "zh": "目录中的江苏 Oceanpower 质量管理证书",
+    "es": "Certificado de gestión de calidad de Jiangsu Oceanpower del catálogo",
+    "fr": "Certificat de management de la qualité de Jiangsu Oceanpower du catalogue"
+  },
+  "View industry partner source in the catalogue (opens a new tab)": {
+    "en": "View industry partner source in the catalogue (opens a new tab)",
+    "zh": "查看目录中的行业合作伙伴（新标签页）",
+    "es": "Ver socios industriales del catálogo (otra pestaña)",
+    "fr": "Voir les partenaires industriels du catalogue (nouvel onglet)"
+  },
+  "Catalogue partner logos including China Tunnel Group, Bayer, MCC, CRCC, DSM, CPIC, Tianma, CCCC, AkzoNobel, CTG and BASF": {
+    "en": "Catalogue partner logos including China Tunnel Group, Bayer, MCC, CRCC, DSM, CPIC, Tianma, CCCC, AkzoNobel, CTG and BASF",
+    "zh": "目录中的合作机构标志，包括 China Tunnel Group、Bayer、MCC、CRCC、DSM、CPIC、Tianma、CCCC、AkzoNobel、CTG 及 BASF",
+    "es": "Logotipos del catálogo: China Tunnel Group, Bayer, MCC, CRCC, DSM, CPIC, Tianma, CCCC, AkzoNobel, CTG y BASF",
+    "fr": "Logos du catalogue : China Tunnel Group, Bayer, MCC, CRCC, DSM, CPIC, Tianma, CCCC, AkzoNobel, CTG et BASF"
+  },
+  "View academic partner source in the catalogue (opens a new tab)": {
+    "en": "View academic partner source in the catalogue (opens a new tab)",
+    "zh": "查看目录中的高校合作伙伴（新标签页）",
+    "es": "Ver socios académicos del catálogo (otra pestaña)",
+    "fr": "Voir les partenaires universitaires du catalogue (nouvel onglet)"
+  },
+  "Catalogue university and institute logos including Tsinghua, Zhejiang, Tongji, Southeast, Miami University and Hong Kong Polytechnic University": {
+    "en": "Catalogue university and institute logos including Tsinghua, Zhejiang, Tongji, Southeast, Miami University and Hong Kong Polytechnic University",
+    "zh": "目录中的高校标志，包括清华、浙江、同济、东南、迈阿密大学及香港理工大学",
+    "es": "Logotipos del catálogo: Tsinghua, Zhejiang, Tongji, Southeast, Miami University y Hong Kong Polytechnic University",
+    "fr": "Logos du catalogue : Tsinghua, Zhejiang, Tongji, Southeast, Miami University et Hong Kong Polytechnic University"
+  },
+  "Sand-coated GFRP specification table": {
+    "en": "Sand-coated GFRP specification table",
+    "zh": "覆砂 GFRP 参数表",
+    "es": "Tabla de propiedades GFRP con recubrimiento de arena",
+    "fr": "Tableau des caractéristiques GFRP sablées"
+  },
+  "AI assistant": {
+    "en": "AI assistant",
+    "zh": "AI 助手",
+    "es": "Asistente de IA",
+    "fr": "Assistant IA"
+  },
+  "Checking assistant connection…": {
+    "en": "Checking assistant connection…",
+    "zh": "正在检查助手连接…",
+    "es": "Comprobando la conexión…",
+    "fr": "Vérification de la connexion…"
+  },
+  "Live AI · Company knowledge": {
+    "en": "Live AI · Company knowledge",
+    "zh": "实时 AI · 公司知识",
+    "es": "IA en línea · Información de la empresa",
+    "fr": "IA en ligne · Informations de l’entreprise"
+  },
+  "Catalogue fallback · No live AI": {
+    "en": "Catalogue fallback · No live AI",
+    "zh": "目录备用模式 · 非实时 AI",
+    "es": "Modo catálogo · Sin IA en línea",
+    "fr": "Mode catalogue · Sans IA en ligne"
+  },
+  "Assistant unavailable · Local catalogue only": {
+    "en": "Assistant unavailable · Local catalogue only",
+    "zh": "助手暂不可用 · 仅本地目录",
+    "es": "Asistente no disponible · Solo catálogo local",
+    "fr": "Assistant indisponible · Catalogue local uniquement"
+  },
+  "Ask about Oceanpower products or your project requirements. Technical answers require engineering review.": {
+    "en": "Ask about Oceanpower products or your project requirements. Technical answers require engineering review.",
+    "zh": "欢迎咨询 Oceanpower 产品或项目需求。技术答复须经工程师审核。",
+    "es": "Consulte sobre los productos Oceanpower o los requisitos de su proyecto. Las respuestas técnicas requieren revisión de ingeniería.",
+    "fr": "Posez vos questions sur les produits Oceanpower ou votre projet. Les réponses techniques nécessitent une validation technique."
+  },
+  "Thinking…": {
+    "en": "Thinking…",
+    "zh": "正在思考…",
+    "es": "Procesando…",
+    "fr": "Réflexion en cours…"
+  },
+  "The AI service is unavailable. This answer uses the local catalogue.": {
+    "en": "The AI service is unavailable. This answer uses the local catalogue.",
+    "zh": "AI 服务暂不可用。本答复使用本地目录。",
+    "es": "El servicio de IA no está disponible. Esta respuesta utiliza el catálogo local.",
+    "fr": "Le service IA est indisponible. Cette réponse utilise le catalogue local."
+  },
+  "Too many questions. Please wait a few minutes and try again.": {
+    "en": "Too many questions. Please wait a few minutes and try again.",
+    "zh": "提问过于频繁，请稍候几分钟后重试。",
+    "es": "Demasiadas preguntas. Espere unos minutos e inténtelo de nuevo.",
+    "fr": "Trop de questions. Patientez quelques minutes avant de réessayer."
+  },
+  "Catalogue reference · Engineering review required": {
+    "en": "Catalogue reference · Engineering review required",
+    "zh": "目录参考 · 须经工程师审核",
+    "es": "Referencia del catálogo · Revisión de ingeniería necesaria",
+    "fr": "Référence du catalogue · Validation technique requise"
+  },
+  "Provider references are unverified. Engineering review is required.": {
+    "en": "Provider references are unverified. Engineering review is required.",
+    "zh": "模型提供的引用尚未核验，须经工程师审核。",
+    "es": "Las referencias del proveedor no están verificadas. Se requiere revisión de ingeniería.",
+    "fr": "Les références du fournisseur ne sont pas vérifiées. Une validation technique est nécessaire."
+  }
+}
