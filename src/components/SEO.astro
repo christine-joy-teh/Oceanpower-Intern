@@ -1,0 +1,10 @@
+---
+import { locales, htmlLanguages, urlFor, siteUrl, type Locale } from '../lib/routes';
+interface Props { locale: Locale; route:string; title:string; description:string; noindex?:boolean; }
+const {locale,route,title,description,noindex=false}=Astro.props;
+const ogLocales={zh:'zh_CN',en:'en_US',es:'es_ES',fr:'fr_FR'};
+const canonical=siteUrl+(route==='404'?'/404.html':urlFor(locale,route));
+const indexed=import.meta.env.PUBLIC_INDEXABLE==='true'&&!noindex;
+const schema={'@context':'https://schema.org','@type':'WebPage',name:title,description,url:canonical,inLanguage:htmlLanguages[locale],isPartOf:{'@type':'WebSite',name:'Oceanpower',url:siteUrl}};
+---
+<title>{title}</title><meta name="description" content={description}/><meta name="robots" content={indexed?'index,follow':'noindex,follow'}/><link rel="canonical" href={canonical}/>{route!=='404' && locales.map(lang=><link rel="alternate" hreflang={htmlLanguages[lang]} href={siteUrl+urlFor(lang,route)}/>)}{route!=='404' && <link rel="alternate" hreflang="x-default" href={siteUrl+urlFor('zh',route)}/>}<meta property="og:type" content="website"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:site_name" content="Oceanpower"/><meta property="og:locale" content={ogLocales[locale]}/>{locales.filter(l=>l!==locale).map(l=><meta property="og:locale:alternate" content={ogLocales[l]}/>)}<meta property="og:image" content={siteUrl+'/assets/oceanpower-cover.jpg'}/><meta property="og:image:alt" content="Oceanpower"/><meta name="twitter:card" content="summary_large_image"/><script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')}/>

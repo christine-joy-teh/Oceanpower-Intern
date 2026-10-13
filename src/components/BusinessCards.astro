@@ -1,0 +1,8 @@
+---
+import { t } from '../i18n/ui';
+import { urlFor, type Locale } from '../lib/routes';
+interface Props {locale:Locale;}
+const {locale}=Astro.props;
+const cards=[['New materials','new-material'],['Food','food'],['Environment','environment'],['Information','information']];
+---
+<section class="section business-section"><p class="eyebrow dark">{t('Business',locale)}</p><h2>{t('Business',locale)}</h2><p>{t('Browse the four business areas in the website plan. Only the new-material content is available in this demo.',locale)}</p><div class="business-grid">{cards.map(([label,slug])=><a class="business-card" data-theme={slug} href={urlFor(locale,'business/'+slug)}><h3>{t(label,locale)}</h3><span>{slug==='new-material'?t('Browse products',locale):t('Content awaiting review',locale)}</span><b aria-hidden="true">→</b></a>)}</div></section>

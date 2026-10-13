@@ -54,6 +54,18 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 - Sales-assistant capability rows.
 - Buyer-scenario controls.
 - Accessible chatbot with loading, success, source, fallback, and error states.
+- Expandable two-column enquiry workspace with conversational collection and an editable RFQ draft.
+
+## Enquiry workspace
+
+- “Prepare enquiry” is a distinct action; ordinary catalogue questions remain normal chat messages.
+- Desktop expands the existing chat panel into conversation and draft columns. Mobile stacks the draft below the conversation.
+- RFQ fields use the same industrial-editorial type, navy action treatment, aqua accent, square controls, and visible focus rings as the existing interface.
+- Unknown and missing information must remain explicit. Requested delivery is always labelled as a customer request, never a delivery promise.
+- Confirmation means “ready for staff review” only. The interface must state that nothing was sent.
+- The pilot draft remains in memory for the current page only; closing the panel or switching language preserves it, while reset or page reload clears it.
+- The deterministic draft engine (`rfq.js`) and presentation layer (`rfq-ui.js`) remain separate so chat collection and direct field edits share one state object.
+- The summary may collapse on smaller screens, but missing, unknown, and unresolved states must remain available for review. Clipboard failures expose a selectable plain-text fallback.
 
 ## Brand voice
 
@@ -82,4 +94,7 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-09-29 - Integrated catalogue credentials, partner artwork, fiber specification tabs and the separate buyer-demo page with the existing RFQ workspace.
+2026-09-29 - Refined explicit RFQ field states, mobile review, and manual-copy fallback.
+2026-09-29 - Added the bilingual, editable in-memory RFQ workspace and confirmation states.
 2026-09-22 - Added integration-ready catalogue-grounded AI sales assistant states and accessibility rules.

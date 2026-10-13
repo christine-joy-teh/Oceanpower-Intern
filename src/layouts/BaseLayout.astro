@@ -1,0 +1,12 @@
+---
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import DemoTools from '../components/DemoTools.astro';
+import { t } from '../i18n/ui';
+import { htmlLanguages, type Locale } from '../lib/routes';
+import '../styles/global.css';
+interface Props {locale:Locale;route:string;title:string;description:string;noindex?:boolean;product?:string;}
+const {locale,route,title,description,noindex=false,product}=Astro.props;
+---
+<!doctype html><html lang={htmlLanguages[locale]}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><SEO locale={locale} route={route} title={title} description={description} noindex={noindex}/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/></head><body data-locale={locale}><a class="skip-link" href="#top">{t('Skip to main content',locale)}</a><Header locale={locale} route={route}/><main id="top" tabindex="-1"><slot/></main><Footer locale={locale}/><DemoTools locale={locale} product={product}/><script src="../scripts/site.js"></script></body></html>

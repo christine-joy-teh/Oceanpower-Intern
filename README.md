@@ -1,163 +1,114 @@
-﻿# Oceanpower International Website Prototype
+# Oceanpower multilingual website
 
-A front-end concept site for **Jiangsu Oceanpower New Material Technology Co., Ltd.** The prototype reframes Oceanpower for overseas marketing: a premium "Digital Materials Lab" visual direction, bilingual English/Chinese content, and an AI sales-concierge demonstration.
+Astro static site migration based on the supplied oceanpower.com 网站焕新的完整闭环方案.docx. The existing FRP design, images and catalogue specifications are retained. See [TECHNICAL-AUDIT.md](TECHNICAL-AUDIT.md) for the before/after audit and decisions.
 
-## What this prototype demonstrates
+## Run locally
 
-- A modern English-first experience for overseas engineers, contractors, and distributors.
-- A Chinese/English language switch in the top navigation. The choice is remembered in the browser.
-- Catalog-based GFRP, BFRP, and CFRP product messaging and GFRP performance figures.
-- A lightweight AI Sales Concierge demo with product questions, project matching, and RFQ guidance.
-- Three clickable international buyer journeys:
-  - German infrastructure engineer - technical tunnel inquiry.
-  - Middle East coastal bridge contractor - corrosion-focused RFQ.
-  - Southeast Asian distributor - partnership qualification.
-- A visual sales path from discovery to qualified lead and sales review.
+Use Node 24 (minimum 22.12).
 
-## Important: prototype status
+    npm ci
+    npm run dev
 
-The AI concierge is currently a **front-end demonstration**, not a live AI service. It uses predefined English and Chinese responses to show how a real qualification conversation could work. It does not send emails, save leads, access a CRM, or generate real quotes.
+Open http://localhost:4321. Chinese is the default at /. English is /en/, Spanish /es/ and French /fr/. npm start runs Astro on port 8000; stop any older Node server on that port first.
 
-The site is safe to present as a concept. Do not present it as a live technical-advice or quotation system until the production workflow is connected and approved.
+    npm run build
+    npm run preview
 
-## Open the site
+The build runs Astro diagnostics, generates dist/, then validates every localized route, metadata, JSON-LD, local link and anchor. Preview serves the production build and original chat API at port 4321 through tools/preview.mjs (Astro’s default static preview omits custom API plugins).
 
-This is a static website with no installation step.
+## Routes
 
-1. Open `index.html` in a modern browser.
-2. Click **中文** in the header to switch the full website interface and AI demo to Chinese. Click **EN** to switch back.
-3. Click **AI Sales Concierge** at the lower-right corner to test the assistant.
-4. Open **Explore the guided buyer demo** to visit `demo.html` and select a buyer scenario.
+Each route exists in all four languages:
 
-For a simple local web-server preview, run either of the following from this folder:
-
-```powershell
-py -m http.server 8000
-```
-
-or
-
-```powershell
-npx serve .
-```
-
-Then visit the URL printed in the terminal, usually `http://localhost:8000`.
-
-## Project files
-
-| File / folder | Purpose |
+| Route without language prefix | Content |
 | --- | --- |
-| `index.html` | Page structure, sales sections, AI chat interface, and overseas buyer scenarios. |
-| `styles.css` | Main responsive layout and core Oceanpower visual system. |
-| `lab.css` | Digital Materials Lab visual layer: glass panels, clean surfaces, and demo-mode styling. |
-| `script.js` | Mobile menu, language switching, AI demo responses, and buyer-journey interactions. |
-| `assets/` | Images extracted from the supplied Oceanpower FRP Rebar Catalog. |
-| `Oceanpower New Material---FRP Rebar Catalog.pdf` | Original supplied catalog source. |
+| / | Homepage retaining the FRP design |
+| /about/ | Existing company, historical credentials and partners |
+| /business/ | Four divisions listed by the reference document |
+| /business/new-material/ | Existing FRP products, comparison and applications |
+| /business/food/ | Content awaiting company review |
+| /business/environment/ | Content awaiting company review |
+| /business/information/ | Content awaiting company review |
+| /news/ | Content awaiting company review |
+| /contact/ | Existing catalogue contact information and enquiry demo |
+| /products/gfrp/ | Sand-coated GFRP product page |
+| /products/bfrp/ | BFRP product page |
+| /products/cfrp/ | CFRP product page |
+| /demo/ | Buyer journey demonstration |
 
-## Content source and accuracy
+The document's table implies 36 core routes, despite a separate claim of 34. The retained products and demo add 16 routes: 52 content routes plus a 404 page. Language selection links to the same route in the selected language. Chinese is unprefixed; there is no /zh/ route.
 
-The supplied catalog is the primary source for company background, product themes, GFRP performance values, applications, imagery, and contact information. Before publishing, Oceanpower should review every technical specification, contact detail, product name, standard, and project claim.
+## Source structure
 
-## Recommended presentation flow
+- src/pages/[...path].astro: generates the localized routes.
+- src/layouts/BaseLayout.astro: global shell and bundled client script.
+- src/components/: reusable header, footer, language selector, SEO, business cards, enquiry tools and preserved frontend sections.
+- src/i18n/ui.ts: translation helper; common.json and zh/es/fr.json hold text. Spanish/French are draft translations requiring company review.
+- src/content/reference-pages.json: preserved source HTML used by section components. This is the current content source; root HTML files are legacy snapshots, not the Astro source.
+- src/lib/content.ts: builds localized text and language-aware links from those sections.
+- styles.css and lab.css: preserved design, imported by src/styles/global.css.
+- tailwind.config.mjs: shared design tokens. Tailwind 4 uses the compatibility @config directive; preflight is omitted to avoid resetting the current appearance.
+- public/: explicitly published assets, catalogue and generated SEO/Cloudflare files.
+- tools/prepare-public.mjs: copies only public assets and generates sitemap, robots, headers and legacy redirects.
 
-Use this sequence when showing the prototype to management:
+## Content and demo boundaries
 
-1. Start at the hero section: explain that it is designed for an overseas visitor arriving from Google, LinkedIn, an exhibition QR code, or a distributor referral.
-2. Switch from English to Chinese, showing that local staff can use the same site.
-3. Show products and engineering performance as proof of technical capability.
-4. Open the AI Sales Concierge and choose **Tunnel project** or type a question.
-5. Open the separate buyer demo page and select the Middle East coastal-bridge scenario.
-6. Explain that the final conversation creates a structured RFQ for sales review instead of leaving the visitor with a generic contact form.
+All product numbers and existing company details come from the prior supplied-catalogue prototype, not independently verified facts. Historical certificates stay labelled historical. No new facts, prices, cases or claims have been added for divisions missing content.
 
-## Production AI plan
+The Astro enquiry form is entirely local: users can edit requirements, mark project details unknown, review/copy the draft and complete a demo. It does not send, store or email leads. Closing and reopening preserves the in-page draft; navigation/reload clears it. Use fictional details.
 
-The recommended production workflow is:
+The AI chatbot is retained on every Astro page. Dev and preview connect directly to the original server.js /api/chat and /api/health handlers through server-only middleware. Existing CHAT_API_URL, CHAT_API_KEY, CHAT_MODEL and CHAT_KNOWLEDGE_FILE settings apply. No provider key or private knowledge file is included in the frontend.
 
-```text
-Website visitor
-  -> Bilingual AI concierge
-  -> Search approved Oceanpower product documents
-  -> Ask project-qualification questions
-  -> Generate structured RFQ / lead brief
-  -> Sales-manager review
-  -> CRM, email, WhatsApp, WeCom, or distributor follow-up
-```
+The chat keeps the last eight messages in page memory, displays provider/catalogue references, and distinguishes live AI from fallback mode. The original catalogue answers are used for English/Chinese; Spanish/French use the existing translated product tables when live AI is unavailable. Live AI is instructed to use the selected website language. Reload/navigation clears chat history. The enquiry form still does not submit leads.
 
-### Before building the live AI version
+    npm run start:legacy
 
-Collect these items from Oceanpower:
+Legacy mode still serves the original root HTML with the same backend.
 
-- Approved English and Chinese catalogues, datasheets, installation guides, certificates, and FAQs.
-- Full current product list, specifications, dimensions, resin/material options, and standards.
-- 6-10 approved overseas or domestic project case studies with photos.
-- Official logo files, brand rules, factory photos, and export-market contact details.
-- The lead destination: email inbox, Excel, HubSpot, Zoho, WeCom, WhatsApp, or another CRM.
-- Clear sales-routing rules: product line, territory, language, project value, and urgency.
-- Approval policy for quotations and outward-facing AI emails. Recommended: human approval before any quote or customer message is sent.
+### Chat on Cloudflare Pages
 
-### Suggested technology choices
+The site remains an Astro static build, with functions/api/[[path]].js forwarding only /api/chat and /api/health to the existing Node backend. Host server.js separately on a Node-capable service, with the existing knowledge file and private CHAT_API_* environment settings. Set ALLOWED_ORIGINS to your actual Pages/custom origins.
 
-- **Website:** static site now; migrate to a hosted site when approved.
-- **AI:** OpenAI API or another approved LLM provider, with English and Chinese system instructions.
-- **Knowledge base:** approved Oceanpower documents only, indexed for search/retrieval.
-- **Automation:** n8n to route qualified leads, create CRM records, notify sales, and request approval.
-- **Security:** keep API keys server-side only. Never put a live API key in `script.js` or `index.html`.
+Set CHAT_BACKEND_URL in Cloudflare Pages to that backend's HTTPS origin, and set the same secret CHAT_BACKEND_TOKEN on Pages and on the Node service. This token protects the backend bridge; it is distinct from the model provider API key. Do not set a public Vite/Astro environment variable for either key. The bridge only calls this configured origin, enforces request size and same-origin checks, and disables caching. public/_routes.json limits Functions to /api/*.
 
-## Deployment checklist
+No backend hosting or credentials are provisioned automatically. Until configured, the chatbot stays visible and provides clearly labelled local catalogue answers. Test the deployed bridge after configuring it; local preview exercises the original Node handler directly, not Cloudflare's runtime.
 
-Before the site is public, complete these checks:
+## SEO
 
-- [ ] Confirm legal company name, address, phone numbers, emails, and domain.
-- [ ] Confirm all technical performance data with the engineering team.
-- [ ] Add certificates, quality-control proof, and current project case studies.
-- [ ] Review every Chinese and English translation with a native business/technical reviewer.
-- [ ] Replace demo AI replies with a protected server-side AI integration.
-- [ ] Add privacy policy, cookie notice, and form-consent language for overseas visitors.
-- [ ] Set up analytics and conversion tracking.
-- [ ] Connect RFQ submissions to the approved sales workflow.
-- [ ] Test on mobile, desktop, English, and Chinese before launch.
+Set SITE_URL to the intended site's canonical origin. The document proposes https://www.oceanpower.com; no domain binding has been performed.
 
-## Current limitations
+PUBLIC_INDEXABLE defaults to false: demo pages receive noindex, and robots.txt disallows crawling. After company approval, set it to true and rebuild. Pending-content pages and the buyer demo remain noindex and are excluded from sitemap.xml. Metadata includes localized titles/descriptions, canonical URLs, Open Graph, Twitter card, reciprocal hreflang plus x-default, and WebPage/WebSite JSON-LD. No fabricated Product offers, prices, reviews or certifications are emitted.
 
-- No backend, database, authentication, or persistent lead storage.
-- No live document retrieval or real AI API connection.
-- No automated CRM, email, WhatsApp, or WeCom handoff.
-- The website interface, metadata, image descriptions, form validation, RFQ briefs, and generated demo replies support English and Chinese. User-entered text is preserved in its original language; supplied catalogue files are not translated.
+The source _headers file defines CSP and other security headers for Pages. Original .html URLs redirect to their English equivalents through _redirects. These redirects are interpreted by Cloudflare Pages, not by Astro's preview server.
 
-## Contact details currently shown
+## Cloudflare Pages
 
-The prototype contains contact details from the provided catalog. Reconfirm them before external publication:
+Choose ONE deployment method to avoid duplicate builds.
 
-- Jiangsu Oceanpower New Material Technology Co., Ltd.
-- No. 6, Guangming Scientific-pioneer Park, Biancheng Town, Jurong City (Zhenjiang), Jiangsu Province, China.
-- Telephone: 0086-87618886
-- Fax: 0086-87618882
-- Website shown in catalog: `www.jsopmaterial.com`
+### Git integration from the reference document
 
+1. Connect this repository in Cloudflare Pages.
+2. Select Astro, build command npm run build and output directory dist.
+3. Use Node 24 and ASTRO_TELEMETRY_DISABLED=1.
+4. Set SITE_URL and leave PUBLIC_INDEXABLE=false for a demo.
+5. Keep CLOUDFLARE_DEPLOY_ENABLED unset in GitHub when using Git integration.
+6. Bind the proposed custom domain only after the company authorizes it and verifies ownership.
 
-## Quote request flow
+wrangler.toml declares the static output directory. No Astro adapter is required; the chatbot uses the Pages Function bridge described above. Private files, .env, server.js and knowledge sources are not copied to dist.
 
-One native modal dialog (`#rfq-drawer`) is shared by the navigation, specification card, bottom CTA, RFQ builder, CFRP card and chat entry points. `rfq.js` owns its form/review state, inline field validation, focus cycling, Escape/backdrop dismissal, scroll lock and focus restoration. A closed dialog is removed from keyboard navigation; `showModal()` makes the background inert. Hidden mobile-menu/chat triggers return focus to their visible launcher instead.
+### GitHub Actions direct deployment
 
-The drawer uses two form columns on desktop and one at 850px and below. It retains the existing navy, aqua, Manrope and DM Mono design system. The bottom of the page now has a compact CTA, not a second form. Reduced-motion preferences disable its short entrance animation.
+The website.yml workflow validates pushes/PRs and runs browser checks. Deployment runs only on main with CLOUDFLARE_DEPLOY_ENABLED=true.
 
-Review RFQ shows a structured summary. Edit details preserves entered values. Send enquiry opens a prefilled email to info@jsopmaterial.com; the visitor must send it in their email app. Download brief remains available as a fallback. No email delivery service, database or CRM submission has been added, and no success/submitted state is claimed. The final engineering-review note is displayed beside the handoff actions. All new interface copy and errors support English and Chinese.
+Configure GitHub repository/environment variables: CLOUDFLARE_DEPLOY_ENABLED, CLOUDFLARE_PAGES_PROJECT, SITE_URL, PUBLIC_INDEXABLE. Configure secrets CLOUDFLARE_API_TOKEN (Pages deployment permissions) and CLOUDFLARE_ACCOUNT_ID. Create the Cloudflare Pages project first. Use the cloudflare-pages GitHub environment for approval controls. No credentials belong in code or public files.
 
-The GFRP card retains the approved values and semantic row/column headers, with refined hierarchy, numeric alignment and contained horizontal scrolling. The surrounding performance gradient and heading are unchanged.
+No cloud project, secret, DNS record, remote push or production deployment is created by this migration.
 
-### Verification
+## Validation
 
-- `npm run check` checks all four JavaScript files.
-- DOM integration checks exercised the shared entry points, validation, review/edit, safe text rendering, encoded email draft, bilingual state, focus cycling/return, dismissal and scroll restoration.
-- Source-level responsive checks cover 1440, 1024, 768, 390 and 360px. A connected browser was unavailable during implementation; visually confirm those sizes, native keyboard/scroll behavior and the operating system's email handoff before release.
-- Direct server submission would require an approved destination, email/CRM service and delivery/error handling; the current email-draft flow needs none of these.
+    npm test
+    npm run build
+    npx playwright install chromium
+    npm run test:site
 
-## Buyer experience and partner artwork
-
-- The homepage now places Applications directly after Performance. Scripted buyer journeys are retained on `demo.html`, linked from the sales-assistance section. Both pages share the same chat, RFQ, translation and navigation scripts.
-- Product cards use photograph-only crops from the supplied catalogue. GFRP and BFRP show the material; CFRP shows the catalogue's carbon-fiber production equipment. Original catalogue images remain available in `assets/`.
-- The partner panels reproduce the source artwork from PDF page 20 (printed pages 35–36). These are catalogue-listed organisations, not newly verified endorsements. Links open the source document.
-- Material tabs are sticky below the site header within the specification card. Header links expose the active location through `aria-current`.
-- Closed chat is hidden and inert. Escape/Close returns focus to the opener; opening an RFQ closes chat. The mobile launcher is compact and is hidden near specification/contact/footer actions when not focused or open.
-- Hero secondary text uses navy/deep teal for contrast on its light background. Contact telephone and footer contact links are interactive.
-- Syntax and simulated DOM checks passed on both pages, including chat focus, RFQ handoff, launcher suppression, translations and asset references. Live browser visual testing remains pending.
+The legacy 14 server/RFQ tests remain, alongside three chatbot/preview integration tests. The new browser suite serves dist with the actual CSP, checks all 52 routes and console errors, exercises four-language enquiry flows, language navigation, product return links and specification tabs, and checks phone/tablet horizontal overflow. Browser screenshots are written under ignored tmp/site-browser. On Windows, an installed Edge/Chrome can be used automatically or set CHROMIUM_EXECUTABLE_PATH.

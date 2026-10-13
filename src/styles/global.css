@@ -1,0 +1,61 @@
+@import '../../styles.css';
+@import '../../lab.css';
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@config "../../tailwind.config.mjs";
+.language-menu{position:relative;margin-left:auto;font-size:13px;flex-shrink:0}
+.language-menu summary{cursor:pointer;padding:12px;border:1px solid var(--line);border-radius:4px;min-height:44px}
+.language-menu>div{position:absolute;right:0;top:100%;background:var(--paper);border:1px solid var(--line);min-width:150px;padding:8px;z-index:20}
+.language-menu a{display:block;padding:12px;color:var(--ink)}
+.language-menu a[aria-current]{font-weight:800;background:#e9efee}
+.page-heading,.pending-page{padding-block:64px}
+.page-heading h1,.pending-page h1{font-size:clamp(36px,5vw,68px);line-height:1.1;margin:0;letter-spacing:-2px}
+.pending-page{min-height:60vh}.pending-page h2{font-size:28px;margin-top:36px;letter-spacing:0}.pending-page p{max-width:720px;line-height:1.8}
+.business-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:32px}
+.business-section{padding-block:64px}.business-section>p{line-height:1.7;max-width:760px}
+.business-card{background:var(--ink);color:white;padding:28px;text-decoration:none;display:flex;flex-direction:column;gap:18px;min-height:210px}
+.business-card h3{font-size:24px;margin:0}.business-card span{line-height:1.6}.business-card b{margin-top:auto;color:var(--aqua)}
+footer a{color:var(--aqua)}
+dialog.chat-panel{position:fixed;inset:0;margin:auto;border:1px solid var(--line);padding:0;color:var(--ink);width:min(600px,calc(100vw - 24px));height:fit-content;max-height:calc(100dvh - 24px);background:white;z-index:100}
+dialog.chat-panel:not([open]){display:none}dialog.chat-panel[open]{display:flex;flex-direction:column}
+dialog::backdrop{background:rgb(0 52 79 / .5)}
+dialog .chat-header{margin:0;padding:20px;display:flex;justify-content:space-between;align-items:center}
+dialog .chat-header small{display:block}dialog .chat-workspace{overflow-y:auto;min-height:0}
+dialog .rfq-content{padding:20px}dialog .rfq-content>p,dialog form>p{font-size:13px;line-height:1.6}
+dialog .rfq-field-controls input{font-size:16px}dialog button{cursor:pointer}
+dialog .button{border:0;font:700 14px Manrope,Arial,sans-serif;min-height:44px}
+dialog [hidden]{display:none!important}.quick-replies{display:flex;gap:12px;padding:12px}.quick-replies a{color:var(--blue);padding:12px}
+@media(max-width:1000px){.business-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.business-grid{grid-template-columns:1fr}.language-menu summary{padding:10px 6px}.site-header{gap:8px}.brand small{max-width:140px;white-space:normal}.page-heading,.pending-page,.business-section{padding-block:40px}.chat-panel.enquiry-dialog[open]{width:100%;height:100dvh;max-height:100dvh;border-radius:0;border:0}}
+
+/* Native dialog visibility replaces the legacy .open animation state. */
+dialog.chat-panel[open]{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+
+
+/* Oceanpower palette: dark text and light surfaces retain readable contrast. */
+.hero h1 em{color:var(--blue)}
+.hero-stats strong{color:var(--blue)}
+.hero-actions .button{background:var(--gold);color:var(--ink)}
+.business-card{
+ --card-accent:var(--blue);
+ color:var(--ink);
+ background:linear-gradient(135deg,color-mix(in srgb,var(--card-accent) 24%,white),color-mix(in srgb,var(--card-accent) 5%,white));
+ border:1px solid color-mix(in srgb,var(--card-accent) 30%,white);
+ border-top:4px solid var(--card-accent);
+ box-shadow:0 4px 16px rgb(0 52 79 / .04);
+ transition:transform .2s ease,box-shadow .2s ease;
+}
+.business-card[data-theme="new-material"]{--card-accent:var(--blue)}
+.business-card[data-theme="food"]{--card-accent:var(--gold)}
+.business-card[data-theme="environment"]{--card-accent:var(--green)}
+.business-card[data-theme="information"]{--card-accent:var(--aqua)}
+.business-card b{color:var(--blue);transition:transform .2s ease}
+.business-card:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+@media(hover:hover){
+ .business-card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgb(0 52 79 / .12)}
+ .business-card:hover b{transform:translateX(3px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .business-card,.business-card b{transition:none}
+ .business-card:hover,.business-card:hover b{transform:none}
+}
