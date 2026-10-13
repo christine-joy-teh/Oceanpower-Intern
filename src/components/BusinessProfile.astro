@@ -1,0 +1,20 @@
+---
+import businesses from '../content/businesses.json';
+import { t } from '../i18n/ui';
+import { urlFor, type Locale } from '../lib/routes';
+interface Props {locale:Locale;slug:string;}
+const {locale,slug}=Astro.props;
+const business=businesses.find(item=>item.slug===slug)!;
+---
+<section class="section company-profile">
+  <nav class="business-breadcrumb" aria-label={t('Breadcrumb',locale)}><a href={urlFor(locale)}>{t('Home',locale)}</a><span aria-hidden="true">/</span><a href={urlFor(locale,'business')}>{t('Business',locale)}</a><span aria-hidden="true">/</span><span aria-current="page">{t(business.label,locale)}</span></nav>
+  <div class="company-profile-grid">
+    <aside><nav class="division-nav" aria-label={t('Business',locale)}>{businesses.map(item=><a href={urlFor(locale,'business/'+item.slug)} aria-current={item.slug===slug?'page':undefined}>{t(item.label,locale)}<span aria-hidden="true">→</span></a>)}</nav></aside>
+    <article>
+      <header class="company-profile-heading"><div><p class="eyebrow dark">OCEANPOWER / {t(business.label,locale)}</p><h1>{t(business.name,locale)}</h1></div><img src={'/assets/business-'+slug+'.jpg'} alt="" width="334" height="188"/></header>
+      <p class="company-profile-lead">{t(business.summary,locale)}</p>
+      {business.sections.map(section=><section class="company-profile-section"><h2>{t(section.title,locale)}</h2>{section.paragraphs.map(paragraph=><p>{t(paragraph,locale)}</p>)}</section>)}
+      {slug==='new-material'&&<a class="button" href="#solutions">{t('Browse products',locale)} <span aria-hidden="true">↓</span></a>}
+    </article>
+  </div>
+</section>

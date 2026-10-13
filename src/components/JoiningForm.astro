@@ -1,0 +1,82 @@
+---
+import { t } from '../i18n/ui';
+import type { Locale } from '../lib/routes';
+const {locale}=Astro.props as {locale:Locale};
+const fields=[
+  ['position','Applied position','text',true],['name','Name','text',true],
+  ['sex','Sex','select',true],['birth','Date of birth','date',true],
+  ['marital','Marital status','select',false],['university','Graduated university','text',false],
+  ['education','Education','text',false],['speciality','Speciality','text',false],
+  ['graduation','Graduation date','date',false],['phone','Telephone','tel',true],
+  ['email','E-mail','email',false],['address','Address','text',false],
+  ['abilities','Level and abilities','textarea',false],['resume','Résumé','textarea',true]
+] as const;
+---
+<button type="button" class="application-open" aria-haspopup="dialog" aria-controls="application-dialog">{t('Apply now',locale)}</button>
+<dialog id="application-dialog" aria-labelledby="application-title">
+<div class="application-heading"><h2 id="application-title">{t('Joining us',locale)}</h2><button type="button" class="application-close" aria-label={t('Close application form',locale)} autofocus>×</button></div>
+<form class="joining-form" data-locale={locale} data-limit={t('Please keep within the word limit.',locale)} data-ready={t('Application downloaded. It has not been submitted.',locale)}>
+  <div class="form-note">{t('Complete your application below. Download saves a text file to your device; it does not send an application to Oceanpower.',locale)}</div>
+  <div class="form-note">{t('Fields marked * are required.',locale)}</div>
+  {fields.map(([name,label,type,required])=><div class="application-row">
+    <label for={'application-'+name}>{required&&<span aria-hidden="true">* </span>}{t(label,locale)}</label>
+    <div class="application-control">
+      {type==='select'?<select id={'application-'+name} name={name} required={required} data-label={t(label,locale)}>
+        <option value="">{t('Please select',locale)}</option>
+        {(name==='sex'?['Mr.','Ms.']:['Married','Single']).map(option=><option value={t(option,locale)}>{t(option,locale)}</option>)}
+      </select>:type==='textarea'?<><textarea id={'application-'+name} name={name} required={required} rows={name==='resume'?8:5} data-label={t(label,locale)} data-words={name==='resume'?1000:200} aria-describedby={'application-'+name+'-hint'}></textarea><small id={'application-'+name+'-hint'}>{t(name==='resume'?'Maximum 1,000 words.':'Maximum 200 words.',locale)}</small></>:<input id={'application-'+name} name={name} type={type} required={required} maxlength={type==='text'?300:undefined} data-label={t(label,locale)} />}
+    </div>
+  </div>)}
+  <div class="application-actions"><button type="submit">{t('Download application',locale)}</button><button type="reset">{t('Reset',locale)}</button></div>
+  <div class="application-status" role="status" aria-live="polite"></div>
+</form>
+</dialog>
+<script>
+  const dialog=document.querySelector<HTMLDialogElement>('#application-dialog');
+  const opener=document.querySelector<HTMLButtonElement>('.application-open');
+  if(dialog&&opener){
+    let previousOverflow='';
+    opener.addEventListener('click',()=>{previousOverflow=document.body.style.overflow;dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;});
+    dialog.querySelector('.application-close')?.addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('close',()=>{document.body.style.overflow=previousOverflow;opener.focus({preventScroll:true});});
+    dialog.addEventListener('click',event=>{if(event.target===dialog){const bounds=dialog.getBoundingClientRect();if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)dialog.close();}});
+  }
+  document.querySelectorAll<HTMLFormElement>('.joining-form').forEach(form=>{
+    const status=form.querySelector<HTMLElement>('.application-status')!;
+    const areas=form.querySelectorAll<HTMLTextAreaElement>('textarea[data-words]');
+    const validate=(area:HTMLTextAreaElement)=>{
+      const segmenter=new Intl.Segmenter(form.dataset.locale,{granularity:'word'});
+      const count=Array.from(segmenter.segment(area.value)).filter(part=>part.isWordLike).length;
+      area.setCustomValidity(count>Number(area.dataset.words)?form.dataset.limit!:'');
+    };
+    areas.forEach(area=>area.addEventListener('input',()=>validate(area)));
+    form.addEventListener('submit',event=>{
+      event.preventDefault();areas.forEach(validate);if(!form.reportValidity())return;
+      const fields=form.querySelectorAll<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>('[data-label]');
+      const text=Array.from(fields).map(field=>`${field.dataset.label}: ${field.value}`).join('\n\n');
+      const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));
+      const link=document.createElement('a');link.href=url;link.download='oceanpower-application.txt';link.click();
+      setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent=form.dataset.ready!;
+    });
+    form.addEventListener('reset',()=>{areas.forEach(area=>area.setCustomValidity(''));status.textContent='';});
+  });
+</script>
+<style>
+  dialog{width:min(900px,calc(100% - 2rem));max-height:90dvh;padding:0;border:1px solid #cbd2d6;background:#f0f2f2;color:#12344b;overflow:auto;overscroll-behavior:contain}
+  dialog::backdrop{background:rgb(6 27 61 / .65)}
+  .application-heading{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem;background:#f0f2f2;border-bottom:3px solid #498dbb}
+  .application-heading h2{margin:0;font-size:1.5rem}.application-close{font-size:1.75rem;line-height:1;min-width:44px;padding:.4rem}
+  .application-open{margin:1rem 0}
+  dialog .joining-form{margin:0;border-top:0}
+  .joining-form{border-top:3px solid #498dbb;background:#f0f2f2;padding:1rem;margin:1.5rem 0;color:var(--ink,#12344b)}
+  .form-note{margin-bottom:.75rem;font-size:.9rem}
+  .application-row{display:grid;grid-template-columns:180px minmax(0,1fr);gap:1rem;padding:.6rem 0;border-bottom:1px solid white;align-items:center}
+  label{text-align:right}label span{color:#b32b20}
+  input,select,textarea{font:inherit;color:inherit;background:white;border:1px solid #cbd2d6;border-radius:2px;padding:.65rem;min-height:44px;max-width:100%;box-sizing:border-box}
+  input,textarea{width:100%}textarea{resize:vertical}input[type=date]{max-width:240px}
+  input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid #0758d5;outline-offset:2px}
+  small{display:block;margin-top:.35rem}.application-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 .5rem}
+  button{font:inherit;padding:.75rem 1rem;min-height:44px;border:1px solid #28699d;background:#28699d;color:white;cursor:pointer}button[type=reset]{background:white;color:#12344b}
+  .application-status{margin-top:1rem}
+  @media(max-width:700px){.application-row{grid-template-columns:1fr;gap:.4rem}label{text-align:left}.joining-form{padding:.8rem}}
+</style>

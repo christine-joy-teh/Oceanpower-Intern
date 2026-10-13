@@ -5,3 +5,5 @@ for(const locale of locales)for(const route of routes){const url='/'+(locale==='
 for(const file of ['sitemap.xml','robots.txt','_headers','_redirects','404.html'])await fs.access('dist/'+file);
 for(const file of ['.env','server.js','knowledge/oceanpower-approved-knowledge.md'])await fs.access('dist/'+file).then(()=>{throw new Error('Private file published: '+file)},()=>{});
 console.log('Validated '+count+' localized routes, metadata, JSON-LD, local links, anchors and public-file isolation.');
+await import('./validate-business-translations.mjs');
+await import('./validate-corporate-content.mjs');

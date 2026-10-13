@@ -1,0 +1,14 @@
+---
+import {t} from '../i18n/ui';
+import {urlFor,type Locale} from '../lib/routes';
+interface Props {locale:Locale;category:{category:string;content:Record<string,string[]>};}
+const {locale,category}=Astro.props;
+---
+<section class="section category-page">
+<a href={urlFor(locale,'products')}>← {t('Products',locale)}</a>
+<h1>{t(category.category,locale)}</h1>
+<div class="category-content">{category.content[locale].map(paragraph=><p>{paragraph}</p>)}</div>
+</section>
+<style>
+.category-page{min-height:65vh}.category-page h1{font-size:clamp(32px,5vw,64px);letter-spacing:-.5px;line-height:1.2;margin:40px 0;max-width:1000px}.category-content{max-width:960px;line-height:1.8}
+</style>

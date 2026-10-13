@@ -1,8 +1,8 @@
 ---
 import { t } from '../i18n/ui';
 import { urlFor, type Locale } from '../lib/routes';
-interface Props {locale:Locale;}
-const {locale}=Astro.props;
-const cards=[['New materials','new-material'],['Food','food'],['Environment','environment'],['Information','information']];
+import businesses from '../content/businesses.json';
+interface Props {locale:Locale;standalone?:boolean;}
+const {locale,standalone=false}=Astro.props;
 ---
-<section class="section business-section"><p class="eyebrow dark">{t('Business',locale)}</p><h2>{t('Business',locale)}</h2><p>{t('Browse the four business areas in the website plan. Only the new-material content is available in this demo.',locale)}</p><div class="business-grid">{cards.map(([label,slug])=><a class="business-card" data-theme={slug} href={urlFor(locale,'business/'+slug)}><h3>{t(label,locale)}</h3><span>{slug==='new-material'?t('Browse products',locale):t('Content awaiting review',locale)}</span><b aria-hidden="true">→</b></a>)}</div></section>
+<section class="section business-section"><p class="eyebrow dark">OCEANPOWER</p>{standalone?<h1>{t('Business',locale)}</h1>:<h2>{t('Business',locale)}</h2>}<p>{t('Four areas of expertise. Discover our companies in new materials, food technology, environmental solutions and information technology.',locale)}</p><div class="business-grid">{businesses.map(business=><a class="business-card business-profile-card" data-theme={business.slug} href={urlFor(locale,'business/'+business.slug)}><img src={'/assets/business-'+business.slug+'.jpg'} alt="" width="334" height="188" loading="lazy"/><div class="business-card-copy"><h3>{t(business.label,locale)}</h3><p>{t(business.summary,locale)}</p><b>{t('View more',locale)} <span aria-hidden="true">→</span></b></div></a>)}</div></section>

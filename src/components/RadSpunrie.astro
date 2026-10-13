@@ -1,0 +1,18 @@
+---
+import content from '../content/rad-spunrie.json';
+import {t} from '../i18n/ui';
+import {urlFor,type Locale} from '../lib/routes';
+const {locale}=Astro.props as {locale:Locale};
+const languageIndex={en:0,zh:1,es:2,fr:3}[locale];
+const local=(values:string[])=>values[languageIndex];
+---
+<article class="section rad-detail">
+<a href={urlFor(locale,'products')}>← {t('Products',locale)}</a>
+<header><div><p class="eyebrow dark">RAD SPUNRIE</p><h1>{t('Rad Spunrie asphalt modifier',locale)}</h1><p>{local(content.intro)}</p></div><img src="/assets/product-example-191.jpg" alt={t('Rad Spunrie asphalt modifier',locale)} width="480" height="320"/></header>
+{content.sections.map(section=><section><h2>{local(section.title)}</h2>{section.paragraphs.map(p=><p>{local(p)}</p>)}</section>)}
+<section><h2>{local(content.tableTitle)}</h2><div class="table-scroll"><table><thead><tr>{content.columns.map(c=><th scope="col">{local(c)}</th>)}</tr></thead><tbody>{content.tests.map(row=><tr><th scope="row">{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td></tr>)}</tbody></table></div><p>{local(content.tableNote)}</p></section>
+<section><h2>{local(content.projectsTitle)}</h2>{content.projects.map(p=><p>{local(p)}</p>)}</section>
+</article>
+<style>
+.rad-detail{max-width:1400px;margin:auto}.rad-detail header{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;margin:40px 0}.rad-detail h1{font-size:clamp(32px,4vw,56px);letter-spacing:-1px;line-height:1.2}.rad-detail h2{font-size:28px;letter-spacing:normal;line-height:1.35;margin:0 0 20px}.rad-detail img{width:100%;height:auto}.rad-detail section{padding:32px 0;border-bottom:1px solid #d9ddd8}.rad-detail p{line-height:1.8;max-width:960px}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;text-align:left}th,td{padding:14px;border-bottom:1px solid #d9ddd8}thead{background:#12344b;color:white}@media(max-width:700px){.rad-detail header{grid-template-columns:1fr}.rad-detail h2{font-size:24px}}
+</style>
