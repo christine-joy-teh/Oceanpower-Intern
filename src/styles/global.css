@@ -3,6 +3,75 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 @config "../../tailwind.config.mjs";
+.corporate-content .ceo-article h2{color:#498fbf;font:700 24px Arial,sans-serif;border-bottom:3px solid #498fbf;padding-bottom:10px;margin-bottom:0}
+.ceo-message{background:#f0f0f0;padding:12px;font-family:Arial,Helvetica,sans-serif;color:#111}
+.ceo-message-body{background:#fff;display:flow-root}
+.ceo-message figure{float:left;width:218px;margin:0 12px 8px 0}
+.ceo-portrait{aspect-ratio:218/257;overflow:hidden}
+.ceo-portrait img{display:block;width:100%;height:auto}
+.ceo-message figcaption{text-align:center;font-size:16px;line-height:1.4;padding:12px 0;background:white;color:#333}
+.corporate-content .ceo-message p{font:16px/1.55 Arial,Helvetica,sans-serif;margin:0 0 28px}
+.corporate-content .ceo-message .ceo-intro{margin-bottom:0}
+.corporate-content .ceo-message .ceo-motto{color:#498fbf;margin-bottom:28px}
+.corporate-content .ceo-message p:last-child{margin-bottom:0}
+.headquarters-contact h3{font-size:28px;line-height:1.3;color:var(--aqua);margin:0 0 24px;border-bottom:1px solid #38566d;padding-bottom:24px}
+.headquarters-contact p{line-height:1.8}
+.headquarters-contact dl{display:grid;gap:14px;margin-top:28px}
+.headquarters-contact dl div{display:grid;grid-template-columns:95px minmax(0,1fr);gap:12px;font-size:14px;line-height:1.7}
+.headquarters-contact dd{margin:0;overflow-wrap:anywhere;color:#c7d3df}
+.headquarters-contact dd a{font-size:inherit;border:0;padding:0;display:inline;color:var(--aqua);text-decoration:underline}
+@media(max-width:600px){.ceo-message figure{float:none;width:218px;max-width:100%;margin:0 auto 24px}.headquarters-contact dl div{grid-template-columns:1fr;gap:2px}}
+.corporate-content{padding-block:64px 88px}
+.corporate-heading{max-width:920px;margin-bottom:44px}
+.corporate-heading h1,.corporate-heading h2{font-size:clamp(36px,4.6vw,66px);line-height:1.12;letter-spacing:-2px;margin:0;max-width:none}
+.corporate-heading>p:last-child{font-size:19px;line-height:1.8;margin:24px 0 0;color:#455c73}
+.corporate-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;align-items:start}
+.corporate-toc{display:flex;flex-direction:column;gap:0;border-left:3px solid var(--blue);position:sticky;top:104px}
+.corporate-toc a{padding:13px 18px;color:var(--ink);line-height:1.5;background:rgb(255 255 255 / .55)}
+.corporate-toc a:hover,.corporate-toc a:focus-visible{background:#e1eef3;color:var(--blue)}
+.corporate-articles{min-width:0;max-width:920px}
+.corporate-content .corporate-article{padding:0 0 32px;margin:0 0 36px;border-bottom:1px solid var(--line);scroll-margin-top:110px}
+.corporate-content .corporate-article:last-child{margin-bottom:0}
+.corporate-content .corporate-article h2{font-size:28px;line-height:1.3;letter-spacing:-.5px;margin:0 0 20px;max-width:none}
+.corporate-article p{font-size:16px;line-height:1.9;margin:0 0 18px}
+.corporate-source{display:inline-block;font-size:12px;color:var(--blue);padding:8px 0;text-underline-offset:4px}
+.headquarters-details{display:grid;gap:18px;margin:28px 0}
+.headquarters-details div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px}
+.headquarters-details dt{font-weight:800}.headquarters-details dd{margin:0;overflow-wrap:anywhere}.headquarters-details a{color:var(--blue)}
+.contact-division-label{padding-block:24px}
+footer .footer-links{display:flex;gap:20px;flex-wrap:wrap}
+@media(max-width:1000px){.corporate-layout{grid-template-columns:190px minmax(0,1fr);gap:28px}.site-header nav{gap:18px}}
+@media(max-width:600px){.corporate-content{padding-block:40px 56px}.corporate-layout{grid-template-columns:1fr}.corporate-toc{position:static}.corporate-heading{margin-bottom:28px}.corporate-heading>p:last-child{font-size:17px}.headquarters-details div{grid-template-columns:1fr;gap:6px}footer .footer-links{gap:8px 18px;margin-block:14px}}
+.business-section h1{font-size:clamp(38px,4.6vw,66px);line-height:1.1;letter-spacing:-2px;margin:0}
+.business-profile-card.business-card{padding:0;gap:0;overflow:hidden}
+.business-profile-card>img{display:block;width:100%;height:auto;aspect-ratio:167/94;object-fit:cover}
+.business-card-copy{padding:24px;display:flex;flex-direction:column;gap:18px;flex:1}
+.business-card-copy p{font-size:15px;line-height:1.75;margin:0}
+.business-card-copy b{display:block;padding-top:12px;font-size:13px}
+.company-profile{padding-block:48px 80px}
+.business-breadcrumb{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;margin-bottom:40px}
+.business-breadcrumb a{color:var(--blue)}
+.company-profile-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
+.division-nav{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);position:sticky;top:104px}
+.division-nav a{display:flex;justify-content:space-between;gap:12px;padding:18px;background:white;border-bottom:1px solid var(--line);color:var(--ink);line-height:1.4}
+.division-nav a:last-child{border-bottom:0}
+.division-nav a[aria-current=page]{background:var(--blue);color:white}
+.division-nav a:focus-visible{outline:3px solid var(--aqua);outline-offset:2px}
+.company-profile article{min-width:0;max-width:1040px}
+.company-profile-heading{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:28px;align-items:center;padding-bottom:28px;border-bottom:3px solid var(--blue)}
+.company-profile-heading h1{font-size:clamp(28px,3.2vw,46px);line-height:1.16;letter-spacing:-1px;margin:0;overflow-wrap:break-word}
+.company-profile-heading .eyebrow{margin-bottom:18px}
+.company-profile-heading img{width:100%;height:auto;border-radius:4px}
+.company-profile-lead{font-size:20px;line-height:1.7;color:var(--blue);margin:28px 0}
+.company-profile-section{margin:32px 0}
+.company-profile-section h2{font-size:24px;letter-spacing:-.4px;line-height:1.3;max-width:none;margin:0 0 16px}
+.company-profile-section p{font-size:16px;line-height:1.9;margin:0 0 18px;max-width:78ch}
+.company-profile .button{display:inline-block}
+@media(max-width:1000px){.company-profile-grid{grid-template-columns:180px minmax(0,1fr);gap:28px}.company-profile-heading{grid-template-columns:1fr}.company-profile-heading img{max-width:280px}}
+@media(max-width:600px){.company-profile-grid{grid-template-columns:1fr}.division-nav{display:grid;grid-template-columns:1fr 1fr;position:static}.division-nav a{font-size:12px;padding:14px}.company-profile{padding-block:32px 56px}.business-breadcrumb{margin-bottom:24px}.company-profile-lead{font-size:18px}}
+.site-header .brand{flex-shrink:0}
+.brand-logo{display:block;width:auto;height:64px;object-fit:contain;mix-blend-mode:multiply}
+@media(max-width:600px){.brand-logo{height:52px}}
 .language-menu{position:relative;margin-left:auto;font-size:13px;flex-shrink:0}
 .language-menu summary{cursor:pointer;padding:12px;border:1px solid var(--line);border-radius:4px;min-height:44px}
 .language-menu>div{position:absolute;right:0;top:100%;background:var(--paper);border:1px solid var(--line);min-width:150px;padding:8px;z-index:20}

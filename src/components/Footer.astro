@@ -4,4 +4,4 @@ import { urlFor, type Locale } from '../lib/routes';
 interface Props { locale: Locale; }
 const {locale}=Astro.props;
 ---
-<footer><span>© Oceanpower New Material Technology Co., Ltd.</span><a href={urlFor(locale,'contact')}>{t('Contact',locale)}</a><span>{t('Prototype · Content requires company review',locale)}</span></footer>
+<footer><span>© {t('OCEANPOWER New Material Technology Co., Ltd.',locale)}</span><nav class="footer-links" aria-label={t('Explore Oceanpower',locale)}><a href={urlFor(locale,'contact')}>{t('Contact',locale)}</a><a href={urlFor(locale,'research')}>{t('Research',locale)}</a><a href={urlFor(locale,'careers')}>{t('Careers',locale)}</a><a href={urlFor(locale,'legal')}>{t('Website information',locale)}</a></nav><span>{t('Prototype · Content requires company review',locale)}</span></footer>

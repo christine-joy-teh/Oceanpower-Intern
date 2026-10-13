@@ -1,0 +1,7 @@
+---
+import {t} from '../i18n/ui';
+import type {Locale} from '../lib/routes';
+interface Props {locale:Locale;paragraphs:string[];}
+const {locale,paragraphs}=Astro.props;
+---
+<div class="ceo-message"><div class="ceo-message-body"><figure><div class="ceo-portrait"><img src="/assets/oceanpower-ceo.jpg" alt={t('Polo He',locale)} width="218" height="300" loading="lazy"/></div><figcaption>{t('Directors : Polo He',locale)}</figcaption></figure><p class="ceo-intro">{t(paragraphs[0],locale)}</p><p class="ceo-motto"><strong>{t(paragraphs[1],locale)}</strong></p>{paragraphs.slice(2).map(paragraph=><p>{t(paragraph,locale)}</p>)}</div></div>

@@ -5,5 +5,5 @@ export default defineConfig({
  output: 'static', trailingSlash: 'always',
  i18n: { defaultLocale: 'zh', locales: ['zh','en','es','fr'], routing: { prefixDefaultLocale: false } },
  integrations: [{ name: 'oceanpower-chat', hooks: { 'astro:server:setup': ({server}) => chatPlugin().configureServer(server) } }],
- vite: { server: { fs: { strict: true } } },
+ vite: { build: { assetsInlineLimit: 0 }, server: { fs: { strict: true } } },
 });

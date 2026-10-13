@@ -1,0 +1,93 @@
+[
+  {
+    "category": "Fibre-reinforced composites",
+    "name": "GFRP reinforcing bars",
+    "image": "/assets/product-example-186.jpg",
+    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50032&Id=186&FId=t3:50032:3",
+    "route": "products/fibre-reinforced-composites",
+    "content": {
+      "en": [],
+      "zh": [],
+      "es": [],
+      "fr": []
+    }
+  },
+  {
+    "category": "Asphalt-based products",
+    "name": "Rad Spunrie asphalt modifier",
+    "image": "/assets/product-example-191.jpg",
+    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50035&Id=191&FId=t3:50035:3",
+    "route": "products/asphalt-based-products",
+    "content": {
+      "en": [],
+      "zh": [],
+      "es": [],
+      "fr": []
+    }
+  },
+  {
+    "category": "Cement-based products",
+    "name": "Polycarboxylate concrete admixture",
+    "image": "/assets/product-example-185.jpg",
+    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50031&Id=185&FId=t3:50031:3",
+    "route": "products/cement-based-products",
+    "content": {
+      "en": [],
+      "zh": [],
+      "es": [],
+      "fr": []
+    }
+  },
+  {
+    "category": "Safety monitoring systems",
+    "name": "KNPFT-1 fibre Bragg grating temperature sensor",
+    "image": "/category-images/monitoring.jpg",
+    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=206&FId=t3:50053:3",
+    "route": "products/safety-monitoring-systems",
+    "content": {
+      "en": [],
+      "zh": [],
+      "es": [],
+      "fr": []
+    }
+  },
+  {
+    "category": "Integrated solutions",
+    "name": "Sponge-city paving and rainwater recovery system",
+    "image": "/category-images/solutions.jpg",
+    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=383&FId=t3:50056:3",
+    "route": "products/integrated-solutions",
+    "content": {
+      "en": [],
+      "zh": [],
+      "es": [],
+      "fr": []
+    }
+  },
+  {
+    "category": "Functional additives products",
+    "name": "Architectural coating additives",
+    "image": "/category-images/additives.jpg",
+    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50065&Id=380&FId=t3:50065:3",
+    "route": "products/functional-additives",
+    "content": {
+      "en": [],
+      "zh": [],
+      "es": [],
+      "fr": []
+    }
+  },
+  {
+    "category": "Colour system products",
+    "name": "GSB 16-1517-2002 architectural colour card",
+    "image": "/category-images/colour.jpg",
+    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=330&FId=t3:50061:3",
+    "route": "products/colour-systems",
+    "content": {
+      "en": [],
+      "zh": [],
+      "es": [],
+      "fr": []
+    }
+  }
+]

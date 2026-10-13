@@ -27,5 +27,5 @@ await page.locator('#catalogue-question').fill('Question de test');await page.lo
 assert.equal(chatRequests[0].locale,'fr');assert.equal(chatRequests[0].history.length,2);assert.equal(await page.locator('.chat-stream img').count(),0);assert.match(await page.locator('#chat-mode').textContent(),/IA en ligne/);
 await page.locator('#catalogue-question').fill('Suite');await page.locator('#catalogue-form button').click();await page.waitForFunction(()=>!document.querySelector('.chat-stream').hasAttribute('aria-busy'));assert.equal(chatRequests[1].history.length,4);
 
-assert.deepEqual(failures,[]);assert.deepEqual(errors,[]);console.log('Browser checks passed: 52 routes, 104 mobile/tablet views, 4-language enquiry journeys, product return links, tabs, language switching, no page or console errors.');
+assert.deepEqual(failures,[]);assert.deepEqual(errors,[]);console.log('Browser checks passed: '+manifest.locales.length*routes.length+' routes, '+manifest.locales.length*routes.length*2+' mobile/tablet views, 4-language enquiry journeys, product return links, tabs, language switching, no page or console errors.');
 }catch(e){await fs.writeFile('tmp/site-browser/failures.json',JSON.stringify({message:e.message,failures,errors},null,2));throw e;}finally{await browser?.close();server.close();}

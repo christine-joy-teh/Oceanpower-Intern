@@ -8,6 +8,9 @@
   "routes": [
     "",
     "about",
+    "research",
+    "careers",
+    "legal",
     "business",
     "business/new-material",
     "business/food",
@@ -15,15 +18,21 @@
     "business/information",
     "news",
     "contact",
+    "products",
     "products/gfrp",
     "products/bfrp",
     "products/cfrp",
-    "demo"
+    "demo",
+    "products/rad-spunrie",
+    "products/fibre-reinforced-composites",
+    "products/asphalt-based-products",
+    "products/cement-based-products",
+    "products/safety-monitoring-systems",
+    "products/integrated-solutions",
+    "products/functional-additives",
+    "products/colour-systems"
   ],
   "pending": [
-    "business/food",
-    "business/environment",
-    "business/information",
     "news"
   ]
 }

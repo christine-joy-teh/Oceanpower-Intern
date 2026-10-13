@@ -1,0 +1,8 @@
+---
+import {t} from '../i18n/ui';
+import content from '../content/corporate.json';
+import type {Locale} from '../lib/routes';
+interface Props {locale:Locale;}
+const {locale}=Astro.props;
+---
+<section class="contact headquarters-contact" id="contact"><div><p class="eyebrow"><i></i>{t('START A CONVERSATION',locale)}</p><h2>{t('Group headquarters',locale)}</h2></div><div id="headquarters"><h3>{t('Shenzhen headquarters',locale)}</h3><p>{t(content.contact.sections[0].paragraphs[0],locale)}</p><dl><div><dt>{t('Telephone',locale)}</dt><dd><a href="tel:+8675583300666">+86 755 83300666</a></dd></div><div><dt>{t('Fax',locale)}</dt><dd>+86 755 83300726 / 83300727 / 83300728</dd></div><div><dt>{t('Hotline',locale)}</dt><dd><a href="tel:4006686126">400-6686-126</a></dd></div></dl></div></section>

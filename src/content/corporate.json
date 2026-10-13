@@ -1,0 +1,193 @@
+{
+  "about": {
+    "title": "Oceanpower Group",
+    "intro": "Technology, people and responsible development connect Oceanpower's businesses.",
+    "sections": [
+      {
+        "id": "group",
+        "title": "Group overview",
+        "paragraphs": [
+          "Headquartered in Shenzhen, Oceanpower brings together research, manufacturing and technical services. Its group profile describes research centres in Shenzhen and Shanghai and production capabilities in Guangdong and Shanghai, serving advanced construction materials, water treatment, transport and digital colour applications.",
+          "Alongside the four company profiles in Business, the group presentation covers industrial investment, intelligent water systems, transport infrastructure, energy and commodities, supply-chain cooperation and social responsibility. These activities connect research with practical applications and industry services."
+        ],
+        "source": "About_Index"
+      },
+      {
+        "id": "group-activities",
+        "title": "Wider group activities",
+        "paragraphs": [
+          "Industrial investment supports materials development and production. Intelligent water systems apply modelling and automated control to treatment operations. Transport infrastructure work includes coloured asphalt, recycled asphalt and additives for road performance.",
+          "Energy and commodities activities cover coal, iron ore, non-ferrous metals and logistics. Supply-chain cooperation supports policy research, training, standards, branding and industry exchange. Social responsibility includes public-interest standardisation and community service; the profile also describes employee participation through the company's Party organisation."
+        ],
+        "source": "About_Index"
+      },
+      {
+        "id": "leadership",
+        "title": "Ceo Message",
+        "paragraphs": [
+          "Our motivation to strive is:",
+          "\"Solution Innovation For Today And Tomorrow\"",
+          "It is a privilege for me to introduce you about our company, OCEANPOWER COPORATION.",
+          "In a world where continuous change is a reality, business is challenged to leverage upon new, complex and expensive technologies for enhancing their competitive edge and ensuring their growth. Helping customers through this challenge is OCEANPOWER's business.",
+          "OCEANPOWER helps customers leverage upon the right business processes and solutions to achieve business objectives. We have always identified emerging shifts in technology, and provided our customer with Chinese government support.",
+          "In a large corporation or a small enterprise, the success of your business is very important to us. We will work hard for you to earn your trust.We constantly invite solution for “today's and tomorrow's world”"
+        ],
+        "source": "About_CEO"
+      },
+      {
+        "id": "culture",
+        "title": "Corporate culture",
+        "paragraphs": [
+          "Oceanpower views its culture as a shared asset that develops through the work of its subsidiaries. Values are reflected in management, service, strategy and everyday practice.",
+          "The company encourages teamwork, perseverance, enthusiasm and personal development. Employee activities and physical exercise support cooperation and wellbeing, while continued learning strengthens the organisation."
+        ],
+        "source": "About_Culture"
+      },
+      {
+        "id": "environmental-policy",
+        "title": "Environmental policy",
+        "paragraphs": [
+          "Environmental responsibility is part of Oceanpower's business operations and applies to employees, the workplace and the wider community. Product and project decisions consider environmental effects, and suppliers and subcontractors are encouraged to provide responsible products.",
+          "The policy calls for compliance with environmental laws, less waste and discharge, improved processes, and efficient use of energy, natural resources and recycled materials. Environmental management should cover new developments and improve continuously with leadership involvement and employee participation.",
+          "Training, emergency preparedness, recognition of employee contributions and open dialogue with external organisations support this commitment. Oceanpower welcomes feedback on its environmental performance."
+        ],
+        "source": "About_Policy"
+      }
+    ]
+  },
+  "research": {
+    "title": "Research and development",
+    "intro": "Connecting materials science, environmental engineering and practical industry needs.",
+    "sections": [
+      {
+        "id": "platform",
+        "title": "Research platform",
+        "paragraphs": [
+          "Oceanpower's research system brings together its research institute, the Engineering Research Center of Architectural Coatings and a postdoctoral programme. It connects industry, teaching and research to develop technical expertise and support practical applications.",
+          "Research themes include civil engineering materials, polymers, environmental science, optical-electrical-mechanical technology and digital colour. Work also addresses municipal water treatment and the development of national and international standards.",
+          "The research plan emphasises laboratory investment, equipment development, researcher training and incentives for scientific achievement."
+        ],
+        "source": "Research_RDP"
+      },
+      {
+        "id": "institute",
+        "title": "Central Research Institute",
+        "paragraphs": [
+          "The Central Research Institute studies how material structure affects function, with a focus on polymer design and performance for industrial applications.",
+          "The institute's overview describes controlled testing environments and equipment for viscosity, tensile performance, UV spectroscopy and accelerated UV ageing. Its work connects laboratory evaluation with applied materials research, technical publications and construction-sector research topics."
+        ],
+        "source": "Research_CRI"
+      },
+      {
+        "id": "standards",
+        "title": "Standardisation expertise",
+        "paragraphs": [
+          "The legacy Standard Institute overview describes work across colour, ultraviolet disinfection, water-treatment equipment, asphalt concrete, civil-engineering composites and reinforcing fibres, and colour reference materials.",
+          "Activities include proposing, developing and revising standards, coordinating technical work, supporting measurement consistency, promoting implementation and exchanging knowledge with industry and international organisations.",
+          "Colour work covers specification and measurement; water-related work covers disinfection and treatment equipment; construction-related work covers material performance, testing and quality control."
+        ],
+        "source": "Research_SI"
+      },
+      {
+        "id": "environment",
+        "title": "Research environment",
+        "paragraphs": [
+          "The legacy research-environment page features the production technology centre in Heyuan, Guangdong. It complements the group's laboratory research with facilities for development and production."
+        ],
+        "source": "Research_RDE"
+      }
+    ]
+  },
+  "careers": {
+    "title": "People and careers",
+    "intro": "Developing people, sharing knowledge and growing together.",
+    "sections": [
+      {
+        "id": "talent",
+        "title": "Talent strategy",
+        "paragraphs": [
+          "Oceanpower's people-centred philosophy treats employees as a driving force for development. Managers are responsible for identifying, supporting and developing talent, with career planning that considers individual strengths, interests and professional skills."
+        ],
+        "source": "Human_TS"
+      },
+      {
+        "id": "management",
+        "title": "Management philosophy",
+        "paragraphs": [
+          "Oceanpower welcomes diverse talent in management, technology and marketing. Its people-centred approach includes career planning based on individual strengths, interests and character, alongside professional training and physical wellbeing. The original strategy also describes employee share ownership as a way to share the company’s progress and success."
+        ],
+        "source": "Human_TS"
+      },
+      {
+        "id": "recruitment",
+        "title": "Recruitment and selection",
+        "paragraphs": [
+          "The eight qualities highlighted in the talent strategy are ambition, knowledge and continuous learning, passion, responsibility, efficiency, perseverance, teamwork and tolerance, and physical and mental wellbeing. Employees are encouraged to face challenges, acknowledge mistakes, learn from others and work with commitment."
+        ],
+        "source": "Human_TS"
+      },
+      {
+        "id": "development",
+        "title": "Career development",
+        "paragraphs": [
+          "The original promotion process includes publishing vacancies internally, written applications and a statement supporting the application, an HR assessment of conduct, ability, attendance and skills, and an open presentation by shortlisted candidates before appointment.",
+          "Role changes consider personal strengths and interests, untapped potential, new decisions and projects, market expansion and the effective allocation of people. Job changes also take account of capability, performance, company needs and the professional skills required for the position."
+        ],
+        "source": "Human_TS"
+      },
+      {
+        "id": "joining-us",
+        "title": "Joining us",
+        "paragraphs": [
+          "Complete your application below. Download saves a text file to your device; it does not send an application to Oceanpower."
+        ],
+        "source": "Human_JoiningUs"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Website information",
+    "intro": "A summary of the declarations published on the original Oceanpower website.",
+    "sections": [
+      {
+        "id": "rights",
+        "title": "Content and intellectual property",
+        "paragraphs": [
+          "The original declaration assigns website content, trademarks, trade names and the oceanpower.com domain to Oceanpower or the relevant rights holders. It requires written permission for unauthorised copying, publication, adaptation or use."
+        ],
+        "source": "Contact_Declaration"
+      },
+      {
+        "id": "limitations",
+        "title": "Information and external links",
+        "paragraphs": [
+          "The declaration does not guarantee the accuracy, completeness, timeliness or uninterrupted availability of the original website. Content may change. External links are provided for convenience and do not imply endorsement; users decide whether to visit them."
+        ],
+        "source": "Contact_Declaration"
+      },
+      {
+        "id": "privacy",
+        "title": "Privacy and scope",
+        "paragraphs": [
+          "The original statement describes consent-based handling of user information, with disclosure exceptions for user authorisation, legal requirements, judicial decisions, government requests and violations affecting Oceanpower's interests. It identifies the laws of the People's Republic of China as applicable to that website.",
+          "This summary describes the legacy site's declaration. The enquiry tool on this prototype creates a local draft and does not submit an enquiry; its own on-screen notices explain that behaviour."
+        ],
+        "source": "Contact_Declaration"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Group headquarters",
+    "intro": "For group-level enquiries, the original Oceanpower website lists the following headquarters details.",
+    "sections": [
+      {
+        "id": "headquarters",
+        "title": "Shenzhen headquarters",
+        "paragraphs": [
+          "Blocks C and D, 7th and 8th floors, Building F3.8, Tian'an Industrial Development Area, Chegongmiao, Shenzhen, China. Postal code: 518040."
+        ],
+        "source": "Contact_Index"
+      }
+    ]
+  }
+}

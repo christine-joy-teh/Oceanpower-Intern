@@ -1,0 +1,18 @@
+---
+import content from '../content/corporate.json';
+import JoiningForm from './JoiningForm.astro';
+import CeoMessage from './CeoMessage.astro';
+import { t } from '../i18n/ui';
+import { type Locale } from '../lib/routes';
+interface Props {locale:Locale;page:keyof typeof content;embedded?:boolean;}
+const {locale,page,embedded=false}=Astro.props;
+const document=content[page];
+const sourceUrl=(key:string)=>'http://www.oceanpower.com/pages/'+(key==='Human_JoiningUs'?'Feedback_01':key==='About_Index'?'TuWen_02':key.startsWith('Research_')?'News_05':'TuWen_01')+'_En.aspx?'+key+'_';
+---
+<section class="section corporate-content" data-corporate-page={page}>
+  <header class="corporate-heading"><p class="eyebrow dark">OCEANPOWER</p>{embedded?<h2>{t(document.title,locale)}</h2>:<h1>{t(document.title,locale)}</h1>}<p>{t(document.intro,locale)}</p></header>
+  <div class="corporate-layout">
+    <nav class="corporate-toc" aria-label={t(document.title,locale)}>{document.sections.map(section=><a href={'#'+section.id}>{t(section.title,locale)}</a>)}</nav>
+    <div class="corporate-articles">{document.sections.map(section=><section class:list={["corporate-article",{"ceo-article":section.id==='leadership'}]} id={section.id}><h2>{t(section.title,locale)}</h2>{section.id==='leadership'?<CeoMessage locale={locale} paragraphs={section.paragraphs}/>:section.paragraphs.map(paragraph=><p>{t(paragraph,locale)}</p>)}{section.id==='joining-us'&&<JoiningForm locale={locale}/>} {page==='contact'&&<dl class="headquarters-details"><div><dt>{t('Telephone',locale)}</dt><dd><a href="tel:+8675583300666">+86 755 83300666</a></dd></div><div><dt>{t('Fax',locale)}</dt><dd>+86 755 83300726 / 83300727 / 83300728</dd></div><div><dt>{t('Hotline',locale)}</dt><dd><a href="tel:4006686126">400-6686-126</a></dd></div></dl>}<a class="corporate-source" href={sourceUrl(section.source)} target="_blank" rel="noopener noreferrer">{t(section.id==='joining-us'?'Open job application':'Read the original source',locale)} <span aria-hidden="true">↗</span></a></section>)}</div>
+  </div>
+</section>
