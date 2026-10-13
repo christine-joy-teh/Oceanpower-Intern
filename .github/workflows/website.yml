@@ -1,0 +1,62 @@
+name: Website build and deployment
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: website-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      ASTRO_TELEMETRY_DISABLED: 1
+      SITE_URL: ${{ vars.SITE_URL || 'https://www.oceanpower.com' }}
+      PUBLIC_INDEXABLE: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # Preview integration tests require the generated dist files.
+      - run: npm run build
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:site
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-validation
+          path: |
+            dist
+            tmp/site-browser
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
+    needs: validate
+    runs-on: ubuntu-latest
+    environment: cloudflare-pages
+    env:
+      ASTRO_TELEMETRY_DISABLED: 1
+      SITE_URL: ${{ vars.SITE_URL || 'https://www.oceanpower.com' }}
+      PUBLIC_INDEXABLE: ${{ vars.PUBLIC_INDEXABLE || 'false' }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_PAGES_PROJECT: ${{ vars.CLOUDFLARE_PAGES_PROJECT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy validated static build
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          test -n "$CLOUDFLARE_PAGES_PROJECT"
+          npx --yes wrangler@4 pages deploy dist --project-name "$CLOUDFLARE_PAGES_PROJECT" --branch main

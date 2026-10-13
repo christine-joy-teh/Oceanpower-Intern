@@ -1,0 +1,1 @@
+export default { content: ['./src/**/*.{astro,html,js,ts}'], corePlugins: { preflight: false }, theme: { extend: { colors: { ink:'#00344f', blue:'#0066A6', aqua:'#00B4D8', gold:'#FFB703', green:'#06A77D', paper:'#f6f5f0' }, fontFamily: { sans:['Manrope','Arial','sans-serif'] } } }, plugins: [] };

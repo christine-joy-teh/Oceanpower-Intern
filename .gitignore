@@ -7,3 +7,12 @@ __pycache__/
 .pytest_cache/
 coverage/
 docs/
+# Astro build and local tooling
+dist/
+.astro/
+.wrangler/
+%SystemDrive%/
+
+# Public copies are generated from the existing catalogue assets.
+public/assets/
+public/catalogue.pdf

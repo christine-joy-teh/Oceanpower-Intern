@@ -1,0 +1,9 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { t } from '../i18n/ui';
+import { urlFor, type Locale } from '../lib/routes';
+interface Props { locale: Locale; route: string; }
+const {locale,route}=Astro.props;
+const links=[['Business','business'],['About','about'],['News','news'],['Contact','contact']];
+---
+<header class="site-header"><a class="brand" href={urlFor(locale)} aria-label={t('Home',locale)}><span class="brand-mark">O</span><span>OCEANPOWER<small>{t('NEW MATERIAL TECHNOLOGY',locale)}</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">{t('Menu',locale)}</button><nav id="site-nav" aria-label={t('Main navigation',locale)}>{links.map(([label,path])=><a href={urlFor(locale,path)} aria-current={route===path?'page':undefined}>{t(label,locale)}</a>)}<button type="button" class="mobile-quote" data-rfq-start>{t('Prepare enquiry draft',locale)}</button></nav><LanguageSwitcher locale={locale} route={route}/><button class="header-cta" type="button" data-rfq-start>{t('Prepare enquiry draft',locale)} <span aria-hidden="true">→</span></button></header>
