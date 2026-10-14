@@ -59,7 +59,7 @@ import '../styles/admin.css';
             <input type="hidden" name="id" />
             <div class="field-row">
               <label>内容类型<select name="kind" required><option value="page">页面</option><option value="business">业务</option><option value="product">产品</option><option value="news">新闻</option><option value="document">资料</option></select></label>
-              <label>网址名称<input name="slug" required pattern="[a-z0-9-]+" placeholder="coastal-gfrp-rebar" /><small>仅使用小写英文字母、数字及连字符。</small></label>
+              <label>网址名称<input name="slug" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="coastal-gfrp-rebar" /><small>仅使用小写英文字母、数字及连字符。</small></label>
               <label>发布状态<select name="status"><option value="draft">草稿</option><option value="published">已发布</option></select></label>
               <label>显示顺序<input name="sortOrder" type="number" value="0" /></label>
             </div>

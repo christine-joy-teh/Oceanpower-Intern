@@ -93,6 +93,15 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 - Escape closes the chat panel and focus returns to the launcher.
 - Reduced-motion mode supported.
 
+## Responsive behavior
+
+- Phone and tablet layouts are first-class states for both the public website and content manager.
+- Public navigation collapses before links become crowded; editorial grids become one column below 850 px.
+- The content manager uses a two-column index at tablet width, then a single vertical workflow below 700 px.
+- Phone forms use 16 px controls to prevent automatic iOS zoom, with at least 44 px touch targets and 8 px separation between adjacent actions.
+- Long titles, URLs and filenames must wrap inside their own column without causing viewport-level horizontal scrolling.
+- At narrow phone widths, destructive and primary editor actions stack to avoid cramped or accidental taps.
+
 ## Project-specific bans
 
 - No API keys in browser JavaScript.
@@ -104,6 +113,7 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-10-14 - Hardened phone and tablet layouts for the public website and Chinese content manager, with automated overflow and touch-target checks.
 2026-10-13 - Switched the content-manager interface and operational messages to Chinese-first copy with a Simplified Chinese typeface.
 2026-10-13 - Added the local MySQL content-manager design for bilingual pages, businesses, products, news and documents.
 2026-09-29 - Integrated catalogue credentials, partner artwork, fiber specification tabs and the separate buyer-demo page with the existing RFQ workspace.
