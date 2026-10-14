@@ -24,9 +24,16 @@ MYSQL_PORT=3306
 MYSQL_DATABASE=oceanpower_cms
 MYSQL_USER=oceanpower_cms
 MYSQL_PASSWORD=YOUR_LOCAL_PASSWORD
+MYSQL_SSL_MODE=DISABLED
 CMS_ADMIN_USERNAME=admin
 CMS_ADMIN_PASSWORD=A_LOCAL_PASSWORD_WITH_8_OR_MORE_CHARACTERS
 ```
+
+For a hosted MySQL service that requires TLS, set `MYSQL_SSL_MODE=REQUIRED`.
+This encrypts the connection but does not verify a private certificate authority.
+For verified TLS, download the provider CA certificate outside Git, set
+`MYSQL_SSL_MODE=VERIFY_IDENTITY`, and point `MYSQL_SSL_CA_FILE` to that file.
+Never commit database passwords or provider certificates copied from a private console.
 
 `.env` is ignored by Git. Never place real credentials in source files, screenshots or chat messages.
 
@@ -56,3 +63,22 @@ Uploaded JPG, PNG, WebP, GIF and PDF files are stored in the ignored local `uplo
 - Deleting content is permanent after the browser confirmation.
 - Uploaded files remain on this computer. Online hosting will need persistent file storage or object storage.
 - Cloudflare Pages cannot connect directly to a normal MySQL server. Online deployment will require a Node-capable backend host and a reachable managed MySQL database.
+
+## Render pilot deployment
+
+Create a Render **Web Service** from this repository and use:
+
+```text
+Build command: npm ci && npm run build
+Start command: node tools/preview.mjs
+Health check path: /api/health/
+```
+
+Set `HOST=0.0.0.0`; Render supplies `PORT` automatically. Add the `MYSQL_*`,
+`CMS_ADMIN_*`, `SITE_URL` and `PUBLIC_INDEXABLE` environment variables in the
+Render dashboard. Do not copy `.env` into Git. Start with
+`PUBLIC_INDEXABLE=false` while the pilot is being reviewed.
+
+The current `uploads/` directory is local filesystem storage. Render instances
+can replace that filesystem during deploys, so uploaded images and documents
+need a persistent disk or object-storage integration before staff rely on them.

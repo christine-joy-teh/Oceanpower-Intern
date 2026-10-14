@@ -15,34 +15,47 @@ function configured() {
   return Boolean(process.env.MYSQL_DATABASE && process.env.MYSQL_USER);
 }
 
-function getPool() {
-  if (!configured()) throw new Error('MySQL is not configured. Add the MYSQL_* values to .env.');
-  if (!pool) {
-    pool = mysql.createPool({
-      host: process.env.MYSQL_HOST || '127.0.0.1',
-      port: Number(process.env.MYSQL_PORT || 3306),
-      database: process.env.MYSQL_DATABASE,
-      user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_PASSWORD || '',
-      connectionLimit: 6,
-      charset: 'utf8mb4',
-      timezone: 'Z',
-      decimalNumbers: true,
-    });
+function sslConfig() {
+  const mode = String(process.env.MYSQL_SSL_MODE || '').trim().toUpperCase();
+  if (!mode || mode === 'DISABLED') return undefined;
+  const caFile = String(process.env.MYSQL_SSL_CA_FILE || '').trim();
+  if (caFile) return { ca: fs.readFileSync(path.resolve(caFile), 'utf8'), rejectUnauthorized: true };
+  if (mode === 'VERIFY_CA' || mode === 'VERIFY_IDENTITY') {
+    throw new Error('MYSQL_SSL_CA_FILE is required for verified MySQL TLS.');
   }
-  return pool;
+  return { rejectUnauthorized: false };
 }
 
-async function migrate() {
-  const connection = await mysql.createConnection({
+function connectionOptions(extra = {}) {
+  const ssl = sslConfig();
+  return {
     host: process.env.MYSQL_HOST || '127.0.0.1',
     port: Number(process.env.MYSQL_PORT || 3306),
     database: process.env.MYSQL_DATABASE,
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD || '',
     charset: 'utf8mb4',
+    ...(ssl ? { ssl } : {}),
+    ...extra,
+  };
+}
+
+function getPool() {
+  if (!configured()) throw new Error('MySQL is not configured. Add the MYSQL_* values to .env.');
+  if (!pool) {
+    pool = mysql.createPool(connectionOptions({
+      connectionLimit: 6,
+      timezone: 'Z',
+      decimalNumbers: true,
+    }));
+  }
+  return pool;
+}
+
+async function migrate() {
+  const connection = await mysql.createConnection(connectionOptions({
     multipleStatements: true,
-  });
+  }));
   try {
     await connection.query(fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8'));
   } finally {

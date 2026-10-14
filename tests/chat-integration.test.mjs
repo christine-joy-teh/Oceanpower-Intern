@@ -55,3 +55,11 @@ test('production preview serves the built site and chatbot, not project sources'
   for(const file of ['/server.js','/.env','/knowledge/oceanpower-approved-knowledge.md'])assert.equal((await fetch(base+file)).status,404);
  }finally{await new Promise(resolve=>server.close(resolve));}
 });
+
+test('production preview supports local defaults and Render listen settings',async()=>{
+ const {previewListenOptions}=await import('../tools/preview.mjs');
+ assert.deepEqual(previewListenOptions(['node','preview.mjs'],{}),{port:8000,host:'127.0.0.1'});
+ assert.deepEqual(previewListenOptions(['node','preview.mjs'],{PORT:'10000',HOST:'0.0.0.0'}),{port:10000,host:'0.0.0.0'});
+ assert.deepEqual(previewListenOptions(['node','preview.mjs','--port','4321'],{PORT:'10000',HOST:'0.0.0.0'}),{port:4321,host:'0.0.0.0'});
+ assert.throws(()=>previewListenOptions(['node','preview.mjs'],{PORT:'invalid'}),/PORT/);
+});
