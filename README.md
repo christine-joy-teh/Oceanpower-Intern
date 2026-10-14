@@ -1,5 +1,7 @@
 # Oceanpower multilingual website
 
+The optional local MySQL content manager is documented in [CMS_SETUP.md](CMS_SETUP.md). It provides a single administrator login for Chinese and English products, news, page content, business descriptions and downloadable documents.
+
 Astro static site migration based on the supplied oceanpower.com 网站焕新的完整闭环方案.docx. The existing FRP design, images and catalogue specifications are retained. See [TECHNICAL-AUDIT.md](TECHNICAL-AUDIT.md) for the before/after audit and decisions.
 
 ## Run locally

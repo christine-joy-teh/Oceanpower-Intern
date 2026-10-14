@@ -4,4 +4,4 @@ import type { Locale } from '../lib/routes';
 interface Props {locale:Locale;}
 const {locale}=Astro.props;
 ---
-<ContentSection selector=".hero" locale={locale}/>
+<div data-cms-entry="page:home"><ContentSection selector=".hero" locale={locale}/></div>

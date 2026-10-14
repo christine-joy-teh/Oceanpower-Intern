@@ -5,9 +5,9 @@ export default function chatPlugin() {
   const attach = server => {
     const { handleApi } = require('../server.js');
     server.middlewares.use((req, res, next) => {
-      if (/^\/api\/(chat|health)\/?$/.test(req.url || '')) {
-        req.url = req.url.replace(/\/$/, '');
-        if (process.env.CHAT_BACKEND_TOKEN) req.headers.authorization = 'Bearer ' + process.env.CHAT_BACKEND_TOKEN;
+      if (/^\/api\/(?:chat|health)(?:\/?(?:\?.*)?)?$|^\/api\/cms\//.test(req.url || '')) {
+        if (/^\/api\/(chat|health)\/?$/.test(req.url || '')) req.url = req.url.replace(/\/$/, '');
+        if (/^\/api\/(chat|health)/.test(req.url || '') && process.env.CHAT_BACKEND_TOKEN) req.headers.authorization = 'Bearer ' + process.env.CHAT_BACKEND_TOKEN;
         return handleApi(req, res, next);
       }
       next();

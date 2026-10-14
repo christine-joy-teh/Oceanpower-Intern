@@ -1,7 +1,9 @@
 import { createRequire } from 'node:module';
 // Offline validation: never call a developer's paid AI provider.
 Object.assign(process.env,{CHAT_API_URL:'',CHAT_API_KEY:'',CHAT_MODEL:'',CHAT_BACKEND_TOKEN:'',ALLOWED_ORIGINS:''});
-const { handleApi }=createRequire(import.meta.url)('../server.js');
+const require=createRequire(import.meta.url);
+const {handleApi}=require('../server.js');
+const cmsRepository=require('../cms/repository.js');
 import manifest from '../src/content/routes.json' with { type: 'json' };
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -28,4 +30,4 @@ assert.equal(chatRequests[0].locale,'fr');assert.equal(chatRequests[0].history.l
 await page.locator('#catalogue-question').fill('Suite');await page.locator('#catalogue-form button').click();await page.waitForFunction(()=>!document.querySelector('.chat-stream').hasAttribute('aria-busy'));assert.equal(chatRequests[1].history.length,4);
 
 assert.deepEqual(failures,[]);assert.deepEqual(errors,[]);console.log('Browser checks passed: '+manifest.locales.length*routes.length+' routes, '+manifest.locales.length*routes.length*2+' mobile/tablet views, 4-language enquiry journeys, product return links, tabs, language switching, no page or console errors.');
-}catch(e){await fs.writeFile('tmp/site-browser/failures.json',JSON.stringify({message:e.message,failures,errors},null,2));throw e;}finally{await browser?.close();server.close();}
+}catch(e){await fs.writeFile('tmp/site-browser/failures.json',JSON.stringify({message:e.message,failures,errors},null,2));throw e;}finally{await browser?.close();await new Promise(resolve=>server.close(resolve));await cmsRepository.close();}

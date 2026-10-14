@@ -55,6 +55,16 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 - Buyer-scenario controls.
 - Accessible chatbot with loading, success, source, fallback, and error states.
 - Expandable two-column enquiry workspace with conversational collection and an editable RFQ draft.
+- Password-protected content manager using the same industrial editorial palette, typography and accessibility floor.
+
+## Content manager
+
+- The administration screen is a dense working interface: content types on the left, records in the middle and the editor on the right.
+- Chinese and English fields are visible together so staff can compare translations before saving.
+- Draft and published states use text labels rather than color alone.
+- File uploads, empty lists, database errors and successful saves have explicit status text.
+- Mobile collapses navigation, records and editor into a single vertical flow.
+- The content manager is always `noindex` and never exposes database or account credentials to browser JavaScript.
 
 ## Enquiry workspace
 
@@ -94,6 +104,8 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-10-13 - Switched the content-manager interface and operational messages to Chinese-first copy with a Simplified Chinese typeface.
+2026-10-13 - Added the local MySQL content-manager design for bilingual pages, businesses, products, news and documents.
 2026-09-29 - Integrated catalogue credentials, partner artwork, fiber specification tabs and the separate buyer-demo page with the existing RFQ workspace.
 2026-09-29 - Refined explicit RFQ field states, mobile review, and manual-copy fallback.
 2026-09-29 - Added the bilingual, editable in-memory RFQ workspace and confirmation states.

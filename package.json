@@ -4,9 +4,9 @@
   "private": true,
   "description": "Oceanpower international website and catalogue-grounded AI sales assistant pilot",
   "scripts": {
-    "start": "astro dev --host 127.0.0.1 --port 8000",
-    "check": "node --check server.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check translations.js && node --check specifications.js && node --check navigation.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
-    "test": "node --test tests/server.test.js tests/rfq.test.js tests/chat-integration.test.mjs",
+    "start": "node tools/preview.mjs --port 8000",
+    "check": "node --check server.js && node --check cms/security.js && node --check cms/repository.js && node --check cms/router.js && node --check src/scripts/admin.js && node --check src/scripts/cms-public.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check translations.js && node --check specifications.js && node --check navigation.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/cms.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
+    "test": "node --test tests/server.test.js tests/rfq.test.js tests/chat-integration.test.mjs tests/cms.test.js",
     "test:browser": "node tests/browser-rfq.e2e.js",
     "test:browser:playwright": "node tests/rfq.browser.js",
     "start:legacy": "node server.js",
@@ -15,8 +15,10 @@
     "preview": "node tools/preview.mjs",
     "check:legacy": "node --check server.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check translations.js && node --check specifications.js && node --check navigation.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
     "test:site": "node tools/site-browser.mjs",
+    "cms:migrate": "node tools/cms-migrate.mjs",
+    "cms:seed": "node tools/cms-seed.mjs",
     "predev": "node tools/prepare-public.mjs",
-    "prestart": "node tools/prepare-public.mjs",
+    "prestart": "npm run build",
     "prepreview": "node tools/prepare-public.mjs"
   },
   "engines": {
@@ -31,5 +33,8 @@
     "playwright": "^1.64.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "mysql2": "^3.24.5"
   }
 }

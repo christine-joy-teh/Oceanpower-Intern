@@ -1,6 +1,7 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createCmsRouter } = require('./cms/router');
 
 loadEnv(path.join(__dirname, '.env'));
 
@@ -36,6 +37,7 @@ const PUBLIC_FILES = new Map([
 ]);
 const PUBLIC_ASSET_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.svg', '.webp']);
 const DRAFT_SOURCE_NOTE = 'Draft catalogue extraction; engineering and sales approval pending';
+const handleCms = createCmsRouter();
 
 const SYSTEM_PROMPT = `You are Oceanpower AI, a bilingual pre-sales assistant for Jiangsu Oceanpower New Material Technology Co., Ltd.
 
@@ -577,9 +579,10 @@ function serveStatic(request, response) {
 }
 
 function handleApi(request, response, next = () => sendJson(response, 404, { error: 'Not found' })) {
-  if (request.url?.startsWith('/api/') && process.env.CHAT_BACKEND_TOKEN && request.headers.authorization !== 'Bearer ' + process.env.CHAT_BACKEND_TOKEN) {
+  if (/^\/api\/(chat|health)\/?(?:\?|$)/.test(request.url || '') && process.env.CHAT_BACKEND_TOKEN && request.headers.authorization !== 'Bearer ' + process.env.CHAT_BACKEND_TOKEN) {
     return sendJson(response, 401, { error: 'Unauthorized' });
   }
+  if (request.url?.startsWith('/api/cms/')) return handleCms(request, response);
   if (request.method === 'GET' && request.url === '/api/health') {
     const notice = configurationNotice('en');
     return sendJson(response, 200, {

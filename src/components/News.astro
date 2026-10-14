@@ -1,0 +1,10 @@
+---
+import type {Locale} from '../lib/routes';
+const {locale}=Astro.props as {locale:Locale};
+---
+<section class="section cms-news" data-cms-news>
+  <p class="eyebrow dark">OCEANPOWER</p>
+  <h1>{locale==='zh'?'新闻动态':'News'}</h1>
+  <p>{locale==='zh'?'公司发布的最新消息将显示在这里。':'Published company updates will appear here.'}</p>
+  <div class="cms-entry-grid"><p class="cms-empty">{locale==='zh'?'目前没有已发布的新闻。':'No published news yet.'}</p></div>
+</section>

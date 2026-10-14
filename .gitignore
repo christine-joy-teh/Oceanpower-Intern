@@ -2,6 +2,7 @@
 node_modules/
 npm-debug.log*
 tmp/
+uploads/
 __pycache__/
 *.py[cod]
 .pytest_cache/

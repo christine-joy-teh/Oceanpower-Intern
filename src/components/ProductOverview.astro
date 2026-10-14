@@ -7,11 +7,13 @@ const {locale}=Astro.props as {locale:Locale};
 <section class="section product-category-overview">
 <p class="eyebrow dark">OCEANPOWER</p><h1>{t('Products',locale)}</h1>
 <p>{t('Explore one featured product or solution from each Oceanpower materials category.',locale)}</p>
+<section class="cms-managed-section" aria-labelledby="cms-products-heading" hidden data-cms-products><h2 id="cms-products-heading">{locale==='zh'?'最新产品':'Latest products'}</h2><div class="cms-entry-grid"></div></section>
 <div class="product-examples">{products.map(product=><article>
 {product.image?<img src={product.image} alt={t(product.name,locale)} width="480" height="320" loading="lazy"/>:<div class="category-cover" aria-hidden="true">{t(product.category,locale)}</div>}
 <div class="example-content"><h2 class="category">{t(product.category,locale)}</h2>
 <a href={product.route?urlFor(locale,product.route):product.source} target={product.route?undefined:'_blank'} rel={product.route?undefined:'noopener noreferrer'}>{t('View more',locale)} <span aria-hidden="true">{product.route?'→':'↗'}</span></a></div>
 </article>)}</div>
+<section class="cms-managed-section" aria-labelledby="cms-documents-heading" hidden data-cms-documents><h2 id="cms-documents-heading">{locale==='zh'?'下载文件':'Downloads'}</h2><div class="cms-document-list"></div></section>
 </section>
 <style>
 .product-category-overview h1{font-size:clamp(2.5rem,6vw,5rem);margin:1rem 0}.product-category-overview>p{max-width:780px}

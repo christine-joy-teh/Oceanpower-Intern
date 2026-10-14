@@ -1,0 +1,101 @@
+---
+import '../styles/admin.css';
+---
+<!doctype html>
+<html lang="zh-CN" style="font-family:'Noto Sans SC','Microsoft YaHei',sans-serif">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>网站内容管理 | 海川集团</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#admin-main">跳至主要内容</a>
+  <main id="admin-main">
+    <section id="login-view" class="login-shell" aria-labelledby="login-heading">
+      <div class="login-brand"><span>O</span><strong>OCEANPOWER</strong><small>网站内容管理</small></div>
+      <form id="login-form" class="login-form">
+        <p class="eyebrow">内容管理后台</p>
+        <h1 id="login-heading">登录后更新网站内容</h1>
+        <p>请使用网站负责人提供的内部试用账号。</p>
+        <label for="admin-username">用户名</label>
+        <input id="admin-username" name="username" autocomplete="username" required />
+        <label for="admin-password">密码</label>
+        <input id="admin-password" name="password" type="password" autocomplete="current-password" required />
+        <button type="submit">登录</button>
+        <p id="login-status" class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section id="admin-view" class="admin-shell" hidden>
+      <header class="admin-header">
+        <a href="/" class="admin-brand"><span>O</span><strong>Oceanpower 网站内容管理</strong></a>
+        <div><span id="signed-in-user"></span><button id="logout-button" type="button">退出登录</button></div>
+      </header>
+      <div class="admin-grid">
+        <aside class="content-nav">
+          <p class="nav-label">网站栏目</p>
+          <nav aria-label="内容类型">
+            <button type="button" data-kind="page">首页与公司页面</button>
+            <button type="button" data-kind="business">业务介绍</button>
+            <button type="button" data-kind="product">产品</button>
+            <button type="button" data-kind="news">新闻</button>
+            <button type="button" data-kind="document">下载资料</button>
+          </nav>
+          <button id="new-entry" class="new-entry" type="button">新增内容</button>
+        </aside>
+
+        <section class="entry-index" aria-labelledby="entries-heading">
+          <div class="index-heading"><div><p class="eyebrow">内容列表</p><h1 id="entries-heading">产品</h1></div><span id="entry-count"></span></div>
+          <div id="entry-list" class="entry-list" aria-live="polite"></div>
+        </section>
+
+        <section class="editor" aria-labelledby="editor-heading">
+          <header><p class="eyebrow">内容编辑</p><h2 id="editor-heading">新增内容</h2><p>本试用版可编辑中文和英文。西班牙语及法语继续使用网站现有内容。</p></header>
+          <form id="entry-form">
+            <input type="hidden" name="id" />
+            <div class="field-row">
+              <label>内容类型<select name="kind" required><option value="page">页面</option><option value="business">业务</option><option value="product">产品</option><option value="news">新闻</option><option value="document">资料</option></select></label>
+              <label>网址名称<input name="slug" required pattern="[a-z0-9-]+" placeholder="coastal-gfrp-rebar" /><small>仅使用小写英文字母、数字及连字符。</small></label>
+              <label>发布状态<select name="status"><option value="draft">草稿</option><option value="published">已发布</option></select></label>
+              <label>显示顺序<input name="sortOrder" type="number" value="0" /></label>
+            </div>
+            <div class="translation-grid">
+              <fieldset><legend>英文内容</legend>
+                <label>英文标题<input name="titleEn" maxlength="255" /></label>
+                <label>英文摘要<textarea name="summaryEn" rows="3"></textarea></label>
+                <label>英文正文<textarea name="bodyEn" rows="10"></textarea></label>
+              </fieldset>
+              <fieldset lang="zh-CN"><legend>中文内容</legend>
+                <label>标题<input name="titleZh" maxlength="255" /></label>
+                <label>摘要<textarea name="summaryZh" rows="3"></textarea></label>
+                <label>正文<textarea name="bodyZh" rows="10"></textarea></label>
+              </fieldset>
+            </div>
+            <details class="advanced-fields">
+              <summary>产品规格与高级设置</summary>
+              <label>规格数据<textarea name="specs" rows="6" placeholder="Diameter | 直径 | 16 | mm | Catalogue p. 11"></textarea><small>每行一项：英文名称 | 中文名称 | 数值 | 单位 | 资料来源。</small></label>
+              <label>JSON 扩展设置<textarea name="metadata" rows="5" placeholder='{"category":"GFRP"}'></textarea><small>可选填产品分类、联系电话或外部链接等资料。</small></label>
+              <label>发布日期<input name="publishedAt" type="datetime-local" /></label>
+            </details>
+            <div class="upload-grid">
+              <label>封面图片<input id="image-upload" type="file" accept="image/jpeg,image/png,image/webp,image/gif" /><small id="image-name">尚未选择图片。</small></label>
+              <label>可下载文件<input id="document-upload" type="file" accept="application/pdf" /><small id="document-name">尚未选择文件。</small></label>
+            </div>
+            <input type="hidden" name="featuredImageId" /><input type="hidden" name="attachmentId" />
+            <div class="editor-actions">
+              <button id="save-entry" type="submit">保存内容</button>
+              <button id="delete-entry" class="danger" type="button" hidden>删除内容</button>
+            </div>
+            <p id="editor-status" class="form-status" role="status" tabindex="-1"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="../scripts/admin.js"></script>
+</body>
+</html>

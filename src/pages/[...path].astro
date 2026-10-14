@@ -13,6 +13,7 @@ import BusinessCards from '../components/BusinessCards.astro';
 import BusinessProfile from '../components/BusinessProfile.astro';
 import CorporateContent from '../components/CorporateContent.astro';
 import HeadquartersContact from '../components/HeadquartersContact.astro';
+import News from '../components/News.astro';
 import corporate from '../content/corporate.json';
 import businesses from '../content/businesses.json';
 import ContentSection from '../components/ContentSection.astro';
@@ -42,6 +43,7 @@ const product=['products/gfrp','products/bfrp','products/cfrp'].includes(route)?
 {route==='business/new-material'&&<><ProductGrid locale={locale}/><ProductComparison locale={locale}/><Applications locale={locale}/><ContentSection selector="#rfq" locale={locale}/></>}
 {pending&&<section class="section pending-page"><p class="eyebrow dark">OCEANPOWER</p><h1>{t(names[route],locale)}</h1><h2>{t('Content awaiting review',locale)}</h2><p>{description}</p><a class="button" href={urlFor(locale,'business')}>{t('Business',locale)} →</a></section>}
 {route==='contact'&&<><section class="section page-heading"><h1>{t('Contact',locale)}</h1></section><HeadquartersContact locale={locale}/><ContentSection selector="#rfq" locale={locale}/></>}
+{route==='news'&&<News locale={locale}/>}
 {product&&<div class="product-detail"><ContentSection page={product as 'gfrp'|'bfrp'|'cfrp'} selector=".product-wrap" locale={locale}/></div>}
 {route==='demo'&&<><section class="section page-heading"><h1>{t('LIVE DEMO MODE',locale)}</h1></section><ContentSection page="demo" selector="#demo-mode" locale={locale}/></>}
 </BaseLayout>

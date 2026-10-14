@@ -9,7 +9,7 @@ const {locale,page,embedded=false}=Astro.props;
 const document=content[page];
 const sourceUrl=(key:string)=>'http://www.oceanpower.com/pages/'+(key==='Human_JoiningUs'?'Feedback_01':key==='About_Index'?'TuWen_02':key.startsWith('Research_')?'News_05':'TuWen_01')+'_En.aspx?'+key+'_';
 ---
-<section class="section corporate-content" data-corporate-page={page}>
+<section class="section corporate-content" data-corporate-page={page} data-cms-entry={`page:${page}`}>
   <header class="corporate-heading"><p class="eyebrow dark">OCEANPOWER</p>{embedded?<h2>{t(document.title,locale)}</h2>:<h1>{t(document.title,locale)}</h1>}<p>{t(document.intro,locale)}</p></header>
   <div class="corporate-layout">
     <nav class="corporate-toc" aria-label={t(document.title,locale)}>{document.sections.map(section=><a href={'#'+section.id}>{t(section.title,locale)}</a>)}</nav>
