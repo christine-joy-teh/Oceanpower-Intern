@@ -21,8 +21,15 @@ function json(response, status, body, extraHeaders = {}) {
   response.end(JSON.stringify(body));
 }
 
+// Use the right-most X-Forwarded-For entry: it is appended by the nearest proxy
+// (Render), whereas left-most entries can be supplied by the client.
 function clientAddress(request) {
-  return String(request.headers['x-forwarded-for'] || request.socket?.remoteAddress || 'unknown').split(',')[0].trim();
+  return String(request.headers['x-forwarded-for'] || request.socket?.remoteAddress || 'unknown').split(',').at(-1).trim();
+}
+
+function secureRequest(request) {
+  return process.env.NODE_ENV === 'production' || Boolean(request.socket?.encrypted)
+    || String(request.headers['x-forwarded-proto'] || '').split(',')[0].trim() === 'https';
 }
 
 function sameOrigin(request) {
@@ -78,13 +85,13 @@ async function readJson(request) {
   catch { throw Object.assign(new Error('The request must contain valid JSON.'), { status: 400 }); }
 }
 
-function sessionCookie(token) {
-  const secure = process.env.NODE_ENV === 'production' ? '; Secure' : '';
+function sessionCookie(token, request) {
+  const secure = secureRequest(request) ? '; Secure' : '';
   return `${COOKIE_NAME}=${encodeURIComponent(token)}; Path=/; HttpOnly; SameSite=Strict; Max-Age=28800${secure}`;
 }
 
-function clearCookie() {
-  const secure = process.env.NODE_ENV === 'production' ? '; Secure' : '';
+function clearCookie(request) {
+  const secure = secureRequest(request) ? '; Secure' : '';
   return `${COOKIE_NAME}=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0${secure}`;
 }
 
@@ -100,7 +107,9 @@ function requireCsrf(request, session) {
 }
 
 function publicEntry(entry, locale) {
-  const selected = entry.translations[locale] || entry.translations.en || entry.translations.zh || { title:'', summary:'', body:'' };
+  // Both locale rows always exist, so fall back on an empty title rather than a missing row.
+  const selected = [locale, locale === 'zh' ? 'en' : 'zh'].map((key) => entry.translations[key]).find((value) => value?.title)
+    || entry.translations[locale] || { title:'', summary:'', body:'' };
   return {
     id: entry.id, kind: entry.kind, slug: entry.slug, status: entry.status, sortOrder: entry.sort_order,
     publishedAt: entry.published_at, title: selected.title, summary: selected.summary, body: selected.body,
@@ -167,7 +176,7 @@ function createCmsRouter(repo = repository, adminOverride = null) {
         const csrf = newToken();
         await repo.createSession(tokenHash(token), admin.username, csrf);
         clearLoginAttempts(request);
-        json(response, 200, { user: { username: admin.username }, csrfToken: csrf }, { 'Set-Cookie': sessionCookie(token) });
+        json(response, 200, { user: { username: admin.username }, csrfToken: csrf }, { 'Set-Cookie': sessionCookie(token, request) });
         return true;
       }
 
@@ -180,7 +189,7 @@ function createCmsRouter(repo = repository, adminOverride = null) {
       if (request.method === 'POST' && url.pathname === '/api/cms/logout') {
         if (!requireCsrf(request, session)) { json(response, 403, { error: 'Your session could not be verified. Refresh and try again.' }); return true; }
         await repo.deleteSession(tokenHash(session.token));
-        json(response, 200, { ok: true }, { 'Set-Cookie': clearCookie() }); return true;
+        json(response, 200, { ok: true }, { 'Set-Cookie': clearCookie(request) }); return true;
       }
 
       if (request.method === 'GET' && url.pathname === '/api/cms/admin/entries') {

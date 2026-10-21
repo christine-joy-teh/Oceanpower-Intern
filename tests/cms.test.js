@@ -3,7 +3,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const http = require('node:http');
-const { createCmsRouter } = require('../cms/router');
+const { createCmsRouter, publicEntry } = require('../cms/router');
 const { constantTimeEqual, tokenHash } = require('../cms/security');
 
 function fixtureRepository() {
@@ -65,6 +65,34 @@ test('environment-configured administrator can sign in and CRUD bilingual publis
     const removed=await fetch(base+'/api/cms/admin/entries/1',{method:'DELETE',headers:{Cookie:cookie,'X-CSRF-Token':session.csrfToken}});
     assert.equal(removed.status,200);
   },{username:'editor',password:'local-demo-password'});
+});
+
+test('session cookie is Secure when the request arrived over HTTPS through a proxy', async () => {
+  await withServer(fixtureRepository(),async base=>{
+    const login=await fetch(base+'/api/cms/login',{method:'POST',headers:{'Content-Type':'application/json','X-Forwarded-Proto':'https'},body:JSON.stringify({username:'editor',password:'local-demo-password'})});
+    assert.equal(login.status,200);
+    assert.match(login.headers.get('set-cookie'),/;\s*Secure/);
+  },{username:'editor',password:'local-demo-password'});
+});
+
+test('login rate limit cannot be bypassed by rotating a client-supplied X-Forwarded-For', async () => {
+  await withServer(fixtureRepository(),async base=>{
+    const statuses=[];
+    for(let i=0;i<10;i++){
+      const response=await fetch(base+'/api/cms/login',{method:'POST',headers:{'Content-Type':'application/json','X-Forwarded-For':`203.0.113.${i}, 198.51.100.7`},body:JSON.stringify({username:'editor',password:'wrong-password'})});
+      statuses.push(response.status);
+    }
+    assert.ok(statuses.includes(429),statuses.join(','));
+  },{username:'editor',password:'local-demo-password'});
+});
+
+test('public entries fall back to the other language when the requested title is empty', () => {
+  const entry={id:1,kind:'product',slug:'zh-only',status:'published',sort_order:0,published_at:null,metadata:{},specs:[],featured_image_id:null,attachment_id:null,
+    translations:{en:{title:'',summary:'',body:''},zh:{title:'仅中文产品',summary:'中文摘要',body:''}}};
+  assert.equal(publicEntry(entry,'en').title,'仅中文产品');
+  assert.equal(publicEntry(entry,'zh').title,'仅中文产品');
+  entry.translations.en={title:'English product',summary:'',body:''};
+  assert.equal(publicEntry(entry,'en').title,'English product');
 });
 
 test('administrator credentials use constant-time comparison and are not part of session tokens', () => {

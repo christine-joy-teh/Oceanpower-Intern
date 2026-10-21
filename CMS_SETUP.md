@@ -82,3 +82,24 @@ Render dashboard. Do not copy `.env` into Git. Start with
 The current `uploads/` directory is local filesystem storage. Render instances
 can replace that filesystem during deploys, so uploaded images and documents
 need a persistent disk or object-storage integration before staff rely on them.
+To use a Render persistent disk, attach the disk (for example at `/var/data`)
+and set `CMS_UPLOAD_DIR=/var/data/uploads`. A disk limits the service to one
+instance and removes zero-downtime deploys. Files uploaded before the disk was
+attached are already lost; re-upload them, because MySQL keeps only metadata.
+
+Additional Render notes:
+
+- Do not set `NODE_ENV=production` for the build. `npm ci` would skip the
+  development dependencies that `npm run build` needs. The admin cookie is
+  marked `Secure` automatically when Render forwards an HTTPS request.
+- Set `NODE_VERSION=22.12.0` or newer to match `package.json` `engines`.
+- `MYSQL_SSL_MODE=REQUIRED` encrypts the connection but does not verify the
+  server certificate. For verified TLS, upload the Aiven CA certificate as a
+  Render **Secret File** (for example `aiven-ca.pem`, available at
+  `/etc/secrets/aiven-ca.pem`), then set
+  `MYSQL_SSL_CA_FILE=/etc/secrets/aiven-ca.pem` and
+  `MYSQL_SSL_MODE=VERIFY_IDENTITY`.
+- Run `npm run cms:migrate` once against Aiven from a trusted computer before
+  the first deploy. The web service does not create tables automatically.
+- The site stays visible when MySQL is unavailable. CMS overlays and the admin
+  page return errors until the database is reachable again.

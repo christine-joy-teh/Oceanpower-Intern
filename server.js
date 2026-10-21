@@ -143,9 +143,11 @@ function sendJson(response, status, body) {
   response.end(JSON.stringify(body));
 }
 
+// Right-most X-Forwarded-For entry is appended by the nearest proxy; left-most can be spoofed.
 function clientAddress(request) {
   return String(request.headers['x-forwarded-for'] || request.socket.remoteAddress || 'unknown')
-    .split(',')[0]
+    .split(',')
+    .at(-1)
     .trim();
 }
 

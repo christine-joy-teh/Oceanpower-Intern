@@ -7,6 +7,11 @@ const mysql = require('mysql2/promise');
 
 let pool;
 
+// Set CMS_UPLOAD_DIR to a persistent disk mount on hosts with an ephemeral filesystem (Render).
+function uploadDirectory() {
+  return path.resolve(process.env.CMS_UPLOAD_DIR || path.join(__dirname, '..', 'uploads'));
+}
+
 function inputError(message) {
   return Object.assign(new Error(message), { status: 400 });
 }
@@ -45,6 +50,8 @@ function getPool() {
   if (!pool) {
     pool = mysql.createPool(connectionOptions({
       connectionLimit: 6,
+      // Fail before the browser's 5 s fallback instead of holding requests for the 10 s default.
+      connectTimeout: 4000,
       timezone: 'Z',
       decimalNumbers: true,
     }));
@@ -129,7 +136,7 @@ async function saveEntry(id, input) {
     if (entryId) {
       const [result] = await connection.execute('UPDATE cms_entries SET kind=?,slug=?,status=?,sort_order=?,published_at=?,featured_image_id=?,attachment_id=?,metadata=? WHERE id=?',
         [data.kind,data.slug,data.status,data.sortOrder,data.publishedAt,data.featuredImageId,data.attachmentId,JSON.stringify(data.metadata),entryId]);
-      if (!result.affectedRows) throw new Error('Content entry not found.');
+      if (!result.affectedRows) throw Object.assign(new Error('Content entry not found.'), { status: 404 });
     } else {
       const [result] = await connection.execute('INSERT INTO cms_entries (kind,slug,status,sort_order,published_at,featured_image_id,attachment_id,metadata) VALUES (?,?,?,?,?,?,?,?)',
         [data.kind,data.slug,data.status,data.sortOrder,data.publishedAt,data.featuredImageId,data.attachmentId,JSON.stringify(data.metadata)]);
@@ -176,7 +183,7 @@ async function saveFile({ originalName, mimeType, bytes }) {
   const id = crypto.randomUUID();
   const extension = path.extname(originalName).toLowerCase().slice(0, 10);
   const storedName = `${id}${extension}`;
-  const directory = path.resolve(__dirname, '..', 'uploads');
+  const directory = uploadDirectory();
   await fs.promises.mkdir(directory, { recursive: true });
   await fs.promises.writeFile(path.join(directory, storedName), bytes, { flag: 'wx' });
   try {
@@ -191,7 +198,7 @@ async function saveFile({ originalName, mimeType, bytes }) {
 async function getFile(id) {
   const [rows] = await getPool().execute('SELECT * FROM cms_files WHERE id=?', [String(id)]);
   if (!rows[0]) return null;
-  return { ...rows[0], path: path.resolve(__dirname, '..', 'uploads', rows[0].stored_name) };
+  return { ...rows[0], path: path.join(uploadDirectory(), rows[0].stored_name) };
 }
 
 async function close() {

@@ -4,6 +4,10 @@ npm-debug.log*
 tmp/
 uploads/
 certs/
+*.pem
+# Database dumps can contain sessions, usernames or customer data.
+*.sql
+!cms/schema.sql
 __pycache__/
 *.py[cod]
 .pytest_cache/
