@@ -30,6 +30,7 @@ function cosineSearch(index, queryVector, topK = 5) {
     text: chunk.text,
     source: chunk.source,
     chunkIndex: chunk.chunkIndex,
+    lang: chunk.lang,
     score: cosineSimilarity(chunk.embedding, queryVector),
   }));
   scored.sort((a, b) => b.score - a.score);

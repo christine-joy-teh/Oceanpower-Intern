@@ -32,6 +32,18 @@ test('cosineSearch ranks chunks by similarity, highest first', () => {
   assert.equal(results.length, 3);
 });
 
+test('cosineSearch passes through a chunk\'s lang field when present', () => {
+  const index = {
+    chunks: [
+      { text: 'zh text', source: 'a.pdf', chunkIndex: 0, lang: 'zh', embedding: [1, 0] },
+      { text: 'en text', source: 'a.pdf', chunkIndex: 0, lang: 'en', embedding: [0, 1] },
+    ],
+  };
+  const results = cosineSearch(index, [1, 0], 2);
+  assert.equal(results.find((r) => r.text === 'zh text').lang, 'zh');
+  assert.equal(results.find((r) => r.text === 'en text').lang, 'en');
+});
+
 test('cosineSearch respects topK', () => {
   const index = {
     chunks: [
