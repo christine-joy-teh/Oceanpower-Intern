@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { extractPdfText } = require('../rag/lib/extract');
+const { extractPdfText, extractEnglishText } = require('../rag/lib/extract');
 
 test('extractPdfText reads the embedded text layer directly when one exists', async () => {
   const samplePdf = path.join(
@@ -55,4 +55,26 @@ test('extractPdfText throws a clear error when there is no text layer and no tra
     () => extractPdfText(path.join(pdfsDir, 'sample.pdf')),
     /no manual transcript found/i,
   );
+});
+
+test('extractEnglishText returns null when no English transcript exists', () => {
+  const pdfPath = path.join(
+    __dirname, '..', 'rag', 'knowledge-bases', 'haichuan', 'pdfs',
+    '海川机场道面解决方案2.pdf',
+  );
+  assert.equal(extractEnglishText(path.join(path.dirname(pdfPath), 'does-not-exist.pdf')), null);
+});
+
+test('extractEnglishText reads an English transcript file when one exists', (t) => {
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'rag-extract-test-'));
+  t.after(() => fs.rmSync(tmpDir, { recursive: true, force: true }));
+
+  const pdfsDir = path.join(tmpDir, 'pdfs');
+  const transcriptsEnDir = path.join(tmpDir, 'transcripts-en');
+  fs.mkdirSync(pdfsDir);
+  fs.mkdirSync(transcriptsEnDir);
+  fs.writeFileSync(path.join(transcriptsEnDir, 'sample.txt'), 'Manually translated product description.', 'utf8');
+
+  const text = extractEnglishText(path.join(pdfsDir, 'sample.pdf'));
+  assert.equal(text, 'Manually translated product description.');
 });

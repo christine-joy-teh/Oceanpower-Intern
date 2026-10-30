@@ -15,6 +15,26 @@ function transcriptPathFor(filePath) {
   return path.join(kbDir, 'transcripts', `${base}.txt`);
 }
 
+function englishTranscriptPathFor(filePath) {
+  const pdfsDir = path.dirname(filePath);
+  const kbDir = path.dirname(pdfsDir);
+  const base = path.basename(filePath, path.extname(filePath));
+  return path.join(kbDir, 'transcripts-en', `${base}.txt`);
+}
+
+// Optional English counterpart to a PDF's (Chinese) text. Returns null when
+// none exists — most knowledge bases won't have one, and that's fine: this
+// just lets build-index.js also embed an English chunk set when a
+// translation has been provided, so English queries can match English text
+// directly instead of relying on cross-lingual embedding similarity alone.
+function extractEnglishText(filePath) {
+  const transcriptPath = englishTranscriptPathFor(filePath);
+  if (fs.existsSync(transcriptPath)) {
+    return fs.readFileSync(transcriptPath, 'utf8');
+  }
+  return null;
+}
+
 async function extractPdfText(filePath) {
   const buffer = fs.readFileSync(filePath);
   const data = await pdfParse(buffer);
@@ -35,4 +55,4 @@ async function extractPdfText(filePath) {
   );
 }
 
-module.exports = { extractPdfText };
+module.exports = { extractPdfText, extractEnglishText };
