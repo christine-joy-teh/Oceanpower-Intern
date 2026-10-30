@@ -132,7 +132,7 @@ What it does: extract PDF text, chunk it, embed it locally (no API key), store i
    const { retrieve } = require('./rag/retrieve');
 
    const chunks = await retrieve('haichuan', userQuestion, 5);
-   // chunks: Array<{ text, source, chunkIndex, score }>
+   // chunks: Array<{ text, source, chunkIndex, lang, score }>
    // Stuff chunk.text (and chunk.source for citations) into your own
    // chatbot's system prompt before calling your LLM provider.
    ```
@@ -144,5 +144,6 @@ What it does: extract PDF text, chunk it, embed it locally (no API key), store i
 - Generated indexes (`rag/knowledge-bases/*/index.json`) are gitignored — they're derived data, regenerate them from the PDFs rather than committing them.
 - The embedding model (`Xenova/bge-small-zh-v1.5`) downloads once (~100MB) on first real use, then runs fully offline — no API key, no per-query cost.
 - **PDFs with no embedded text layer:** some PDFs (common with design-tool-exported brochures) have their text flattened to images or vector outlines, which no text-extraction library can recover. `extractPdfText` automatically falls back to a manual transcript file at `<kbDir>/transcripts/<pdf-basename>.txt` when a PDF's text layer comes back empty, and throws a clear error if neither exists. Produce a transcript however you like (read the PDF yourself, ask a vision-capable LLM, OCR it with a tool of your choice) and save it at that path — extraction picks it up automatically on the next build. The Haichuan knowledge base's 8 image-only manuals were handled this way; see `rag/knowledge-bases/haichuan/transcripts/`.
+- **Cross-lingual queries:** the embedding model is Chinese-optimized, so an English question against Chinese-only content matches unreliably. Drop an optional English counterpart at `<kbDir>/transcripts-en/<pdf-basename>.txt` and `build-index.js` embeds it alongside the Chinese text as its own chunk set (tagged `lang: 'en'` vs `lang: 'zh'` in the returned results) — so an English query matches English text directly instead of relying on cross-lingual embedding similarity. The Haichuan knowledge base has English transcripts for the 8 Chinese-only manuals (the 9th already has native bilingual text, so needs no separate English file); see `rag/knowledge-bases/haichuan/transcripts-en/`.
 - Automated tests never touch the real embedding model: they set `RAG_FAKE_EMBEDDINGS=1`, which swaps in a cheap deterministic fake embedding (see `rag/lib/embed.js`). Use the same env var if you add tests for this toolkit in another project.
 - This repo's own `server.js` (the Oceanpower chatbot) does **not** use `rag/` yet — wiring it in (or wiring any other chatbot in) is a separate, later step, not part of this toolkit.

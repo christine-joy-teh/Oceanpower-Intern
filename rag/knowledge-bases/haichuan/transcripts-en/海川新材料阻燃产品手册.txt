@@ -1,0 +1,85 @@
+Green Road — Haichuan FRMAX™ Asphalt Concrete Flame-Retardant Modifier: The Safety Choice for Long Tunnel Asphalt Concrete Pavement
+
+Asphalt is a flammable material. In the event of a fire, the asphalt in asphalt concrete can burn at high temperature and release large amounts of toxic gas; combined with poor ventilation inside tunnels, this makes evacuation and rescue very difficult and can cause severe casualties and property loss. Flame-retardant and smoke-suppression treatment of asphalt concrete pavement material is therefore essential in long tunnels.
+
+1 Product Introduction
+
+Haichuan's FRMAX™ asphalt concrete flame-retardant modifier is a composite of multiple synergistic flame retardants, available as FRMAX™ High-Efficiency type and FRMAX™ Eco-friendly type.
+
+Table 1 Physical/chemical indicators of the FRMAX™ series flame-retardant modifiers:
+Indicator / Eco-friendly type / High-efficiency type
+- Appearance/color: purplish-red granules / white powder
+- Dimensions: 3mm x 5mm cylinder / fineness >=1000 mesh
+- Effective flame-retardant content: >=70% / >=85%
+- Density: 1.0-2.0 g/cm3 / 2.0-2.4 g/cm3
+- Ignition point: >=260C / (no data)
+- Decomposition temperature: (no data) / >=280
+
+The High-Efficiency type uses the synergy of organic flame retardants with inorganic metal oxides, making full use of heat-barrier, condensed-phase and gas-phase effects and an air-isolating coverage effect, giving it high flame-retardant efficiency and low cost. The Eco-friendly type promotes early-stage dehydration and carbonization of the polymer during combustion of the asphalt pavement, then forms a stable, low-volatility compound that covers the asphalt surface and isolates it from air; it emits no corrosive gas and has low toxicity.
+
+FRMAX™ asphalt flame-retardant modifier features:
+- Easy to add: can be added directly to the asphalt mixture with the aggregate and asphalt during mixing
+- Easy to disperse: fundamentally solves the problem of flame retardants settling and being hard to dissolve in asphalt
+- Good flame-retardant effect
+
+Table 2 Relationship between oxygen index and flame-retardant dosage:
+Flame-retardant type / oxygen index / content in asphalt
+Eco-friendly: >=24 -> 10%; >=26 -> 15%; >=28 -> 20%
+High-efficiency: >=26 -> 8%; >=28 -> 9%; >=30 -> 10%
+
+2 Technical Analysis
+
+1) Improving flame-retardant performance of asphalt concrete
+
+Oxygen index testing and direct burning tests were used to evaluate FRMAX™'s flame-retardant performance.
+
+Oxygen index test results (Eco-friendly type):
+Flame retardant dosage relative to asphalt (%): 0, 10, 12, 15, 20, 25
+Oxygen index (%): 19.5, 25, 26, 28, 29, 30
+
+Oxygen index test results (High-efficiency type):
+Dosage (%): 0, 6, 7, 8, 9, 10
+Oxygen index (%): 19.5, 25, 27, 28, 30, 32
+
+Direct burning tests: the flame retardant works through gas-phase and solid-phase flame-retardant mechanisms, releasing non-combustible gas during burning and forming a glass-like film on the asphalt surface that blocks contact between asphalt and oxygen. The asphalt film coating the aggregate did not thin, indicating the asphalt did not participate in combustion. In contrast, for ordinary asphalt concrete the surface voids increased significantly and the asphalt film coating the aggregate thinned noticeably, indicating the asphalt did participate in combustion.
+
+2) Improving asphalt concrete performance
+
+Table: flame-retardant asphalt concrete performance (project / mix type / blank sample / flame-retardant asphalt concrete):
+- Residual stability (%): AC-13 blank 92.4, flame-retardant 93.1; SMA-13 blank 86.4, flame-retardant 94.1
+- Freeze-thaw split tensile strength ratio (%): AC-13 blank 86.5, flame-retardant 87.6; SMA-13 blank 87.5, flame-retardant 93.2
+- Dynamic stability (cycles/mm): AC-13 blank 1126, flame-retardant 2096; SMA-13 blank 6250, flame-retardant 7050
+
+3 Technical Achievements
+
+Patents:
+- A flame-retardant modified asphalt mixture, ZL03133266.8
+- Flame-retardant modified Stone Mastic Asphalt (SMA) mixture, ZL200510033363.6
+- A road-use flame-retardant asphalt, ZL200510037412.3
+- A halogen-free road-use flame-retardant asphalt, ZL200510037414.2
+- A road-use flame-retardant asphalt and preparation method, ZL200610082139.0
+- An asphalt flame-retardant modifier, ZL200610062961.0
+- A test method for the flame-retardant performance of asphalt, ZL200810067148.1
+- A warm-mix flame-retardant asphalt mixture and preparation method, ZL200810241464.6
+
+Standards:
+- National standard "Road-Use Flame-Retardant Asphalt Concrete" (GB/T 29051-2012)
+- Guangdong provincial standard "Flame-Retardant Modified Asphalt" (DB44/T 627-2009)
+
+Award: "Preparation Technology and Application Research of Flame-Retardant Asphalt-Based Materials" won the Hubei Province Science and Technology Progress Second Prize in December 2013.
+
+4 Selected FRMAX™ Flame-Retardant Modifier Application Cases
+
+Anhui Yanjiang Expressway: flame-retardant asphalt pavement was laid in four tunnels on the Anhui Yanjiang (along-the-Yangtze) Expressway — Zhucun Tunnel, Meichong No.1 Tunnel, Meichong No.2 Tunnel, and Dajianshan Tunnel — all using the FRMAX™ Eco-friendly type modifier.
+
+Hunan Liuyang Jiaoxiling Tunnel project: Jiaoxiling Tunnel, on the Liuyang-to-Yong'an section, is 3,900 m long with a 7 m clear pavement width. It is a key project of the Liu-Yong highway reconstruction, ranked first in Hunan and second nationwide among highway tunnels, and was listed by Hunan Province as a key project. The tunnel pavement was built with a 5 cm AC-20 asphalt concrete middle layer and a 4 cm AC-13 flame-retardant asphalt concrete upper layer over an 18 cm concrete base layer.
+
+Tianjin Jinji Expressway Extension Lianhualing and Dalinghou Tunnels: the Lianhualing Tunnel on the Tianjin Jinji Expressway extension is about 2.2 km, and the Tianjin section of Dalinghou Tunnel is about 1.56 km, with a 10.5 m pavement width. The upper layer uses a 4 cm AC-13 flame-retardant asphalt concrete pavement with Haichuan FRMAX™ Eco-friendly modifier added at 5 per mille of the asphalt mixture.
+
+Yunnan Xianglin Highway Fenghuangshan Tunnel project: Fenghuangshan Tunnel crosses Fenghuang Mountain, is 2,663 m long, 10.50 m wide and 7.15 m high. The pavement structure combines reinforced concrete and asphalt concrete. To ensure tunnel safety and driving comfort, the design uses a 4 cm AC-16 asphalt concrete upper layer with Haichuan FRMAX™ Eco-friendly modifier added at 8.4 per mille.
+
+Shanghai Yangtze River Tunnel-Bridge project: on 19 June 2008, under the unified direction of Shanghai Yangtze River Tunnel-Bridge Construction and Development Co., Shanghai Urban Construction (Group) produced and constructed a warm-mix flame-retardant asphalt mixture test section. The test section was 200 m long and 16 m wide, with a 4 cm SMA-13 warm-mix flame-retardant modified asphalt concrete upper layer, designed to an oxygen index >32%, using the Haichuan FRMAX™ High-Efficiency type modifier.
+
+Yunnan Mengxin Expressway tunnel project: the FRMAX™ Eco-friendly modifier was used in all large and medium tunnels on the Mengzi-to-Xinjie Expressway.
+
+www.oceanpower.com / www.opmaterial.com

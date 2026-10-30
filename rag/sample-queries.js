@@ -9,6 +9,10 @@ const QUESTIONS = [
   '彩色沥青的颜料和施工要求是什么？',
   '高粘度沥青改性剂的技术指标有哪些？',
   '温拌沥青技术的优势是什么？',
+  'What are the benefits of the asphalt regenerant product?',
+  'How does the anti-rutting agent improve pavement performance?',
+  'What is colored asphalt used for?',
+  'GFRP rebar applications in metro construction',
 ];
 
 async function main() {
@@ -16,7 +20,7 @@ async function main() {
     console.log(`\n=== ${question} ===`);
     const results = await retrieve('haichuan', question, 3);
     results.forEach((result, i) => {
-      console.log(`[${i + 1}] score=${result.score.toFixed(3)} source=${result.source}`);
+      console.log(`[${i + 1}] score=${result.score.toFixed(3)} lang=${result.lang} source=${result.source}`);
       console.log(result.text.slice(0, 200).replace(/\n/g, ' '));
     });
   }
