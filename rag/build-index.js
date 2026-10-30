@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { extractPdfText } = require('./lib/extract');
+const { extractPdfText, extractEnglishText } = require('./lib/extract');
 const { chunkText } = require('./lib/chunk');
 const { embed } = require('./lib/embed');
 const { saveIndex } = require('./lib/store');
@@ -23,10 +23,20 @@ async function buildIndexForDir(kbName, kbDir) {
     console.log(`[build-index] Extracting ${file}...`);
     const text = await extractPdfText(filePath);
     const pieces = chunkText(text);
-    console.log(`[build-index] ${file}: ${pieces.length} chunks`);
     pieces.forEach((piece, chunkIndex) => {
-      chunks.push({ source: file, chunkIndex, text: piece });
+      chunks.push({ source: file, chunkIndex, lang: 'zh', text: piece });
     });
+
+    const englishText = extractEnglishText(filePath);
+    if (englishText) {
+      const englishPieces = chunkText(englishText);
+      englishPieces.forEach((piece, chunkIndex) => {
+        chunks.push({ source: file, chunkIndex, lang: 'en', text: piece });
+      });
+      console.log(`[build-index] ${file}: ${pieces.length} zh chunks + ${englishPieces.length} en chunks`);
+    } else {
+      console.log(`[build-index] ${file}: ${pieces.length} chunks`);
+    }
   }
 
   console.log(`[build-index] Embedding ${chunks.length} chunks...`);
