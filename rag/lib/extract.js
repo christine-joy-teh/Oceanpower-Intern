@@ -2,7 +2,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const pdfParse = require('pdf-parse');
 
-const MIN_TEXT_LAYER_LENGTH = 30;
+// A product manual page always yields far more than this from a real text
+// layer; a small value here let a PDF with only a stray embedded caption
+// (e.g. one image's alt-text-like fragment) wrongly skip the OCR-free
+// transcript fallback and return nearly-empty text instead.
+const MIN_TEXT_LAYER_LENGTH = 200;
 
 function transcriptPathFor(filePath) {
   const pdfsDir = path.dirname(filePath);

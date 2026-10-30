@@ -22,3 +22,6 @@ dist/
 # Public copies are generated from the existing catalogue assets.
 public/assets/
 public/catalogue.pdf
+
+# Generated RAG indexes (regenerate with npm run rag:build -- <kb>)
+rag/knowledge-bases/*/index.json
