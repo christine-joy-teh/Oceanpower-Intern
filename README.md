@@ -114,3 +114,35 @@ No cloud project, secret, DNS record, remote push or production deployment is cr
     npm run test:site
 
 The legacy 14 server/RFQ tests remain, alongside three chatbot/preview integration tests. The new browser suite serves dist with the actual CSP, checks all 52 routes and console errors, exercises four-language enquiry flows, language navigation, product return links and specification tabs, and checks phone/tablet horizontal overflow. Browser screenshots are written under ignored tmp/site-browser. On Windows, an installed Edge/Chrome can be used automatically or set CHROMIUM_EXECUTABLE_PATH.
+
+## RAG knowledge base toolkit (`rag/`)
+
+`rag/` is a self-contained, standalone local-RAG toolkit — it has no dependency on anything Oceanpower-specific or on `server.js`, so it can be copied as-is into any other Node-based chatbot project.
+
+What it does: extract PDF text, chunk it, embed it locally (no API key), store it as a JSON index, and retrieve the closest chunks for a question.
+
+**To use it from any chatbot project:**
+
+1. Copy the whole `rag/` folder (including `knowledge-bases/<name>/pdfs/` and any `knowledge-bases/<name>/transcripts/`) into the other project, or depend on it as a local path.
+2. Install its one dependency there too: `npm install pdf-parse @xenova/transformers`.
+3. Build the index once: `node rag/build-index.js <name>`.
+4. From your chatbot's code, import and call the one function it needs:
+
+   ```js
+   const { retrieve } = require('./rag/retrieve');
+
+   const chunks = await retrieve('haichuan', userQuestion, 5);
+   // chunks: Array<{ text, source, chunkIndex, score }>
+   // Stuff chunk.text (and chunk.source for citations) into your own
+   // chatbot's system prompt before calling your LLM provider.
+   ```
+
+**Notes:**
+
+- Add a new knowledge base at any time: drop PDFs into `rag/knowledge-bases/<name>/pdfs/`, then run `npm run rag:build -- <name>` (or `node rag/build-index.js <name>` in a project without that npm script).
+- Query a knowledge base directly from the command line: `node -e "require('./rag/retrieve').retrieve('<name>', '你的问题', 5).then(r => console.log(r))"`.
+- Generated indexes (`rag/knowledge-bases/*/index.json`) are gitignored — they're derived data, regenerate them from the PDFs rather than committing them.
+- The embedding model (`Xenova/bge-small-zh-v1.5`) downloads once (~100MB) on first real use, then runs fully offline — no API key, no per-query cost.
+- **PDFs with no embedded text layer:** some PDFs (common with design-tool-exported brochures) have their text flattened to images or vector outlines, which no text-extraction library can recover. `extractPdfText` automatically falls back to a manual transcript file at `<kbDir>/transcripts/<pdf-basename>.txt` when a PDF's text layer comes back empty, and throws a clear error if neither exists. Produce a transcript however you like (read the PDF yourself, ask a vision-capable LLM, OCR it with a tool of your choice) and save it at that path — extraction picks it up automatically on the next build. The Haichuan knowledge base's 8 image-only manuals were handled this way; see `rag/knowledge-bases/haichuan/transcripts/`.
+- Automated tests never touch the real embedding model: they set `RAG_FAKE_EMBEDDINGS=1`, which swaps in a cheap deterministic fake embedding (see `rag/lib/embed.js`). Use the same env var if you add tests for this toolkit in another project.
+- This repo's own `server.js` (the Oceanpower chatbot) does **not** use `rag/` yet — wiring it in (or wiring any other chatbot in) is a separate, later step, not part of this toolkit.
