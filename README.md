@@ -146,4 +146,14 @@ What it does: extract PDF text, chunk it, embed it locally (no API key), store i
 - **PDFs with no embedded text layer:** some PDFs (common with design-tool-exported brochures) have their text flattened to images or vector outlines, which no text-extraction library can recover. `extractPdfText` automatically falls back to a manual transcript file at `<kbDir>/transcripts/<pdf-basename>.txt` when a PDF's text layer comes back empty, and throws a clear error if neither exists. Produce a transcript however you like (read the PDF yourself, ask a vision-capable LLM, OCR it with a tool of your choice) and save it at that path — extraction picks it up automatically on the next build. The Haichuan knowledge base's 8 image-only manuals were handled this way; see `rag/knowledge-bases/haichuan/transcripts/`.
 - **Cross-lingual queries:** the embedding model is Chinese-optimized, so an English question against Chinese-only content matches unreliably. Drop an optional English counterpart at `<kbDir>/transcripts-en/<pdf-basename>.txt` and `build-index.js` embeds it alongside the Chinese text as its own chunk set (tagged `lang: 'en'` vs `lang: 'zh'` in the returned results) — so an English query matches English text directly instead of relying on cross-lingual embedding similarity. The Haichuan knowledge base has English transcripts for the 8 Chinese-only manuals (the 9th already has native bilingual text, so needs no separate English file); see `rag/knowledge-bases/haichuan/transcripts-en/`.
 - Automated tests never touch the real embedding model: they set `RAG_FAKE_EMBEDDINGS=1`, which swaps in a cheap deterministic fake embedding (see `rag/lib/embed.js`). Use the same env var if you add tests for this toolkit in another project.
-- This repo's own `server.js` (the Oceanpower chatbot) does **not** use `rag/` yet — wiring it in (or wiring any other chatbot in) is a separate, later step, not part of this toolkit.
+
+### Example integration: the Haichuan persona in `server.js`
+
+`server.js` demonstrates wiring `rag/` into a working chatbot via a second persona, selected with `CHAT_PERSONA=haichuan` (default is `oceanpower`, the original static-knowledge-file behavior, unchanged). When the Haichuan persona is active, each chat request calls `retrieve('haichuan', message, 5)`, builds a system prompt from the returned chunks, and sends it to the same upstream LLM provider the Oceanpower persona already uses (any OpenAI-compatible chat-completions endpoint — `.env.example` has it set up for Qwen via Alibaba Cloud Model Studio).
+
+To try it locally:
+1. Build the index once: `npm run rag:build -- haichuan`.
+2. Set `CHAT_PERSONA=haichuan`, plus `CHAT_API_URL`/`CHAT_API_KEY`/`CHAT_MODEL` for your LLM provider, in `.env`.
+3. `npm start`, then POST to `/api/chat` — the response is generated from retrieved Haichuan manual excerpts instead of the Oceanpower knowledge file.
+
+This is also the reference pattern for wiring `rag/` into any other chatbot: retrieve chunks for the user's message, build a prompt from them, call your LLM.
