@@ -1,7 +1,13 @@
 ---
-import ContentSection from './ContentSection.astro';
 import type { Locale } from '../lib/routes';
 interface Props {locale:Locale;}
 const {locale}=Astro.props;
 ---
-<div data-cms-entry="page:home"><ContentSection selector=".hero" locale={locale}/></div>
+<div data-cms-entry="page:home"><section class="hero">
+  <div class="hero-copy"><p class="eyebrow"><i></i> {locale==='zh'?'基础设施材料 / 始于 1998':'INFRASTRUCTURE MATERIALS / EST. 1998'}</p><h1>{locale==='zh'?<>为严苛工程提供<em>材料选择。</em></>:<>Materials for demanding <em>infrastructure.</em></>}</h1><p class="hero-text">{locale==='zh'?'浏览纤维增强复合材料、道路沥青材料与机场道面材料体系，并按产品、用途和目录来源核对关键资料。':'Explore fibre-reinforced composites, asphalt materials and airport-pavement systems with product, application and catalogue-source context kept together.'}</p><div class="hero-actions"><a class="button primary" href="#product-families">{locale==='zh'?'浏览产品体系':'Explore product systems'} <span aria-hidden="true">↓</span></a><button class="text-link hero-enquiry" type="button" data-rfq-start>{locale==='zh'?'准备询价资料':'Prepare an enquiry'} <span aria-hidden="true">→</span></button></div></div>
+  <div class="hero-visual"><div class="hero-label"><span>01</span><b>{locale==='zh'?<>工程材料<br/>清晰选型</>:<>Clear material<br/>selection</>}</b></div><div class="hero-lines"></div><p>FRP · ASPHALT · AIRPORT</p></div>
+  <div class="hero-stats"><div><strong>1998</strong><span>{locale==='zh'?'集团创立':'Group founded'}</span></div><div><strong>3</strong><span>{locale==='zh'?'重点材料产品体系':'Primary material portfolios'}</span></div><div><strong>中 / EN</strong><span>{locale==='zh'?'双语产品资料':'Bilingual product information'}</span></div></div>
+</section></div>
+<style>
+.hero-enquiry{border:0;background:transparent;color:inherit;font:inherit;cursor:pointer;padding:0;min-height:44px}.hero-enquiry:focus-visible{outline:3px solid var(--aqua);outline-offset:5px}
+</style>

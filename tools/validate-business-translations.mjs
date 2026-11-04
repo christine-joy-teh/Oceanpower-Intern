@@ -11,7 +11,7 @@ for (const locale of ['en','zh','es','fr']) {
     if(locale==='en')return key;
     const value=common[key]?.[locale]||dictionary[key];
     assert.ok(value?.trim(),`${locale}: missing translation for ${key}`);
-    if(!(locale==='fr'&&key==='Information'))assert.notEqual(value,key,`${locale}: untranslated business content: ${key}`);
+    if(!(locale==='fr'&&key==='Information')&&key!=='Shenzhen Haichuan Ice Blue Food Technology Co., Ltd.')assert.notEqual(value,key,`${locale}: untranslated business content: ${key}`);
     return value;
   };
   const prefix=locale==='zh'?'':locale+'/';

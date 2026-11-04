@@ -1,6 +1,6 @@
 # Oceanpower multilingual website
 
-The optional local MySQL content manager is documented in [CMS_SETUP.md](CMS_SETUP.md). It provides a single administrator login for Chinese and English products, news, page content, business descriptions and downloadable documents.
+The optional local MySQL content manager is documented in [CMS_SETUP.md](CMS_SETUP.md). It provides a single administrator login for Chinese and English products, news, page content and business descriptions. Staff can upload images, PDFs and short videos, reuse media, preview bilingual text, restore earlier edits, and manually update the existing chatbot's published-product snapshot.
 
 Astro static site migration based on the supplied oceanpower.com 网站焕新的完整闭环方案.docx. The existing FRP design, images and catalogue specifications are retained. See [TECHNICAL-AUDIT.md](TECHNICAL-AUDIT.md) for the before/after audit and decisions.
 
@@ -28,7 +28,7 @@ Each route exists in all four languages:
 | /about/ | Existing company, historical credentials and partners |
 | /business/ | Four divisions listed by the reference document |
 | /business/new-material/ | Existing FRP products, comparison and applications |
-| /business/food/ | Content awaiting company review |
+| /business/food/ | Food catalogue products, selected machine specifications and PDF page references; current specifications still require company review |
 | /business/environment/ | Content awaiting company review |
 | /business/information/ | Content awaiting company review |
 | /news/ | Content awaiting company review |
@@ -148,6 +148,8 @@ What it does: extract PDF text, chunk it, embed it locally (no API key), store i
 - Automated tests never touch the real embedding model: they set `RAG_FAKE_EMBEDDINGS=1`, which swaps in a cheap deterministic fake embedding (see `rag/lib/embed.js`). Use the same env var if you add tests for this toolkit in another project.
 
 ### Example integration: the Haichuan persona in `server.js`
+
+The supplied 28-page Food catalogue is in the Haichuan knowledge base as `Oceanpower food product catalogue.pdf`. Its checked Chinese and English transcripts cite PDF page numbers and separate product sections with form feeds, so machine specifications are not merged across models. These transcripts are selective; ambiguous figures are flagged for staff review. Rebuild the index after changing them. The default `CHAT_PERSONA=oceanpower` does not query this RAG index; `CHAT_PERSONA=haichuan` does when a provider is configured.
 
 `server.js` demonstrates wiring `rag/` into a working chatbot via a second persona, selected with `CHAT_PERSONA=haichuan` (default is `oceanpower`, the original static-knowledge-file behavior, unchanged). When the Haichuan persona is active, each chat request calls `retrieve('haichuan', message, 5)`, builds a system prompt from the returned chunks, and sends it to the same upstream LLM provider the Oceanpower persona already uses (any OpenAI-compatible chat-completions endpoint — `.env.example` has it set up for Qwen via Alibaba Cloud Model Studio).
 

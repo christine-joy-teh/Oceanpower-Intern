@@ -1,7 +1,30 @@
 ---
-import ContentSection from './ContentSection.astro';
-import type { Locale } from '../lib/routes';
+import {fibreProducts,local} from '../content/catalogue';
+import {urlFor,type Locale} from '../lib/routes';
 interface Props {locale:Locale;}
 const {locale}=Astro.props;
+const {gfrp,bfrp,cfrp}=fibreProducts;
+const products=[gfrp,bfrp,cfrp];
 ---
-<ContentSection selector="#performance" locale={locale}/>
+<section class="performance section material-comparison" id="performance" aria-labelledby="comparison-title">
+  <p class="eyebrow dark">{locale==='zh'?'最新版手册对比':'LATEST MANUAL COMPARISON'}</p>
+  <h2 id="comparison-title">{locale==='zh'?'三种复合筋材，参数不混用。':'Three rebar materials, kept distinct.'}</h2>
+  <p class="comparison-intro">{locale==='zh'?'以下为新版海川 FRP 手册的最低值或标准值。GFRP 抗拉强度随直径分档，BFRP 与 CFRP 表中未提供直径。':'These are minimum or standard values from the newer Haichuan FRP manual. GFRP tensile strength is diameter-specific; the BFRP and CFRP table does not state diameters.'}</p>
+  <p id="comparison-scroll" class="comparison-note">{locale==='zh'?'小屏幕可横向滚动查看完整对比。':'On smaller screens, scroll horizontally to compare all materials.'}</p>
+  <div class="comparison-scroll" tabindex="0" role="region" aria-label={locale==='zh'?'FRP 材料对比':'FRP material comparison'} aria-describedby="comparison-scroll">
+    <table><caption class="sr-only">{locale==='zh'?'GFRP、BFRP 与 CFRP 筋材目录对比':'Catalogue comparison of GFRP, BFRP and CFRP rebar'}</caption><thead><tr><th scope="col">{locale==='zh'?'性能':'Property'}</th>{products.map(product=><th scope="col">{local(product.name,locale)}</th>)}</tr></thead><tbody>
+      <tr><th scope="row">{locale==='zh'?'抗拉强度标准值':'Tensile strength standard value'}</th><td>{locale==='zh'?'按直径 ≥450–600 MPa':'≥450–600 MPa by diameter'}</td><td>≥750 MPa</td><td>≥1800 MPa</td></tr>
+      <tr><th scope="row">{locale==='zh'?'弹性模量':'Elastic modulus'}</th><td>≥40 GPa</td><td>≥40 GPa</td><td>≥120 GPa</td></tr>
+      <tr><th scope="row">{locale==='zh'?'伸长 / 极限应变':'Elongation / ultimate strain'}</th><td>≥1.2%</td><td>≥1.8%</td><td>≥1.5%</td></tr>
+      <tr><th scope="row">{locale==='zh'?'新版手册印刷页':'New manual printed page'}</th><td>4</td><td>5</td><td>5</td></tr>
+      <tr><th scope="row">{locale==='zh'?'产品详情':'Product details'}</th>{products.map(product=><td><a href={urlFor(locale,product.route)}>{locale==='zh'?'查看':'Explore'} {product.id.toUpperCase()} <span aria-hidden="true">→</span></a></td>)}</tr>
+    </tbody></table>
+  </div>
+  <p class="comparison-note">{locale==='zh'?'参数来自新版目录，但仍须结合树脂体系、表面形式、环境及项目标准进行工程确认。':'The values come from the newer manual but still require engineering confirmation for resin system, surface finish, exposure and project standard.'}</p>
+  <details class="comparison-details"><summary>{locale==='zh'?'查看各材料详细参数':'See detailed values by material'}</summary><div class="catalogue-spec-list">
+    {products.map(product=><article><header><span>{product.code}</span><h3>{local(product.name,locale)}</h3></header><div class="product-table-scroll" tabindex="0"><table><thead><tr>{product.columns.map(column=><th scope="col">{local(column,locale)}</th>)}</tr></thead><tbody>{product.rows.map((row:readonly any[])=><tr>{row.map((cell:any,index:number)=>index===0?<th scope="row">{typeof cell==='string'?cell:local(cell,locale)}</th>:<td>{typeof cell==='string'?cell:local(cell,locale)}</td>)}</tr>)}</tbody></table></div><p>{local(product.source,locale)}</p></article>)}
+  </div></details>
+</section>
+<style>
+.catalogue-spec-list{display:grid;gap:24px;padding-top:28px}.catalogue-spec-list article{background:#fff;border:1px solid var(--line);padding:28px;min-width:0}.catalogue-spec-list header{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}.catalogue-spec-list header span{font:500 11px/1.4 'DM Mono',monospace;color:var(--blue)}.catalogue-spec-list h3{font-size:26px;margin:0}.catalogue-spec-list article>p{font-size:12px;line-height:1.7;color:#52677b}.catalogue-spec-list .product-table-scroll table{min-width:720px}@media(max-width:600px){.catalogue-spec-list article{padding:20px 16px}}
+</style>

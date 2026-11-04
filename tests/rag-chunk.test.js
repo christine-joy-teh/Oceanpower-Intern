@@ -31,3 +31,8 @@ test('chunkText does not break Chinese text into invalid characters', () => {
     assert.doesNotMatch(chunk, /�/);
   }
 });
+
+test('chunkText keeps page-marked Food specifications in separate chunks', () => {
+  const chunks = chunkText('PDF p. 12 | NE2430L: 65 L/h.\fPDF p. 18 | OP130: 30 L/h.');
+  assert.deepEqual(chunks, ['PDF p. 12 | NE2430L: 65 L/h.', 'PDF p. 18 | OP130: 30 L/h.']);
+});

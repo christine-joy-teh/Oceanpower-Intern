@@ -1,0 +1,12 @@
+---
+import {urlFor,type Locale} from '../lib/routes';
+interface Props {locale:Locale;}
+const {locale}=Astro.props;
+---
+<section class="home-news section" hidden data-cms-news aria-labelledby="home-news-title">
+  <header><div><p class="eyebrow dark"><i></i> OCEANPOWER</p><h2 id="home-news-title">{locale==='zh'?'最新动态':'Latest updates'}</h2></div><a href={urlFor(locale,'news')}>{locale==='zh'?'查看全部新闻':'View all news'} <span aria-hidden="true">→</span></a></header>
+  <div class="cms-entry-grid"></div>
+</section>
+<style>
+.home-news{padding-block:72px}.home-news>header{display:flex;justify-content:space-between;gap:32px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:24px}.home-news h2{font-size:clamp(36px,5vw,62px);letter-spacing:-2px;line-height:1.05;margin:12px 0 0}.home-news header>a{display:flex;align-items:center;min-height:44px;color:var(--blue);font-weight:800}.home-news header>a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}@media(max-width:600px){.home-news>header{align-items:start;flex-direction:column;gap:16px}}
+</style>

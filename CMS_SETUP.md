@@ -54,13 +54,16 @@ npm start
 
 `npm start` builds the current source and launches the production-style local server so the CMS API works on the same origin. Open `http://localhost:8000/admin/`. Published database content overlays the current Chinese and English website. If MySQL is stopped or unavailable, the existing static website remains visible.
 
-Uploaded JPG, PNG, WebP, GIF and PDF files are stored in the ignored local `uploads/` folder. Their metadata is stored in MySQL. Back up both the database and this folder.
+Uploaded JPG, PNG, WebP, GIF, PDF, MP4 and WebM files are stored in the ignored local `uploads/` folder. Their metadata is stored in MySQL. Back up both the database and this folder. Images and PDFs are limited to 25 MB; videos are limited to 80 MB. The admin can attach up to 12 additional images and one video to a content entry, choose previously uploaded files, preview bilingual text, and restore earlier saved revisions. Run `npm run cms:migrate` again after updating this code so the revision table exists.
+
+After publishing or changing products, press **更新聊天机器人知识** in the Chinese admin. This writes a snapshot of *published CMS products only* to `CMS_UPLOAD_DIR/published-product-chat.json` (or `uploads/published-product-chat.json` locally). The existing website chatbot reads that snapshot for exact product-name or model questions and labels its answer as staff-published website information. Drafts stay out of it. The status beside the button shows when the published products have changed since the last update. Other chatbot questions continue to use the previous catalogue fallback or configured provider. This snapshot is separate from the Haichuan PDF RAG index and does not update Dify.
 
 ## Current boundaries
 
 - The pilot uses one shared account, so it cannot identify which staff member made a change.
 - Saving Published content makes it available immediately; there is no approval workflow.
-- Deleting content is permanent after the browser confirmation.
+- Earlier saved versions of an existing entry can be restored in the admin. Deleting an entry is still permanent after the browser confirmation.
+- The content preview shows the edited Chinese and English text in the admin; it is not an exact website layout preview. New files uploaded before an entry is saved remain in the media library even if the edit is abandoned.
 - Uploaded files remain on this computer. Online hosting will need persistent file storage or object storage.
 - Cloudflare Pages cannot connect directly to a normal MySQL server. Online deployment will require a Node-capable backend host and a reachable managed MySQL database.
 

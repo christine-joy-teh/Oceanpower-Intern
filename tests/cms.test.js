@@ -3,7 +3,11 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const http = require('node:http');
-const { createCmsRouter, publicEntry } = require('../cms/router');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const { createCmsRouter, publicEntry, validFileSignature } = require('../cms/router');
+const { answerFromPublishedProducts } = require('../cms/chat-knowledge');
 const { constantTimeEqual, tokenHash } = require('../cms/security');
 
 function fixtureRepository() {
@@ -21,7 +25,12 @@ function fixtureRepository() {
     },
     deleteEntry: async (id) => { const at=entries.findIndex(entry=>entry.id===Number(id));if(at<0)return false;entries.splice(at,1);return true; },
     getFile: async () => null,
-    saveFile: async () => ({id:'file'})
+    fileIsPublic: async () => true,
+    saveFile: async () => ({id:'file'}),
+    listFiles: async () => [],
+    deleteFile: async () => true,
+    listRevisions: async () => [{ id: 7, savedAt: new Date('2026-01-01T00:00:00Z'), snapshot: { slug: 'older' } }],
+    restoreRevision: async () => ({ id: 1, slug: 'older', kind: 'product', status: 'draft' }),
   };
 }
 
@@ -42,6 +51,78 @@ test('public website falls back quietly while admin reports missing MySQL config
     assert.equal(admin.status,503);
     assert.deepEqual(await admin.json(),{error:'The content database is not configured.',code:'CMS_NOT_CONFIGURED'});
   });
+});
+
+test('revision restore and media deletion require an authenticated CSRF request', async () => {
+  await withServer(fixtureRepository(), async (base) => {
+    const login = await fetch(base + '/api/cms/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username: 'editor', password: 'local-demo-password' }) });
+    const session = await login.json();
+    const cookie = login.headers.get('set-cookie').split(';')[0];
+    const revisions = await fetch(base + '/api/cms/admin/entries/1/revisions', { headers: { Cookie: cookie } });
+    assert.equal((await revisions.json()).revisions.length, 1);
+    const restoreUrl = base + '/api/cms/admin/entries/1/revisions/7/restore';
+    assert.equal((await fetch(restoreUrl, { method: 'POST', headers: { Cookie: cookie } })).status, 403);
+    assert.equal((await fetch(restoreUrl, { method: 'POST', headers: { Cookie: cookie, 'X-CSRF-Token': session.csrfToken } })).status, 200);
+    const deleteUrl = base + '/api/cms/admin/files/12345678-1234-1234-1234-123456789013';
+    assert.equal((await fetch(deleteUrl, { method: 'DELETE', headers: { Cookie: cookie } })).status, 403);
+    assert.equal((await fetch(deleteUrl, { method: 'DELETE', headers: { Cookie: cookie, 'X-CSRF-Token': session.csrfToken } })).status, 200);
+  }, { username: 'editor', password: 'local-demo-password' });
+});
+
+test('admin manually syncs published products to the existing chatbot, with draft and stale states', async (t) => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'oceanpower-chat-snapshot-'));
+  const previous = process.env.CMS_UPLOAD_DIR;
+  process.env.CMS_UPLOAD_DIR = directory;
+  t.after(() => { if (previous === undefined) delete process.env.CMS_UPLOAD_DIR; else process.env.CMS_UPLOAD_DIR = previous; fs.rmSync(directory, { recursive: true, force: true }); });
+  await withServer(fixtureRepository(), async (base) => {
+    const login = await fetch(base + '/api/cms/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username: 'editor', password: 'local-demo-password' }) });
+    const session = await login.json();
+    const headers = { Cookie: login.headers.get('set-cookie').split(';')[0], 'X-CSRF-Token': session.csrfToken, 'Content-Type': 'application/json' };
+    const create = (slug, status) => fetch(base + '/api/cms/admin/entries', { method: 'POST', headers, body: JSON.stringify({
+      kind: 'product', slug, status, translations: { en: { title: slug === 'op130' ? 'OP130 soft serve machine' : 'Unpublished machine', summary: 'Staff product summary', body: '' }, zh: { title: slug === 'op130' ? 'OP130 软冰淇淋机' : '未发布机器', summary: '员工产品摘要', body: '' } },
+      specs: [{ labelEn: 'Output', labelZh: '产量', value: '30', unit: 'L/h', source: 'Food catalogue p. 18' }],
+    }) });
+    assert.equal((await create('op130', 'published')).status, 201);
+    assert.equal((await create('draft-machine', 'draft')).status, 201);
+    const before = await fetch(base + '/api/cms/admin/chat-knowledge', { headers });
+    assert.equal((await before.json()).current, false);
+    const blocked = await fetch(base + '/api/cms/admin/chat-knowledge', { method: 'POST', headers: { Cookie: headers.Cookie } });
+    assert.equal(blocked.status, 403);
+    const synced = await fetch(base + '/api/cms/admin/chat-knowledge', { method: 'POST', headers });
+    const status = await synced.json();
+    assert.equal(status.current, true);
+    assert.equal(status.productCount, 1);
+    assert.match(answerFromPublishedProducts('OP130 output?', 'en').answer, /30 L\/h/);
+    assert.equal(answerFromPublishedProducts('Unpublished machine', 'en'), null);
+    assert.match(answerFromPublishedProducts('OP130 exact price and delivery?', 'en').answer, /price or delivery date/);
+    assert.equal((await create('another-published', 'published')).status, 201);
+    const stale = await fetch(base + '/api/cms/admin/chat-knowledge', { headers });
+    assert.equal((await stale.json()).current, false);
+  }, { username: 'editor', password: 'local-demo-password' });
+});
+
+test('media signatures, public gallery URLs and video byte ranges are handled safely', async () => {
+  assert.equal(validFileSignature('video/mp4', Buffer.from('0000ftypisom')), true);
+  assert.equal(validFileSignature('video/mp4', Buffer.from('<script>alert(1)</script>')), false);
+  assert.equal(validFileSignature('application/pdf', Buffer.from('%PDF-1.7')), true);
+  const entry = { id: 1, kind: 'product', slug: 'op130', status: 'published', metadata: { galleryIds: ['12345678-1234-1234-1234-123456789012'], videoId: '12345678-1234-1234-1234-123456789013' }, translations: { en: { title: 'OP130' }, zh: { title: 'OP130' } }, specs: [] };
+  const result = publicEntry(entry, 'en');
+  assert.equal(result.gallery.length, 1);
+  assert.match(result.video, /\/api\/cms\/files\//);
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'oceanpower-video-range-'));
+  const filePath = path.join(directory, 'clip.mp4');
+  fs.writeFileSync(filePath, Buffer.from('0000ftypisom'));
+  try {
+    const repo = fixtureRepository();
+    repo.getFile = async () => ({ path: filePath, byte_size: 12, mime_type: 'video/mp4', original_name: 'clip.mp4' });
+    await withServer(repo, async (base) => {
+      const response = await fetch(base + '/api/cms/files/12345678-1234-1234-1234-123456789013', { headers: { Range: 'bytes=4-7' } });
+      assert.equal(response.status, 206);
+      assert.equal(await response.text(), 'ftyp');
+      const invalid = await fetch(base + '/api/cms/files/12345678-1234-1234-1234-123456789013', { headers: { Range: 'bytes=100-200' } });
+      assert.equal(invalid.status, 416);
+    });
+  } finally { fs.rmSync(directory, { recursive: true, force: true }); }
 });
 
 test('environment-configured administrator can sign in and CRUD bilingual published content', async () => {

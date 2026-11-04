@@ -5,12 +5,18 @@ import ProductCategory from '../components/ProductCategory.astro';
 import ProductOverview from '../components/ProductOverview.astro';
 import RadSpunrie from '../components/RadSpunrie.astro';
 import Hero from '../components/Hero.astro';
+import HomeCatalogue from '../components/HomeCatalogue.astro';
+import HomeNews from '../components/HomeNews.astro';
+import HomeEnquiry from '../components/HomeEnquiry.astro';
 import ProductGrid from '../components/ProductGrid.astro';
 import ProductComparison from '../components/ProductComparison.astro';
+import FibreProductDetail from '../components/FibreProductDetail.astro';
+import {fibreProducts} from '../content/catalogue';
 import Company from '../components/Company.astro';
 import Applications from '../components/Applications.astro';
 import BusinessCards from '../components/BusinessCards.astro';
 import BusinessProfile from '../components/BusinessProfile.astro';
+import FoodCatalogue from '../components/FoodCatalogue.astro';
 import CorporateContent from '../components/CorporateContent.astro';
 import HeadquartersContact from '../components/HeadquartersContact.astro';
 import News from '../components/News.astro';
@@ -25,14 +31,15 @@ const {locale,route}=Astro.props;
 const names:Record<string,string>={'':'Oceanpower website demo','products/rad-spunrie':'Rad Spunrie asphalt modifier',products:'Products',about:'About',business:'Business','business/new-material':'New materials','business/food':'Food','business/environment':'Environment','business/information':'Information',news:'News',contact:'Contact',demo:'LIVE DEMO MODE','products/gfrp':'GFRP Rebar','products/bfrp':'BFRP Rebar','products/cfrp':'CFRP Rebar'};
 const corporatePage=route in corporate ? route as keyof typeof corporate : undefined;
 const category=categories.find(item=>item.route===route);
+const productId=route.startsWith('products/')?route.split('/')[1] as keyof typeof fibreProducts:undefined;
+const product=productId&&productId in fibreProducts?productId:undefined;
 const title=t(corporatePage ? corporate[corporatePage].title : category?.category || names[route],locale)+' | Oceanpower';
 const pending=pendingRoutes.has(route);
 const business=businesses.find(item=>route==='business/'+item.slug);
-const description=(business ? t(business.summary,locale) : corporatePage ? t(corporate[corporatePage].intro,locale) : undefined) || (pending?t('This route follows the supplied website plan. Approved content has not yet been provided.',locale):t('Advanced fiber-reinforced polymer reinforcement for the infrastructure that cannot afford corrosion, weight, or magnetic interference.',locale));
-const product=['products/gfrp','products/bfrp','products/cfrp'].includes(route)?route.split('/')[1]:undefined;
+const description=(business ? t(business.summary,locale) : corporatePage ? t(corporate[corporatePage].intro,locale) : product ? fibreProducts[product].short[locale] || fibreProducts[product].short.en : undefined) || (pending?t('This route follows the supplied website plan. Approved content has not yet been provided.',locale):t('Advanced fiber-reinforced polymer reinforcement for the infrastructure that cannot afford corrosion, weight, or magnetic interference.',locale));
 ---
-<BaseLayout locale={locale} route={route} title={title} description={description} noindex={pending||route==='demo'} product={product?(product==='gfrp'?'GFRP sand-coated rebar':product.toUpperCase()+' rebar'):undefined}>
-{route===''&&<><Hero locale={locale}/><ProductGrid locale={locale}/><ProductComparison locale={locale}/><Applications locale={locale}/><BusinessCards locale={locale}/><Company locale={locale}/><ContentSection selector="#sales-tools, #rfq" locale={locale}/><HeadquartersContact locale={locale}/></>}
+<BaseLayout locale={locale} route={route} title={title} description={description} noindex={pending||route==='demo'} product={product?fibreProducts[product].name.en:undefined}>
+{route===''&&<><Hero locale={locale}/><HomeCatalogue locale={locale}/><ProductGrid locale={locale}/><ProductComparison locale={locale}/><Applications locale={locale}/><Company locale={locale}/><BusinessCards locale={locale}/><HomeNews locale={locale}/><HomeEnquiry locale={locale}/><HeadquartersContact locale={locale}/></>}
 {route==='products/rad-spunrie'&&<RadSpunrie locale={locale}/>}
 {category&&<ProductCategory locale={locale} category={category}/>}
 {route==='products'&&<ProductOverview locale={locale}/>}
@@ -40,10 +47,11 @@ const product=['products/gfrp','products/bfrp','products/cfrp'].includes(route)?
 {(route==='research'||route==='careers'||route==='legal')&&<CorporateContent page={route} locale={locale}/>}
 {route==='business'&&<BusinessCards locale={locale} standalone/>}
 {business&&<BusinessProfile locale={locale} slug={business.slug}/>}
+{route==='business/food'&&<FoodCatalogue locale={locale}/>}
 {route==='business/new-material'&&<><ProductGrid locale={locale}/><ProductComparison locale={locale}/><Applications locale={locale}/><ContentSection selector="#rfq" locale={locale}/></>}
 {pending&&<section class="section pending-page"><p class="eyebrow dark">OCEANPOWER</p><h1>{t(names[route],locale)}</h1><h2>{t('Content awaiting review',locale)}</h2><p>{description}</p><a class="button" href={urlFor(locale,'business')}>{t('Business',locale)} →</a></section>}
 {route==='contact'&&<><section class="section page-heading"><h1>{t('Contact',locale)}</h1></section><HeadquartersContact locale={locale}/><ContentSection selector="#rfq" locale={locale}/></>}
 {route==='news'&&<News locale={locale}/>}
-{product&&<div class="product-detail"><ContentSection page={product as 'gfrp'|'bfrp'|'cfrp'} selector=".product-wrap" locale={locale}/></div>}
+{product&&<div class="product-detail"><FibreProductDetail locale={locale} product={product}/></div>}
 {route==='demo'&&<><section class="section page-heading"><h1>{t('LIVE DEMO MODE',locale)}</h1></section><ContentSection page="demo" selector="#demo-mode" locale={locale}/></>}
 </BaseLayout>

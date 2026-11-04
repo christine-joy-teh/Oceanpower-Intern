@@ -4,6 +4,8 @@ const { once } = require('node:events');
 const http = require('node:http');
 const net = require('node:net');
 const path = require('node:path');
+const fs = require('node:fs');
+const os = require('node:os');
 const { spawn } = require('node:child_process');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -80,6 +82,22 @@ test.after(async () => {
   for (const child of runningChildren) {
     if (child.exitCode === null) child.kill();
   }
+});
+
+test('existing website chatbot answers a manually synced CMS product without provider credentials', async (t) => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'oceanpower-chat-server-'));
+  t.after(() => fs.rmSync(directory, { recursive: true, force: true }));
+  fs.writeFileSync(path.join(directory, 'published-product-chat.json'), JSON.stringify({ fingerprint: 'fixture', builtAt: new Date().toISOString(), products: [{
+    slug: 'op130', translations: { en: { title: 'OP130 soft serve machine', summary: 'Twin-twist soft serve machine.', body: '' }, zh: { title: 'OP130 软冰淇淋机', summary: '双口味软冰淇淋机。', body: '' } },
+    specs: [{ labelEn: 'Output', labelZh: '产量', value: '30', unit: 'L/h', source: 'Food catalogue p. 18' }],
+  }] }));
+  const app = await startApp({ CMS_UPLOAD_DIR: directory });
+  t.after(() => app.stop());
+  const { response, body } = await postChat(app.baseUrl, 'What is the output of OP130?');
+  assert.equal(response.status, 200);
+  assert.match(body.answer, /30 L\/h/);
+  assert.equal(body.sourceStatus, 'staff-published');
+  assert.equal(body.mode, 'catalogue-demo');
 });
 
 test('only intended public files and assets are served', async (t) => {

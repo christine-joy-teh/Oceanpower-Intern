@@ -479,6 +479,18 @@
     "es": "Modo catálogo · Sin IA en línea",
     "fr": "Mode catalogue · Sans IA en ligne"
   },
+  "Published website product information": {
+    "en": "Published website product information",
+    "zh": "网站已发布产品资料",
+    "es": "Información de productos publicada en el sitio",
+    "fr": "Informations produit publiées sur le site"
+  },
+  "Staff-published website content · Confirm specifications with staff": {
+    "en": "Staff-published website content · Confirm specifications with staff",
+    "zh": "网站已发布资料 · 具体规格请向工作人员确认",
+    "es": "Contenido publicado por el equipo · Confirme las especificaciones",
+    "fr": "Contenu publié par l'équipe · Confirmez les caractéristiques"
+  },
   "Assistant unavailable · Local catalogue only": {
     "en": "Assistant unavailable · Local catalogue only",
     "zh": "助手暂不可用 · 仅本地目录",

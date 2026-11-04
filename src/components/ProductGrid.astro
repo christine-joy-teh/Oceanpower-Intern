@@ -1,7 +1,20 @@
 ---
-import ContentSection from './ContentSection.astro';
-import type { Locale } from '../lib/routes';
+import {fibreProducts,local} from '../content/catalogue';
+import {urlFor,type Locale} from '../lib/routes';
 interface Props {locale:Locale;}
 const {locale}=Astro.props;
+const products=Object.values(fibreProducts);
 ---
-<ContentSection selector="#solutions" locale={locale}/>
+<section class="products section" id="solutions">
+  <div class="section-head"><div><p class="eyebrow dark"><i></i> {locale==='zh'?'复合筋产品平台':'FRP PRODUCT PLATFORM'}</p><h2>{locale==='zh'?'按材料与用途清晰选型。':'Select by material and application.'}</h2></div><p>{locale==='zh'?'最新版手册将 GFRP、BFRP、CFRP 筋材与 GFRP 全螺纹锚杆分开列示，避免跨产品引用参数。':'The latest manual keeps GFRP, BFRP and CFRP rebar separate from the GFRP all-thread anchor bar, preventing cross-product specification errors.'}</p></div>
+  <div class="product-grid">
+    {products.map((product,index)=><article class:list={['product-card',index===0&&'featured',product.id==='cfrp'&&'carbon']}>
+      <img src={product.image} alt={local(product.alt,locale)} loading="lazy" width="800" height="640"/>
+      <div class="product-content"><p>{product.code}</p><h3>{local(product.name,locale)}</h3><span>{local(product.short,locale)}</span><a href={urlFor(locale,product.route)}>{locale==='zh'?'查看产品详情':'View product details'} <b aria-hidden="true">→</b></a></div>
+    </article>)}
+  </div>
+  <aside class="anchor-product-strip" aria-labelledby="anchor-product-title"><div><p class="eyebrow dark">04 / ANCHORING</p><h3 id="anchor-product-title">{locale==='zh'?'GFRP 全螺纹树脂锚杆':'GFRP all-thread resin anchor bar'}</h3><p>{locale==='zh'?'独立的隧道及边坡锚固产品，具有专属直径与承载力表，不得套用 GFRP 筋材参数。':'A separate tunnel and slope anchoring product with its own diameter and capacity table—not GFRP rebar data.'}</p></div><a href={urlFor(locale,'products/fibre-reinforced-composites')+'#gfrp-anchor-bar'}>{locale==='zh'?'查看锚杆参数':'View anchor-bar data'} <span aria-hidden="true">→</span></a></aside>
+</section>
+<style>
+.anchor-product-strip{margin-top:24px;padding:28px 32px;border:1px solid var(--line);border-left:4px solid var(--aqua);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:36px;align-items:center;background:#f8faf8}.anchor-product-strip h3{font-size:clamp(22px,2.4vw,32px);margin:6px 0 10px}.anchor-product-strip p{max-width:760px;line-height:1.7;margin:0}.anchor-product-strip a{color:var(--blue);font-weight:800;white-space:nowrap}.anchor-product-strip a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}@media(max-width:700px){.anchor-product-strip{grid-template-columns:1fr;padding:24px 20px;gap:20px}.anchor-product-strip a{white-space:normal;min-height:44px;display:flex;align-items:center}}
+</style>

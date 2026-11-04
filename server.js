@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createCmsRouter } = require('./cms/router');
 const { retrieve } = require('./rag/retrieve');
+const { answerFromPublishedProducts } = require('./cms/chat-knowledge');
 
 loadEnv(path.join(__dirname, '.env'));
 
@@ -584,8 +585,11 @@ async function handleChat(request, response) {
     if (!message) return sendJson(response, 400, { error: 'Please enter a question.' });
     if (message.length > 2000) return sendJson(response, 400, { error: 'Please shorten the question to 2,000 characters.' });
 
-    let result;
-    if (LIVE_AI_READY) {
+    let result = CHAT_PERSONA === 'oceanpower' ? answerFromPublishedProducts(message, locale) : null;
+    if (result) {
+      // A staff-synced product entry is a deterministic local answer with a
+      // real CMS source, even when a provider is configured for other queries.
+    } else if (LIVE_AI_READY) {
       try {
         let systemPrompt;
         if (CHAT_PERSONA === 'haichuan') {
