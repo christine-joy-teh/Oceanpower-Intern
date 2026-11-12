@@ -91,3 +91,6 @@ All seven overview links now open internal category pages with headings only. Ex
 
 ### Category photographs
 Replaced the four category illustrations with real photographs. Monitoring equipment and tunnel-project photographs come from the original opxincai.com catalogue. Representative laboratory photograph: https://www.pexels.com/photo/scientists-experimenting-in-the-laboratory-9243576/ ; representative colour swatches: https://www.pexels.com/photo/a-spread-of-paint-color-swatches-6583367/ . Stock images illustrate the categories and do not depict Oceanpower facilities or staff.
+
+### Archive translations (2026-11-12)
+The 132 published archive records now use saved Google Translate translations for English, Spanish and French titles, summaries and descriptions, alongside localized archive controls. Chinese source records, dates, model identifiers and links are retained. Translation was authorized by the user. These are machine translations, not company-approved technical translations; text embedded in original source images remains Chinese. The build checks coverage and rendering for all 396 translated records. New or changed source text requires corresponding entries in src/content/official-product-translations.json. No translation service is called by visitors.

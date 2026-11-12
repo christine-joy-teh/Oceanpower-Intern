@@ -16,3 +16,4 @@ const airport=await fs.readFile('dist/en/products/integrated-solutions/index.htm
 console.log('Validated '+count+' localized routes, metadata, JSON-LD, local links, anchors and public-file isolation.');
 await import('./validate-business-translations.mjs');
 await import('./validate-corporate-content.mjs');
+await import('./validate-archive-translations.mjs');
