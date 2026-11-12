@@ -1,3 +1,3 @@
-import {load} from 'cheerio';import fs from 'node:fs/promises';
-const common=JSON.parse(await fs.readFile('src/i18n/common.json','utf8'));const source=JSON.parse(await fs.readFile('src/content/reference-pages.json','utf8'));
-for(const lang of ['zh','es','fr']){const dict=JSON.parse(await fs.readFile('src/i18n/'+lang+'.json','utf8'));const missing=new Set();for(const html of Object.values(source)){const $=load(html);$('main *').contents().each((_,node)=>{if(node.type!=='text')return;const key=node.data.trim();if(!key||!/[A-Za-z]{3}/.test(key)||dict[key]||common[key])return;if(/^(?:[\d\s.,≥>–%/-]*(?:MPa|GPa|mm)|GFRP|BFRP|CFRP|\/ GFRP|\/ BFRP|\/ CFRP|GFRP · BFRP · CFRP|info@jsopmaterial.com)$/.test(key))return;missing.add(key);});}console.log(lang,JSON.stringify([...missing]));}
+// Validate the current corporate and business content in the production build.
+await import('./validate-business-translations.mjs');
+await import('./validate-corporate-content.mjs');

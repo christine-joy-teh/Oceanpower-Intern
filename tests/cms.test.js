@@ -72,3 +72,17 @@ test('administrator credentials use constant-time comparison and are not part of
   assert.equal(constantTimeEqual('local-demo-password','wrong-password'),false);
   assert.equal(tokenHash('session-token').length,64);
 });
+
+test('public CMS omits retired products and catalogues without deleting stored records', async () => {
+  const repo=fixtureRepository();
+  for(const [slug,title] of [['gfrp','GFRP Rebar'],['frp-rebar-catalogue','Product catalogue'],['asphalt','Asphalt modifier']]) {
+    await repo.saveEntry(null,{kind:'product',slug,status:'published',translations:{en:{title,summary:'',body:''}}});
+  }
+  await withServer(repo,async base=>{
+    for(const locale of ['en','zh']) {
+      const result=await fetch(base+'/api/cms/public?locale='+locale).then(r=>r.json());
+      assert.deepEqual(result.entries.map(entry=>entry.slug),['asphalt']);
+    }
+    assert.equal((await repo.listEntries()).length,3);
+  });
+});

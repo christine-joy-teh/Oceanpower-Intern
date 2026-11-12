@@ -39,7 +39,6 @@ for(const locale of ['en','zh','es','fr']) {
       assert.ok(block.find('.corporate-source').attr('href').endsWith('?'+section.source+'_'));
     }
     assert.equal($('.business-profile-card').length,0,'Do not duplicate the business overview on corporate pages');
-    if(route==='about')assert.equal($('#company').length,1,'Existing FRP company section must appear only once');
     if(route==='contact'){assert.equal($('#contact').length,1);assert.equal($('a[href="tel:+8675583300666"]').length,1);}
     for(const link of ['research','careers','legal'])assert.equal($(`footer a[href="/${prefix}${link}/"]`).length,1);
   }

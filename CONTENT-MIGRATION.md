@@ -1,5 +1,15 @@
 # Oceanpower content migration — 13 October 2026
 
+## FRP removal — 11 November 2026
+
+- Removed all FRP reinforcement content from the published website, including GFRP, BFRP, CFRP, the fibre-reinforced composites category, comparisons, specifications, application sections and the legacy reinforcement company/certificate sections.
+- Replaced the homepage reinforcement introduction with the group introduction. Retained the other six product categories, Rad Spunrie detail, corporate pages and enquiry form.
+- Removed reinforcement routes and redirects in all four languages, public catalogue downloads and associated imagery. Historical source files remain outside the published build.
+- Replaced chatbot reinforcement knowledge and fallback answers with current business/category information. Public CMS responses exclude retired records; stored records are retained for administrators.
+- Validated the production build and 80 localized routes, removed URLs, chatbot responses, CMS filtering, desktop/mobile/tablet layouts and four-language enquiry journeys. No deployment was performed.
+
+The entries below describe earlier migration work and are historical.
+
 Reference: http://www.oceanpower.com/index_en.aspx
 
 The old site is a content reference only. The existing Astro design, product catalogue, AI assistant and enquiry draft remain in use. Source text is paraphrased and organised into readable sections. New copy supports English, Chinese, Spanish and French.

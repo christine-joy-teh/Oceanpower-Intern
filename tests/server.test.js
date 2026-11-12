@@ -86,12 +86,12 @@ test('only intended public files and assets are served', async (t) => {
   const app = await startApp();
   t.after(() => app.stop());
 
-  for (const publicPath of ['/', '/index.html', '/demo.html', '/styles.css', '/lab.css', '/script.js', '/rfq.js', '/rfq-ui.js', '/translations.js', '/specifications.js', '/navigation.js', '/catalogue.pdf', '/assets/gfrp-rebar.jpg']) {
+  for (const publicPath of ['/', '/index.html', '/en/products/', '/assets/oceanpower-logo.gif']) {
     const response = await fetch(`${app.baseUrl}${publicPath}`);
     assert.equal(response.status, 200, publicPath);
   }
 
-  const privatePaths = [
+  const privatePaths = ['/catalogue.pdf', '/gfrp.html', '/bfrp.html', '/cfrp.html', '/assets/gfrp-rebar.jpg',
     '/.env',
     '/.env.example',
     '/server.js',
@@ -115,67 +115,22 @@ test('only intended public files and assets are served', async (t) => {
     assert.equal(response.status, 404, privatePath);
   }
 
-  const head = await fetch(`${app.baseUrl}/script.js`, { method: 'HEAD' });
+  const head = await fetch(`${app.baseUrl}/en/`, { method: 'HEAD' });
   assert.equal(head.status, 200);
   assert.equal(await head.text(), '');
   assert.match(head.headers.get('cache-control'), /no-cache/);
   assert.equal((await fetch(`${app.baseUrl}/api/health`)).status, 200);
 });
 
-test('reported catalogue-demo questions return safe product-specific answers', async (t) => {
-  const app = await startApp();
-  t.after(() => app.stop());
-
-  const definition = await postChat(app.baseUrl, 'What is sand-coated GFRP rebar?');
-  assert.equal(definition.response.status, 200);
-  assert.match(definition.body.answer, /glass fiber and a resin matrix/i);
-  assert.match(definition.body.sources[0].detail, /printed pp\. 11-12/i);
-  assert.equal(definition.body.sourceStatus, 'catalogue-reference-draft');
-
-  const definitionZh = await postChat(app.baseUrl, '什么是覆砂 GFRP 玻璃纤维筋？', 'zh');
-  assert.match(definitionZh.body.answer, /玻璃纤维与树脂基体/);
-  assert.match(definitionZh.body.sources[0].detail, /11-12/);
-
-  const approval = await postChat(app.baseUrl, 'Can the chatbot approve an engineering design?');
-  assert.match(approval.body.answer, /^No\./);
-  assert.match(approval.body.answer, /cannot approve an engineering design/i);
-  assert.doesNotMatch(approval.body.answer, /info@/i);
-  assert.equal(approval.body.sourceStatus, 'draft-knowledge-reference');
-
-  const approvalZh = await postChat(app.baseUrl, '聊天机器人可以批准工程设计吗？', 'zh');
-  assert.match(approvalZh.body.answer, /^不可以/);
-
-  const commercial = await postChat(app.baseUrl, 'What is the exact price and delivery date?');
-  assert.match(commercial.body.answer, /neither a current price nor a confirmed delivery date/i);
-  assert.deepEqual(commercial.body.sources, []);
-
-  const commercialZh = await postChat(app.baseUrl, '准确价格和交货日期是什么？', 'zh');
-  assert.match(commercialZh.body.answer, /既不包含现行价格，也不包含已确认的交货日期/);
-  assert.deepEqual(commercialZh.body.sources, []);
-
-  const ambiguousRockbolt = await postChat(app.baseUrl, 'What is the tensile strength of a 20 mm GFRP rockbolt?');
-  assert.match(ambiguousRockbolt.body.answer, /not specific enough/i);
-  assert.match(ambiguousRockbolt.body.nextQuestion, /general solid.*MGSL20/i);
-  assert.doesNotMatch(ambiguousRockbolt.body.answer, /sand-coated GFRP rebar: 4-12/i);
-  assert.equal(ambiguousRockbolt.body.sources.length, 2);
-  assert.ok(ambiguousRockbolt.body.sources.every((source) => /printed pp\. 9-10/i.test(source.detail)));
-
-  const ambiguousRockboltZh = await postChat(app.baseUrl, '20 毫米 GFRP 锚杆的抗拉强度是多少？', 'zh');
-  assert.match(ambiguousRockboltZh.body.answer, /不足以确定强度值/);
-  assert.match(ambiguousRockboltZh.body.nextQuestion, /MGSL20/);
-
-  const solidRockbolt = await postChat(app.baseUrl, 'What is the tensile strength of the 20 mm general solid GFRP rockbolt?');
-  assert.match(solidRockbolt.body.answer, /700 MPa/);
-  assert.match(solidRockbolt.body.answer, /200 kN/);
-  assert.match(solidRockbolt.body.sources[0].detail, /General solid.*printed pp\. 9-10/i);
-
-  const miningRockbolt = await postChat(app.baseUrl, 'What is the tensile strength of the MGSL20 all-thread GFRP rockbolt?');
-  assert.match(miningRockbolt.body.answer, /500 MPa/);
-  assert.match(miningRockbolt.body.answer, /160 kN/);
-
-  const unsupported = await postChat(app.baseUrl, 'Who won an unrelated football match?');
-  assert.deepEqual(unsupported.body.sources, []);
-  assert.equal(unsupported.body.sourceStatus, 'none');
+test('retired product questions return current product guidance', async (t) => {
+  const app = await startApp(); t.after(() => app.stop());
+  for (const question of ['What is GFRP rebar?', 'Compare BFRP and CFRP', '20 mm rockbolt strength', 'What products are available?']) {
+    const result = await postChat(app.baseUrl, question);
+    assert.equal(result.response.status, 200);
+    assert.doesNotMatch(result.body.answer, /gfrp|bfrp|cfrp|rebar|rockbolt|MPa/i);
+    assert.match(result.body.answer, /asphalt/i);
+    assert.deepEqual(result.body.sources, []);
+  }
 });
 
 test('provider references remain unverified and failures use the local fallback', async (t) => {

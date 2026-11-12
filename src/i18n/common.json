@@ -335,53 +335,17 @@
     "es": "Orientación de producto",
     "fr": "Orientation produit"
   },
-  "Qualifies the project environment, reinforcement type and target diameter to guide buyers to the best-fit system.": {
-    "en": "Compare catalogue properties and prepare your requirements for an engineering review.",
-    "zh": "对比目录参数并整理需求，以供工程师审核。",
-    "es": "Compare propiedades del catálogo y prepare sus requisitos para una revisión técnica.",
-    "fr": "Comparez les propriétés du catalogue et préparez vos besoins pour un examen technique."
-  },
-  "Close-up of Oceanpower glass-fiber reinforcement bars": {
-    "en": "Close-up of Oceanpower glass-fiber reinforcement bars",
-    "zh": "Oceanpower 玻璃纤维筋材特写",
-    "es": "Detalle de barras de fibra de vidrio Oceanpower",
-    "fr": "Gros plan des armatures en fibre de verre Oceanpower"
-  },
-  "Close-up of basalt-fiber reinforcement bars": {
-    "en": "Close-up of basalt-fiber reinforcement bars",
-    "zh": "玄武岩纤维筋材特写",
-    "es": "Detalle de barras de fibra de basalto",
-    "fr": "Gros plan des armatures en fibre de basalte"
-  },
   "Carbon-fiber production equipment shown in the Oceanpower catalogue": {
     "en": "Carbon-fiber production equipment shown in the Oceanpower catalogue",
     "zh": "Oceanpower 目录中的碳纤维生产设备",
     "es": "Equipo de producción de fibra de carbono del catálogo Oceanpower",
     "fr": "Équipement de production de fibre de carbone du catalogue Oceanpower"
   },
-  "FRP material comparison": {
-    "en": "FRP material comparison",
-    "zh": "FRP 材料对比",
-    "es": "Comparación de materiales FRP",
-    "fr": "Comparaison des matériaux FRP"
-  },
   "Fiber specifications": {
     "en": "Fiber specifications",
     "zh": "纤维材料参数",
     "es": "Características de las fibras",
     "fr": "Caractéristiques des fibres"
-  },
-  "GFRP specifications": {
-    "en": "GFRP specifications",
-    "zh": "GFRP 参数",
-    "es": "Características GFRP",
-    "fr": "Caractéristiques GFRP"
-  },
-  "Oceanpower FRP rebar installed in metro and rail foundation projects": {
-    "en": "Oceanpower FRP rebar installed in metro and rail foundation projects",
-    "zh": "用于地铁及铁路基础工程的 Oceanpower FRP 筋材",
-    "es": "Armaduras FRP Oceanpower utilizadas en proyectos de metro y cimentaciones ferroviarias",
-    "fr": "Armatures FRP Oceanpower utilisées dans des projets de métro et de fondations ferroviaires"
   },
   "Company information": {
     "en": "Company information",
@@ -449,12 +413,6 @@
     "es": "Logotipos del catálogo: Tsinghua, Zhejiang, Tongji, Southeast, Miami University y Hong Kong Polytechnic University",
     "fr": "Logos du catalogue : Tsinghua, Zhejiang, Tongji, Southeast, Miami University et Hong Kong Polytechnic University"
   },
-  "Sand-coated GFRP specification table": {
-    "en": "Sand-coated GFRP specification table",
-    "zh": "覆砂 GFRP 参数表",
-    "es": "Tabla de propiedades GFRP con recubrimiento de arena",
-    "fr": "Tableau des caractéristiques GFRP sablées"
-  },
   "AI assistant": {
     "en": "AI assistant",
     "zh": "AI 助手",
@@ -520,5 +478,11 @@
     "zh": "模型提供的引用尚未核验，须经工程师审核。",
     "es": "Las referencias del proveedor no están verificadas. Se requiere revisión de ingeniería.",
     "fr": "Les références du fournisseur ne sont pas vérifiées. Une validation technique est nécessaire."
+  },
+  "Please contact Oceanpower for product information and technical review.": {
+    "en": "Please contact Oceanpower for product information and technical review.",
+    "zh": "产品信息与技术审核请联系海川。",
+    "es": "Contacte con Oceanpower para información sobre productos y revisión técnica.",
+    "fr": "Contactez Oceanpower pour les informations produits et une étude technique."
   }
 }

@@ -16,7 +16,7 @@ function open(dialog){if(!enquiry.open&&!catalogue.open)opener=document.activeEl
 function close(dialog){dialog.close();opener?.focus();}
 document.querySelectorAll('[data-dialog-close]').forEach(button=>button.addEventListener('click',()=>close(button.closest('dialog'))));
 for(const d of [enquiry,catalogue])d.addEventListener('cancel',()=>opener?.focus());
-document.querySelectorAll('[data-rfq-start]').forEach(button=>button.addEventListener('click',()=>{if(button.dataset.product)form.elements.product.value=button.dataset.product+' rebar';open(enquiry);}));
+document.querySelectorAll('[data-rfq-start]').forEach(button=>button.addEventListener('click',()=>{if(button.dataset.product)form.elements.product.value=button.dataset.product;open(enquiry);}));
 document.querySelectorAll('[data-open-catalogue]').forEach(button=>button.addEventListener('click',()=>open(catalogue)));
 document.querySelectorAll('[data-unknown]').forEach(button=>button.addEventListener('click',()=>{const input=form.elements[button.dataset.unknown];const on=button.getAttribute('aria-pressed')!=='true';button.setAttribute('aria-pressed',String(on));input.value=on?label('Not sure yet'):'';input.readOnly=on;}));
 form.addEventListener('input',()=>{status.textContent='';});
@@ -36,9 +36,7 @@ async function checkChat(){
 }
 document.querySelectorAll('[data-open-catalogue]').forEach(button=>button.addEventListener('click',checkChat));
 function localCatalogue(question){
- const match=question.match(/gfrp|bfrp|cfrp/i);
- const unsupported=/price|cost|quote|delivery|stock|precio|prix|livraison|entrega|价格|报价|交期|库存/i.test(question);
- return match&&!unsupported?dict.products[match[0].toLowerCase()]?.text:label('I cannot confirm that from the supplied catalogue. Please contact Oceanpower for a technical review.');
+ return label('Please contact Oceanpower for product information and technical review.');
 }
 chatForm.addEventListener('submit',async event=>{
  event.preventDefault();

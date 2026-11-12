@@ -16,7 +16,7 @@ test('Astro dev and preview use the original API without a second listening serv
   try{
    const health=await fetch(base+'/api/health/').then(r=>r.json());assert.equal(health.mode,'catalogue-demo');
    const result=await fetch(base+'/api/chat/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'BFRP',locale:'en'})}).then(r=>r.json());
-   assert.match(result.answer,/750/);assert.equal(result.mode,'catalogue-demo');
+   assert.doesNotMatch(result.answer,/BFRP|750/i);assert.match(result.answer,/asphalt/i);assert.equal(result.mode,'catalogue-demo');
    assert.equal((await fetch(base+'/api/chat/')).status,405);
    assert.equal((await fetch(base+'/server.js')).status,404);
   }finally{await new Promise(resolve=>server.close(resolve));}

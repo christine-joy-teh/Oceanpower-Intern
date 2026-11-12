@@ -1,3 +1,4 @@
+const { isRetiredContent } = require('../content-policy');
 'use strict';
 
 const fs = require('node:fs');
@@ -132,14 +133,14 @@ function createCmsRouter(repo = repository, adminOverride = null) {
         const locale = url.searchParams.get('locale') === 'zh' ? 'zh' : 'en';
         const kind = url.searchParams.get('kind') || undefined;
         const entries = await repo.listEntries({ kind, publishedOnly: true });
-        json(response, 200, { entries: entries.map((entry) => publicEntry(entry, locale)) });
+        json(response, 200, { entries: entries.filter(entry => !isRetiredContent(entry)).map((entry) => publicEntry(entry, locale)) });
         return true;
       }
 
       const fileMatch = url.pathname.match(/^\/api\/cms\/files\/([a-f0-9-]{36})$/i);
       if (request.method === 'GET' && fileMatch) {
         const file = await repo.getFile(fileMatch[1]);
-        if (!file || !fs.existsSync(file.path)) { json(response, 404, { error: 'File not found.' }); return true; }
+        if (!file || isRetiredContent(file.original_name) || !fs.existsSync(file.path)) { json(response, 404, { error: 'File not found.' }); return true; }
         securityHeaders(response);
         response.setHeader('Content-Type', file.mime_type);
         response.setHeader('Content-Length', file.byte_size);

@@ -1,18 +1,5 @@
 [
   {
-    "category": "Fibre-reinforced composites",
-    "name": "GFRP reinforcing bars",
-    "image": "/assets/product-example-186.jpg",
-    "source": "http://www.opxincai.com/prod_view.aspx?TypeId=50032&Id=186&FId=t3:50032:3",
-    "route": "products/fibre-reinforced-composites",
-    "content": {
-      "en": [],
-      "zh": [],
-      "es": [],
-      "fr": []
-    }
-  },
-  {
     "category": "Asphalt-based products",
     "name": "Rad Spunrie asphalt modifier",
     "image": "/assets/product-example-191.jpg",
