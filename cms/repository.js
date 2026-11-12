@@ -7,6 +7,11 @@ const mysql = require('mysql2/promise');
 
 let pool;
 
+// Set CMS_UPLOAD_DIR to a persistent disk mount on hosts with an ephemeral filesystem (Render).
+function uploadDirectory() {
+  return path.resolve(process.env.CMS_UPLOAD_DIR || path.join(__dirname, '..', 'uploads'));
+}
+
 function inputError(message) {
   return Object.assign(new Error(message), { status: 400 });
 }
@@ -15,34 +20,49 @@ function configured() {
   return Boolean(process.env.MYSQL_DATABASE && process.env.MYSQL_USER);
 }
 
-function getPool() {
-  if (!configured()) throw new Error('MySQL is not configured. Add the MYSQL_* values to .env.');
-  if (!pool) {
-    pool = mysql.createPool({
-      host: process.env.MYSQL_HOST || '127.0.0.1',
-      port: Number(process.env.MYSQL_PORT || 3306),
-      database: process.env.MYSQL_DATABASE,
-      user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_PASSWORD || '',
-      connectionLimit: 6,
-      charset: 'utf8mb4',
-      timezone: 'Z',
-      decimalNumbers: true,
-    });
+function sslConfig() {
+  const mode = String(process.env.MYSQL_SSL_MODE || '').trim().toUpperCase();
+  if (!mode || mode === 'DISABLED') return undefined;
+  const caFile = String(process.env.MYSQL_SSL_CA_FILE || '').trim();
+  if (caFile) return { ca: fs.readFileSync(path.resolve(caFile), 'utf8'), rejectUnauthorized: true };
+  if (mode === 'VERIFY_CA' || mode === 'VERIFY_IDENTITY') {
+    throw new Error('MYSQL_SSL_CA_FILE is required for verified MySQL TLS.');
   }
-  return pool;
+  return { rejectUnauthorized: false };
 }
 
-async function migrate() {
-  const connection = await mysql.createConnection({
+function connectionOptions(extra = {}) {
+  const ssl = sslConfig();
+  return {
     host: process.env.MYSQL_HOST || '127.0.0.1',
     port: Number(process.env.MYSQL_PORT || 3306),
     database: process.env.MYSQL_DATABASE,
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD || '',
     charset: 'utf8mb4',
+    ...(ssl ? { ssl } : {}),
+    ...extra,
+  };
+}
+
+function getPool() {
+  if (!configured()) throw new Error('MySQL is not configured. Add the MYSQL_* values to .env.');
+  if (!pool) {
+    pool = mysql.createPool(connectionOptions({
+      connectionLimit: 6,
+      // Fail before the browser's 5 s fallback instead of holding requests for the 10 s default.
+      connectTimeout: 4000,
+      timezone: 'Z',
+      decimalNumbers: true,
+    }));
+  }
+  return pool;
+}
+
+async function migrate() {
+  const connection = await mysql.createConnection(connectionOptions({
     multipleStatements: true,
-  });
+  }));
   try {
     await connection.query(fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8'));
   } finally {
@@ -107,16 +127,38 @@ function cleanEntry(input) {
     attachmentId: input.attachmentId || null, metadata, translations, specs };
 }
 
+function entryToInput(entry) {
+  return { kind: entry.kind, slug: entry.slug, status: entry.status, sortOrder: entry.sort_order,
+    publishedAt: entry.published_at, featuredImageId: entry.featured_image_id, attachmentId: entry.attachment_id,
+    metadata: entry.metadata, translations: entry.translations,
+    specs: entry.specs.map((spec) => ({ labelEn: spec.labelEn, labelZh: spec.labelZh, value: spec.value, unit: spec.unit, source: spec.source, sortOrder: spec.sortOrder })) };
+}
+
 async function saveEntry(id, input) {
   const data = cleanEntry(input);
+  const previous = id ? await getEntry(id) : null;
+  if (id && !previous) throw Object.assign(new Error('Content entry not found.'), { status: 404 });
+  const galleryIds = data.metadata.galleryIds;
+  if (galleryIds !== undefined) {
+    if (!Array.isArray(galleryIds) || galleryIds.length > 12 || galleryIds.some((value) => typeof value !== 'string' || !/^[a-f0-9-]{36}$/i.test(value))) throw inputError('Choose up to 12 uploaded images.');
+    for (const fileId of galleryIds) {
+      const file = await getFile(fileId);
+      if (!file?.mime_type.startsWith('image/')) throw inputError('Gallery items must be uploaded images.');
+    }
+  }
+  if (data.metadata.videoId) {
+    const file = await getFile(data.metadata.videoId);
+    if (!file?.mime_type.startsWith('video/')) throw inputError('Choose an uploaded video.');
+  }
   const connection = await getPool().getConnection();
   try {
     await connection.beginTransaction();
     let entryId = id ? Number(id) : null;
     if (entryId) {
+      await connection.execute('INSERT INTO cms_entry_revisions (entry_id,snapshot) VALUES (?,?)', [entryId, JSON.stringify(entryToInput(previous))]);
       const [result] = await connection.execute('UPDATE cms_entries SET kind=?,slug=?,status=?,sort_order=?,published_at=?,featured_image_id=?,attachment_id=?,metadata=? WHERE id=?',
         [data.kind,data.slug,data.status,data.sortOrder,data.publishedAt,data.featuredImageId,data.attachmentId,JSON.stringify(data.metadata),entryId]);
-      if (!result.affectedRows) throw new Error('Content entry not found.');
+      if (!result.affectedRows) throw Object.assign(new Error('Content entry not found.'), { status: 404 });
     } else {
       const [result] = await connection.execute('INSERT INTO cms_entries (kind,slug,status,sort_order,published_at,featured_image_id,attachment_id,metadata) VALUES (?,?,?,?,?,?,?,?)',
         [data.kind,data.slug,data.status,data.sortOrder,data.publishedAt,data.featuredImageId,data.attachmentId,JSON.stringify(data.metadata)]);
@@ -141,6 +183,18 @@ async function saveEntry(id, input) {
   }
 }
 
+async function listRevisions(entryId) {
+  const [rows] = await getPool().execute('SELECT id,saved_at,snapshot FROM cms_entry_revisions WHERE entry_id=? ORDER BY id DESC LIMIT 20', [Number(entryId)]);
+  return rows.map((row) => ({ id: row.id, savedAt: row.saved_at, snapshot: typeof row.snapshot === 'string' ? JSON.parse(row.snapshot) : row.snapshot }));
+}
+
+async function restoreRevision(entryId, revisionId) {
+  const [rows] = await getPool().execute('SELECT snapshot FROM cms_entry_revisions WHERE entry_id=? AND id=?', [Number(entryId), Number(revisionId)]);
+  if (!rows.length) throw Object.assign(new Error('Revision not found.'), { status: 404 });
+  const snapshot = typeof rows[0].snapshot === 'string' ? JSON.parse(rows[0].snapshot) : rows[0].snapshot;
+  return saveEntry(entryId, snapshot);
+}
+
 async function deleteEntry(id) {
   const [result] = await getPool().execute('DELETE FROM cms_entries WHERE id=?', [Number(id)]);
   return result.affectedRows > 0;
@@ -163,7 +217,7 @@ async function saveFile({ originalName, mimeType, bytes }) {
   const id = crypto.randomUUID();
   const extension = path.extname(originalName).toLowerCase().slice(0, 10);
   const storedName = `${id}${extension}`;
-  const directory = path.resolve(__dirname, '..', 'uploads');
+  const directory = uploadDirectory();
   await fs.promises.mkdir(directory, { recursive: true });
   await fs.promises.writeFile(path.join(directory, storedName), bytes, { flag: 'wx' });
   try {
@@ -178,7 +232,31 @@ async function saveFile({ originalName, mimeType, bytes }) {
 async function getFile(id) {
   const [rows] = await getPool().execute('SELECT * FROM cms_files WHERE id=?', [String(id)]);
   if (!rows[0]) return null;
-  return { ...rows[0], path: path.resolve(__dirname, '..', 'uploads', rows[0].stored_name) };
+  return { ...rows[0], path: path.join(uploadDirectory(), rows[0].stored_name) };
+}
+
+async function fileIsPublic(id) {
+  const [rows] = await getPool().execute(`SELECT id FROM cms_entries WHERE status='published' AND
+    (featured_image_id=? OR attachment_id=? OR JSON_CONTAINS(COALESCE(metadata,JSON_OBJECT()),JSON_QUOTE(?),'$.galleryIds') OR
+    JSON_UNQUOTE(JSON_EXTRACT(metadata,'$.videoId'))=?) LIMIT 1`, [id,id,id,id]);
+  return rows.length > 0;
+}
+
+async function deleteFile(id) {
+  const file = await getFile(id);
+  if (!file) return false;
+  const [references] = await getPool().execute(`SELECT id FROM cms_entries WHERE
+    featured_image_id=? OR attachment_id=? OR JSON_CONTAINS(COALESCE(metadata,JSON_OBJECT()),JSON_QUOTE(?),'$.galleryIds') OR
+    JSON_UNQUOTE(JSON_EXTRACT(metadata,'$.videoId'))=? LIMIT 1`, [id,id,id,id]);
+  if (references.length) throw Object.assign(new Error('Remove this file from website content before deleting it.'), { status: 409 });
+  await getPool().execute('DELETE FROM cms_files WHERE id=?', [id]);
+  await fs.promises.rm(file.path, { force: true });
+  return true;
+}
+
+async function listFiles() {
+  const [rows] = await getPool().query('SELECT id,original_name,mime_type,byte_size,created_at FROM cms_files ORDER BY created_at DESC LIMIT 200');
+  return rows.map((file) => ({ id: file.id, originalName: file.original_name, mimeType: file.mime_type, byteSize: file.byte_size, createdAt: file.created_at, url: `/api/cms/files/${file.id}` }));
 }
 
 async function close() {
@@ -188,4 +266,4 @@ async function close() {
   await activePool.end();
 }
 
-module.exports = { configured, migrate, listEntries, getEntry, saveEntry, deleteEntry, createSession, findSession, deleteSession, saveFile, getFile, close };
+module.exports = { configured, migrate, listEntries, getEntry, saveEntry, deleteEntry, listRevisions, restoreRevision, createSession, findSession, deleteSession, saveFile, getFile, fileIsPublic, deleteFile, listFiles, close };

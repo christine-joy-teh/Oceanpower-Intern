@@ -25,7 +25,7 @@ const copy = {
     welcome: 'Welcome to Oceanpower. I can answer catalogue-based questions about GFRP, BFRP, CFRP and rockbolt systems, or help prepare an RFQ for human review.',
     placeholder: 'Ask about your project...', quick: ['Tunnel project', 'GFRP data', 'Prepare an RFQ'],
     serviceLive: 'Live AI · draft knowledge', serviceDemo: 'Catalogue demo', serviceFallback: 'Catalogue fallback', serviceConfig: 'Catalogue demo · configuration issue', serviceOffline: 'Service unavailable',
-    sourceDraft: 'Catalogue references · draft', sourceKnowledge: 'Pilot knowledge · draft', sourceProvider: 'Provider references · not verified', sourceDefault: 'Sources',
+    sourceDraft: 'Catalogue references · draft', sourceKnowledge: 'Pilot knowledge · draft', sourceProvider: 'Provider references · not verified', sourceStaff: 'Staff-published website information', sourceDefault: 'Sources',
     waiting: 'Checking draft Oceanpower material',
     error: 'I could not reach the knowledge service. Please try again, or email info@jsopmaterial.com.',
     newChat: 'Reset chat & draft',
@@ -41,7 +41,7 @@ const copy = {
     welcome: '欢迎来到 Oceanpower。我可以根据产品目录回答 GFRP、BFRP、CFRP 和锚杆系统的问题，或整理询价需求交由人工审核。',
     placeholder: '输入您的项目问题...', quick: ['隧道项目', 'GFRP 数据', '准备询价'],
     serviceLive: '实时 AI · 草案知识', serviceDemo: '目录演示模式', serviceFallback: '目录备用模式', serviceConfig: '目录演示 · 配置问题', serviceOffline: '服务暂不可用',
-    sourceDraft: '目录参考 · 草案', sourceKnowledge: '试点知识 · 草案', sourceProvider: '模型服务参考 · 未核验', sourceDefault: '参考资料',
+    sourceDraft: '目录参考 · 草案', sourceKnowledge: '试点知识 · 草案', sourceProvider: '模型服务参考 · 未核验', sourceStaff: '网站已发布产品资料', sourceDefault: '参考资料',
     waiting: '正在查询 Oceanpower 草案资料',
     error: '暂时无法连接知识服务。请重试，或发送邮件至 info@jsopmaterial.com。',
     newChat: '重置对话及草稿', rfqIntro: '我们来整理询价草稿。您可以一次提供多项资料、编辑下方字段，或回答“未知”。目前不会发送任何资料。',
@@ -116,6 +116,8 @@ function addMessage(text, type, options = {}) {
       ? uiCopy().sourceProvider
       : options.sourceStatus === 'draft-knowledge-reference'
         ? uiCopy().sourceKnowledge
+      : options.sourceStatus === 'staff-published'
+        ? uiCopy().sourceStaff
       : options.sourceStatus === 'catalogue-reference-draft'
         ? uiCopy().sourceDraft
         : uiCopy().sourceDefault;

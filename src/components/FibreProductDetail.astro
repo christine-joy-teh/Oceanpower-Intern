@@ -1,0 +1,45 @@
+---
+import {fibreProducts,local} from '../content/catalogue';
+import {t} from '../i18n/ui';
+import {urlFor,type Locale} from '../lib/routes';
+interface Props {locale:Locale; product:keyof typeof fibreProducts;}
+const {locale,product}=Astro.props;
+const item=fibreProducts[product];
+const value=(entry:any)=>typeof entry==='string'?entry:local(entry,locale);
+---
+<div class="product-wrap catalogue-product-detail">
+  <p class="product-breadcrumb"><a href={urlFor(locale)}>{t('Home',locale)}</a> / <a href={urlFor(locale,'products')}>{t('Products',locale)}</a> / {local(item.name,locale)}</p>
+  <section class="product-overview" aria-labelledby="product-title">
+    <div>
+      <a class="back-to-products" href={urlFor(locale,'products')}><span aria-hidden="true">←</span> {locale==='zh'?'返回产品中心':'Back to products'}</a>
+      <p class="eyebrow dark">{item.code}</p>
+      <h1 id="product-title">{local(item.name,locale)}</h1>
+      <p class="product-lead">{local(item.lead,locale)}</p>
+      <p>{local(item.description,locale)}</p>
+      <div class="hero-actions"><a class="button" href="#product-specs">{locale==='zh'?'查看参数':'View specifications'} <span aria-hidden="true">↓</span></a><a class="product-inline-link" href={urlFor(locale,'contact')}>{locale==='zh'?'联系技术团队':'Contact technical team'} <span aria-hidden="true">→</span></a></div>
+    </div>
+    <figure><img src={item.image} alt={local(item.alt,locale)} width="800" height="640"/><figcaption>{locale==='zh'?'产品图片用于识别产品类别；表面形式、树脂体系及供货规格须另行确认。':'Image identifies the product family; confirm surface finish, resin system and supply specification.'}</figcaption></figure>
+  </section>
+  <div class="product-facts">{item.facts.map((fact:any)=><div><strong>{fact.value}</strong><span>{local(fact.label,locale)}</span></div>)}</div>
+  <section class="product-block" id="product-specs">
+    <p class="eyebrow dark">{locale==='zh'?'技术参数':'TECHNICAL INFORMATION'}</p>
+    <h2>{locale==='zh'?'最新版手册参考值':'Latest manual reference values'}</h2>
+    <p>{locale==='zh'?'以下数值按产品及直径分列，不可与锚杆、网格或其他复合筋产品互换。':'Keep every value with its product and diameter class. Do not substitute these values for anchor bars, mesh or other composite products.'}</p>
+    <div class="product-table-scroll" tabindex="0" role="region" aria-label={local(item.name,locale)}>
+      <table><caption>{local(item.name,locale)}</caption><thead><tr>{item.columns.map(column=><th scope="col">{local(column,locale)}</th>)}</tr></thead><tbody>{item.rows.map((row:readonly any[])=><tr>{row.map((cell:any,index:number)=>index===0?<th scope="row">{value(cell)}</th>:<td>{value(cell)}</td>)}</tr>)}</tbody></table>
+    </div>
+    <p class="product-source">{local(item.source,locale)}</p>
+    <div class="product-guidance"><h3>{locale==='zh'?'参数说明':'Specification note'}</h3><p>{local(item.tableNote,locale)}</p></div>
+  </section>
+  <section class="product-block" id="product-applications">
+    <p class="eyebrow dark">{locale==='zh'?'应用方向':'APPLICATIONS'}</p>
+    <h2>{locale==='zh'?'手册列示的应用范围':'Applications documented in the manual'}</h2>
+    <ul class="product-application-list">{item.applications.map(application=><li>{local(application,locale)}</li>)}</ul>
+    <div class="product-guidance"><h3>{locale==='zh'?'选型前确认':'Before specifying'}</h3><p>{locale==='zh'?'最终适用性取决于具体产品、树脂体系、暴露环境、结构设计及项目标准。请索取现行检测文件并由项目工程师确认。':'Final suitability depends on the exact product, resin system, exposure, structural design and project standard. Request current test documents and obtain project-engineer confirmation.'}</p></div>
+  </section>
+  <section class="product-block product-next">
+    <h2>{locale==='zh'?'讨论您的项目需求':'Discuss your project requirements'}</h2>
+    <p>{locale==='zh'?'请准备应用场景、直径或尺寸、数量、目的地及期望日期。价格、供货及技术适用性须由工作人员确认。':'Prepare the application, diameter or dimensions, quantity, destination and requested date. Staff must confirm price, availability and technical suitability.'}</p>
+    <div class="hero-actions"><a class="button" href={urlFor(locale,'contact')}>{locale==='zh'?'联系 Oceanpower':'Contact Oceanpower'} <span aria-hidden="true">→</span></a><a class="product-inline-link" href="/catalogue.pdf" target="_blank" rel="noopener">{locale==='zh'?'查看现有 FRP 目录':'View existing FRP catalogue'} <span aria-hidden="true">↗</span></a></div>
+  </section>
+</div>

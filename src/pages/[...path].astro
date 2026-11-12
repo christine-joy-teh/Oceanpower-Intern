@@ -4,8 +4,12 @@ import categories from '../content/product-examples.json';
 import ProductCategory from '../components/ProductCategory.astro';
 import ProductOverview from '../components/ProductOverview.astro';
 import RadSpunrie from '../components/RadSpunrie.astro';
+import HomeCatalogue from '../components/HomeCatalogue.astro';
+import HomeNews from '../components/HomeNews.astro';
+import HomeEnquiry from '../components/HomeEnquiry.astro';
 import BusinessCards from '../components/BusinessCards.astro';
 import BusinessProfile from '../components/BusinessProfile.astro';
+import FoodCatalogue from '../components/FoodCatalogue.astro';
 import CorporateContent from '../components/CorporateContent.astro';
 import HeadquartersContact from '../components/HeadquartersContact.astro';
 import News from '../components/News.astro';
@@ -25,7 +29,7 @@ const business=businesses.find(item=>route==='business/'+item.slug);
 const description=(business ? t(business.summary,locale) : corporatePage ? t(corporate[corporatePage].intro,locale) : undefined) || (pending?t('This route follows the supplied website plan. Approved content has not yet been provided.',locale):t(corporate.about.intro,locale));
 ---
 <BaseLayout locale={locale} route={route} title={title} description={description} noindex={pending||route==='demo'}>
-{route===''&&<><section class="section page-heading" data-cms-entry="page:home"><p class="eyebrow dark">OCEANPOWER</p><h1>{t(corporate.about.title,locale)}</h1><p class="hero-text">{t(corporate.about.intro,locale)}</p><a class="button" href={urlFor(locale,'products')}>{t('Products',locale)}</a></section><BusinessCards locale={locale}/><HeadquartersContact locale={locale}/></>}
+{route===''&&<><section class="section page-heading" data-cms-entry="page:home"><p class="eyebrow dark">OCEANPOWER</p><h1>{t(corporate.about.title,locale)}</h1><p class="hero-text">{t(corporate.about.intro,locale)}</p><a class="button" href={urlFor(locale,'products')}>{t('Products',locale)}</a></section><HomeCatalogue locale={locale}/><BusinessCards locale={locale}/><HomeNews locale={locale}/><HomeEnquiry locale={locale}/><HeadquartersContact locale={locale}/></>}
 {route==='products/rad-spunrie'&&<RadSpunrie locale={locale}/>}
 {category&&<ProductCategory locale={locale} category={category}/>}
 {route==='products'&&<ProductOverview locale={locale}/>}
@@ -33,6 +37,7 @@ const description=(business ? t(business.summary,locale) : corporatePage ? t(cor
 {(route==='research'||route==='careers'||route==='legal')&&<CorporateContent page={route} locale={locale}/>}
 {route==='business'&&<BusinessCards locale={locale} standalone/>}
 {business&&<BusinessProfile locale={locale} slug={business.slug}/>}
+{route==='business/food'&&<FoodCatalogue locale={locale}/>}
 {pending&&<section class="section pending-page"><p class="eyebrow dark">OCEANPOWER</p><h1>{t(names[route],locale)}</h1><h2>{t('Content awaiting review',locale)}</h2><p>{description}</p><a class="button" href={urlFor(locale,'business')}>{t('Business',locale)} →</a></section>}
 {route==='contact'&&<><section class="section page-heading"><h1>{t('Contact',locale)}</h1></section><HeadquartersContact locale={locale}/></>}
 {route==='news'&&<News locale={locale}/>}

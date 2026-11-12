@@ -1,0 +1,2743 @@
+{
+  "source": {
+    "name": "深圳海川新材料科技股份有限公司",
+    "url": "https://www.opxincai.com/",
+    "fetchedAt": "2026-10-30",
+    "status": "Official-site archive; verify current availability and specifications with Oceanpower staff."
+  },
+  "categories": [
+    {
+      "id": "frp",
+      "typeId": 50076,
+      "route": "products/fibre-reinforced-composites",
+      "name": {
+        "zh": "纤维增强复合材料",
+        "en": "Fibre-reinforced composites"
+      },
+      "entries": [
+        {
+          "title": "GFRP筋深圳地铁建设应用案例",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50081&Id=400&FId=t3:50081:3",
+          "typeId": "50081",
+          "releaseDate": "2025-02-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/ED/CgAGbGj4cnGANWvZAAMWBuYlr5E748.jpg"
+          ],
+          "subgroup": {
+            "zh": "工程案例",
+            "en": "Project cases"
+          },
+          "localImages": [
+            "/assets/official-products/babbcf1589659e86a19a.jpg"
+          ]
+        },
+        {
+          "title": "GFRP筋广佛地铁建设应用案例",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50081&Id=401&FId=t3:50081:3",
+          "typeId": "50081",
+          "releaseDate": "2024-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/ED/CgAGbGj4cvWAUHtLAAMU-z-RqDU512.jpg"
+          ],
+          "subgroup": {
+            "zh": "工程案例",
+            "en": "Project cases"
+          },
+          "localImages": [
+            "/assets/official-products/ecbb5b53a7ec93335d21.jpg"
+          ]
+        },
+        {
+          "title": "GFRP筋上海、杭州等地铁建设应用案例",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50081&Id=403&FId=t3:50081:3",
+          "typeId": "50081",
+          "releaseDate": "2024-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/ED/CgAGbGj4c_uATtr8AALaO7K3Hf0581.jpg"
+          ],
+          "subgroup": {
+            "zh": "工程案例",
+            "en": "Project cases"
+          },
+          "localImages": [
+            "/assets/official-products/da88f7ea4c1363138bb8.jpg"
+          ]
+        },
+        {
+          "title": "新型玻璃纤维筋混凝土护栏",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50080&Id=398&FId=t3:50080:3",
+          "typeId": "50080",
+          "releaseDate": "2023-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EC/CgAGbGj4b6uADFatAALOpGd4BaE730.jpg",
+            "https://rc0.zihu.com/g5/M00/45/EC/CgAGbGj4cE-AboiOAAH7TvpGZrE599.jpg",
+            "https://rc0.zihu.com/g5/M00/45/EC/CgAGbGj4cPWAYUBMAAKNwVINQFU750.jpg",
+            "https://rc0.zihu.com/g5/M00/45/EC/CgAGbGj4cPeAUjCpAALOX4p7T8A619.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品应用",
+            "en": "Applications"
+          },
+          "localImages": [
+            "/assets/official-products/99f05804d370d50e8ff8.jpg",
+            "/assets/official-products/4ae47c1708ae876f0efa.jpg",
+            "/assets/official-products/cde0960073285696893c.jpg",
+            "/assets/official-products/7780a79cd7af633182bf.jpg"
+          ]
+        },
+        {
+          "title": "GFRP筋混凝土护栏应用案例",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50081&Id=399&FId=t3:50081:3",
+          "typeId": "50081",
+          "releaseDate": "2023-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EC/CgAGbGj4cb2AQ7OdAAN_F1gRwBI280.jpg"
+          ],
+          "subgroup": {
+            "zh": "工程案例",
+            "en": "Project cases"
+          },
+          "localImages": [
+            "/assets/official-products/ea74312ef93074bd89cd.jpg"
+          ]
+        },
+        {
+          "title": "GFRP筋武汉、 郑州、苏州等地建设应用案例",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50081&Id=404&FId=t3:50081:3",
+          "typeId": "50081",
+          "releaseDate": "2023-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/ED/CgAGbGj4dGWAA7ocAAIvf6nJzQg075.jpg"
+          ],
+          "subgroup": {
+            "zh": "工程案例",
+            "en": "Project cases"
+          },
+          "localImages": [
+            "/assets/official-products/f1bfc00eae346b1d2223.jpg"
+          ]
+        },
+        {
+          "title": "公路边坡、隧道GFRP锚杆加固技术",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50080&Id=395&FId=t3:50080:3",
+          "typeId": "50080",
+          "releaseDate": "2022-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EA/CgAGbGj4bT2AbucRAAOVR6meXUk508.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品应用",
+            "en": "Applications"
+          },
+          "localImages": [
+            "/assets/official-products/f07abd4d4f7fec479157.jpg"
+          ]
+        },
+        {
+          "title": "GPRP筋在配筋混凝土路面、桥面的应用",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50080&Id=397&FId=t3:50080:3",
+          "typeId": "50080",
+          "releaseDate": "2022-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EB/CgAGbGj4br6AAqh2AALemXV7KIo467.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品应用",
+            "en": "Applications"
+          },
+          "localImages": [
+            "/assets/official-products/94a1de85c49979189358.jpg"
+          ]
+        },
+        {
+          "title": "GPRP在海工混凝土构结的应用",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50080&Id=396&FId=t3:50080:3",
+          "typeId": "50080",
+          "releaseDate": "2021-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EB/CgAGbGj4bieAfRgiAANB1MCZysk297.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品应用",
+            "en": "Applications"
+          },
+          "localImages": [
+            "/assets/official-products/c861822bb02d26d6a70c.jpg"
+          ]
+        },
+        {
+          "title": "荣誉资质",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50078&Id=389&FId=t3:50078:3",
+          "typeId": "50078",
+          "releaseDate": "2020-01-01",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/E9/CgAGbGj4VSSADqiyAAIevmvrggc701.jpg",
+            "https://rc0.zihu.com/g5/M00/45/E9/CgAGbGj4VSaAGOldAALt2mIZhxU313.jpg",
+            "https://rc0.zihu.com/g5/M00/45/EA/CgAGbGj4Z5yAKSM8AAAx5dIM5sI073.jpg"
+          ],
+          "subgroup": {
+            "zh": "荣誉资质",
+            "en": "Credentials"
+          },
+          "localImages": [
+            "/assets/official-products/a79baaaa61f2c06a3b01.jpg",
+            "/assets/official-products/c7caf628d62a1cde611f.jpg",
+            "/assets/official-products/67c1e71bad3bc15d30d8.jpg"
+          ]
+        },
+        {
+          "title": "纤维增强聚合物(FRP)",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50079&Id=390&FId=t3:50079:3",
+          "typeId": "50079",
+          "releaseDate": "2020-01-01",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/E9/CgAGbGj4Zd6AKLnBAAHQY_v3Wus958.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品简介",
+            "en": "Products"
+          },
+          "localImages": [
+            "/assets/official-products/f989609509e7052916f8.jpg"
+          ]
+        },
+        {
+          "title": "玻璃纤维筋",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50079&Id=391&FId=t3:50079:3",
+          "typeId": "50079",
+          "releaseDate": "2020-01-01",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EA/CgAGbGj4aMeAEfraAAIgKh7zWUk531.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品简介",
+            "en": "Products"
+          },
+          "localImages": [
+            "/assets/official-products/075fe04bfb3055c73754.jpg"
+          ]
+        },
+        {
+          "title": "玄武岩纤维筋/碳纤维筋材",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50079&Id=392&FId=t3:50079:3",
+          "typeId": "50079",
+          "releaseDate": "2020-01-01",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EA/CgAGbGj4amGAIUO4AAIWw6dA1ks062.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品简介",
+            "en": "Products"
+          },
+          "localImages": [
+            "/assets/official-products/5564f587b65275403cb3.jpg"
+          ]
+        },
+        {
+          "title": "盾构可切削混凝土配筋技术",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50080&Id=394&FId=t3:50080:3",
+          "typeId": "50080",
+          "releaseDate": "2020-01-01",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EA/CgAGbGj4bNqAZhYBAANkyacrbAQ430.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品应用",
+            "en": "Applications"
+          },
+          "localImages": [
+            "/assets/official-products/613ca1501ff8bb7bca2e.jpg"
+          ]
+        },
+        {
+          "title": "全螺纹式树脂锚杆",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50079&Id=393&FId=t3:50079:3",
+          "typeId": "50079",
+          "releaseDate": "2019-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/EA/CgAGbGj4bHWAO8WXAAJAWNNMpVk331.jpg"
+          ],
+          "subgroup": {
+            "zh": "产品简介",
+            "en": "Products"
+          },
+          "localImages": [
+            "/assets/official-products/bff67b3e3e07c4761d45.jpg"
+          ]
+        },
+        {
+          "title": "GFRP筋北京、成都地铁建设应用案例",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50081&Id=402&FId=t3:50081:3",
+          "typeId": "50081",
+          "releaseDate": "2019-10-27",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g5/M00/45/ED/CgAGbGj4c3WAb0HDAAMJ8LWfRu4026.jpg"
+          ],
+          "subgroup": {
+            "zh": "工程案例",
+            "en": "Project cases"
+          },
+          "localImages": [
+            "/assets/official-products/8a6d3a5e459506f87bb9.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asphalt",
+      "typeId": 50027,
+      "route": "products/asphalt-based-products",
+      "name": {
+        "zh": "沥青基产品",
+        "en": "Asphalt-based products"
+      },
+      "entries": [
+        {
+          "title": "Rad Spunrie复合高聚合物沥青混凝土改性剂（抗车辙剂）",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50035&Id=191&FId=t3:50035:3",
+          "typeId": "50035",
+          "releaseDate": "2015-03-31",
+          "summary": "Rad spunrie复合高聚合物沥青混凝土改性剂可用于各种沥青混凝土路面结构形式中，适用于高等级公路、市政道路、机场跑道、重交通道路和超重交通道路等。",
+          "description": "据统计高等级公路建设中90%以上的路面采用了沥青混凝土路面的结构形式，其造价占到了整个项目投资的25%以上，而建成后运营中道路路面往往达不到设计使用年限，更无法与欧美长寿命路面相比较，分析原因是由于设计理念和规范、标准不一致造成的。车辙病害（不可简单修复）是现行沥青混凝土路面病害中最为严重的、已成为道路运营中亟待解决的突出问题。 \n\n美国的路面技术要求是“结构层不可损坏（高强度），磨耗层（上面层）可以更换”，针对我们的现状如何选取好的路面结构形式？延长沥青混凝土路面的使用寿命，是摆在业主、设计和施工单位面前的现实问题。 \n\nRad spunrie复合高聚合物沥青混凝土改性剂可用于各种沥青混凝土路面结构形式中，适用于高等级公路、市政道路、机场跑道、重交通道路和超重交通道路等，特别适用于以下情况： \n\n（1）道路交通量大、重载车多； \n\n（2）极端高温区域，沥青混凝土高温稳定性明显不足； \n\n（3）沥青混凝土面层设计厚度偏薄，整体结构承载力不足； \n\n（4）资源或地域性原因，集料往往就地取材，无法采用优质集料和沥青； \n\n（5）建设资金有限，无法采用上中下面层三层改性或中上面层双层改性来提高沥青混凝土的路面整体强度。 \n\n一 产品介绍 \n\nRad spunrie是海川公司经过多年自主研发的复合高聚合物沥青混凝土改性剂，可在沥青混凝土拌和过程中直接投放，它通过集料表面增强、沥青改性以及弹性恢复等多重作用大幅提高沥青混凝土的强度、高温稳定性，并改善沥青混凝土的的水稳定性、抗裂性，综合而言对于沥青混凝土耐久性有着显著的提高。 \n\n掺加0.3%复合高聚合物改性剂可将普通沥青混凝土的动稳定度提高到6000次/mm以上；掺加0.5%复合高聚合物改性剂可将普通沥青混凝土的动稳定度提高到9000次/mm以上。 \n\n在任何掺量下不改变沥青混凝土的级配，仅需对油石比进行微调。 \n\n直接加入到拌和缸中，需延长拌和时间5-10s，后续施工工艺不受影响。 \n\n二 技术分析 \n\n1、改善高温抗车辙性能 \n\nRad spunrie复合高聚合物沥青混凝土改性剂可全方位地提高沥青混凝土的性能，特别是高温抗车辙性能。通过在长安大学、华南理工大学等高校的试验检测表明，Rad spunrie复合高聚合物沥青混凝土改性剂在高温抗车辙性能方面优势很明显。 \n\n通过图表可以看出，掺加Rad spunrie复合高聚合物改性剂后，沥青混凝土的抗车辙性能显著提高。60℃、0.7Mpa条件下，掺量为0.3%的动稳定度可以达到6000次/mm以上，掺量为0.5%时可以达到9000次/mm以上。 \n\n2、提高道路承载能力，延长道路使用寿命 \n\n沥青混凝土的静态回弹模量体现着道路的承载能力，静态回弹模量越高，道路承载能力越强，使用寿命也就越长。按照《公路工程沥青及沥青混凝土试验规程》中方法对Rad spunrie复合高聚合物改性沥青混凝土和普通沥青混凝土的20℃静态回弹模量进行了对比试验，如下表所示： \n\n从试验数据可以看出，掺加Rad spunrie复合高聚合物改性剂可以提高沥青混凝土的抗压回弹模量，与普通沥青混凝土相比提高了15.2%~23.1%。 \n\n3、对沥青和集料适用性强，提高路面质量 \n\nRad spunrie复合高聚合物改性剂对沥青和集料适用性强，对使用质量较差的沥青和集料的沥青混凝土的性能也有明显的改善作用。 \n\n编号 \n\n| 材料名称 \n\n| 动稳定度（次/mm） \n\n| \n1 \n\n| 石灰岩A+70#沥青A \n\n| 819 \n\n| \n2 \n\n| 石灰岩A+70#沥青A+0.3%Rad spunrie \n\n| 5415 \n\n| \n3 \n\n| 石灰岩A+70#沥青B \n\n| 832 \n\n| \n4 \n\n| 石灰岩A+70#沥青B+0.3%Rad spunrie \n\n| 5574 \n\n| \n5 \n\n| 石灰岩B+70#沥青A \n\n| 796 \n\n| \n6 \n\n| 石灰岩B+70#沥青A+0.3%Rad spunrie \n\n| 5225 \n\n| \n7 \n\n| 石灰岩B+70#沥青B \n\n| 811 \n\n| \n8 \n\n| 石灰岩B+70#沥青B+0.3%Rad spunrie \n\n| 5372 \n\n| \n\n4、经济适用性价比高 \n\n掺加Rad spunrie复合高聚合物改性剂后，掺量为0.3%的情况下60℃的动稳定度可以达到6000次/mm以上，远远高于SBS改性沥青，而造价却更低，因此Rad spunrie复合高聚合物改性剂性价比要高于SBS改性沥青。 \n\n同时与国内外其它抗车辙产品相比，Rad spunrie复合高聚合物改性剂也具有更高的性价比。可以说，Rad spunrie复合高聚合物改性剂是沥青混凝土路面的最具性价比的解决方案。 \n\n三 应用结构层次 \n\n根据具体工程条件，分析车辙主要产生的结构层次，决定复合高聚合物沥青混凝土改性剂的应用层次。一般情况下应用于上面层和中面层，特殊情况下三层均可考虑使用复合高聚合物沥青混凝土改性剂。 \n\n1）I型（性价比最高型）中、上面层同时使用复合高聚合物沥青混凝土改性剂 \n\n2）II型（性能较优型）中面层使用复合高聚合物沥青混凝土改性剂 \n\n3）III型（经济型）上面层使用复合高聚合物沥青混凝土改性剂 \n\n根据欧美国家长寿命设计理念，长寿命路面是指路面设计寿命超过40年，相对于现有的路面其日常养护要求总费用更低的路面结构。长寿命路面基本模型结构分层如下： \n\n1) 轮载下100～150mm区域是高受力区域，也是各种损坏（主要为轮载）的发生区域。 \n\n2) 面层40～75mm高质量沥青混凝土为车辆提供良好的行驶界面，应具有足够的表面构造深度、抗车辙、水稳定性好。 \n\n3) 中间层100～175mm高模量抗车辙沥青混凝土起到连接和扩散荷载的作用，应具有高模量（刚度）、抗车辙的特点。 \n\n4) HMA基层75～100mm高柔性抗疲劳沥青混凝土起到消除疲劳破坏的作用，应具备高柔性、抗疲劳、水稳定性好的特点。 \n\n在欧美长寿命路面的结构设计中，要求整个面层结构均具有良好的抗车辙性能，这是在对整个路面结构做出准确的受力分析的基础上提出的。而国内往往只关注中面层的抗车辙性能，这是一个很大的误区。要使路面达到真正意义上的耐久、长寿命，必须使整个面层结构均具有良好的抗车辙性能。 \n\n应用方式和掺量：复合高聚合物沥青混凝土改性剂可以取代改性沥青或纤维的功能单独使用，也可以与改性沥青、纤维共同使用。一般情况下复合高聚合物沥青混凝土改性剂的掺量为沥青混合料重量的0.3%~0.5%，对于特殊区域可以增加到0.7%~0.9%。 \n\n四 技术成果 \n\n近年来，海川Rad spunrie复合高聚合物改性剂已通过国内多家权威机构的鉴定和检测，这些鉴定和检测报告包括： \n\n（1）住建部鉴定报告“车辙王重交通沥青路面专用抗车辙剂” \n\n（2） 广东省交通厅鉴定报告“重交通路面高温抗车辙性能研究” \n\n（3）广东省经济贸易委员会鉴定报告“车辙王重交通沥青路面专用抗车辙剂” \n\n（4）长安大学“掺加抗车辙剂沥青混凝土高温稳定性检测报告” \n\n（5）华南理工大学“沥青混凝土用抗车辙剂评价报告” \n\n（6）广东交通集团检测中心“深汕高速公路东段添加抗车辙剂试验路段路面质量状况检测评估报告。 \n\n在这些研究的基础上，海川Rad spunrie复合高聚合物改性剂还获得了以下成果： \n\n（1）主编国家标准《抗车辙剂沥青混凝土》GB/T 29050-2012 \n\n（2）主编广东省地方标准《沥青混凝土抗车辙剂》 DB44/T 624-2009 \n\n（3）国家重点新产品“重交通沥青路面专用抗车辙剂”，项目编号：2009GRE02010 \n\n（4）深圳市科技进步奖“新型抗车辙、温拌、高粘改性剂系列产品”证书编号：2010-J-07-R02 \n\n（5）中国专利优秀奖“一种用于交通抗车辙的沥青改性剂及其改性沥青和沥青混凝土”，ZL 200610080064.2 \n\n五 Rad spunrie复合高聚合物改性剂部分应用实例 \n\n（1）安晋高速公路（昆明绕城高速公路西南段） \n\n昆明绕城高速公路西南段设计长度38.57公里，采用双向6车道的全封闭式高速公路标准建设。整个路段中约25公里中面层添加了0.4%的Rad spunrie复合高聚合物改性剂。该路段施工时，时任国务院副总理李克强莅临现场考察。 \n\n（2）深汕高速（东段）大修工程 \n\n深汕高速公路东段路面大修工程于2006年5月完成施工。为加强路面整体结构强度，提高沥青路面抗车辙能力，试验路采用了中面层AC-20型普通沥青混凝土外掺0.3%深圳海川Rad spunrie复合高聚合物改性剂和中面层AC-20型普通沥青混凝土进行比较。于2013年委托广东交通集团检测中心对掺加Rad spunrie复合高聚合物改性剂路段的路面质量状况进行了检测评估，结果表明，该路段各项性能指标良好。说明Rad spunrie复合高聚合物改性剂能够显著延长道路使用寿命。 \n\n现场钻芯取样 沥青路面面板撬取 \n\n（3）山西平阳高速 \n\n山西平阳高速公路全长124.5公里，是山西省第一条山区双向六车道高速公路。中面层6cmAC-20C（掺加5‰ Rad spunrie复合高聚合物改性剂），沥青混凝土油石比为4.5%。 \n\n（4）云南大丽高速（大理到丽江） \n\n云南大丽高速（大理到丽江）是国家高速公路规划重要干线“杭瑞高速（G56）”的联络线。由一条全长204公里的主线和两条总长68.1公里的连接线构成。沥青路面为双向4车道，掺量为沥青混凝土重量的0.4%，级配为AC-20C，使用70#基质沥青，石料为石灰岩。 \n\n（5）乌海市新地至西来峰工业园区运煤二级公路 \n\n新地至西来峰工业园区运煤二级公路，是连接乌海市南北地区，构成乌海市公路网中“三纵四环”的主要骨架之一。沥青路面为两层结构：采用上面层3.5cm厚AC-16沥青混凝土掺加。上面层全线采用海川Rad spunrie复合高聚合物改性剂，掺加量为4.5‰。 \n\n以下案例，按照AC20沥青混凝土，厚度0.06m，折算单车道3.5m宽进行统计： \n\n1、云南省，永武（永仁至武定）高速公路356km； \n\n2、云南省，水麻（水富至麻柳湾）高速公路367km \n\n3、云南省，昆明市呈贡新城元宝路、关山环路、市府环路、拥广路的路面工程81km； \n\n4、云南省，昆明市呈贡中庄路网、新潭路网的路面工程91km； \n\n5、湖南省，张家界至桑植公路87km； \n\n6、安徽省，合肥市一环路的路面工程13.3km； \n\n7、山西省，太原市迎接西大街、南内环街、南中环街、经济开发区、和平北路路面工程115km； \n\n8、河南省，驻马店S219（正阳至汝南）、G107遂平段、新郑段路面工程67km； \n\n9、天津市，唐津高速滨海大桥路面工程18km。 \n\n10、云南省，元双（元谋至双柏）公路793km； \n\n11、云南省，楚大（楚雄至大理）高速公路190km； \n\n12、天津市，京沪高速（天津段）25km； \n\n13、天津市，丹拉高速（天津段）35.3km； \n\n14、G107国道，京水村至小刘村段40km； \n\n15、广东省，深圳市泥岗路5km。 \n\n16、山西省，平阳（平定至阳曲）高速1158km； \n\n17、广东省，深圳市水官高速261km； \n\n18、广东省，揭阳潮汕机场46.7km； \n\n19、云南省，玉元（玉溪至元江）高速公路433km； \n\n20、云南省，元双（元谋至双柏）公路533km； \n\n21、云南省，昆明新机场125km； \n\n22、山东省，济南市文化路路面工程32.6km； \n\n23、北京市，首都机场3.5km. \n\n24、云南省，昆明西北绕城高速项目，250km \n\n25、非洲刚果金金沙萨机场项目，16km \n\n26、新疆国道S301项目，20km \n\n27、山西省，神河高速项目，175km \n\n28、山西省，苛临高速项目，120km \n\n29、....... \n\n截至到2013年底，海川新材已在全国范围内完成了100余项高速公路、重载专线和市政道路抗车辙沥青路面的施工，市场份额居全国之首。",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122084419_0781.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122084419_8906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122084615_3906.jpg",
+            "file:///C:/Users/web/AppData/Local/Temp/msohtmlclip1/01/clip_image001.gif",
+            "file:///C:/Users/web/AppData/Local/Temp/msohtmlclip1/01/clip_image001.gif",
+            "file:///C:/Users/web/AppData/Local/Temp/msohtmlclip1/01/clip_image001.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122084931_5000.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122084959_9375.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122085220_7968.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122085237_4218.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122085253_5312.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122085726_4687.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090010_8906.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090011_7343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090012_1093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090012_3906.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090148_6093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090148_8125.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090238_5781.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090316_3906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090357_4375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090430_7500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150122/20150122090537_0937.jpg"
+          ],
+          "subgroup": {
+            "zh": "混合料改性剂",
+            "en": "Mixture modifiers"
+          }
+        },
+        {
+          "title": "海川OP系列彩色沥青和着色剂",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50036&Id=189&FId=t3:50036:3",
+          "typeId": "50036",
+          "releaseDate": "2014-12-15",
+          "summary": "海川OP系列彩色沥青完全依照道路石油沥青的行业标准研制，不同标号的彩色沥青可以用于不同地区、不同等级的各种路面。由于加入了高分子改性剂，在塑性方面有很大的提高，延度明显好于普通沥青。",
+          "description": "海川OP系列彩色沥青和着色剂——彩色沥青混凝土路面的最佳选择 \n\n产品介绍 \n\n彩色沥青是指由石油化工产品加工而成的具有道路石油沥青性能的可着色浅色或无色粘结材料。着色剂是指用于彩色沥青混凝土中的专用颜料。用彩色沥青作为粘结材料，与着色剂按一定比例经加热、搅拌而成的产品即彩色沥青混凝土。彩色沥青混凝土路面具有色彩绚丽、舒适度高、路用性能优良等特点，不仅能美化环境，改善出行及居住条件，还能有效组织城市交通，缓解城市拥堵问题，已成为目前城市路面彩化的首选。 \n\n技术分析 \n\nn 彩色沥青性能 \n\n海川OP系列彩色沥青完全依照道路石油沥青的行业标准研制，不同标号的彩色沥青可以用于不同地区、不同等级的各种路面。由于加入了高分子改性剂，在塑性方面有很大的提高，延度明显好于普通沥青。 \n\n普通彩色沥青性能指标 \n\n指 标 \n\n| 单位 \n\n| OP-50 \n\n| OP-70 \n\n| OP-90 \n\n| \n针入度（25℃，100g，5s） \n\n| 0.1mm \n\n| 40-60 \n\n| 60-80 \n\n| 80-100 \n\n| \n延度 \n\n| 15℃ \n\n| cm \n\n| ≥100 \n\n| ≥100 \n\n| ≥100 \n\n| \n10℃ \n\n| ≥20 \n\n| ≥25 \n\n| ≥45 \n\n| \n软化点 \n\n（环球法） \n\n| 非机动车道 \n\n| ℃ \n\n| ≥50 \n\n| ≥50 \n\n| ≥50 \n\n| \n机动车道① \n\n| ≥56 \n\n| ≥60 \n\n| ≥65 \n\n| \n\n特种彩色沥青性能指标 \n\n指 标 \n\n| 单位 \n\n| 技术要求 \n\n| 试验方法 \n\n| \n改性彩色沥青 \n\n| 高粘彩色沥青 \n\n| \n针入度（25℃，5s，100g） \n\n| 0.1mm \n\n| 40～80 \n\n| 30～60 \n\n| T 0604 \n\n| \n软化点TR&B \n\n| ℃ \n\n| ≥60 \n\n| ≥80 \n\n| T 0606 \n\n| \n延度 5℃，5cm/min \n\n| cm \n\n| ≥20 \n\n| ≥20 \n\n| T 0605 \n\n| \n60℃动力粘度 \n\n| Pa·s \n\n| ≥1000 \n\n| ≥20000 \n\n| T 0620 \n\n| \n注：改性彩色沥青适用于彩色SMA混合料，高粘彩色沥青适用于彩色OGFC混合料。 \n\nn 着色剂性能 \n\n彩色沥青专用着色剂由海川新材色彩事业部独立研发而成，符合中国颜色国标，具有色彩鲜明、化学性质稳定、着色力强、不宜褪色、耐候性好等特点。目前具有红、绿、黄、蓝等几大色系，并可根据客户的要求进行色彩设计。 \n\n彩色路面专用着色剂性能指标 \n\n指 标 \n\n| 单 位 \n\n| 技术要求 \n\n| 试验方法 \n\n| \n外 观 \n\n| -- \n\n| 粉 末 \n\n| -- \n\n| \n色 光 \n\n| -- \n\n| 近似～微似 \n\n| -- \n\n| \n水溶物含量 \n\n| % \n\n| ≤1.0 \n\n| GB/T 5211.1 \n\n| \n着色率 \n\n| -- \n\n| 98～102 \n\n| GB/T 5211.19 \n\n| \n吸油量 \n\n| % \n\n| ≤22 \n\n| GB/T 5211.15 \n\n| \n筛余量（0.075mm筛孔） \n\n| % \n\n| ≤0.1 \n\n| -- \n\n| \n耐光性 \n\n| 级 \n\n| ≥7 \n\n| GB/T 1710 \n\n| \n\nn 彩色沥青混合料性能 \n\n彩色沥青混合料性能指标 \n\n混合料类型 \n\n| 稳定度（KN） \n\n| 流值(mm) \n\n| 动稳定度 (次/mm) \n\n| 浸水马歇尔试验残留稳定度（%） \n\n| 冻融劈裂试验残留强度比（%） \n\n| \nAC混合料 \n\n| 非机动车道 \n\n| ≥3 \n\n| 2～5 \n\n| ≥1000 \n\n| ≥80 \n\n| ≥75 \n\n| \n机动车道 \n\n| ≥8 \n\n| 1.5～4 \n\n| ≥3000 \n\n| ≥85 \n\n| ≥80 \n\n| \nSMA混合料 \n\n| ≥8 \n\n| - \n\n| ≥3000 \n\n| ≥80 \n\n| ≥80 \n\n| \nOGFC混合料 \n\n| ≥3.5 \n\n| - \n\n| ≥3000 \n\n| - \n\n| - \n\n| \n\nn 色彩稳定性 \n\n未照射 紫外光照射15天后 \n\nn 主编及参编彩色沥青相关国家、地方标准 \n\n目前，海川的彩色沥青所铺筑的彩色路面已超过超过3000万平方米，工程遍布全国各地，海川对彩色沥青在绿道、自行车道等慢行系统路面以及高等级道路路面的应用上面积累了丰富的经验。 \n\n部分工程案例 \n\n大梅沙海滨栈道 \n\n苏州环太湖路自行车 \n\n濮阳高速路服务区 \n\n上海军工路公交专用",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127081815_3125.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127081815_5312.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127082129_9218.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127082130_4218.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127082244_1875.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127082502_9687.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127082620_6250.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127082645_7187.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127082732_5000.jpg"
+          ],
+          "subgroup": {
+            "zh": "彩色沥青",
+            "en": "Coloured asphalt"
+          }
+        },
+        {
+          "title": "海川SINOTPS沥青混凝土高粘改性剂",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50035&Id=194&FId=t3:50035:3",
+          "typeId": "50035",
+          "releaseDate": "2014-12-15",
+          "summary": "排水降噪沥青混凝土是利用级配调整使粗细粒料间的孔隙率提高至20％左右，以使降于铺面上水分可由大量孔隙迅速排除，避免路表积水及在铺面上形成水膜，因而減少行车打滑与水沫飞溅，由于它集优良的排水、防滑、降噪等功能为一体，不失为一种安全、环保的生态沥青混凝土路面铺装新技术。",
+          "description": "一、排水降噪沥青混凝土路面介绍 \n\n1 排水降噪沥青混凝土路面功能特性 \n\n1）有效解决路面积水现象 \n\n排水性是排水降噪沥青混凝土路面的重要特性，雨水可通过表面层内部的空隙流出，而不会在表面形成水膜和径流，从而减少洪涝灾害。 \n\n2）提高行车安全性 \n\n排水降噪沥青混凝土路面在雨天可以有效减少路面积水，增加路面与轮胎的附着力，防止汽车在行驶中发生水漂现象，抑制溅水起雾影响后车视线，减轻雨天路面眩光现象，从而大大提高雨天行车安全性。据统计，铺装排水降噪沥青混凝土路面后，交通事故率下降80%。 \n\n3）降低环境噪音 \n\n排水降噪沥青混凝土路面与普通沥青混凝土路面相比，可降低噪声３-５dB。 \n\n2 排水降噪沥青混凝土路面的结构特点 \n\n与传统的密级配沥青混凝土相比，排水降噪沥青混凝土的大空隙特征使其更容易受到日光、空气及水的侵蚀，导致混合料出现耐久性的降低以及透水功能丧失等问题。为保证排水降噪沥青混凝土路面的耐久性和功能的持续性，必须选择优质骨料及高粘性的沥青胶结料，高粘度改性沥青为构建排水降噪沥青混凝土路面的核心技术。 \n\n3 典型路面结构设计 \n\n| \n\n二、产品介绍 \n\nSINOTPS是海川公司为适应我国发展高等级公路的要求，独立自主研发的一种高粘沥青改性剂。可以添加到基质沥青中制备高粘沥青或是和集料一起直接投入到拌和锅中进行干拌后再加入基质沥青拌和生产高粘沥青混合料。所制备出的高粘度沥青混合料耐久性、高温稳定性、抗老化性能显著提高，具有较高的抗飞散性、耐水性、耐候性和耐流动性。 \n\n三、技术分析 \n\n1 高粘改性沥青性能指标 \n\n检测项目 \n\n| SINOTPS高粘沥青 \n\n| 国家标准 \n\n| \n软化点（℃） \n\n| 88 \n\n| ＞80 \n\n| \n针入度（25℃，0.1mm） \n\n| 42 \n\n| ＞40 \n\n| \n延度 （15℃，cm） \n\n| ＞100 \n\n| ＞50 \n\n| \n粘韧性(N·m) \n\n| 31.4 \n\n| ＞20 \n\n| \n韧性(N·m) \n\n| 21.2 \n\n| ＞15 \n\n| \n薄膜加热质量变化率（%） \n\n| 0.28 \n\n| ≤0.6 \n\n| \n60℃粘度（Pa·s） \n\n| 102636 \n\n| ＞20000 \n\n| \n注：基质沥青为70号道路石油沥青。 \n\n从表中数据可以看出，高粘改性沥青软化点高、60℃粘度高，说明由其制备的沥青混凝土高温稳定性好；韧性、粘韧性好，说明由其制备的沥青混凝土的握裹力和抗疲劳性能得到改善。 \n\n2 高粘改性沥青混合料性能指标 \n\n高粘改性沥青混合料性能试验结果 \n\n混合料类型 \n\n| 浸水马歇尔残留稳定度比（%） \n\n| 冻融劈裂残留强度比（%） \n\n| 低温（-10℃）弯曲破坏应变（με） \n\n| 动稳定度（次/mm） \n\n| \nOGFC-13 \n\n| 88.9 \n\n| 93.7 \n\n| 3865 \n\n| 5549 \n\n| \n从表中数据可以看出，高粘改性沥青混合料高温性能、低温性能和水稳性都得到明显提高。 \n\n四、SINO TPS高粘沥青的其它应用 \n\nSINO TPS高粘沥青除用于建造排水降噪沥青混凝土路面外，还具有如下用途： \n\n1 铺筑半柔性路面 \n\n半柔性路面是指在开级配大空隙基体沥青混凝土中, 填充以水泥为主要成分的特殊水泥砂浆而形成的兼具沥青路面与水泥混凝土路面特点的复合式路面。半柔性路面既具有高于水泥混凝土路面的柔性又具有高于沥青混凝土路面的刚性，是一种新型刚柔并济的路面。半柔性路面利用嵌挤原则，通过骨料之间的相互嵌挤作用和灌入的水泥胶浆共同形成材料强度，提高了路面抵抗荷载作用的能力。 \n\n2 铺筑应力吸收层 \n\n高粘沥青应力吸收层是通过洒布高粘沥青，然后在上方撒布级配碎石，形成应力吸收层，以起到应力吸收及防水的作用。专门用于路面及桥面的反射裂缝问题。其具有以下特点： \n\nn 良好的抗剪强度。可减少沥青混凝土面层与旧水泥路面的相对运动。 \n\nn 较强的抗变形能力和良好的柔韧性。可减少和防止沥青混凝土面层的反射裂缝。 \n\nn 良好的防水性。可阻止路表水透入，从而消除路面水损坏。 \n\nn 增加沥青混凝土面层与旧水泥混凝土路面之间的结合，从而消除层问滑移，减少温度变化引起的沥青混凝土面层内的拉应力和拉应变。 \n\n3 铺筑桥面防水粘结层 \n\n高粘沥青防水粘结层是指使用高粘度改性沥青作为胶结材料所形成的一种特殊的沥青加铺碎石结构。其具有优异的防水和粘结功能，可以提高基层与沥青混凝土面层之间的粘结力，还可以吸收因基层水泥混凝土面板变形而产生的应力，延缓反射裂缝的出现，起到非常好的防水作用、粘结作用和层间应力吸收作用。同时，能与沥青混合料很好地融合在一起，形成一体的不透水层，将沥青混凝土面层中的水分与水泥混凝土面板隔离开来，起到相互的保护作用。 \n\n4 制备高性能SMA \n\n用SINO TPS高粘沥青制备高性能的高粘沥青SMA，具有优良的路用性能和抗剪切、疲劳性能，目前主要用于钢桥面铺装和机场道面铺装。 \n\n五、技术成果 \n\n1 \n\n| 专利 \n\n| 一种高黏度沥青改性剂、改性沥青、沥青混合料 ZL201010152571.9 \n\n| \n一种透水路面结构 ZL200820138981.6 \n\n| \n一种铺筑降噪排水性路面用的高粘彩色沥青胶结料 ZL200610121782.X \n\n| \n铺筑降噪排水性路面用的高粘彩色沥青混合料 ZL200610063560.7 \n\n| \n2 \n\n| 标准 \n\n| 国家标准《高粘高弹道路沥青》（GB/T 30516-2014） \n\n| \n广东省地方标准《排水降噪路面用高粘沥青》（DB44/T 025-2009） \n\n| \n3 \n\n| 获奖 \n\n| “环保型路面建造技术与工程应用”于2013年2月获国家科技进步二等奖 \n\n| \n“环保型道路建设与维护技术”于2012年12月获陕西省科技进步一等奖 \n\n| \n“排水降噪路面材料与铺装技术研究”于2010年4月获云南省科技进步三等奖 \n\n| \n“排水降噪防滑沥青路面材料的研究与应用”于2007年12月获湖北省科技进步三等奖 \n\n| \n\n六、海川SINOTPS关于OGFC部分应用实例 \n\n云南新河高速 OGFC 太原市矿院路OGFC 徽六潜高速\n\n湖北省孝襄高速公路 中新天津生态城纬二路 深圳坪山新区振环路 \n\n| \n\n| \n\n| \n\n|",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113016_0937.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113146_1093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113146_2656.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113223_1093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113223_9062.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113305_7343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113609_3593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113659_2812.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113739_1875.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113807_6718.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113924_4531.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126113924_6562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126114328_2500.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126114328_7656.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126114328_8906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126114850_3281.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126114850_6562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126114850_8750.jpg"
+          ],
+          "subgroup": {
+            "zh": "混合料改性剂",
+            "en": "Mixture modifiers"
+          }
+        },
+        {
+          "title": "彩色防滑聚合物路面涂层",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50036&Id=190&FId=t3:50036:3",
+          "typeId": "50036",
+          "releaseDate": "2014-12-15",
+          "summary": "我司引进欧洲技术——彩色防滑聚合物路面涂层，包括高耐侯的特种聚合物彩色树脂基黏合剂和各种不同规格性能的集料，在坚实的路面上按一定的厚度，把高磨光值的骨料用粘合剂固定在路面上，从而形成不同色彩，具有路表花纹组织，并产生足够的防滑力的表面构造，已通过交通部门检测认证，并已在规模化应用。",
+          "description": "彩色防滑聚合物路面涂层—彩 色 路 面 的 新选 择 \n\n一、产品介绍 \n\n1、概念：我司引进欧洲技术——彩色防滑聚合物路面涂层，包括高耐侯的特种聚合物彩色树脂基黏合剂和各种不同规格性能的集料，在坚实的路面上按一定的厚度，把高磨光值的骨料用粘合剂固定在路面上，从而形成不同色彩，具有路表花纹组织，并产生足够的防滑力的表面构造，已通过交通部门检测认证，并已在规模化应用。 \n\n2、性能和特点： \n\nn 防滑性能好，可显著增加雨天抗滑性能 \n\nn 重型卡车在转弯处刹车不会产生抱死现象 \n\nn 施工迅速，可达1小时快速固化，2小时可通车 \n\nn 用于繁忙路段施工和抢修工程,减少因施工引起的交通延误 \n\nn 固化不受温湿度影响，零下20℃也能正常固化 \n\nn 特殊的聚合结构，色彩鲜艳持久，不粉化开裂 \n\nn 特有的罩面涂层，填充了小孔隙，耐沾污性强 \n\nn 耐磨性能强，附着力好 \n\nn 耐腐蚀 \n\nn 降低噪音 \n\nn 具有一定的抗裂性能 \n\nn 施工便利 \n\nn 综合性价比高 \n\n二、技术分析 \n\n1、功能： \n\nn 美化环境 \n\n彩色防滑聚合物路面涂层，在提高路面性能和功能的同时，还会使我们的环境更加五彩斑斓，同时还可以利用其鲜艳的颜色做出各种图案来美化我们的环境。 \n\nn 防滑 \n\n彩色防滑聚合物路面涂层是在现有的路面上，粘结上3-5毫米厚的高磨光值的防滑骨科而形成的具有较大的构造深度和摩擦系数的路面面层。 \n\nn 交通警示 \n\n在现代的交通管理中最重要的交通理念就是：让被管理对象各行其道，合理的疏导交通，最大限度的利用道路资源，提高交通的安全性。 \n\n要实现上述理念就需要各种颜色醒目的交通标识。彩色防滑聚合物路面涂层正是具备了上述要求的产品，通过适当颜色处理工艺可以获得很多鲜艳的颜色；交通管理部门可以根据需要，采用防滑彩色路面来设定各种专用车道和标识，作为交通警示。 \n\nn 可设计反光功能 \n\n反光型彩色防滑聚合物路面涂层，是近几年在普通彩色防滑路面的基础上发展起来的一种全新的交通安全技术，它既保持了传统材料的色彩警示和防滑性，同时又增加了对道路安全至关重要的夜间和雨雾天潮湿路面的彩色反光性能，该材料由于是采用特种骨料的底层反光技术，其在夜间所反射光的颜色与白天彩色路面所见颜色相同。 \n\n　 暗室拍摄反光效果 \n\n2、应用领域: \n\n广泛应用于城市道路，如BRT公交车道、公交港湾、人行横道、自行车道小区景观道路、酒店宾馆迎宾车道等, 用以强化交通安全导引，体现城市人文精神。 \n\n广泛应用于高速公路：如：收费站、连续下坡、弯道处、隧道出入口等用以防滑减速，消除疲劳，提供体验型驾乘环境，强化行车安全保障。 \n\n3、设计参考 \n\n厚度设计:人行道或自行车道厚度等非机动车道 为1.0-2.5毫米。机动车道或高速公路厚度为3—5毫米. \n\n颜色：可调根据客户要求，常用色为红色、绿色、 黄色、蓝色 \n\n4、检测认定 \n\n　 \n\nn 部分技术参数比较： \n\n三、部分工程案例： \n\n海口市滨海大道工程 海南大学校园路面工程 河源高新区彩色防滑路面工程 \n\n河源高新区人行横道 河源鳄湖彩色防滑路面工程 深圳保安路段绿道人行横道 \n\n云南昆明高速减速带 云南安宁高速收费站 \n\n漯河市慢性系统建设工程 \n\n珠海绿道 河源公园绿道",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126134633_8125.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205100534_0000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126134809_5312.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126134930_0937.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126134930_2968.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205102257_7187.png",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101151_5468.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101151_6562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101151_7500.png",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101152_0312.png",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101152_2031.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101152_3750.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101152_5468.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101152_6406.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101152_7500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101152_8437.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101153_1093.png",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205101153_3125.png"
+          ],
+          "subgroup": {
+            "zh": "彩色沥青",
+            "en": "Coloured asphalt"
+          }
+        },
+        {
+          "title": "海川OP系列沥青混凝土再生剂",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50035&Id=195&FId=t3:50035:3",
+          "typeId": "50035",
+          "releaseDate": "2014-12-15",
+          "summary": "概要：沥青混凝土再生技术，是将旧沥青路面经过翻挖、回收、破碎、筛分后，与再生剂、新沥青材料、新集料等按一定比例重新拌和，使之能够满足一定的路用性能并用其重新铺筑路面的一套工艺技术。沥青混凝土再生技术是一种经济、绿色环保的施工技术。",
+          "description": "概要：沥青混凝土再生技术，是将旧沥青路面经过翻挖、回收、破碎、筛分后，与再生剂、新沥青材料、新集料等按一定比例重新拌和，使之能够满足一定的路用性能并用其重新铺筑路面的一套工艺技术。沥青混凝土再生技术是一种经济、绿色环保的施工技术。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165708_9687.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165709_3593.jpg"
+          ],
+          "subgroup": {
+            "zh": "混合料改性剂",
+            "en": "Mixture modifiers"
+          }
+        },
+        {
+          "title": "海川EC-120和130系列沥青混凝土温拌添加剂",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50035&Id=192&FId=t3:50035:3",
+          "typeId": "50035",
+          "releaseDate": "2014-12-15",
+          "summary": "温拌沥青混合料（WMA）是一类拌合温度介于热拌沥青混合料（HMA）和冷拌沥青混合料（CMA）之间，性能达到或超过热拌沥青混合料的新的节能减排沥青混合料",
+          "description": "概要： 温拌沥青混合料（WMA）是一类拌合温度介于热拌沥青混合料（HMA）和冷拌沥青混合料（CMA）之间，性能达到或超过热拌沥青混合料的新的节能减排沥青混合料。 \n\n详细介绍: \n\n温拌沥青混合料（WMA）是一类拌合温度介于热拌沥青混合料（HMA）和冷拌沥青混合料（CMA）之间，性能达到或超过热拌沥青混合料的新的节能减排沥青混合料",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165948_3125.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165948_7343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165949_1250.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165949_5781.jpg"
+          ],
+          "subgroup": {
+            "zh": "混合料改性剂",
+            "en": "Mixture modifiers"
+          }
+        },
+        {
+          "title": "EC-110沥青混凝土温拌添加剂",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50035&Id=277&FId=t3:50035:3",
+          "typeId": "50035",
+          "releaseDate": "2015-03-18",
+          "summary": "温拌沥青混合料（WMA）是一类拌合温度介于热拌沥青混合燃（HMA）和冷拌沥青混合料（CMA）之间，性能达到或超过热拌沥青混合料的新的节能减排沥青混合料。",
+          "description": "温拌沥青混合料（WMA）是一类拌合温度介于热拌沥青混合燃（HMA）和冷拌沥青混合料（CMA）之间，性能达到或超过热拌沥青混合料的新的节能减排沥青混合料。",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150318/20150318093406_5000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150318/20150318093418_5781.jpg"
+          ],
+          "subgroup": {
+            "zh": "混合料改性剂",
+            "en": "Mixture modifiers"
+          }
+        },
+        {
+          "title": "德兰尼特AS纤维",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50034&Id=196&FId=t3:50034:3",
+          "typeId": "50034",
+          "releaseDate": "2014-12-15",
+          "summary": "通过对沥青混凝土掺加纤维的研究表明，可以改善沥青混凝土综合性能。多年来，美国、加拿大、德国等采用聚合物纤维作为沥青混凝土的加筋材料，其路面结构形式用于大量已高速公路及其他重交通公路。",
+          "description": "德兰尼特AS纤维——沥青混凝土加筋的最佳选择 ——随着我国经济建设高速发展，交通量及重载车辆日益增多，对道路沥青混凝土路面建设质量提出了越来越高的要求，越来越多的新型材料不断应用于路面技术领域。通过对沥青混凝土掺加纤维的研究表明，可以改善沥青混凝土综合性能。多年来，美国、加拿大、德国等采用聚合物纤维作为沥青混凝土的加筋材料，其路面结构形式用于大量已高速公路及其他重交通公路。 \n\n一 、产品介绍 \n\nDelannite®德兰尼特AS纤维（聚丙烯腈纤维） \n\n其具有较高抗拉强度、良好的吸油性、耐高温、耐腐蚀、不溶胀、化学性质稳定等特点。在沥青混凝土中，纤维形成的均匀、密集分布的三维乱向搭接体系起到了加筋和桥接的作用，可显著改善沥青混凝土路面抗裂性、高低温稳定性、抗疲劳性等性能，从而延长路面的使用寿命。适用于沥青马蹄脂（SMA），密级配沥青混凝土（AC）、开级配沥青混凝土（OGFC）、稀浆封层、微表处等结构形式。 \n\n德兰尼特AS沥青混凝土用纤维 \n\n技术指标 \n\n| 德兰尼特AS II \n\n| 交通密度（昼夜） \n\n| 掺加量 \n\n| \n纤度（dtex） \n\n| 0.9~2.1 \n\n| <3000 \n\n| 1～2kg/T \n\n| \n标称直径（mm） \n\n| 0.010~0.015 \n\n| 3000～30000 \n\n| 2.5～4kg/T \n\n| \n长度（mm） \n\n| 6±1.5 \n\n| >30000 \n\n| 4kg/T \n\n| \n比重(103Kg/m3) \n\n| 1.18 \n\n| 桥面铺装 \n\n| 2～3kg/T \n\n| \n颜 色 \n\n| 淡黄色 \n\n| 采用可熔塑料包装，无须打开包装袋，可连同包装袋一起投入拌和楼。施工工艺与不添加纤维产品时基本相同，只在向搅拌机中加入集料的同时，按规定添加量将纤维加入搅拌机，先与石料、矿粉等干拌，适当延长拌和时间5～15秒，然后再加入热沥青拌和均匀即可。 \n\n| \n抗拉强度（Mpa） \n\n| 500~600 \n\n| \n断裂伸长率（%） \n\n| 20±5 \n\n| \n弹性模量（Gpa） \n\n| 7~9 \n\n| \n熔点（℃） \n\n| >220 \n\n| \n纤维数量(根/ Kg) \n\n| 11亿 \n\n| \n注：以上纤维技术参数均由海川公司实验室检测所得，但是用户应自行进行实验予以确认。 \n\n二 、 技术研究 \n\n参编《沥青混凝土路面用聚合物纤维》（JT/T 534－2004） \n\nn 提高沥青混凝土的高温稳定性； \n\nn 提高沥青混凝土的低温抗裂性； \n\nn 提高沥青混凝土的抗疲劳特性； \n\nn 提高沥青混凝土的柔韧性、抗剥落性、抗磨耗性和水稳性。 \n\n德兰尼特AS纤维的突出特点 \n\nn 比表面积大，吸油性好； \n\nn 独一无二的分子组成，耐高温，能满足不同的拌和要求； \n\nn 在沥青混合料中具有极好的分散性； \n\nn 对沥青混合料具有物理改性和机械改性双重功效； \n\nn 高效环保，不影响沥青混合料的回收再生； \n\nn 对水不敏感，不溶胀，易于存储和施工，特别适用于大孔隙开级配混合料。 \n\n提高沥青混凝土的水稳定性 \n\n由于德兰尼特AS纤维具有较多孔，对沥青具有较强的吸附能力，导致吸附在矿料上的沥青膜变厚，并减少了自由沥青含量，提高沥青与集料形成的界面膜抵抗水分剥离作用的能力，因而添加德兰尼特AS纤维的沥青混凝土表现出较高的残留稳定度，抗水害能力增强。 \n\n浸水马歇尔试验，残留稳定度对比 \n\n浸水马歇尔试验方法评价混凝土耐水害性能在世界各地得到广泛应用，该方法是通过两组马歇尔试件：一组在60℃水浴中保养1h后测定其马歇尔稳定度MS1；另一组在60℃水浴中恒温保养48h后测定其马歇尔稳定度MS2。MSa＝MS2/MS1为残余稳定度。 \n\n纤维沥青混凝土冻融劈裂试验分析 \n\n试验结果表明，冻融劈裂抗拉强度比TSR 德兰尼特AS纤维为94.1%，木质素纤维为91.5%。 \n\n提高沥青混凝土的疏水性试验 \n\n疏水性是纤维的重要特性之一，是否有良好的疏水性直接影响到路面的耐久性。为了考察不同纤维SMA沥青混凝土路面在降雨后进入混凝土水的蒸发和析出能力，进行了疏水试验，如图所示德兰尼特AS纤维具有良好的疏水性。 \n\n提高沥青混凝土的低温抗裂性能 \n\n沥青混凝土路面的低温缩裂是由于温度应力超过了混凝土抗拉强度而导致面层开裂的，因此若沥青混合料具有较高强度或在低温下有较好的抗变形能力和较强的应力松弛能力，温度应力则不会过大累积，混合料均会有较好的低温抗裂性能。试验证明，AC-16使用的沥青为克拉玛依90#道路石油沥青，未掺入纤维的沥青混凝土其最佳沥青用量为4.2%，掺入纤维的沥青混合料其最佳沥青用量为4.6%。 \n\n提高沥青混凝土的高温抗车辙性能 \n\n采用克拉玛依90#道路石油沥青AC-16I型沥青混合料。对于无纤维添加的情况，马歇尔试验确定的最佳沥青用量为4.2%，添加混合料总重0.2%海川德兰尼特AS纤维的混合料，其马歇尔法确定的最佳沥青用量为4.7%。 \n\n另外根据奥地利联邦经济事务部科研项目3.137《对添加纤维的高稳固沥青混凝土的长期10年观察》：加入0.3%的德兰尼特AS纤维与不加或加入其它纤维的沥青混凝土相比，路面车辙可减少60%。因为德兰尼特AS纤维均有明显突起的“触角”，且比木质素纤维要粗，故其加筋效果要明显；纤维的长径比越大，作用效果越好，所以德兰尼特AS纤维比其它纤维抗车辙能力更强。 \n\n没有使用德兰尼特AS纤维的试件经过30000次轮载实验产生严重车辙 \n\n使用0.1%，0.3%的德兰尼特AS纤维的试件经过30000次轮载实验后车辙变形 \n\n提高沥青混凝士的抗疲劳性 \n\n15℃疲劳试验结果证明，在应力水平不高时加德兰尼特AS纤维沥青混凝土较不加德兰尼特AS纤维沥青混凝土疲劳性能好；当应力水平较高时，德兰尼特AS纤维沥青混凝土的疲劳性有所下降。 \n\n图 疲劳寿命（次）对比曲线-添加德兰尼特AS纤维的沥青混凝土抗疲劳性提高优于木质素纤维。 \n\n降低沥青混凝土的集料飞散性能、提高玛蹄脂粘结性 \n\nAK-13A混凝土飞散试验利用洛杉矶磨耗机进行，此试验主要常用来确定SMA以及排水型混凝土的最小沥青用量；在本次试验中利用飞散试验主要来反映纤维对于混凝土结构的加强作用以及抗松散能力。 \n\n纤维种类 \n\n| 未掺加纤维 \n\n| 德兰尼特 AS纤维 \n\n| \n质量损失 \n\n| 18.75% \n\n| 15.04% \n\n| \n\n三 、部分工程案例 \n\n深圳西部通道 深圳市宝安大道沥青混凝土路面2标 深圳南坪快速路16标 \n\n东海大桥桥面铺装 夏港大道（广深路连云港） 湖北荆州长江公路大桥桥面 \n\n武汉军山长江大桥桥面铺装 连徐高速邳州大桥 沪杭高速公路大蒸港桥及南界泾桥",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127092322_3281.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127092414_2343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127092658_0781.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127092741_9062.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127092817_6406.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127092850_8125.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127092921_1093.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093307_0000.png",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093332_6875.png",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093448_7656.png",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093448_9375.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093622_4843.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093622_6093.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093622_7187.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093738_8125.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093738_9687.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093739_2187.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093839_8437.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093840_0000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127093840_1406.jpg"
+          ],
+          "subgroup": {
+            "zh": "纤维",
+            "en": "Fibres"
+          }
+        },
+        {
+          "title": "海川FRMAX tm 沥青混凝土阻燃改性剂",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50035&Id=193&FId=t3:50035:3",
+          "typeId": "50035",
+          "releaseDate": "2014-12-15",
+          "summary": "简介：由于沥青是易燃材料，一旦发生火灾，沥青混凝土中的沥青可能会在高温下燃烧，并释放大量的有毒气体，加上隧道内部通风条件差，从而给人元逃生和施救带来很大的困难，造成不堪设想的人员和财产损失。因此，在长大隧道内，对沥青混凝土路面材料做阻燃抑烟处理十分必要。",
+          "description": "简介：由于沥青是易燃材料，一旦发生火灾，沥青混凝土中的沥青可能会在高温下燃烧，并释放大量的有毒气体，加上隧道内部通风条件差，从而给人元逃生和施救带来很大的困难，造成不堪设想的人员和财产损失。因此，在长大隧道内，对沥青混凝土路面材料做阻燃抑烟处理十分必要。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165855_2343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165855_5000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165856_0156.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217165856_3906.jpg"
+          ],
+          "subgroup": {
+            "zh": "混合料改性剂",
+            "en": "Mixture modifiers"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cement",
+      "typeId": 50026,
+      "route": "products/cement-based-products",
+      "name": {
+        "zh": "水泥基产品",
+        "en": "Cement-based products"
+      },
+      "entries": [
+        {
+          "title": "土木工程用玻璃纤维增强筋",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50032&Id=186&FId=t3:50032:3",
+          "typeId": "50032",
+          "releaseDate": "2014-12-16",
+          "summary": "土木工程用玻璃纤维增强筋（Glass Fiber Reinforced Polymer Bars）是由含碱量小于1%的无碱玻璃纤维（E-Glass）无捻粗纱或者高强玻璃纤维（S）无捻粗纱和树脂基体（环氧树脂、乙烯基树脂）、固化剂等材料，通过成型固化工艺复合而成的筋材，简称GFRP筋。",
+          "description": "简介：土木工程用玻璃纤维增强筋（Glass Fiber Reinforced Polymer Bars）是由含碱量小于1%的无碱玻璃纤维（E-Glass）无捻粗纱或者高强玻璃纤维（S）无捻粗纱和树脂基体（环氧树脂、乙烯基树脂）、固化剂等材料，通过成型固化工艺复合而成的筋材，简称GFRP筋。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216155355_5937.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216155356_0312.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216155356_4531.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216155356_9218.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216155357_6718.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216155358_4375.jpg"
+          ],
+          "subgroup": {
+            "zh": "土工材料",
+            "en": "Geotechnical materials"
+          }
+        },
+        {
+          "title": "T010/140无纺应力吸收膜",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50032&Id=187&FId=t3:50032:3",
+          "typeId": "50032",
+          "releaseDate": "2014-12-16",
+          "summary": "耐温：以聚酯为原料，熔点高达230摄氏度，沥青混凝土摊铺时性能稳定，不收缩，不变形；高强：采用长丝针刺无纺工艺，同等克重下，纵横向强度高；均质：表面均匀，可以快速浸透沥青油并达到饱和，使之与路面紧密结合。",
+          "description": "简介： \n\n耐温：以聚酯为原料，熔点高达230摄氏度，沥青混凝土摊铺时性能稳定，不收缩，不变形； \n\n高强：采用长丝针刺无纺工艺，同等克重下，纵横向强度高； \n\n均质：表面均匀，可以快速浸透沥青油并达到饱和，使之与路面紧密结合。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216160532_6562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216160533_1562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216160533_9843.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216160534_5000.jpg"
+          ],
+          "subgroup": {
+            "zh": "土工材料",
+            "en": "Geotechnical materials"
+          }
+        },
+        {
+          "title": "聚羧酸高性能混凝土外加剂",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50031&Id=185&FId=t3:50031:3",
+          "typeId": "50031",
+          "releaseDate": "2014-12-16",
+          "summary": "掺加CP系列外加剂的混凝土能够明显改善混凝土工作性、大幅度提高混凝土力学性能和耐久性，同时能够节约水泥用量节省矿产资源、增加工业废料用量、实现废弃物回收利用、减少水泥生产的三废排放量，生产和使用过程中不含甲醛等有害物质，有效实现混凝土的低碳绿色化合高性能化！",
+          "description": "简介：Concrete powerTM系列（以下简称CP系列）聚羧酸高性能混凝土外加剂是深圳海川新材料科技有限公司和海川博士后科研工作站联合开发的具有世界先进水平的一种聚羧酸低碳绿色高性能混凝土外加剂！掺加CP系列外加剂的混凝土能够明显改善混凝土工作性、大幅度提高混凝土力学性能和耐久性，同时能够节约水泥用量节省矿产资源、增加工业废料用量、实现废弃物回收利用、减少水泥生产的三废排放量，生产和使用过程中不含甲醛等有害物质，有效实现混凝土的低碳绿色化合高性能化！ \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216151140_5781.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216151141_4531.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216151142_2656.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141216/20141216151143_1718.jpg"
+          ],
+          "subgroup": {
+            "zh": "外加剂",
+            "en": "Admixtures"
+          }
+        },
+        {
+          "title": "路威® 100钢纤维",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50030&Id=183&FId=t3:50030:3",
+          "typeId": "50030",
+          "releaseDate": "2014-12-16",
+          "summary": "路威®100钢纤维是一种具有抗裂、抗冲击性能强、耐磨强度高、与水泥亲合性好，可增加构件强度，延长使用寿命的混凝土外加材料，克服了混凝土抗拉强度低、极限延伸率小、脆性等缺点，具有优良的抗拉、抗弯、抗剪、阻裂、耐疲劳、高韧性等性能。",
+          "description": "路威®2002钢纤维是一种具有抗裂、抗冲击性能强、耐磨强度高、与水泥亲合性好，可增加构件强度，延长使用寿命的混凝土外加材料，克服了混凝土抗拉强度低、极限延伸率小、脆性等缺点，具有优良的抗拉、抗弯、抗剪、阻裂、耐疲劳、高韧性等性能。 \n\n路威®100冷拔端钩形钢纤维 路威®100剪切波浪形钢纤维 \n\n路威®100钢纤维技术参数 \n\n类别 \n\n| 规格型号 \n\n| 抗拉强度等级 \n\n（自选） \n\n| 等效直径 \n\n（mm） \n\n| 长度 \n\n（mm） \n\n| 长径比 \n\n| \n冷拉钢丝端钩型 \n\n| LWDW0.1-20/0.38 \n\n| 600 \n\n| 3000 \n\n| 0.25 \n\n| 20 \n\n| 80 \n\n| \nLWDW0.1-15/0.38 \n\n| 600 \n\n| 3000 \n\n| 0.30 \n\n| 15 \n\n| 50 \n\n| \nLWDW0.1-30/0.50 \n\n| 600 \n\n| 2000 \n\n| 0.5 \n\n| 30 \n\n| 60 \n\n| \nLWDW0.1-30/0.60 \n\n| 600 \n\n| 1200 \n\n| 0.6 \n\n| 40 \n\n| 67 \n\n| \nLWDW0.1-50/0.80 \n\n| 600 \n\n| 1100 \n\n| 0.75 \n\n| 50 \n\n| 66 \n\n| \nLWDW0.1-60/0.90 \n\n| 600 \n\n| 1000 \n\n| 0.9 \n\n| 60 \n\n| 66 \n\n| \n剪切波浪型 \n\n| LWDW0.2-35/0.80 \n\n| 380 \n\n| 700 \n\n| 0.8 \n\n| 35 \n\n| 40 \n\n| \nLWDW0.2-25/0.80 \n\n| 380 \n\n| 700 \n\n| 0.8 \n\n| 25 \n\n| 32 \n\n| \n\n路威®100钢纤维的特点 \n\n★改善混凝土抗弯、抗拉、抗剪、抗裂、抗疲劳及耐腐蚀性能 \n\n由于钢纤维混凝土抗裂性、整体性好，因而耐冻融性、耐热性、耐磨性、抗气蚀性和抗腐蚀性均有显著提高。 \n\n★提高混凝土的韧性和抗冲击性能 \n\n钢纤维用于隐蔽工程、遮弹层火箭发射基础等重要部位，钢纤维混凝土与素混凝土相比，抗爆强度增加80%。 \n\n★水泥混凝土收缩性能明显改善 \n\n钢纤维混凝土用于桥面、路面、消力池、水池、其收缩缝间距与素混凝土相比，可提高11至13倍（可延长至50~60m）。 \n\n★钢纤维混凝土与素混凝土相比，截面厚度可减少50% \n\n路威®100钢纤维的应用范围 \n\n广泛用于公路路面、水库、机场跑道、高层建筑基础、地下库、矿山隧道、防空洞、遮弹层、桥梁、涵洞、消力池，重型基地、负荷30吨以上的重型码头及仓库地面、海港码头、海洋工程、火箭发射场、防爆防浪设施等各种混凝土建筑物。 \n\n路威®100钢纤维的施工注意事项 \n\n（1）选择合适的投料顺序（钢纤维使用——搅拌是关键） \n\n①先将钢纤维及粗骨料投入拌和机拌30秒，使钢纤维分散在石子中，不致团结。 \n\n②再将砂及水泥投入拌和机干搅拌30秒。 \n\n③再在转动着搅拌机中加水，并再搅拌3分钟左右。 \n\n一般只要设法将钢纤维与混凝土完全均匀的搅拌即可（具体操作时注意：砂、石、水泥、钢纤维必须先干拌完全均匀再加适量水，否则难以拌匀）。 \n\n（2）机械拌和混凝土的过程中加钢纤维 \n\n①在传输带上，一般先递入料斗的是干砂，石，按设计比例先递入搅拌斗。 \n\n②在干料中加入适量的钢纤维（钢纤维的加入量根据设计要求，详见使用配比）。 \n\n③当砂、石、钢纤维全部倒入料斗后，就可以进行干拌（千万不要加水），一般干搅一分钟至二分钟即可。 \n\n④再加水进行（适量水）进行混凝土搅拌（请注意水的掺量切勿过量，否则钢纤维容易结团）。 \n\n⑤将拌和好的钢纤维水泥混凝土装车，就可以运到施工现场使用了。 \n\n⑥铺装过程可以使用大型机械，也可以手工铺装，这与普通混凝土铺装相同。 \n\n⑦铺装完毕后须用压实机振动压实，不留泡或砂眼，要保证混凝土的实在。 \n\n⑧最后对混凝土表面进行平整，人工与机械均可。注意不要将钢纤维露到表面来。 \n\n注 ：①钢纤维混凝土的稠度可参与同类工程对普通混凝土所要求的稠度来确定，其塌落度值可比相应普通混凝土要求值小20mm,其维勃稠度值与相应普通混凝土要求值相同。 \n\n②钢纤维混凝土浇注时，随拌随用，连续浇捣，不到分格缝不得甩施工缝，浇捣时应振密实。 \n\n③钢纤维混凝土具有集粗料细，砂率大，纤维乱向分布的特点。采用机械抹平，阻止纤维外露.采用压纹器工艺还应以避免拉毛产生纤维外露现象。经24小时后，应按常规及时养护，夏天应用草包之类覆盖，寒天应注意保温。",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204084444_5000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204084444_5781.jpg"
+          ],
+          "subgroup": {
+            "zh": "纤维",
+            "en": "Fibres"
+          }
+        },
+        {
+          "title": "ConcretePower3000超纲纤维",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50030&Id=181&FId=t3:50030:3",
+          "typeId": "50030",
+          "releaseDate": "2014-12-16",
+          "summary": "Concretepower3000纤维是一种可以替代钢纤维的高分子聚合物纤维，可以有效地抑制混凝土早期裂缝的产生和发展，显著地提高硬化混凝土的抗折强度、抗冲击性能、抗磨损性能、韧性等力学性能，延长混凝土结构的使用寿命。",
+          "description": "Concretepower3000纤维是一种可以替代钢纤维的高分子聚合物纤维，是由深圳海川工程科技有限公司与世界著名纤维生产商共同开发出的混凝土专用高强纤维产品。它可以有效地抑制混凝土早期裂缝的产生和发展，显著地提高硬化混凝土的抗折强度、抗冲击性能、抗磨损性能、韧性等力学性能，延长混凝土结构的使用寿命。该纤维在混凝土中分散性良好，同时兼具与水泥基材料粘接性高、耐碱、高强、高弹模以及较高的延伸率等优点，较之于混凝土常用的钢纤维及钢筋网，是一种性价比更优的新型混凝土增强纤维。 \n\nConcretepower3000高分子超纲纤维技术参数 \n\n原 料 \n\n| 高分子聚合物 \n\n| 直径（μm） \n\n| 660 \n\n| \n长 度（mm） \n\n| 30 \n\n| 密 度 （g/cm3） \n\n| 1.3 \n\n| \n抗拉强度（MPa） \n\n| 750～850 \n\n| 弹性模量（GPa） \n\n| 30～38 \n\n| \n抗酸性 \n\n| 良好 \n\n| \n抗碱性 \n\n| 良好 \n\n| \n耐光性、耐候性 \n\n| 良好 \n\n| \n\nConcretepower3000高分子超纲纤维的特点 \n\n●在水泥混凝土拌和物中分散性好 \n\nConcretepower3000纤维属亲水性纤维，因而该纤维在混凝土中具有良好的分散性。 \n\n●与水泥基材料界面结合力强 \n\n因Concretepower3000纤维表面粗糙不平，增加了其与水泥基材料的物理粘接（锚固效应），所以该纤维与水泥基材料有很高的界面粘接力。 \n\n●长期耐久性突出 \n\n通过对Concretepower3000纤维进行耐碱性加速试验、长期耐碱性试验及耐候性（抗紫外线）试验，该纤维在PH值为13的水泥浆液中浸泡2年，其最终的强度和弹模提高5％左右；通过紫外线连续照射800小时，强度保持率大于85％，显示出Concretepower3000纤维突出的长期耐久性。 \n\n●属有机纤维 \n\n不会有生锈问题，外观优美。 \n\n●重量轻，便于运输 \n\n比重是钢纤维的1/6 (Concrete -power3000：1.3g/cm3，钢纤维：7.85g/cm3）。 \n\n●使用的安全性高 \n\nConcretepower3000纤维混凝土喷射作业时即使回弹飞落到作业面上，也不会伤到作业员及重型车辆，使用的安全性高。 \n\nConcretepower3000纤维混凝土的施工注意事项 \n\n●拌和 \n\nConcretepower3000纤维混凝土的制备可采用搅拌机机械搅拌，也可在搅拌车内拌和。为确保其在混凝土中均匀分散，建议采用搅拌机机械拌和方式。为了确保纤维在混凝土中的分散性能，须延长混凝土的搅拌时间30～60秒左右即可。 \n\n●硬化及表面加工 \n\nConcretepower3000纤维混凝土的硬化及表面加工顺序同普通混凝土相同（但需加强振捣工序）。 \n\n●喷射工艺 \n\n与普通混凝土相比，喷枪会因纤维而造成内壁受损，致使喷出能力下降。",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204102944_3593.jpg"
+          ],
+          "subgroup": {
+            "zh": "纤维",
+            "en": "Fibres"
+          }
+        },
+        {
+          "title": "路威®2002聚丙烯腈纤维",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50030&Id=180&FId=t3:50030:3",
+          "typeId": "50030",
+          "releaseDate": "2014-12-16",
+          "summary": "作为混凝土的次加筋材料，路威®2002纤维可有效地抑制混凝土早期的塑性裂缝和干缩裂缝，提高混凝土的韧性及抗冲击性能，改善混凝土的抗冻性、抗渗性等耐久性能。可广泛应用于道路、桥梁、隧道、水利、港口码头、机场（跑道、停机坪）、工业与民用建筑等工程设施中。",
+          "description": "路威®2002聚丙烯腈纤维是深圳海川新材料科技有限公司与欧洲著名纤维生产商共同开发的一种专用于水泥混凝土材料的增强纤维。作为混凝土的次加筋材料，路威®2002纤维可有效地抑制混凝土早期的塑性裂缝和干缩裂缝，提高混凝土的韧性及抗冲击性能，改善混凝土的抗冻性、抗渗性等耐久性能。可广泛应用于道路、桥梁、隧道、水利、港口码头、机场（跑道、停机坪）、工业与民用建筑等工程设施中。 \n\n路威®2002聚丙烯腈（PAN）纤维的特点\n\n| \n\n路威®2002聚丙烯腈（PAN）纤维对水泥混凝土性能的改善作用 \n\n（1）提高水泥混凝土抗裂性 \n\n与水泥粘结性好，对骨料起到承托的作用； \n\n减少泌水，调节含水量，避免水分蒸发过快引起的干缩裂缝； \n\n调节水泥混凝土内部因水化放热及外部温度变化产生的温度应变，降低裂缝水平。 \n\nFig. 1 Fig. 2 \n\n（2）提高水泥混凝土的抗渗性能 \n\n路威2002聚丙烯腈纤维大大减少了水泥混凝土中连通毛细孔的数量，并降低了孔径的尺度，有效地提高了水泥混凝土的抗渗能力。 \n\nFig. 3 Fig. 4 \n\n（3）提高水泥混凝土的抗弯韧性 \n\n韧性指数：I5提高4.25～4.65倍，I10提高6.45～7.63倍，I20提高9.2～11.73，I10/I5、I20/I10介于1.42～1.66之间，剩余强度系数R5，10在44～60.5之间，R10，20在27.5～41之间变化。 \n\n（4）提高水泥混凝土的抗冻性 \n\n纤维通过增强混凝土的抗裂能力，削弱和释放混凝土积累的损伤应变能；另外纤维弹性模量随温度的降低而显著提高（如图表5），使纤维具有很好的荷载传递和裂缝控制能力；纤维引人一定量的气泡，可缓解、消除冻胀应力。图表6中纤维混凝土抗冻次数可达600次（1.0kg/m3）。 \n\n图表5：纤维弹性模量与温度的关系 图6 纤维混凝土的抗冻试验 \n\n（5）降低混凝土的收缩性能 \n\n水泥混凝土早期因塑形收缩力低，更有利于聚丙烯腈纤维限缩作用的发挥。因此，在水泥混凝土中掺入乱向分布的聚丙烯腈纤维后有效抑制了混凝土的塑形收缩，收缩的能量被分散到具有高抗拉强度而弹性模量降低的纤维上，增加了水泥混凝土的韧性，控制了水泥混凝土的微细裂缝的产生与发展。 \n\n图7 混凝土收缩性能比较 \n\n（6）提高混凝土的抗冲击性能 \n\n纤维通过增强水泥混凝土抗裂能力，使水泥混凝土材料的连续性和均匀性得以改善，加之纤维对冲击能的吸收，有效地提高了水泥混凝土的抗冲击性能。图表8中纤维混凝土的抗冲击能力提高60%（1.0kg/m3）。 \n\n图8 混凝土抗冲击性能比较 \n\n路威®2002聚丙烯腈（PAN）纤维的施工方法 \n\n路威®2002纤维在混凝土中的作用是通过物理作用实现的，与混凝土中的骨料、外加剂、掺合料和水泥都不会有任何冲突，对搅拌设备、搅拌及施工工艺也无特别要求，只需适当延长搅拌时间即可使用，无论是在混凝土搅拌站还是施工现场搅拌都特别简便，具体施工方法如下： \n\n●根据纤维的建议掺量及每次搅拌混凝土的方量，准确称量纤维； \n\n●将纤维加入备好的砂、石、水泥料中，一并加入搅拌机；先干拌15秒，再加水湿拌30秒；视拌合均匀程度适当延长15秒左右； \n\n●加入纤维后的混凝土的施工工艺及养护工艺与未加纤维的混凝土完全相同。 \n\n注意：加入纤维后，混凝土的粘聚性增强，坍落度稍有下降，建议改变外加剂的用量，绝不可通过加大用水量进行调整。 \n\n路威®2002聚丙烯腈（PAN）纤维的建议添加量 \n\n一般每立方砂浆、混凝土纤维掺量为0.5～1.0 kg/m3，最高为1.5 kg/m3。 \n\n使用目的 \n\n| 部位 \n\n| 建议掺量(kg/m3) \n\n| \n抗裂、防渗 \n\n| 大坝面板、桥面、工业楼板、墙和地板、水池、桥梁等 \n\n| 0.5～1.0 \n\n| \n抗冲击、耐磨 \n\n| 大坝溢洪道、机场道面、桥面、路面、防弹板、抗冲击挡板等 \n\n| 0.8～1.5 \n\n|",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090130_9218.png",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090416_4843.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090416_6093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090506_4062.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090506_5625.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090619_2500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090619_3750.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090723_4375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204090740_9218.jpg"
+          ],
+          "subgroup": {
+            "zh": "纤维",
+            "en": "Fibres"
+          }
+        },
+        {
+          "title": "路威®2002仿钢纤维",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50030&Id=179&FId=t3:50030:3",
+          "typeId": "50030",
+          "releaseDate": "2014-12-16",
+          "summary": "路威®2002聚丙烯粗纤维具有良好的分散性及与水泥基体的粘结力，产品既有钢纤维的功能，又有塑料合成纤维的优点，主要用来代替在混凝土面板结构中的焊接金属网格和钢纤维。",
+          "description": "路威®2002仿钢纤维是深圳海川新材料科技有限公司引进欧洲专业技术生产的新一代结构增强合成纤维。其具有良好的分散性及与水泥基体的粘结力，产品既有钢纤维的功能，又有塑料合成纤维的优点，主要用来代替在混凝土面板结构中的焊接金属网格和钢纤维。该纤维的表面粗糙，凹凸不平，是一种新型增强、增韧材料，当纤维的掺量较高时，纤维对混凝土早期抗裂效果较显著，可以代替钢纤维或钢丝网片，增加混凝土的韧性、提高抵抗温度应力或抗爆裂的能力。 \n\n路威®2002仿钢纤维技术参数 \n\n纤维牌号 \n\n技术指标 \n\n| 路威2002-Ⅲ \n\n| \n标称直径(μm) \n\n| ≥100 \n\n| \n原材料 \n\n| 聚丙烯 \n\n| \n长度(mm) \n\n| 25 \n\n| 30 \n\n| 55 \n\n| \n比重(103kg/m3) \n\n| 0.91 \n\n| 0.91 \n\n| 0.91 \n\n| \n抗拉强度(MPa) \n\n| ≥450 \n\n| ≥450 \n\n| ≥450 \n\n| \n弹性模量 (GPa) \n\n| ≥5.0 \n\n| ≥5.0 \n\n| ≥5.0 \n\n| \n断裂伸长率(%) \n\n| ≤30 \n\n| ≤30 \n\n| ≤30 \n\n| \n\n路威®2002仿钢纤维的应用领域 \n\n该产品最大的特性就是高强、高模、低伸、无污染。可替代钢纤维用于水泥混凝土的抗裂增强。既保持了原有传统混凝土纤维的粘结性、高温稳定性、疲劳耐久性、低温防裂性，更大大改善了纤维在混凝土中的和易性及分散性，能更均匀地承载整个混凝土结构的主要荷载；具有强度高、耐腐蚀、耐高温、化学稳定性强，与混凝土裹握力强、抗老化、抗风蚀，耐酸碱、抗磁防锈。更立体地起到加筋和桥接的作用。且易施工、对设备无损害。 \n　　公路路面、桥面、机场道面、停机坪、码头堆场铺面、面板堆石坝面板、工业建筑地坪、仓库地面等，用于提高这些面板结构的抗裂性、弯拉强度、弯曲韧性、耐冲击、耐疲劳性能等。 \n\n路威®2002仿钢纤维的使用说明 \n\n路威®2002仿钢纤维对混凝土的增强是一种物理作用不改变混凝土的设计配比。 \n\n1、长度选择：一般工程中路威®2002仿钢纤维的长度以25-60MM为宜。 \n\n2、配比设计：通常情况下，单方混凝土中，路威®2002仿钢纤维掺量为5-6kg为宜。桥面防水层等掺量加倍。不必改变其他材料的用量。 \n\n3、搅拌方法：由于路威®2002仿钢纤维具有很好的分散性，不必附加其他搅拌条件，使用传统搅拌工艺即可，或选用双轴卧式强制搅拌机。 \n\n4、一般每立方砂浆、混凝土纤维掺量为2.5～13 kg/m3，一般为5 kg/m3。 \n\n5、不可减少钢筋混凝土结构的配筋率；不能降低施工质量管理要求，仍应按国家相关技术规范进行施工和养护。 \n\n注意：加入纤维后，混凝土混合料粘稠度增大，压路机碾压时应比普通混合料多碾压2-3遍。或酌情延长振实时间30秒左右，待混凝土表面稍微钝化后再进行抹面，以免带出纤维。养护仍应按普通混凝土的要求进行。",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "纤维",
+            "en": "Fibres"
+          }
+        },
+        {
+          "title": "路威®2002聚丙烯网状纤维",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50030&Id=238&FId=t3:50030:3",
+          "typeId": "50030",
+          "releaseDate": "2014-02-12",
+          "summary": "路威®2002聚丙烯网状纤维也称路威PP纤维网，是以聚丙烯为原料，经特殊的生产工艺制造而成，其外观为多根纤维单丝相互交联而成的网状结构,可用于混凝土的抗裂防渗、增强增韧工程。",
+          "description": "路威®2002聚丙烯网状纤维也称路威PP纤维网，是以聚丙烯为原料，经特殊的生产工艺制造而成，其外观为多根纤维单丝相互交联而成的网状结构。路威PP纤维网被投入到混凝土中后，搅拌过程中纤维单丝间的横向连接经粗骨料的冲击而撕裂， 形成纤维单丝，其毛糙的撕裂边缘使纤维与混凝土之间有极好的握裹力，可用于混凝土的抗裂防渗、增强增韧工程。 \n\n路威®2002聚丙烯（PP）网状纤维技术参数 \n\n纤维类型 \n\n| 束状网 \n\n| 密度g/cm3 \n\n| 0.91 \n\n| \n当量直径μm \n\n| 100 \n\n| 长度mm \n\n| 6、9、12、19 \n\n| \n抗拉强度MPa \n\n| ≥400 \n\n| 弹性模量 \n\n| ≥3500MPa \n\n| \n断裂伸长率% \n\n| 8～30 \n\n| 抗酸碱性 \n\n| 极高 \n\n| \n熔点℃ \n\n| 160～170 \n\n| 燃点℃ \n\n| 580℃ \n\n| \n\n路威®2002聚丙烯（PP）网状纤维的特点 \n\n■ 主要功能： \n\n作为混凝土的次要加强筋材料，路威PP纤维网可大大提高其抗裂、抗渗、抗冲击、抗震、抗冻、抗冲磨、抗爆裂、抗老化性能及和易性、泵送性、保水性。 \n\n● 阻止混凝土裂缝的产生 \n\n● 提高混凝土的抗渗透性能 \n\n● 提高混凝土的抗冻融性能 \n\n● 提高混凝土的抗冲击、抗折、抗疲劳、抗震性能 \n\n● 改善混凝土的耐久性，抗老化性 \n\n● 提高混凝土的耐火性能 \n\n■ 应用领域： \n\n● 混凝土刚性自防水结构： \n\n地下室底板、侧墙、顶板、屋面现浇楼板、蓄水池等。抗裂、抗冲击、抗磨损要求高的工程、水利工程、地铁、机场跑道、港口码头、立交高架桥桥面、桥墩、超长结构等。 \n\n● 水泥砂浆： \n\n内（外）墙粉刷、加气混凝土抹灰、室内装饰腻子及保温砂浆。 \n\n● 抗爆、耐火工程： \n\n人防军事工程、石油平台、烟囱、耐火材料等。 \n\n● 喷射混凝土： \n\n隧道、涵洞衬砌、薄壁结构、斜坡加固等。 \n\n路威®2002聚丙烯（PP）网状的施工注意事项 \n\n■ 使用说明 \n\n● 长度选择：普通混凝土一般选用19mm，喷射混凝土一般选用10mm。 \n\n● 掺量设计：通常情况下，掺量为0.9kg/m3，桥面防水层掺量0.9～1.8kg／m3， \n\n隧道用喷射混凝土掺量0.9～1.8kg/m3。 \n\n● 搅拌工艺： \n\n先投入碎石．然后投入纤维，再投入砂子搅拌2分钟，使纤维充分打开．然后投入水泥和水按常规工艺搅拌均匀即可。也可按常规工艺投入顺序施工，但拌合搅拌时间应不少于4分钟， 以使纤维充分混合。 \n\n● 成型养护：无特殊要求，可酌情延长振实时间30秒左右，抹面时应待混凝土表面稍微钝化后再进行，以免带出纤维。 \n\n■ 注意事项 \n\n● 不可取代结构性加强材料，也不可减少主结构尺寸。 \n\n● 不能单独用于解决沉降、大体积混凝土水化热和强大外力冲击的场合。 \n\n● 不能因为纤维的使用而降低施工 质量管理要求，仍应按国家有关规范进行施工和养护。",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150204/20150204095627_8437.jpg"
+          ],
+          "subgroup": {
+            "zh": "纤维",
+            "en": "Fibres"
+          }
+        },
+        {
+          "title": "路威®2002聚丙烯单丝纤维",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50030&Id=299&FId=t3:50030:3",
+          "typeId": "50030",
+          "releaseDate": "2011-03-31",
+          "summary": "经过改性工艺处理后的路威®2002聚丙烯单丝纤维，其抗风化抗紫外线能力得到提高。当混凝土结构遭受外力侵蚀时，它依然能够起到二次加强筋的作用，将水泥混凝土肌体紧紧地抱合在一起，抗拒混凝土表面的剥落和蚀洞，大大延长了水泥混凝土结构件的使用寿命，减小混凝土的维护成本。",
+          "description": "路威®2002聚丙烯单丝纤维，是经过改性工艺处理后的聚丙烯纤维。由于普通的聚丙烯材料与身俱来的性质决定其运用，它的抗风化能力、抗紫外线能力不能完全满足某些工程的需求，水泥混凝土结构件一旦完成投入使用后，必然会天长日久的遭受自然界的各种破坏，如日晒、冰冻、风蚀、水蚀，各种气体的侵蚀或河水、海水的撞击，或含有酸、碱、盐等物体的腐蚀以及人为不经意的损坏。这时聚丙烯纤维经过一定年限后已被侵蚀腐坏，在水泥混凝土中已失去了二次加强筋的作用，从而产生剥落、蚀洞现象。\n\n经过改性工艺处理后的路威®2002聚丙烯单丝纤维，其抗风化抗紫外线能力得到提高。当混凝土结构遭受外力侵蚀时，它依然能够起到二次加强筋的作用，将水泥混凝土肌体紧紧地抱合在一起，抗拒混凝土表面的剥落和蚀洞，大大延长了水泥混凝土结构件的使用寿命，减小混凝土的维护成本。 \n\n路威®2002聚丙烯单丝纤维的应用领域、使用方法、注意事项与普通聚丙烯单丝纤维相同，但其主要性能参数略高于后者。 \n\n性能参数：（可按客户要求技术参数订制） \n\n纤维直径 um \n\n| 18-65 \n\n| 密度 g/cm3 \n\n| 0.91 \n\n| \n断裂强度 Mpa \n\n| ≥600 \n\n| 熔点 0C \n\n| 160 ± 5 \n\n| \n初始模量 Mpa \n\n| ≥5.0× 103 \n\n或 ≥7.0 × 103 \n\n| 安全性 \n\n| 无毒 \n\n| \n断裂伸长率 % \n\n| ≤ 30 或≤ 50 \n\n| 吸水率 % \n\n| ≤ 2 \n\n| \n抗酸碱性（极限拉力保持率） % \n\n| ≥95 \n\n| 规格 mm \n\n| 3~30 \n\n|",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150331/20150331091935_4530.jpg"
+          ],
+          "subgroup": {
+            "zh": "纤维",
+            "en": "Fibres"
+          }
+        }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "typeId": 50028,
+      "route": "products/safety-monitoring-systems",
+      "name": {
+        "zh": "安全监测系统",
+        "en": "Safety-monitoring systems"
+      },
+      "entries": [
+        {
+          "title": "KNPFT-1光纤光栅快速温度传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=206&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2012-10-01",
+          "summary": "KNPFT-1光纤光栅快速温度传感器是一款快速响应的温度传感器（在消防领域称为光纤光栅感温火灾探测单元），主要应用于对电磁干扰和温度响应要求较高的场合，如电力设备/电缆测温、油库储罐火灾探测、公路隧道火灾探测、地铁火灾探测、煤矿火灾探测等。",
+          "description": "KNPFT-1光纤光栅快速温度传感器是一款快速响应的温度传感器（在消防领域称为光纤光栅感温火灾探测单元），主要应用于对电磁干扰和温度响应要求较高的场合，如电力设备/电缆测温、油库储罐火灾探测、公路隧道火灾探测、地铁火灾探测、煤矿火灾探测等。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| -40℃～120℃（其他量程可定制） \n\n| \n精度 \n\n| ±0.5℃ \n\n| \n分辨率 \n\n| 0.1℃ \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| Φ7×100mm（其它尺寸可定制） \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 夹持、绑扎、埋入 \n\n| \n工作温度 \n\n| -40℃～120℃ （短时200℃） \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPGT-1光纤光栅通用温度传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=205&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2012-10-01",
+          "summary": "KNPGT-1光纤光栅通用温度传感器是一款应用广泛的温度传感器，应用于各行各业。在土木工程领域，可应用于桥梁、大坝、隧道管片等各种工业和民用建筑钢结构以及混凝土结构内部和表面温度的施工和长期温度效应的健康监测。同时可作为光纤光栅其他类型传感器消除温度效应的参考。",
+          "description": "KNPGT-1光纤光栅通用温度传感器是一款应用广泛的温度传感器，应用于各行各业。在土木工程领域，可应用于桥梁、大坝、隧道管片等各种工业和民用建筑钢结构以及混凝土结构内部和表面温度的施工和长期温度效应的健康监测。同时可作为光纤光栅其他类型传感器消除温度效应的参考。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| -40℃～120℃（其他量程可定制） \n\n| \n精度 \n\n| ±0.5℃ \n\n| \n分辨率 \n\n| 0.1℃ \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| Φ9×100mm（其它尺寸可定制） \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 夹持、绑扎、埋入 \n\n| \n工作温度 \n\n| -40℃～120℃ （短时200℃） \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPES-1光纤光栅埋入式应变传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=208&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPES-1光纤光栅埋入式应变传感器可广泛应用于桥梁、大坝、隧道管片等各种工业和民用建筑钢结构以及混凝土内部结构的应变、应力的施工和长期健康监测。",
+          "description": "KNPES-1光纤光栅埋入式应变传感器可广泛应用于桥梁、大坝、隧道管片等各种工业和民用建筑钢结构以及混凝土内部结构的应变、应力的施工和长期健康监测。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| ±1000 、±1500 (其他可定制) \n\n| \n精度 \n\n| 1% F.S. \n\n| \n分辨率 \n\n| 1 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n标距 \n\n| 100 mm标距（其它标距可定制） \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 埋入 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPFBG-P 便携式光纤光栅信号处理器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50055&Id=225&FId=t3:50055:3",
+          "typeId": "50055",
+          "releaseDate": "2014-12-15",
+          "summary": "便携式光纤光栅信号处理器适用于现场巡检人工测试以及施工现场的监测测量。具有高稳定性、高分辨率、便于携带特点。采用LCD屏显示，界面友好、触摸屏操作简单，具有数据存储、物理量转换、通讯等功能。内置锂电池可连续工作8小时。机壳采用工程铝材，重量轻、强度高，可适应恶劣的施工现场环境。",
+          "description": "便携式光纤光栅信号处理器适用于现场巡检人工测试以及施工现场的监测测量。具有高稳定性、高分辨率、便于携带特点。采用LCD屏显示，界面友好、触摸屏操作简单，具有数据存储、物理量转换、通讯等功能。内置锂电池可连续工作8小时。机壳采用工程铝材，重量轻、强度高，可适应恶劣的施工现场环境。 \n\n项目 \n\n| 指标 \n\n| \n通道数 \n\n| 1~4 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n重复性 \n\n| 5pm (典型) \n\n| \n分辨率 \n\n| 1pm \n\n| \n扫描频率 \n\n| 1 ~ 100 Hz \n\n| \n连接形式 \n\n| FC/APC \n\n| \n电源供电 \n\n| 内置电池 8小时 \n\n| \n输出信号接口 \n\n| USB 网口 \n\n| \n工作温度 \n\n| 0℃～40℃ \n\n| \n尺寸（长×宽×高） \n\n| 220mm×150mm×70mm \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅信号处理器",
+            "en": "FBG signal processors"
+          }
+        },
+        {
+          "title": "KNPFBG-ZYG 矿用光纤光栅顶板应力监测系统",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50054&Id=224&FId=t3:50054:3",
+          "typeId": "50054",
+          "releaseDate": "2014-12-15",
+          "summary": "ZYG矿用光纤光栅顶板应力监测系统是用于煤矿顶板状态在线监测系统。系统将光纤传感、计算机检测、数据通讯和传感技术融为一体。实现了复杂环境条件下对煤矿顶板状态的自动监测和汇报。系统装置通过通过安标国家矿用产品安全标志中心的性能检测和安全检测，取得”MA”矿用证书。",
+          "description": "ZYG矿用光纤光栅顶板应力监测系统是用于煤矿顶板状态在线监测系统。系统将光纤传感、计算机检测、数据通讯和传感技术融为一体。实现了复杂环境条件下对煤矿顶板状态的自动监测和汇报。系统装置通过通过安标国家矿用产品安全标志中心的性能检测和安全检测，取得”MA”矿用证书。 \n\n项目 \n\n| 指标 \n\n| \n处理器与传感器传输距离 \n\n| 5Km \n\n| \n处理器与井上设备传输距离 \n\n| 10Km \n\n| \n温度传感器测量范围 \n\n| -10 ~80℃ \n\n| \n温度传感器基本误差 \n\n| ±3%F.S. \n\n| \n顶板应力测量范围 \n\n| 0 ~ 70KN \n\n| \n顶板应力基本误差 \n\n| ±6%F.S. \n\n| \n顶板位移感器测量范围 \n\n| 0 ~180mm \n\n| \n顶板位移传感器基本误差 \n\n| ±5%F.S. \n\n| \n锚杆(索)应力传感器测量范围 \n\n| 0 ~ 150KN \n\n| \n锚杆(索)应力传感器基本误差 \n\n| ±5%F.S. \n\n| \n装置工作电压 \n\n| 127V（井下）/220V（井上） \n\n| \n装置输入功率 \n\n| <300VA \n\n|",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218135808_8906.jpg"
+          ],
+          "subgroup": {
+            "zh": "光纤光栅监测系统",
+            "en": "FBG monitoring systems"
+          }
+        },
+        {
+          "title": "KNPFBG-FireAlarm 光纤光栅感温火灾探测系统",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50054&Id=223&FId=t3:50054:3",
+          "typeId": "50054",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPFBG-FireAlarm光纤光栅信号处理部件是一款准分布式、可恢复、差定温、本质安全防爆的新一代感温火灾探测系统。通过国标GB/T 21197-2007《线型光纤感温火灾探测器》型式检验。单套设备可监测超过10KM以上的隧道或电缆沟温度。",
+          "description": "KNPFBG-FireAlarm光纤光栅信号处理部件是一款准分布式、可恢复、差定温、本质安全防爆的新一代感温火灾探测系统。通过国标GB/T 21197-2007《线型光纤感温火灾探测器》型式检验。单套设备可监测超过10KM以上的隧道或电缆沟温度。 \n\n项目 \n\n| 指标 \n\n| \n通道数 \n\n| 1~64 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n扫描频率 \n\n| 1 Hz \n\n| \n温度分辨率 \n\n| 0.1℃ \n\n| \n响应时间 \n\n| ≤ 30s \n\n| \n连接形式 \n\n| FC/APC \n\n| \n电源供电 \n\n| 220V AC 2A \n\n| \n输出信号接口 \n\n| 声光报警、无源触点、RS232/485、网口 \n\n| \n工作温度 \n\n| 0℃～40℃ \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅监测系统",
+            "en": "FBG monitoring systems"
+          }
+        },
+        {
+          "title": "KNPFBG-SHS 光纤光栅结构安全健康监测系统",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50054&Id=222&FId=t3:50054:3",
+          "typeId": "50054",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPFBG-SHS是针对重大基础设施如隧道、桥梁、高层建筑等开发的光纤光栅结构安全健康监测系统，为各种力学结构提供在线施工安全监测、运营管养的健康状态在线评估、事件报警、应急预案定制等多层次解决方案，是结构安全的保护神。",
+          "description": "KNPFBG-SHS是针对重大基础设施如隧道、桥梁、高层建筑等开发的光纤光栅结构安全健康监测系统，为各种力学结构提供在线施工安全监测、运营管养的健康状态在线评估、事件报警、应急预案定制等多层次解决方案，是结构安全的保护神。 \n\n项目 \n\n| 指标 \n\n| \n通道数 \n\n| 1~32 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n重复性 \n\n| 5pm (典型) \n\n| \n分辨率 \n\n| 1pm \n\n| \n扫描频率 \n\n| 1Hz、100Hz、1000Hz \n\n| \n连接形式 \n\n| FC/APC \n\n| \n电源供电 \n\n| 220V AC 2A \n\n| \n输出信号接口 \n\n| 无源触点、RS232/485、USB、网口 \n\n| \n工作温度 \n\n| 0℃～40℃ \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅监测系统",
+            "en": "FBG monitoring systems"
+          }
+        },
+        {
+          "title": "KNPFBG-YGS127(A) 矿用隔爆型光纤光栅信号处理器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50055&Id=228&FId=t3:50055:3",
+          "typeId": "50055",
+          "releaseDate": "2014-12-15",
+          "summary": "YGS127(A) 矿用隔爆型光纤光栅信号处理器具有“MA”认证许可，可用于有瓦斯易爆气体环境的煤矿井下，是一种新型的煤矿环境安全、工况监测监控仪器仪表。该光纤光栅信号处理器防爆型式为矿用隔爆型。",
+          "description": "YGS127(A) 矿用隔爆型光纤光栅信号处理器具有“MA”认证许可，可用于有瓦斯易爆气体环境的煤矿井下，是一种新型的煤矿环境安全、工况监测监控仪器仪表。该光纤光栅信号处理器防爆型式为矿用隔爆型。 \n\n项目 \n\n| 指标 \n\n| \n通道数 \n\n| 1~32 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n重复性 \n\n| 5pm (典型) \n\n| \n分辨率 \n\n| 1pm \n\n| \n扫描频率 \n\n| 1 Hz \n\n| \n防爆形式 \n\n| Exd I Mb \n\n| \n连接形式 \n\n| FC/APC \n\n| \n电源供电 \n\n| 127V AC 1A \n\n| \n输出信号接口 \n\n| 以太网光口 1310nm 传输距离10KM \n\n| \n工作温度 \n\n| 0℃～40℃ \n\n| \n尺寸（长×宽×高） \n\n| 656mm×526mm×208mm \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅信号处理器",
+            "en": "FBG signal processors"
+          }
+        },
+        {
+          "title": "KNPFBG-F 快速光纤光栅信号处理器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50055&Id=227&FId=t3:50055:3",
+          "typeId": "50055",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPFBG-F系列高速光纤光栅信号分析仪主要用于采集频率要求较高的场合，如适用于桥梁、桩基、铁轨、建筑结构、电厂等环境下的实时高速动态采集现场环境各种数据。目前最高可达8通道1000Hz频率、16通道100Hz频率扫描，满足对动态应变和振动等参量的高速测量。",
+          "description": "KNPFBG-F系列高速光纤光栅信号分析仪主要用于采集频率要求较高的场合，如适用于桥梁、桩基、铁轨、建筑结构、电厂等环境下的实时高速动态采集现场环境各种数据。目前最高可达8通道1000Hz频率、16通道100Hz频率扫描，满足对动态应变和振动等参量的高速测量。 \n\n项目 \n\n| 指标 \n\n| \n通道数 \n\n| 1~16 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n重复性 \n\n| 5pm (典型) \n\n| \n分辨率 \n\n| 1pm \n\n| \n扫描频率 \n\n| 1~1000 Hz \n\n| \n连接形式 \n\n| FC/APC \n\n| \n电源供电 \n\n| 220V AC 1A \n\n| \n输出信号接口 \n\n| USB \n\n| \n工作温度 \n\n| 0℃～40℃ \n\n| \n尺寸（长×宽×高） \n\n| 480mm×400mm×95mm \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅信号处理器",
+            "en": "FBG signal processors"
+          }
+        },
+        {
+          "title": "KNPFBG-S 标准19英寸光纤光栅信号处理器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50055&Id=226&FId=t3:50055:3",
+          "typeId": "50055",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPFBG-S 标准19英寸光纤光栅信号处理器全面向工业长期监测设计，主要用于1Hz静态测量。其特点是多通道、大容量。标准19英寸光纤光栅信号处理器具有分辨率高、重复性好、采集速度快、可靠性高、处理能力强大、连接测点多和兼容性强等众多优点，可靠稳定的长期监测。",
+          "description": "KNPFBG-S 标准19英寸光纤光栅信号处理器全面向工业长期监测设计，主要用于1Hz静态测量。其特点是多通道、大容量。标准19英寸光纤光栅信号处理器具有分辨率高、重复性好、采集速度快、可靠性高、处理能力强大、连接测点多和兼容性强等众多优点，可靠稳定的长期监测。 \n\n项目 \n\n| 指标 \n\n| \n通道数 \n\n| 1~64 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n重复性 \n\n| 5pm (典型) \n\n| \n分辨率 \n\n| 1pm \n\n| \n扫描频率 \n\n| 1 Hz \n\n| \n连接形式 \n\n| FC/APC \n\n| \n电源供电 \n\n| 220V AC 2A \n\n| \n输出信号接口 \n\n| RS232/485、USB、网口 \n\n| \n工作温度 \n\n| 0℃～40℃ \n\n| \n尺寸（长×宽×高） \n\n| 480mm×430mm×175mm \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅信号处理器",
+            "en": "FBG signal processors"
+          }
+        },
+        {
+          "title": "KNPAC-1光纤光栅加速度传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=217&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "光纤光栅加速度计主要用于大桥、大坝、大型结构等低频振动监测。具有精度高、灵敏度高、抗干扰、寿命长等优点。通过多只光纤光栅加速度计组合使用可实现对二维、三维加速度的测量。",
+          "description": "光纤光栅加速度计主要用于大桥、大坝、大型结构等低频振动监测。具有精度高、灵敏度高、抗干扰、寿命长等优点。通过多只光纤光栅加速度计组合使用可实现对二维、三维加速度的测量。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 2g \n\n| \n精度 \n\n| 2mg \n\n| \n分辨率 \n\n| 0.5mg \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n响应频率 \n\n| 0.5Hz ~ 30Hz \n\n| \n灵敏度系数 \n\n| ≈500pm/g \n\n| \n尺寸 \n\n| 24mm×55mm×18mm \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 螺孔安装 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNP-GMY150G光纤光栅锚杆(索)压力传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=218&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNP-GMY150G光纤光栅锚杆(索)压力传感器其主要用于监测锚杆在工作状态下对岩壁的承托载荷，其安装在锚杆托盘与岩壁之间，主要用于对端头锚固的锚杆和锚索的受力进行监测。",
+          "description": "KNP-GMY150G光纤光栅锚杆(索)压力传感器其主要用于监测锚杆在工作状态下对岩壁的承托载荷，其安装在锚杆托盘与岩壁之间，主要用于对端头锚固的锚杆和锚索的受力进行监测。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 0~150KN \n\n| \n精度 \n\n| 5% F.S. \n\n| \n分辨率 \n\n| 1KN \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 250mm×155mm×120mm \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 套接在锚杆（索）托盘处 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP54 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPPS-1光纤光栅渗压计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=215&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPPS-1光纤光栅渗压计采用独有的压力弹性元件作为传感基底，专为精确测量完全饱和或者部分饱和土壤和岩石中的小孔水压而设计。设计应用于测量流体的压力，如埋入坝体、填土内监测其地下水位及孔隙水压力。也可安装在钻孔、测井或测压管中。",
+          "description": "KNPPS-1光纤光栅渗压计采用独有的压力弹性元件作为传感基底，专为精确测量完全饱和或者部分饱和土壤和岩石中的小孔水压而设计。设计应用于测量流体的压力，如埋入坝体、填土内监测其地下水位及孔隙水压力。也可安装在钻孔、测井或测压管中。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 1Mpa （其他可定制） \n\n| \n精度 \n\n| 0.3% F.S. \n\n| \n灵敏度 \n\n| 0.1% F.S. \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| Φ3mm×120mm \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 埋入 \n\n| \n工作温度 \n\n| -30℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNP-GUG180光纤光栅离层传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=219&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNP-GUG180光纤光栅离层传感器，其主要用于测试顶板岩层锚固范围内外位移量。其工作原理是通过将离层仪基点锚头固定在稳定岩层内，浅基点固定在运动岩层内。当岩层有离层现象发生时，锚头及测试绳向下移动时，离层仪内光纤光栅受力发生相应改变，引起波长变化。",
+          "description": "KNP-GUG180光纤光栅离层传感器，其主要用于测试顶板岩层锚固范围内外位移量。其工作原理是通过将离层仪基点锚头固定在稳定岩层内，浅基点固定在运动岩层内。当岩层有离层现象发生时，锚头及测试绳向下移动时，离层仪内光纤光栅受力发生相应改变，引起波长变化。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 200mm (可延长续测) \n\n| \n精度 \n\n| 5% F.S. \n\n| \n分辨率 \n\n| 1% F.S. \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 395mm×306mm×34mm \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 锚固 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP54 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPDS-2光纤光栅位移传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=213&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPDS-2光纤光栅位移计主要应用于长期测量结构梁体和高层建筑等结构物或其他混凝土/纲结构建筑物沉降、位移及滑移。它具有可靠性高、抗干扰能力强等优点。",
+          "description": "KNPDS-2光纤光栅位移计主要应用于长期测量结构梁体和高层建筑等结构物或其他混凝土/纲结构建筑物沉降、位移及滑移。它具有可靠性高、抗干扰能力强等优点。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 0~100mm（其它可定制） \n\n| \n精度 \n\n| 1mm \n\n| \n分辨率 \n\n| 0.1mm \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 配合各种规格定制 \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 膨胀螺钉+胶接 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPSS-1光纤光栅钢筋应力传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=210&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPSS-1光纤光栅钢筋应力传感器适用于测量结构内部的钢筋应力，广泛应用于监测大坝、桥梁、厂房基础、桩基、隧洞衬砌等结构的钢筋应力。传感器长期埋设于建筑物内。",
+          "description": "KNPSS-1光纤光栅钢筋应力传感器适用于测量结构内部的钢筋应力，广泛应用于监测大坝、桥梁、厂房基础、桩基、隧洞衬砌等结构的钢筋应力。传感器长期埋设于建筑物内。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 拉：200Mpa 压：100MPa \n\n| \n精度 \n\n| 1% F.S. \n\n| \n分辨率 \n\n| 1Mpa \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 各种钢筋规格 长度600mm \n\n| \n尾纤方式 \n\n| Φ3mm 恺缆 \n\n| \n安装方式 \n\n| 焊接 绑扎 在钢筋笼 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPMS-1光纤光栅表面安装式应变传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=209&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPMS-1光纤光栅表面安装式应变传感器可广泛应用于桥梁、大坝、隧道管片等各种工业和民用建筑钢结构以及混凝土结构的表面层应变、应力的施工和长期健康监测。对于钢结构，采用配套支座与其牢固焊接；对于混凝土结构，采用配套支座螺杆与其上的安装孔进行胶接。",
+          "description": "KNPMS-1光纤光栅表面安装式应变传感器可广泛应用于桥梁、大坝、隧道管片等各种工业和民用建筑钢结构以及混凝土结构的表面层应变、应力的施工和长期健康监测。对于钢结构，采用配套支座与其牢固焊接；对于混凝土结构，采用配套支座螺杆与其上的安装孔进行胶接。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| ±500、±1000、±1500 其他可定制 \n\n| \n精度 \n\n| 1% F.S. \n\n| \n分辨率 \n\n| 1 \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n标距 \n\n| 100 mm标距（其它标距可定制） \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 安装座安装 焊接@钢结构 钻孔粘接@混凝土 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNP-GDY70G光纤光栅测力锚杆",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=220&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNP-GDY70G光纤光栅测力锚杆是将光纤光栅内置于不同规格的钢锚杆内。通过观测埋入在锚杆内部的多支光纤光栅传感单元的受力情况，并依据测力锚杆力学原理，用计算机计算得出在测力锚杆工作状态时不同观测时刻锚杆全长范围内的应变、轴向力、弯矩、剪应力及锚杆变形等数据。",
+          "description": "KNP-GDY70G光纤光栅测力锚杆是将光纤光栅内置于不同规格的钢锚杆内。通过观测埋入在锚杆内部的多支光纤光栅传感单元的受力情况，并依据测力锚杆力学原理，用计算机计算得出在测力锚杆工作状态时不同观测时刻锚杆全长范围内的应变、轴向力、弯矩、剪应力及锚杆变形等数据。这些力学数据可以作为分析巷道锚杆工作状态及顶板安全状况的基本依据，对巷道锚杆支护的安全施工及参数设计优化具有重要意义。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 70KN \n\n| \n精度 \n\n| 6% F.S. \n\n| \n分辨率 \n\n| 1% F.S. \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 各种钢筋规格 \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 锚固 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP54 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPPS-2光纤光栅土压计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=216&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPPS-2光纤光栅式土压力计用于测量挡土墙、桥台、码头板桩墙、基坑护壁墙等填土、堤坝等软基的土体压力或边界土体侧压力。",
+          "description": "KNPPS-2光纤光栅式土压力计用于测量挡土墙、桥台、码头板桩墙、基坑护壁墙等填土、堤坝等软基的土体压力或边界土体侧压力。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 1Mpa 2Mpa （其他可定制） \n\n| \n精度 \n\n| 1% F.S. \n\n| \n分辨率 \n\n| 0.1% F.S. \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 配合各种规格定制 \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 埋入 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "多通道频率采集仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50050&Id=267&FId=t3:50050:3",
+          "typeId": "50050",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-C-Fxx系列弦式采集仪用于钢弦式传感器频率信号的采集，如应变计、钢筋计、锚索计孔隙水压计、土压力盒等等。",
+          "description": "OP-C-Fxx系列弦式采集仪用于钢弦式传感器频率信号的采集，如应变计、钢筋计、锚索计孔隙水压计、土压力盒等等。 \n\n本仪器既适用于自动化监测又适于检测，抗干扰能力强， 数据接口设有防雷保护功能，保证了非电源线引发的瞬间过流疏通。\n室外或野外环境自动化监测需加配防护箱。也可加无线传输系统组成无线自动化监测、检测系统。 \n\n技术指标： \n\n1．型 号: OP-C-F08/1016/1032； \n\n2．通 道 数：8、16、32； \n\n3．分 辨 率：0.01Hz； \n\n4．精 度：0.1Hz； \n\n5．采集范围：500～3500Hz； \n\n6．存 储 器：可存储6000组数据； \n\n7．接 口：RS485； \n\n8.工作温度：–30℃～+60℃。 \n\n配套设备：所有弦式传感器、无线传输模块、采集箱",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "数据采集系统",
+            "en": "Data acquisition"
+          }
+        },
+        {
+          "title": "KNPFRPS-1光纤光栅FRP智能锚杆",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=211&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPFRPS-1光纤光栅FRP智能锚杆采用独特的生产工艺将光纤光栅在FRP拉制时植入到FRP杆体内部。",
+          "description": "KNPFRPS-1光纤光栅FRP智能锚杆采用独特的生产工艺将光纤光栅在FRP拉制时植入到FRP杆体内部。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 拉伸 500Mpa 其他可定制 \n\n| \n精度 \n\n| 1% F.S.(0.5% F.S.可选) \n\n| \n分辨率 \n\n| 1Mpa \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 各种规格定制 \n\n| \n尾纤方式 \n\n| Φ3mm 铠缆 \n\n| \n安装方式 \n\n| 混凝土埋入 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPFT-2光纤光栅小型温度传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=207&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPFT-2光纤光栅小型温度传感器是一款应用于电力开关柜内的小型快速响应的温度传感器。小型化单端设计特别适用于电力触头等部位温度探测。",
+          "description": "KNPFT-2光纤光栅小型温度传感器是一款应用于电力开关柜内的小型快速响应的温度传感器。小型化单端设计特别适用于电力触头等部位温度探测。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| -40℃～120℃（其他量程可定制） \n\n| \n精度 \n\n| ±0.5℃ \n\n| \n分辨率 \n\n| 0.1℃ \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| Φ4×45mm（其它尺寸可定制） \n\n| \n尾纤方式 \n\n| Φ3mm 铠缆 \n\n| \n安装方式 \n\n| 夹持、绑扎 \n\n| \n工作温度 \n\n| -40℃～120℃ （短时200℃） \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPDS-1光纤光栅裂缝传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=212&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPDS-1光纤光栅裂缝传感器主要应用于长期测量混凝土结构、土体、岩体等结构缝隙、伸缩缝等部位的开合度（变形），也可用于边坡、大坝等结构物的位移、沉陷和滑移。",
+          "description": "KNPDS-1光纤光栅裂缝传感器主要应用于长期测量混凝土结构、土体、岩体等结构缝隙、伸缩缝等部位的开合度（变形），也可用于边坡、大坝等结构物的位移、沉陷和滑移。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 0~20mm（其它可定制） \n\n| \n精度 \n\n| 1mm \n\n| \n分辨率 \n\n| 0.1mm \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 配合各种规格定制 \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 埋入 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "KNPWL-1光纤光栅沉降传感器（静力水准仪）",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50053&Id=214&FId=t3:50053:3",
+          "typeId": "50053",
+          "releaseDate": "2014-12-15",
+          "summary": "KNPWL-1光纤光栅沉降传感器采用静力水准仪的原理。内置浮筒，当传感器安装位置处发生沉降时，液位变化带动浮筒沉降变化，从而引起光栅波长变化。",
+          "description": "KNPWL-1光纤光栅沉降传感器采用静力水准仪的原理。内置浮筒，当传感器安装位置处发生沉降时，液位变化带动浮筒沉降变化，从而引起光栅波长变化。 \n\n项目 \n\n| 指标 \n\n| \n量程 \n\n| 0~150mm（其它可定制） \n\n| \n精度 \n\n| 2mm \n\n| \n分辨率 \n\n| 1mm \n\n| \n波长范围 \n\n| C波段（1525 nm ~1565nm） \n\n| \n尺寸 \n\n| 500×200×200 配合各种规格定制 \n\n| \n尾纤方式 \n\n| Φ3mm、Φ8mm铠缆 \n\n| \n安装方式 \n\n| 配套安装架 \n\n| \n工作温度 \n\n| -40℃～80℃ \n\n| \n外壳防护等级 \n\n| IP68 \n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "光纤光栅传感器",
+            "en": "FBG sensors"
+          }
+        },
+        {
+          "title": "力平衡传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50048&Id=261&FId=t3:50048:3",
+          "typeId": "50048",
+          "releaseDate": "2013-03-17",
+          "summary": "该传感器基于差容式力平衡加速度原理，通过测量振动位移求取振动加速度。 低频效果良好，适用于柔性结构，如超大跨径桥梁。",
+          "description": "该传感器基于差容式力平衡加速度原理，通过测量振动位移求取振动加速度。 低频效果良好，适用于柔性结构，如超大跨径桥梁。 \n\n技术指标： \n\n应用领域： 桥梁、建筑、古建筑、桩基等结构振动与冲击测试 \n\n配套设备：振动采集仪、屏蔽线缆、模态分析软件",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317105945_8138.png"
+          ],
+          "subgroup": {
+            "zh": "振动监测",
+            "en": "Vibration monitoring"
+          }
+        },
+        {
+          "title": "便携式频率采集仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50050&Id=266&FId=t3:50050:3",
+          "typeId": "50050",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-B-F01型便携弦式采集仪用于钢弦式传感器频率信号的采集，如应变计、钢筋计、锚索计孔隙水压计、土压力盒等等。可采集我公司温度传感器数据。",
+          "description": "OP-B-F01型便携弦式采集仪用于钢弦式传感器频率信号的采集，如应变计、钢筋计、锚索计孔隙水压计、土压力盒等等。可采集我公司温度传感器数据。 \n\n采用当前国际最新16位单片机数字信号处理技术，对信号数据进行采集、存储、下载、液晶显示。硬件高度集成化，有很强的抗硬、软件干扰能力。内置镍铬充电电池，经济环保。 \n\n体积小，重量轻，便于携带，操作。适于工程检测、传感器安装检验及抽检等。 \n\n技术指标： \n\n1.型 号: OP-B-F01； \n\n2.通 道 数：1； \n\n3.量 程：500～3500Hz； \n\n4.测试精度：频率0.05Hz温度0.1℃； \n\n5.分 辨 率：频率0.01Hz 温度0.01℃； \n\n6.存 储 器：可存储6000组数据； \n\n7.接 口：RS485； \n\n8.屏 显：全中文液晶屏显示； \n\n9.电 源：蓄电池供电,充电器一个； \n\n10.外形尺寸:200*155*45mm； \n\n11.重 量:0.6Kg； \n\n12.工作温度：–30℃～+60℃。 \n\n配套设备：所有弦式传感器、无线传输模块",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "数据采集系统",
+            "en": "Data acquisition"
+          }
+        },
+        {
+          "title": "多点位移计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50044&Id=253&FId=t3:50044:3",
+          "typeId": "50044",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-W-M系列多点位移计由弦式裂缝计组（3～6支）、位移传递杆及其保护管、减摩环、安装支座、锚固头等组成，直接安装在钻孔里，以监测多个滑动面和区域的变形或沉降位移。",
+          "description": "OP-W-M系列多点位移计由弦式裂缝计组（3～6支）、位移传递杆及其保护管、减摩环、安装支座、锚固头等组成，直接安装在钻孔里，以监测多个滑动面和区域的变形或沉降位移。 应用领域：档土墙、连续墙、隧道、坝体等多层高程之间的垂直位移监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、专用芯屏线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317102753_9224.png"
+          ],
+          "subgroup": {
+            "zh": "位移监测",
+            "en": "Displacement monitoring"
+          }
+        },
+        {
+          "title": "磁通量传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50046&Id=248&FId=t3:50046:3",
+          "typeId": "50046",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-C-M系列磁通量传感器是基于铁磁性材料的磁弹效应原理工作，当铁磁性材料承受外界机械荷载发生变化时，其内部的磁化强度发生变化，通过测定磁化强度的变化，来监测构件的内力。根据构造不同，分为闭合式磁通量传感器和开环式磁通量传感器。",
+          "description": "OP-C-M系列磁通量传感器是基于铁磁性材料的磁弹效应原理工作，当铁磁性材料承受外界机械荷载发生变化时，其内部的磁化强度发生变化，通过测定磁化强度的变化，来监测构件的内力。根据构造不同，分为闭合式磁通量传感器和开环式磁通量传感器。 \n\n闭合式磁通量传感器（OP-C-M01）在安装钢索的同时将传感器安装在钢索上。可用于施工期监控和运营期健康监测。 \n\n开环式磁通量传感器（OP-C-M02）夹在钢索保护管外，便于安装及维护，可用于施工期监控及运营期健康监测。 \n\n应用领域：拉索、吊杆、钢丝束、预应力等结构受力测试。 \n\n技术指标： \n\n配套设备：磁通量采集仪、线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317100237_0977.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317100237_0781.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317100316_6262.png"
+          ],
+          "subgroup": {
+            "zh": "应力监测",
+            "en": "Stress monitoring"
+          }
+        },
+        {
+          "title": "锚索计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50046&Id=247&FId=t3:50046:3",
+          "typeId": "50046",
+          "releaseDate": "2013-03-16",
+          "summary": "OP-S-S系列钢弦式锚索计采用高强度的合金钢圆筒制造，内置3～6支高精度弦式传感器，可以量测出总荷载，同时通过测读每只传感器，还可以测出不均匀荷载或偏心荷载，内置温度传感器可同时监测安装位置的温度。采用全防水密封结构设计，具有良好的精度和灵敏度、防水性能和稳定性，适应长期监测和自动化测量。",
+          "description": "OP-S-S系列钢弦式锚索计采用高强度的合金钢圆筒制造，内置3～6支高精度弦式传感器，可以量测出总荷载，同时通过测读每只传感器，还可以测出不均匀荷载或偏心荷载，内置温度传感器可同时监测安装位置的温度。采用全防水密封结构设计，具有良好的精度和灵敏度、防水性能和稳定性，适应长期监测和自动化测量。 \n\n应用领域：拉索、吊杆、钢丝束、预应力等结构受力监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316173430_9712.png"
+          ],
+          "subgroup": {
+            "zh": "应力监测",
+            "en": "Stress monitoring"
+          }
+        },
+        {
+          "title": "磁通量采集仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50050&Id=270&FId=t3:50050:3",
+          "typeId": "50050",
+          "releaseDate": "2015-03-17",
+          "summary": "磁通量采集仪包括激发器，信号调理器，数据采集和内置处理器。它通过传感器内的初级线圈给构件施加激励电压，通过初级线圈获取应力信息。仪器可以通过通讯接口RS485接受和响应主机的命令。磁通量采集仪是多通道、实时测量系统。",
+          "description": "磁通量采集仪包括激发器，信号调理器，数据采集和内置处理器。它通过传感器内的初级线圈给构件施加激励电压，通过初级线圈获取应力信息。仪器可以通过通讯接口RS485接受和响应主机的命令。磁通量采集仪是多通道、实时测量系统。 \n\n技术指标： \n\n采集通道数：8,16,32通道 \n\n测量范围：0~屈服应力 \n\n适应环境温度为：-40~80℃ \n\n测量误差：≤1%F·S \n\n测量分辨率：0.2%F·S \n\n供电电源：AC100~240V \n\n可实现自动测量、自动温度补偿 \n\n配套设备：磁通量传感器、无线传输模块、采集防护箱",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "数据采集系统",
+            "en": "Data acquisition"
+          }
+        },
+        {
+          "title": "多通道电压采集仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50050&Id=268&FId=t3:50050:3",
+          "typeId": "50050",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-C-Vxx系列电压采集仪用于自动化采集信号，测量精度高，抗干扰能力强，前端可接标准电压变送器，采用通用标准RS485接口，数据接口处设有防雷保护模块，保证了非电源线引发的瞬间过流疏通。",
+          "description": "OP-C-Vxx系列电压采集仪用于自动化采集信号，测量精度高，抗干扰能力强，前端可接标准电压变送器，采用通用标准RS485接口，数据接口处设有防雷保护模块，保证了非电源线引发的瞬间过流疏通。 \n\n技术指标： \n\n1.型号：OP-C-V08/16/32 \n\n2.采集范围：-10v~+10v，-5v~+5v，0~10v，0~5v \n\n3.通道数：8、16、32通道 \n\n4．存 储 器：可存储6000组数据； \n\n5．接 口：RS485； \n\n6.工作温度：–30℃～+60℃。 \n\n配套设备：静力水准仪、无线传输模块、采集箱",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "数据采集系统",
+            "en": "Data acquisition"
+          }
+        },
+        {
+          "title": "土压力盒",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50046&Id=244&FId=t3:50046:3",
+          "typeId": "50046",
+          "releaseDate": "2013-03-16",
+          "summary": "OP-T-H系列钢弦式土压力盒是一种埋入式土压力传感器，用于监测各类结构物内部土体的应力，适应长期监测和自动化测量。",
+          "description": "OP-T-H系列钢弦式土压力盒是一种埋入式土压力传感器，用于监测各类结构物内部土体的应力，适应长期监测和自动化测量。\n\n应用领域：水电水利工程、石油化工、隧道、边坡、地铁、基坑等结构中的土体压力监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、2芯线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316172006_2503.png"
+          ],
+          "subgroup": {
+            "zh": "应力监测",
+            "en": "Stress monitoring"
+          }
+        },
+        {
+          "title": "导论式固定测斜仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50047&Id=257&FId=t3:50047:3",
+          "typeId": "50047",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-D- CX型导轮式固定测斜仪通过不锈钢连接杆与滑轮组件连接后，安装在带导槽的标准测斜管中与测斜管同步移动，配合自动化数据采集设备，可自动进行连续监测。安装多个传感器，可获得沿测斜管轴向的扰度变形曲线。",
+          "description": "OP-D- CX型导轮式固定测斜仪通过不锈钢连接杆与滑轮组件连接后，安装在带导槽的标准测斜管中与测斜管同步移动，配合自动化数据采集设备，可自动进行连续监测。安装多个传感器，可获得沿测斜管轴向的扰度变形曲线。 \n\n应用领域：深基坑、高边坡、大坝、填土、路基尾矿库等结构倾斜或内部位移监测。 \n\n技术指标： \n\n配套设备：测斜仪读数仪、测斜采集仪、测斜管、专用电缆",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317104743_7518.png"
+          ],
+          "subgroup": {
+            "zh": "倾斜监测",
+            "en": "Tilt monitoring"
+          }
+        },
+        {
+          "title": "弦式内埋应变计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50045&Id=240&FId=t3:50045:3",
+          "typeId": "50045",
+          "releaseDate": "2013-11-20",
+          "summary": "OP-NY-01型埋入式应变计可直接埋设于混凝土或钢筋混凝土内，以监测混凝土的静态应变。内置温度传感器可同时监测测点处的温度，便于进行温度补偿，提高传感器在不同温度条件下监测数据的准确性和可靠性。",
+          "description": "OP-NY-01型埋入式应变计可直接埋设于混凝土或钢筋混凝土内，以监测混凝土的静态应变。内置温度传感器可同时监测测点处的温度，便于进行温度补偿，提高传感器在不同温度条件下监测数据的准确性和可靠性。 \n\n应用领域：桥梁、隧洞衬砌、大坝、桩基等混凝土结构内部的应变监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、专用4芯屏线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316114107_9843.png"
+          ],
+          "subgroup": {
+            "zh": "应变监测",
+            "en": "Strain monitoring"
+          }
+        },
+        {
+          "title": "单点沉降计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50044&Id=254&FId=t3:50044:3",
+          "typeId": "50044",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-C-S系列单点沉降计是由位移计、测杆、锚头、沉降板组成。钻孔后将单点沉降计埋入土体基础内部，测量锚头与沉降板之间的相对位移变化。",
+          "description": "OP-C-S系列单点沉降计是由位移计、测杆、锚头、沉降板组成。钻孔后将单点沉降计埋入土体基础内部，测量锚头与沉降板之间的相对位移变化。 \n\n应用领域：公路、铁路、大坝等地基沉降变形监测。 \n\n技术指标: \n\n配套设备：便携式频率采集仪、多通道频率采集仪、专用2芯屏线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317103641_7835.png"
+          ],
+          "subgroup": {
+            "zh": "位移监测",
+            "en": "Displacement monitoring"
+          }
+        },
+        {
+          "title": "数据采集监测软件",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50052&Id=275&FId=t3:50052:3",
+          "typeId": "50052",
+          "releaseDate": "2013-03-17",
+          "summary": "数据采集监测软件用于实时采集安装在各种大型结构建筑（桥梁、尾矿库、大坝等）上的传感器输出信号数据，并将数据进行滤波、工程单位变换等一系列处理后，显示在用户界面上，并存储在数据库中。",
+          "description": "数据采集监测软件用于实时采集安装在各种大型结构建筑（桥梁、尾矿库、大坝等）上的传感器输出信号数据，并将数据进行滤波、工程单位变换等一系列处理后，显示在用户界面上，并存储在数据库中。数据采集监测软件主要功能如下： \n\n1) 自动化运行：设备能在无人值守的情况下24小时不间断连续采样。 \n\n2) 开机自启动：采集设备断电停止运行，并重新来电时，设备能够自动启动，并能自动运行，恢复数据连续采样状态。 \n\n3) 数据预处理：对采集到的数据进行工程单位变换和初期预处理。 \n\n4) 参数设置：能在本地和监控中心能对采样参数进行设置，包括采样率、采样间隔、采样方式等。 \n\n5) 精确的同步校时功能：各工作站能进行精确同步、校时，工作在同一时间频率里。 \n\n6) 网络通信：采集到的数据通过网络传输到监控中心，网络通信是基于TCP/IP标准，以便于与其它基于TCP/IP的设备和网络相协调。 \n\n7) 分级管理功能：对采集系统参数设置的人工干预需按权限管理，不同权限的工作人员拥有不同的操作权限，防止误操作的发生。 \n\n8) 设备自诊断、自恢复功能：当采集设备出现异常时，能进行自诊断和自恢复，并向监控中心报警，记录诊断和自恢复日志，部分采集站设备异常不会影响其它采集站设备的正常工作。 \n\n9) 详细的日志功能：对日常的操作、异常情况的处理等均有详细的日志，以供维护人员查看。 \n\n10) 软件应具有高可靠性、高可移植性和可维护性。高可靠性要求程序结构简单，并经过严格测试；可移植性要求使用通用编程方法，在编写硬件驱动时可采用VISA技术，可维护性要求具有详细的软件设计文档、使用手册、软件说明书等，并要求程序具有高可读性。 \n\n软件结构见下图： \n\n下图我司开发的某数据采集监测软件主界面。",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317150657_3909.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317150734_0949.jpg"
+          ],
+          "subgroup": {
+            "zh": "客户端软件平台",
+            "en": "Monitoring software"
+          }
+        },
+        {
+          "title": "压电式传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50048&Id=260&FId=t3:50048:3",
+          "typeId": "50048",
+          "releaseDate": "2013-03-17",
+          "summary": "压电加速度传感器为超小型设计，重量约3-150克，频带宽，采用剪切式结构，因此具有优越的性能指标，传感器对地绝缘，铠装输出电缆，适用于长期在线监测及恶劣的环境中进行监测。该传感器不适用于低频结构测试，如超大跨径桥梁结构振动测试。",
+          "description": "压电加速度传感器为超小型设计，重量约3-150克，频带宽，采用剪切式结构，因此具有优越的性能指标，传感器对地绝缘，铠装输出电缆，适用于长期在线监测及恶劣的环境中进行监测。该传感器不适用于低频结构测试，如超大跨径桥梁结构振动测试。 \n\n技术指标： \n\n应用领域： 桥梁、建筑、古建筑、桩基等结构振动与冲击测试 \n\n配套设备：振动采集仪、屏蔽线缆、模态分析软件",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317105715_9233.png"
+          ],
+          "subgroup": {
+            "zh": "振动监测",
+            "en": "Vibration monitoring"
+          }
+        },
+        {
+          "title": "雨量计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50049&Id=265&FId=t3:50049:3",
+          "typeId": "50049",
+          "releaseDate": "2013-03-17",
+          "summary": "常用雨量计由容栅式、翻斗式两种",
+          "description": "常用雨量计由容栅式、翻斗式两种，主要技术指标如下： \n\n应用领域：边坡、尾矿库等结构服役环境的降雨量监测。 \n\n配套设备：电压采集仪、通用采集仪、无线传输模块。",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317142810_4383.png"
+          ],
+          "subgroup": {
+            "zh": "环境监测",
+            "en": "Environmental monitoring"
+          }
+        },
+        {
+          "title": "渗压计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50046&Id=245&FId=t3:50046:3",
+          "typeId": "50046",
+          "releaseDate": "2013-03-16",
+          "summary": "OP-S-W系列钢弦式渗压计是用来监测软土地基的深层孔隙水压力，采用预埋或钻孔方式安装。",
+          "description": "OP-S-W系列钢弦式渗压计是用来监测软土地基的深层孔隙水压力，采用预埋或钻孔方式安装。 \n\n应用领域：隧道、边坡、水利水电工程、铁路、石油化工、尾矿库等结构中的孔隙水压力监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、2芯线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316172323_4399.png"
+          ],
+          "subgroup": {
+            "zh": "应力监测",
+            "en": "Stress monitoring"
+          }
+        },
+        {
+          "title": "钢筋应力计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50046&Id=243&FId=t3:50046:3",
+          "typeId": "50046",
+          "releaseDate": "2013-03-16",
+          "summary": "OP-GY-16系列钢弦式钢筋计用来监测混凝土或其它结构中钢筋及锚杆的应力。内温度传感器同时监测安装位置的温度。采用对焊、螺纹连接等安装方式。加装配套附件可组成锚杆测力计、基岩应力计等测量应力的仪器。",
+          "description": "OP-GY-16系列钢弦式钢筋计用来监测混凝土或其它结构中钢筋及锚杆的应力。内温度传感器同时监测安装位置的温度。采用对焊、螺纹连接等安装方式。加装配套附件可组成锚杆测力计、基岩应力计等测量应力的仪器。 \n\n应用领域：桥梁、隧道、边坡、建筑、水电水利工程、石油化工、地铁等结构中的钢筋应力监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、专用4芯线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316171219_4244.png"
+          ],
+          "subgroup": {
+            "zh": "应力监测",
+            "en": "Stress monitoring"
+          }
+        },
+        {
+          "title": "振动采集仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50050&Id=271&FId=t3:50050:3",
+          "typeId": "50050",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-C-VI系列动态信号采集与分析系统由系列智能信号调理与采集仪和工程测试与信号分析软件组成，可进行信号示波、采集、分析、结果显示以及报告生成，全面解决现场动态数据采集和分析问题，多种采集方式和专业功能分析功能可以满足各行业对振动的测试需求，非常适合现场振动、冲击和噪声的信号采集与分析。特别是具有组建网络的功能，可以对大型设备、结构的在线监测和分析组建监测网络，实现远程数据采集和监控，进行设备维护和早期损伤识别、故障诊断。",
+          "description": "OP-C-VI系列动态信号采集与分析系统由系列智能信号调理与采集仪和工程测试与信号分析软件组成，可进行信号示波、采集、分析、结果显示以及报告生成，全面解决现场动态数据采集和分析问题，多种采集方式和专业功能分析功能可以满足各行业对振动的测试需求，非常适合现场振动、冲击和噪声的信号采集与分析。特别是具有组建网络的功能，可以对大型设备、结构的在线监测和分析组建监测网络，实现远程数据采集和监控，进行设备维护和早期损伤识别、故障诊断。 \n\n技术指标： \n\n配套设备：加速度传感器、速度传感器",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317144801_0959.png"
+          ],
+          "subgroup": {
+            "zh": "数据采集系统",
+            "en": "Data acquisition"
+          }
+        },
+        {
+          "title": "拉线位移计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50044&Id=252&FId=t3:50044:3",
+          "typeId": "50044",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-L-L系列拉线式位移传感器将机械位移量转换成可计量的、成线性比例的电信号量。被测物体产生位移时，拉动与其相连接的钢绳，钢绳带动传感器传动机构和传感元件同步转动；当位移反向移动时，传感器内部的回旋装置将自动收回绳索，并在绳索伸长、收缩过程中保持其张力不变，从而输出一个与绳索移动量成正比例的电信号。",
+          "description": "OP-L-L系列拉线式位移传感器将机械位移量转换成可计量的、成线性比例的电信号量。被测物体产生位移时，拉动与其相连接的钢绳，钢绳带动传感器传动机构和传感元件同步转动；当位移反向移动时，传感器内部的回旋装置将自动收回绳索，并在绳索伸长、收缩过程中保持其张力不变，从而输出一个与绳索移动量成正比例的电信号。 \n\n应用领域：桥梁伸缩缝、支座等结构的位移监测。 \n\n技术指标： \n\n配套设备：通用采集仪、专用4芯屏线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317102533_8613.png"
+          ],
+          "subgroup": {
+            "zh": "位移监测",
+            "en": "Displacement monitoring"
+          }
+        },
+        {
+          "title": "电阻应变计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50045&Id=242&FId=t3:50045:3",
+          "typeId": "50045",
+          "releaseDate": "2015-03-16",
+          "summary": "OP-DY-03型电阻应变计选用德国进口应变片加工、封装而成，具有精度高、长期稳定性、耐久性好等突出优点，可测试动态应变。",
+          "description": "OP-DY-03型电阻应变计选用德国进口应变片加工、封装而成，具有精度高、长期稳定性、耐久性好等突出优点，可测试动态应变。 \n\n应用领域：桥梁、隧道、石油管线、储油罐、海洋平台、古建筑、地铁、钢结构、钢板桩等结构的应力应变监测。\n\n技术指标： \n\n配套设备：电阻应变采集仪",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316165416_9570.png"
+          ],
+          "subgroup": {
+            "zh": "应变监测",
+            "en": "Strain monitoring"
+          }
+        },
+        {
+          "title": "静力水准仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50044&Id=250&FId=t3:50044:3",
+          "typeId": "50044",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-J-W系列静力水准仪是是一种表面安装式的沉降挠度观测仪，由一系列智能液位传感器及储液罐组成，储液罐之间由连通管连通，主要用于量测各液位计相对基准点的竖向变形情况。",
+          "description": "OP-J-W系列静力水准仪是是一种表面安装式的沉降挠度观测仪，由一系列智能液位传感器及储液罐组成，储液罐之间由连通管连通，主要用于量测各液位计相对基准点的竖向变形情况。\n\n应用领域：桥梁、地铁、古建筑、水利大坝、尾矿库等结构的变形监测。 \n\n技术指标： \n\n配套设备：电压采集仪、通用采集仪、无线传输模块、专用线缆",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317101642_9726.png"
+          ],
+          "subgroup": {
+            "zh": "位移监测",
+            "en": "Displacement monitoring"
+          }
+        },
+        {
+          "title": "电容式传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50048&Id=259&FId=t3:50048:3",
+          "typeId": "50048",
+          "releaseDate": "2013-03-17",
+          "summary": "内装集成电路加速度传感器，是内装微型IC—集成电路放大器的加速度传感器，能直接与振动调理、采集设备连接，简化了测试系统，提高了测试的可靠性，具有低阻抗输出、抗干扰、噪声小、性价比高等特点，内置温度传感器，用于消除温度带来的影响。",
+          "description": "内装集成电路加速度传感器，是内装微型IC—集成电路放大器的加速度传感器，能直接与振动调理、采集设备连接，简化了测试系统，提高了测试的可靠性，具有低阻抗输出、抗干扰、噪声小、性价比高等特点，内置温度传感器，用于消除温度带来的影响。 \n\n应用领域： 桥梁、建筑、古建筑、桩基等结构振动与冲击测试。 \n\n技术指标： \n\n配套设备：振动采集仪、屏蔽线缆、模态分析软件",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317105303_0509.png"
+          ],
+          "subgroup": {
+            "zh": "振动监测",
+            "en": "Vibration monitoring"
+          }
+        },
+        {
+          "title": "轴力计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50046&Id=246&FId=t3:50046:3",
+          "typeId": "50046",
+          "releaseDate": "2013-03-16",
+          "summary": "OP-Z-N系列钢弦式轴力计，又称反力计，是一种钢弦式载重传感器，具有分辨力高、抗干扰性能强，对集中载荷反应灵敏、测值可靠性好等优点，能长期测量基础对上部结构的反力、钢支撑轴力及静压桩实验时的载荷等。",
+          "description": "OP-Z-N系列钢弦式轴力计，又称反力计，是一种钢弦式载重传感器，具有分辨力高、抗干扰性能强，对集中载荷反应灵敏、测值可靠性好等优点，能长期测量基础对上部结构的反力、钢支撑轴力及静压桩实验时的载荷等。 \n\n应用领域：隧道、地铁、桩基等结构的荷载监测 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、2芯线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316173105_1128.png"
+          ],
+          "subgroup": {
+            "zh": "应力监测",
+            "en": "Stress monitoring"
+          }
+        },
+        {
+          "title": "测斜仪采集仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50050&Id=269&FId=t3:50050:3",
+          "typeId": "50050",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-C-Axx系列测斜采集仪专用于固定式倾角仪的信号采集，抗干扰能力强，采用通用标准RS485接口，适合于长期组网自动监测。",
+          "description": "OP-C-Axx系列测斜采集仪专用于固定式倾角仪的信号采集，抗干扰能力强，采用通用标准RS485接口，适合于长期组网自动监测。室外或野外环境自动化监测需加配防护箱。加配无线传输系统组成无线自动化监测、检测系统。 \n\n技术指标： \n\n1、通道数：8/16/32通道 \n\n2．存 储 器：可存储6000组数据； \n\n3．接 口：RS485； \n\n4.工作温度：–30℃～+60℃。 \n\n配套设备：导轮式固定测斜仪、盒式固定倾角仪、采集防护箱。",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "数据采集系统",
+            "en": "Data acquisition"
+          }
+        },
+        {
+          "title": "温湿度传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50049&Id=262&FId=t3:50049:3",
+          "typeId": "50049",
+          "releaseDate": "2015-03-17",
+          "summary": "OP-WS-01型温湿度传感器可以同时监测环境的温度及湿度。采用国际先进敏感元器件，采用RS485总线与上位机通信，RS-485采用平衡发送和差分接收，用于多点互连时非常方便，可以省掉许多信号线，也可以联网构成分布式系统，在此基础之上，数据接口处设有防雷保护模块，保证了非电源线引发的瞬间过流疏通。",
+          "description": "OP-WS-01型温湿度传感器可以同时监测环境的温度及湿度。采用国际先进敏感元器件，采用RS485总线与上位机通信，RS-485采用平衡发送和差分接收，用于多点互连时非常方便，可以省掉许多信号线，也可以联网构成分布式系统，在此基础之上，数据接口处设有防雷保护模块，保证了非电源线引发的瞬间过流疏通。 \n\n应用领域：桥梁、隧道、地铁、石化管线、海洋平台、古建筑、博物馆、仓库等结构服役环境的温湿度监测。 \n\n技术指标： \n\n配套设备：无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317142119_6900.png"
+          ],
+          "subgroup": {
+            "zh": "环境监测",
+            "en": "Environmental monitoring"
+          }
+        },
+        {
+          "title": "固定式倾角仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50047&Id=258&FId=t3:50047:3",
+          "typeId": "50047",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-G-XJ型固定式倾角仪安装在斜坡面上（如堆石坝混凝土面板挠度监测）、高墩、高耸建筑、古建筑等结构上，测量倾斜变形。具有高精度、大量程、防潮、防水、绝缘等优良性能。",
+          "description": "OP-G-XJ型固定式倾角仪安装在斜坡面上（如堆石坝混凝土面板挠度监测）、高墩、高耸建筑、古建筑等结构上，测量倾斜变形。具有高精度、大量程、防潮、防水、绝缘等优良性能。 \n\n应用领域：高墩、高耸建筑、古建筑等高耸结构的倾斜变形监测。 \n\n技术指标： \n\n配套设备：测斜仪读数仪、测斜采集仪、专用电缆",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317105029_3474.png"
+          ],
+          "subgroup": {
+            "zh": "倾斜监测",
+            "en": "Tilt monitoring"
+          }
+        },
+        {
+          "title": "通用采集仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50050&Id=273&FId=t3:50050:3",
+          "typeId": "50050",
+          "releaseDate": "2015-03-17",
+          "summary": "通用采集仪是依靠成熟的PCI、PXI总线技术，将分布在大型结构监测区域内的模拟信号（电流信号、电压信号）、数字信号（RS232、RS422、RS485）、GPIB信号或其它类型的信号，通过通用采集仪解调设备解调后，送入采集仪进行模数转换、处理、整理、传输等操作。",
+          "description": "通用采集仪是依靠成熟的PCI、PXI总线技术，将分布在大型结构监测区域内的模拟信号（电流信号、电压信号）、数字信号（RS232、RS422、RS485）、GPIB信号或其它类型的信号，通过通用采集仪解调设备解调后，送入采集仪进行模数转换、处理、整理、传输等操作。 \n\n主要性能指标如下： \n\n1、 采用通用的总线平台，可方便升级扩展和维护； \n\n2、 最高采样率可达250KS/s，采样率可调、可定制； \n\n3、 各通道之间严格同步采样，各通道间同步采样精度<1微妙； \n\n4、 前置集线调理模块，提高信号信噪比； \n\n5、 通用采集仪处理器处理能力强，双核CPU，主频≥2.0GHz； \n\n6、 内存≥1GB，硬盘≥60GB，可定制； \n\n7、 工作温度0—45℃，如需要在极低温或高温下工作，可定制； \n\n8、 平均无故障工作时间（MTTF）长，≥100000小时。 \n\n配套设备：模拟信号（电流信号、电压信号）、数字信号（RS232、RS422、RS485）、GPIB输出的传感器",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "数据采集系统",
+            "en": "Data acquisition"
+          }
+        },
+        {
+          "title": "移动式测斜仪系统（滑动测斜仪系统）",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50047&Id=256&FId=t3:50047:3",
+          "typeId": "50047",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-Y-C型移动式测斜仪采用进口元件实现高精度快速倾角测量，由测斜探头、专用线缆、读数仪、充电器、下载软件组成。移动式测斜仪要在专用的测斜管中使用，测斜管直径70mm，测斜管的内壁开有导槽，将测斜管预埋在被测结构内部，测斜探头沿壁内导槽上下移动。",
+          "description": "OP-Y-C型移动式测斜仪采用进口元件实现高精度快速倾角测量，由测斜探头、专用线缆、读数仪、充电器、下载软件组成。移动式测斜仪要在专用的测斜管中使用，测斜管直径70mm，测斜管的内壁开有导槽，将测斜管预埋在被测结构内部，测斜探头沿壁内导槽上下移动。 \n\n应用领域：深基坑、高边坡、大坝、尾矿库等结构倾斜或内部位移监测。 \n\n技术指标： \n\n配套设备：测斜仪读数仪、专用线缆 、测斜管",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317104109_2829.png"
+          ],
+          "subgroup": {
+            "zh": "倾斜监测",
+            "en": "Tilt monitoring"
+          }
+        },
+        {
+          "title": "弦式表面应变计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50045&Id=241&FId=t3:50045:3",
+          "typeId": "50045",
+          "releaseDate": "2013-03-16",
+          "summary": "OP-WY-02型应变计可直接栓接、粘接在混凝土表面、焊接在钢结构表面，用于结构静态应力、应变的监测。内置温度传感器可同时监测测点处的温度，便于进行温度补偿，提高传感器在不同温度条件下监测数据的准确性和可靠性。",
+          "description": "OP-WY-02型应变计可直接栓接、粘接在混凝土表面、焊接在钢结构表面，用于结构静态应力、应变的监测。内置温度传感器可同时监测测点处的温度，便于进行温度补偿，提高传感器在不同温度条件下监测数据的准确性和可靠性。 \n\n应用领域：桥梁、隧道、边坡、石油管线、储油罐、海洋平台、古建筑、地铁、钢结构、钢板桩等结构的应力应变监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、专用4芯屏线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150316/20150316160614_0812.png"
+          ],
+          "subgroup": {
+            "zh": "应变监测",
+            "en": "Strain monitoring"
+          }
+        },
+        {
+          "title": "裂缝计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50044&Id=251&FId=t3:50044:3",
+          "typeId": "50044",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-L-C系列表面式裂缝针，主要测量混凝土、岩石、土体和结构物裂缝或伸缩缝的开合度，内置温度传感器，可同步测量安装位置的温度，自动进行实时温度补偿。",
+          "description": "OP-L-C系列表面式裂缝针，主要测量混凝土、岩石、土体和结构物裂缝或伸缩缝的开合度，内置温度传感器，可同步测量安装位置的温度，自动进行实时温度补偿。 \n\n应用领域：铁路、桥梁、隧道、边坡、大坝、民用建筑、古建筑等结构的裂缝测试 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、专用4芯屏线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317102207_8465.png"
+          ],
+          "subgroup": {
+            "zh": "位移监测",
+            "en": "Displacement monitoring"
+          }
+        },
+        {
+          "title": "GPS监测设备",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50044&Id=249&FId=t3:50044:3",
+          "typeId": "50044",
+          "releaseDate": "2013-03-17",
+          "summary": "GPS（全球卫星定位系统）自八十年代中期投入民用后，已广泛地在导航、定位等各领域应用，尤其在测量界的控制测量中起了划时代的作用。正因为是它在静态相对定位中的高精度、高效益、全天候、不需通视等优点，使人们普遍采用其来代替常规的三角、三边、边角等方法，并在理论、实践中取得了可喜的成果。在精密工程变形监测中也逐步得到广泛的应用。",
+          "description": "GPS（全球卫星定位系统）自八十年代中期投入民用后，已广泛地在导航、定位等各领域应用，尤其在测量界的控制测量中起了划时代的作用。正因为是它在静态相对定位中的高精度、高效益、全天候、不需通视等优点，使人们普遍采用其来代替常规的三角、三边、边角等方法，并在理论、实践中取得了可喜的成果。在精密工程变形监测中也逐步得到广泛的应用。 \n\n应用领域：桥梁、边坡、水利大坝、尾矿库等结构的变形监测。 \n\n技术指标： \n\n配套设备：参考站、光纤收发器等",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317100631_2529.png"
+          ],
+          "subgroup": {
+            "zh": "位移监测",
+            "en": "Displacement monitoring"
+          }
+        },
+        {
+          "title": "风速仪",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50049&Id=264&FId=t3:50049:3",
+          "typeId": "50049",
+          "releaseDate": "2013-03-17",
+          "summary": "常用风速仪有机械式和超声波式两种",
+          "description": "常用风速仪有机械式和超声波式两种，主要技术指标如下： \n\n应用领域：大跨径桥梁结构、大跨空间结构、高耸建筑结构服役环境的风荷载监测。 \n\n配套设备：电压采集仪、通用采集仪、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317142622_6901.png"
+          ],
+          "subgroup": {
+            "zh": "环境监测",
+            "en": "Environmental monitoring"
+          }
+        },
+        {
+          "title": "收敛计",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50044&Id=255&FId=t3:50044:3",
+          "typeId": "50044",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-S-CO型数显收敛计是新一代电子数字显示收敛计。适用于量测隧道、巷道、峒室及其它工程围岩周边任意方向两点间的距离微小变化，达到评定工程稳定性，研究工程围岩及支护的变形发展规律，确定合理支护参数的目的。",
+          "description": "OP-S-CO型数显收敛计是新一代电子数字显示收敛计。适用于量测隧道、巷道、峒室及其它工程围岩周边任意方向两点间的距离微小变化，达到评定工程稳定性，研究工程围岩及支护的变形发展规律，确定合理支护参数的目的。 \n\n技术指标：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317103841_0488.png"
+          ],
+          "subgroup": {
+            "zh": "位移监测",
+            "en": "Displacement monitoring"
+          }
+        },
+        {
+          "title": "数据处理软件",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50052&Id=276&FId=t3:50052:3",
+          "typeId": "50052",
+          "releaseDate": "2015-03-17",
+          "summary": "数据处理软件用于对大型建筑实时监测数据进行处理，主要包括时域分析、频率分析、统计分析等。",
+          "description": "数据处理软件用于对大型建筑实时监测数据进行处理，主要包括时域分析、频率分析、统计分析等，以我司某监测项目为例，主要处理分析内容如下： \n\n1) 索力信息：计算斜拉索索力，绘制索力变化曲线，形成索力的变化信息。 \n\n2) 风速分布：计算并绘制风玫瑰图等，形成桥址处的风荷载信息。 \n\n3) 交通荷载处理：通过对通过车辆的车流量、车速、车轴重、车总重、车轴距等进行归纳、汇总，形成之江大桥的交通荷载信息和交通量控制的依据。 \n\n4) 环境温湿度：对钢箱梁内、钢拱塔内以及斜拉索锚杯区的环境温湿度进行比较、汇总，掌握环境对钢结构的腐蚀信息并绘制其变化规律。 \n\n5) 气象站：形成桥址处的台风、能见度、降雨量等气象信息。 \n\n6) 桥墩撞击、地震响应：提取安装于桥墩、桥塔承台处的加速度突变信息，对桥墩撞击、地震响应等偶然荷载进行实时监控、报警。 \n\n7) 线形：提取所有挠度传感器的实时数据，在线绘制桥梁线形图。 \n\n8) 空间变位：实时显示空间变位信息，与初始数据、历史数据进行对比，信息突变报警。 \n\n9) 钢混结合段锚杆力：将应变转换成锚杆力信息，绘制结合段的受力状况图。 \n\n10) 时域数据回放：选定要进行数据回放的时间段，处理程序将从数据库中提取数据进行回放。 \n\n11) 数据的时域分析：建立数据在时域上的自相关和互相关函数以及自协方差和互协方差函数。 \n\n12) 数据的频域分析：傅里叶分析（FFT），自动率谱分析和互功率谱分析等。 \n\n13）统计分析：对各类传感器数据进行统计分析，并将统计结果存入数据库中。统计分析的内容包括最大值、最小值、平均值、均方差等。 \n\n主界面 \n\n自功率谱分析",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317150956_7032.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317151022_4097.jpg"
+          ],
+          "subgroup": {
+            "zh": "客户端软件平台",
+            "en": "Monitoring software"
+          }
+        },
+        {
+          "title": "无线模块和软件",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50051&Id=274&FId=t3:50051:3",
+          "typeId": "50051",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-W-H01无线数传是依靠成熟的GPRS网络，在网络覆盖内区域内可以快速组建数据通讯，实现实时远程数据传输。",
+          "description": "无线模块 \n\nOP-W-H01无线数传是依靠成熟的GPRS网络，在网络覆盖内区域内可以快速组建数据通讯，实现实时远程数据传输。TFL-SC系列通讯模块内置工业级GPRS DTU无线模块，硬件接口：RS232；RS485。支持所有的波特率。支持AT指令集，采用通用标准串口对模块进行设置和调试，提供标准的RS232/485接口。采用ARM9高性能工业级嵌入式处理器，以实时操作系统RTOS为软件支撑平台,内嵌自主知识产权的TCP/IP协议栈。为用户提供高速，稳定可靠，数据终端永远在线，多种协议转换的虚拟专用网络。TCP/UDP透明数据传输；支持多种工作模式。心跳包技术。智能防掉线，支持在线检测，在线维持，掉线自动重拨，确保设备永远在线。高速处理CPU：采用极高速ARM9的工业级CPU，可以更加高速地处理各种协议数据转换，避免因CPU处理速度慢而导致的数据重传和丢失等问题 \n\n工作环境温度：-25℃～+65℃ \n\n储存温度：-40℃～+85℃ \n\n相对湿度：0～95%非冷凝 \n\n波特率：110bps～230400bps \n\n接口：RS232/RS485/TTL232 \n\nGPRS无线数传的优势 \n\n1、覆盖范围：能满足山区、乡镇和跨地区的接入需求。 \n\n2、数据传输速率高。每个信息采集点每次数据传输量在10Kbps之内，目前GPRS实际数据传输速率在40Kbps左右，完全能满足本系统数据传输速率（≥10Kbps）的需求。 \n\n3、通信费用低。 \n\n4、良好的实时响应与处理能力。与短消息服务比较，由于GPRS具有实时在线特性，系统无时延，可很好的满足系统对数据采集和传输实时性的要求。 \n\n客户端软件 \n\nGPRS无线客户端软件分为如下模块：登录管理、模块管理、数据显示、图形显示、日常记录、密码修改、个人资料。功能模块图如下：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317145332_3145.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317145352_9069.jpg"
+          ],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "数字式温度传感器",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50049&Id=263&FId=t3:50049:3",
+          "typeId": "50049",
+          "releaseDate": "2013-03-17",
+          "summary": "OP-W-01型数字式温度传感器由优质不锈钢外壳、数字温度传感器和专用电缆组成。该产品具有高精度、高稳定性，高可靠性，防潮及绝缘等优良性能，适应长期监测和自动化测量。",
+          "description": "OP-W-01型数字式温度传感器由优质不锈钢外壳、数字温度传感器和专用电缆组成。该产品具有高精度、高稳定性，高可靠性，防潮及绝缘等优良性能，适应长期监测和自动化测量。 \n\n应用领域：可广泛用于桥梁、隧道、石化、古建筑、基坑等结构的温度荷载监测。 \n\n技术指标： \n\n配套设备：便携式频率采集仪、多通道频率采集仪、专用4芯屏线缆、无线传输模块",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150317/20150317142451_9244.png"
+          ],
+          "subgroup": {
+            "zh": "环境监测",
+            "en": "Environmental monitoring"
+          }
+        }
+      ]
+    },
+    {
+      "id": "solutions",
+      "typeId": 50024,
+      "route": "products/integrated-solutions",
+      "name": {
+        "zh": "解决方案",
+        "en": "Engineering solutions"
+      },
+      "entries": [
+        {
+          "title": "新型海绵城市——排水降噪路面与雨水回收系统",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=383&FId=t3:50056:3",
+          "typeId": "50056",
+          "releaseDate": "2017-04-01",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g1/M00/B2/CE/CgAGS1jkZwCAH7YUAAJHaxwPaVk390.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-OAUxl_AALG3yQi4Zs874.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-WAMHgzAANMIElWUsA466.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-aAE7goAAMULrpY-P4578.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-eASTvmAANpz9ujx00801.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-mAdPwSAAOpMkPKiJM812.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-qAWF92AAI3HtepSlw824.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-uAFuJOAALrM5N5uds092.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-2AFcQ8AAN_r2llU9M529.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS-6AbXjoAAMjqMqk4W0472.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS_CAZU6jAAKo1cYFQPo504.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS_GADvAyAALNSzbOqQY822.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS_KARE3ZAAKmagH6Klw450.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS_SAD1tVAAMkGdVe1BQ283.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D4/CgAGTFjfS_aAS17PAALEj3ys4Lg416.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfS_eAa8YaAAKFsuaTuJo976.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfS_iAI4v_AALYuz4tsUw662.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfS_qAKpbeAAJgpbgtoc4652.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfS_uAfY5rAAJKNgC5KIo123.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfS_yAE-PVAAKMBYCfza8282.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTFaANU97AAJ-3lrXefc137.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTFiAKDpPAAHZGsO1l9k549.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTFmAKoPtAAJ0exO6NFk223.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTFuAR3XJAAM1i_2J_9w411.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTF2AcQjSAALkOO7bYy0299.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTF6AY1LZAAK4x8GCdhE107.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTGCADuMuAALx-ZCcdRE568.jpg",
+            "https://rc0.zihu.com/g1/M00/B0/D5/CgAGTFjfTGGAJJKbAAKNs3vt-3w062.jpg"
+          ],
+          "subgroup": {
+            "zh": "沥青基解决方案",
+            "en": "Asphalt solutions"
+          },
+          "localImages": [
+            "/assets/official-products/b7fedafa45361b75ec53.jpg",
+            "/assets/official-products/06080e852ce3ec67b336.jpg",
+            "/assets/official-products/094aaa5709b79364c336.jpg",
+            "/assets/official-products/2e50db89052669df927d.jpg",
+            "/assets/official-products/6136e046570ccc450eea.jpg",
+            "/assets/official-products/d9d7c9a858efce908237.jpg",
+            "/assets/official-products/21fbc0490b7fe037ad0f.jpg",
+            "/assets/official-products/17b79c3a68d1bbb91cea.jpg",
+            "/assets/official-products/d8a4c53264b3b3f4bc8d.jpg",
+            "/assets/official-products/89f9fc524361865df49f.jpg",
+            "/assets/official-products/b0d426a0ced6c3bf64c5.jpg",
+            "/assets/official-products/0586cfc8387c7f951c95.jpg",
+            "/assets/official-products/69b8db894a11d9fe24a4.jpg",
+            "/assets/official-products/13ad0a7b548b1420c5df.jpg",
+            "/assets/official-products/4d17f71cdde3cf486e73.jpg",
+            "/assets/official-products/60e14eab53bde5928aab.jpg",
+            "/assets/official-products/f724313ca388c68cca85.jpg",
+            "/assets/official-products/c47847bc6d5bc666649f.jpg",
+            "/assets/official-products/4adf9ee33dd966676485.jpg",
+            "/assets/official-products/4ab525e36638f96d529b.jpg",
+            "/assets/official-products/ad7e8e357df3b1236713.jpg",
+            "/assets/official-products/c909afb14f68c9f8aa46.jpg",
+            "/assets/official-products/96553048bbb3e14cc632.jpg",
+            "/assets/official-products/ff567c3ac67a2b730de7.jpg",
+            "/assets/official-products/f095f940d197904c79bd.jpg",
+            "/assets/official-products/60dea3000ba519ac4809.jpg",
+            "/assets/official-products/7bd412d65401456f5582.jpg",
+            "/assets/official-products/5980ab8bf3aea756e65a.jpg"
+          ]
+        },
+        {
+          "title": "光纤光栅智能感温火警系统",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=234&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2015-03-31",
+          "summary": "l 火灾初期就能迅速判断，准确定位，及时报警 l 正确判断火灾和非火灾状况，避免误报，漏报，迟报 l 系统稳定可靠，几乎免维护 l 符合《火灾自动报警系统设计规范》GB 50116-2013和《线型感温火灾探测器》GB 16280-2014",
+          "description": "l 火灾初期就能迅速判断，准确定位，及时报警 \n\nl 正确判断火灾和非火灾状况，避免误报，漏报，迟报 \n\nl 系统稳定可靠，几乎免维护 \n\nl 符合《火灾自动报警系统设计规范》GB 50116-2013和《线型感温火灾探测器》GB 16280-2014 \n\nKNP光纤光栅智能感温火灾报警系统—长大隧道火灾监测的最佳选择 \n\n近几年来我国的高速公路隧道、地铁隧道、城市地下交通隧道等交通基础设施正在大规模的建设，随着汽车的拥有量越来越多，各类交通事故的数量也越来越多，特别是出现在隧道内的各类交通事故也越来越频繁，一旦隧道发生火灾事故，其后果较其他事故更危险、更严重，因此采取快速火灾报警技术在隧道火灾报警系统中显得尤其重要。我公司基于最新的独立波长光纤光栅智能传感技术并结合了独特的火灾判断机制，使得技术处于行业领先地位，特别是对于火灾初期的隧道环境状态能予以准确判断，真正做到火灾的早期预警。 \n\n1、每个光纤光栅传感器不仅显示温度，而且准确定位。 \n\n2、每个传感器通过温度显示和位置标示，可以直观显示隧道内传感器位置和对应温度的坐标图。 \n\n光纤光栅温度传感器和位置坐标示意图 \n\n3、火灾定位精度高，若有需要实施消防联动或消防救援可以进行精确定位。 \n\n4、能实现定温、差温、温升等不同形式的温度探测，也可以实现三者结合方式的测量。 \n\n5、每个传感器实时自检，信号处理系统实时自检，系统实时校准，确保整个系统运行的准确、稳定、可靠。 \n\n几种常见隧道火灾监测技术比较 \n\n| 光纤光栅 \n\n| 感温电缆 \n\n| 分布式光纤DTS \n\n| 双波长火焰探测 \n\n| \n响应速度 \n\n| 较快 \n\n| 较快 \n\n| 中 \n\n| 快 \n\n| \n测量精度 \n\n| 高 \n\n| 低 \n\n| 中 \n\n| 中 \n\n| \n报警定位 \n\n| 准确 \n\n| 一般 \n\n| 一般 \n\n| 准确 \n\n| \n测量范围 \n\n| -30℃~120℃差定温度任意报警阈值设定 \n\n| 固定 \n\n| -30℃~120℃差定温度任意报警阈值设定 \n\n| 只能测火焰明火，不能测温度。对阴燃，烟雾，非碳类燃烧不敏感。 \n\n| \n系统价格 \n\n| 中 \n\n| 低 \n\n| 中 \n\n| 高 \n\n| \n系统稳定性 \n\n| 稳定 \n\n| 超温即被破坏 \n\n| 稳定 \n\n| 经常要维护,尤其是清洁 \n\n| \n总体性能 \n\n| 价格适中；不受电磁干扰和恶劣环境影响，抗干扰能力强；反应速度快；报警定位准确；精度高；长期稳定性好，基本免维护。 \n\n| 价格最便宜；易受电磁干扰，只能一次性使用；感温铜管施工维护困难；灵敏度低，容易误报、漏报。 \n\n| 价格适中；不受电磁干扰影响，光强检测，光源使用寿命较短；反应速度慢；报警定位不准确。 \n\n| 造价最高；探测器安装在隧道侧壁，需要经常清洁和维护；光污染、雷电天气容易会引起误报。对阴燃，烟雾，非碳类燃烧不敏感。 \n\n| \nn 工程应用案列 \n\n云南剑川兰坪隧道隧道光纤光栅感温火灾报警系统 \n\n广州永和隧道火灾监测报警系统",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126084351_1093.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126084351_2968.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126084552_9375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126084641_2968.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126084641_5625.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126084642_0000.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "储油气罐智能感温火警系统",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=231&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "我国是能源消费大国，对能源的需求尤其旺盛。无论是国家或者是地方均在建设储备油罐等设施，而各类油品的储运安全是能源生产和销售的重要保障，由于油气是易燃物，因此对各类储油罐、储气罐进行实时在线温度监测，并建立火灾报警系统非常重要。",
+          "description": "储油罐/ 储气罐光纤光栅智能感温火灾报警系统 \n\n一．概述 \n\n随着国民经济的不断发展和人们生活水平的不断提高，人们对能源的需求越来越多，我国是能源消费大国，对能源的需求尤其旺盛。无论是国家或者是地方均在建设储备油罐等设施，而各类油品的储运安全是能源生产和销售的重要保障，由于油气是易燃物，因此对各类储油罐、储气罐进行实时在线温度监测，并建立火灾报警系统非常重要。 \n\n油罐火灾现场 \n\n二．储油罐光纤光栅感温火灾报警系统解决方案 \n\n按照中石化有关火灾报警技术标准要求，储备油库的火灾报警系统宜采用无电检测技术，光纤光栅感温火灾探测传感系统是目前国际上新型一代无电检测火灾温度探测系统，具有高精度、高灵敏度、安全防爆、抗强电磁干扰、抗雷击、抗腐蚀、可长期实时监测等众多优点，能快速、准确的探测出各类温度异常部位和区域，为及时采取各类安全措施提供可靠依据。 \n\n一般情况下，对灌区油罐实行集中监控方式，每个油罐无论容积大小，均实行单独监测通道实时在线温度检测方式，避免同一监测通道监测多个油罐而造成的许多维护管理方面的不便，光纤光栅温度探测器在油罐上的间隔可以按照3-6米布置，也可以做成双环布设，采用专用夹具将光纤光栅温度探测器布设在浮盘/浮船挡油槽的密封圈附近，然后通过光纤/光缆把探测器串连起来，接入到控制室的信号处理器，通过信号处理器对采集到的信号进行解调，测量出现场温度的实际情况，并将相关的信息传递到中央控制室。 \n\n| \n\n| \n\n油罐光纤光栅感温火灾探测系统示意图 \n\n储油罐主要有三类：外浮顶、内浮顶(拱顶)、球形罐 \n\n1、外浮顶油罐光纤光栅感温火灾探测器的布置方式： \n\n外浮顶罐光纤光栅传感器布设示意图 \n\n外浮顶油罐主要是以储存原油为主，体积较大，必须设置火灾报警系统。在外浮顶储罐上，一般采用专用夹具将光纤光栅感温火灾探测器布设在浮盘/浮船密封圈附近。光纤光栅探测器使用传输光缆连接，在储罐内，传输光缆沿滑梯敷设，并垂落至浮盘处与光纤光栅探测器连接。其中滑梯至罐底浮盘处的传输光缆采用防爆挠线管敷设。 \n\n外浮顶光纤光栅探测器安装实物图 \n\n2、 内浮顶(拱顶)油罐光纤光栅感温火灾探测器布置方式 \n\n内浮顶罐光纤光栅传感器布设示意图 \n\n内浮顶(拱顶)油罐多用于存储成品油，由于成品油易燃烧，且内浮顶上下移动，浮盘处极易发热，存在着极大的安全隐患。因此为了消除这些隐患，需要为内浮顶油罐配备专门的感温火灾探测系统，以达到消防监控的目的。 \n\n拱顶光纤光栅探测器安装实物图 \n\n结合现场油罐的实际情况和用户单位的需求，可采用专用夹具将光纤光栅 \n\n探测器布设在浮盘/浮船密封圈附近。探测器走线方式采用双回路错位布线方式，即罐上采用两条探测器串同时布设。传输光缆从内浮顶罐的通光孔穿到罐内浮盘上，一端直接和光纤光栅感温探测器连接，并固定在浮盘上；另一端与光纤光栅感温探测信号处理器连接；罐内传输光缆用防爆挠线管保护，防爆挠线管在罐内处于自由落体状态，可随浮盘上下运动。 \n\n3、储气罐光纤光栅感温火灾探测器报警方式 \n\n储气罐主要储存各类天然气或石油液化气等各类可燃气体，遇到高温时，罐内压力升高，易发生爆炸和燃烧，因此对气罐周围温度及罐体的温度实施在线监测和火灾报警监控很有必要。 \n\n储气罐光纤光栅探测器实物安装图 \n\n储气罐的形状与储油罐不一样，储气罐主要是球状，因此如何布设温度探测器与有关不太一样，通常根据球体的直径大小布置若干圈探测器，每圈温度探测器布设的位置主要看关键探测点布设，也可以平均间隔布设。 \n\n储气罐光纤光栅火灾报警系统示意图 \n\n光纤光栅感温火灾监测系统特点 \n\n1.安全性高：系统的信号处理和控制器处于远离工作区域，温度数据采集和传输全部采用光传感和光传输，真正实现无电检测，本质更安全； \n\n2.温度数据精确度高：典型精度±1℃，分辨率0.1℃； \n\n3.系统采用先进可靠的事件识别技术，真正实现不误报，不漏报 \n\n4.每个传感器实时自检，信号处理系统实时自检，实时校准，确保系统工作稳定，数据传输准确。 \n\n5.快速响应：系统响应时间不超过20秒，确保事故能够得到及时处理； \n\n6. 定位准确：通过独有的定位识别技术，能够准确判断危险点或危险区域； \n\n7.施工安全方便，在油罐上安装无需动用明火。 \n\n8.系统配置灵活，可以根据油罐多少进行设备扩容。 \n\n9. 良好的兼容性：通过各种通讯接口（串口、网口等），和开关量信号，可以方便实现与外部系统进行数据交换和与消防系统联动。 \n\n软件界面",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127151542_9843.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127151543_1562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127151655_8750.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127151825_9062.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127151824_8281.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152000_6406.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152001_0312.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152141_7031.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152143_4218.png",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152248_5468.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152248_9375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152349_1250.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152349_7812.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152455_5625.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152529_2812.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127152530_0312.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "矿用光纤光栅安全监测方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=229&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "该技术技术优势：1、环境适应性好；2、扩电磁干扰；3、传输距离远；4、多参量传感；5、长期稳定性；6、系统容量大",
+          "description": "该技术技术优势：1、环境适应性好；2、扩电磁干扰；3、传输距离远；4、多参量传感；5、长期稳定性；6、系统容量大 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114518_9062.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114519_2656.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114519_7343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114520_1406.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114520_6406.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114521_1875.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114521_6875.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114522_2031.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114522_7500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114523_4375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114523_9375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114524_4531.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141219/20141219114525_0468.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "隧道结构健康安全监测方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=237&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "为确保桥梁结构的结构安全，实现安全的运行，实施合理的维修计划，建立桥梁结构健康监测系统是非常必要的。通过健康监测发现桥梁早期的病害，既能保障行车安全，又能大大节约桥梁的维修费用。",
+          "description": "为了交通的便捷和快捷，提高运输效率和效益，在公路、铁路、城市交通的建设中出现了大量的隧道建设，由于隧道大多建设在城市地下、山区、江河湖泊底部，地质状况复杂，任何地质情况的变化都会给遂道的安全带来极大的危险，因此，无论是在隧道建设的过程中还是隧道运行使用的过程中均应实施状态健康监测。 \n\n结构健康监测在隧道监测领域的发展目前明显滞后于其他领域的发展，主要原因有两点： \n\n1、隧道结构和岩土工程条件的复杂性和监测上的难度等因素造成的。隧道工程一般规模较大，属于线状工程，长达几公里到数十公里，往往穿越许多不同的环境空域和时域，工程条件常常比较复杂，有时环境十分恶劣，因此要准确、快速、长距离、实时和大范围获得结构体的变形数据和变化规律并非易事。 \n\n2、缺少长距离和大面积的监测技术：隧道工程长达数公里到数十公里，对这钟长距离和大面积的监测对象，传统的检测和监测技术和方法一般无能为力； \n\n随着光纤光栅传感技术的不断发展和应用，特别是智能光纤光栅传感技术的不断成熟，长距离，大面积的实时在线健康监测已经完全可以再隧道的健康监测中大展宏图。 \n\n隧道监测示意图 \n\n光纤光栅隧道监测的主要内容是： \n\n隧道收敛变形监测 \n\n隧道地表土体沉降 \n\n隧道拱顶沉降、围岩离层监测 \n\n孔隙水压力监测 \n\n围岩压力及支护土压力监测 \n\n支护和衬砌内应力 \n\n表面应力及裂缝测量 \n\n锚杆或锚索受力 \n\n钢支撑内力及外力 \n\n在隧道内应用的光纤光栅传感器包括：温度传感器、应变传感器、位移传感器、压力传感器、倾斜传感器、土压计、渗压计、猫杆测力计等。光纤光栅传感健康监测系统包括传感器、数据采集、数据通讯、数据保存、数据处理、开放接口等单元组成。 \n\n隧道管片预安装埋入式传感器和钢筋计 \n\n隧道健康监测主要分两个阶段，一是施工阶段，二是运营阶段 \n\n1、隧道施工阶段：施工阶段监测可以及时把握围岩变化及支护系统的力学状态，预测工程安全事故，及时修正施工方案，将风险和损失降到最小。另外在施工期可将相关传感器及时植入隧道内部，构成隧道体内的感知“神经”；再加上隧道成型后安装在隧道表面的传感器的共同监测，由此可以形成一个真正的全面的隧道光纤光栅智能健康监测系统。 \n\n隧道结构健康监测传感器安装 \n\n2、隧道主体成型后的阶段：隧道主体成型后主要安装表面传感器，这些传感器主要是光纤光栅表面应变计、裂缝位移计、温度计。 \n\n隧道监测分类及使用传感器的种类 \n\n分类 \n\n| 传感器名称 \n\n| \n隧洞形变监测 \n\n| 光纤光栅位移计 \n\n| \n光纤光栅离层传感器 \n\n| \n光纤光栅土体位移计（裂缝计） \n\n| \n隧洞渗流监测 \n\n| 光纤光栅土压计 \n\n| \n光纤光栅渗压计 \n\n| \n应变监测 \n\n| 光纤光栅锚杆压力计 \n\n| \n光纤光栅钢筋计 \n\n| \n光纤光栅FRP智能锚杆 \n\n| \n光纤光栅应变（表按、埋入）计 \n\n| \n温度监测 \n\n| 光纤光栅温度计 \n\n|",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084517_5000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084517_6562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084559_4531.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084559_2500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084650_3593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084650_5156.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084650_6562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084735_3593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084735_5468.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084812_0000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128084812_1875.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "园林道路景观综合解决方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=203&FId=t3:50056:3",
+          "typeId": "50056",
+          "releaseDate": "2014-12-15",
+          "summary": "海川新材推出的园路景观化解决方案采用DrainAPMax彩色排水降噪路面，改变了乏味的黑色路面铺装，主要用于公园、小区、广场、人行道路路面、桥面铺装等",
+          "description": "简介：海川新材推出的园路景观化解决方案采用DrainAPMax彩色排水降噪路面，改变了乏味的黑色路面铺装，主要用于公园、小区、广场、人行道路路面、桥面铺装等。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171341_7343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171342_1093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171342_4218.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171342_8437.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171343_1250.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171343_4843.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171344_0937.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217171344_4062.jpg"
+          ],
+          "subgroup": {
+            "zh": "沥青基解决方案",
+            "en": "Asphalt solutions"
+          }
+        },
+        {
+          "title": "水电水利系统安全健康监测",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=236&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "光纤光栅传感器是一种光波长检测技术的无源传感器，无需供电，抗任何电磁干扰，可以长距离、大面积、长时间的在各类恶劣环境中工作，因此特别适合在水利水电以及水务领域从事安全监测。",
+          "description": "水电大坝、江河堤坝、输水管道以及其他一些水利设施如水闸等常修建在各种各样的地质、地形及水文环境中，承受着静水、动水、渗水等各种作用，工作条件十分复杂，由于客观条件的复杂以及技术水平的限制，即使精心设计，精心施工也无法做到尽善尽美，万无一失，随着时间的推移以及环境的不断变化，这些设施还会变形、老化，因此必须从一开始就对他们进行监测监控，随时掌握它们的变化动态，及时发现不安全现象，真正做到防患未然。 \n\n水电大坝 水电大坝健康监测示意图 \n\n多数水利设施往往范围广、环境恶劣、地质条件复杂，因此能否实现有效监测关键在于使用的技术条件和手段，传统的监测技术是无法从根本上满足监测需求的，特别是传统的电信号监测技术，无法在旷野长期大范围的做实时在线监测。 \n\n输水管道维修 输水管道健康监测示意图 \n\n随着技术的不断进步，特别是光传感技术的不断成熟，采用光传感技术用于水利水电方面的健康监测已经被逐步接受，尤其是光纤光栅传感技术的应用，从根本上解决了传统电信号技术不能解决的难题，由于光纤光栅传感器是一种光波长检测技术的无源传感器，无需供电，抗任何电磁干扰，可以长距离、大面积、长时间的在各类恶劣环境中工作，因此特别适合在水利水电以及水务领域从事安全监测。 \n\n根据行业规范和监测要求，目前可以满足水工条件的光纤光栅传感器器件有：温度计、应变计、钢筋计、位移计、无应力计、渗压计、土压计、锚杆测力计等，可采用光纤光栅传感器监测的项目有： \n\n分类 \n\n| 传感器名称 \n\n| \n位移监测 \n\n| 光纤光栅土体位移计 \n\n| \n光纤光栅位移计 \n\n| \n光纤光栅倾斜计 \n\n| \n渗流监测 \n\n| 光纤光栅土压计 \n\n| \n光纤光栅渗压计 \n\n| \n应变监测 \n\n| 埋入应变传感器 \n\n| \n光纤光栅FRP智能锚杆 \n\n| \n管网渗漏 \n\n| 光纤光栅温度计 \n\n| \n\n防汛墙结构安全健康监测 \n\n坝体内的光纤光栅传感器无需供电，传感器可串连使用，构成监测网络，现场传感器信号可通过光缆直接远距离传输到控制室，光纤光栅传感系统可采用双光纤布设传感器，即使传感器间光纤断开也不影响其他传感器的运行。传感器与数据采集设备之间的数据均采用光纤传输，抗干扰能力远高于电缆。 \n\n此外水务部门的闸门启闭状态的监测也很重要，闸门关闭不及时，会形成漏水、渗水，闸门不能闭合，会形成潮水倒灌，为了了解闸门的启闭状态，建立一套闸门监控系统很有必要。因此采用光纤光栅技术做成的闸位计就能很好的满足闸门监测的需要。 \n\n闸位计示意图 移门及闸位计的安装 拍门及开位计的安装",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083644_6093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083644_9687.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083731_1250.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083731_2968.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083815_3750.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083856_6718.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083856_8593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128083857_0156.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "自行车专用道彩色解决方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=204&FId=t3:50056:3",
+          "typeId": "50056",
+          "releaseDate": "2014-12-15",
+          "summary": "修建自行车专用道路，是建设节约型、环保型社会的发展趋势。海川新材推出的自行车专用道路彩色解决方案，重点解决自行车道的隔离化，使用人行道、自行车道、机动车道 三者并行不悖，互不侵犯。",
+          "description": "简介：修建自行车专用道路，是建设节约型、环保型社会的发展趋势。海川新材推出的自行车专用道路彩色解决方案，重点解决自行车道的隔离化，使用人行道、自行车道、机动车道 三者并行不悖，互不侵犯。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217170811_8437.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217170812_9375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217170813_3281.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217170813_7968.jpg"
+          ],
+          "subgroup": {
+            "zh": "沥青基解决方案",
+            "en": "Asphalt solutions"
+          }
+        },
+        {
+          "title": "高温重载车辙病害解决方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=199&FId=t3:50056:3",
+          "typeId": "50056",
+          "releaseDate": "2014-12-15",
+          "summary": "复合高聚合物沥青混凝土改性剂通过集料表面增强、沥青改性以及弹性恢复等多重作用大幅度提高沥青混凝土的强度、高温稳定性、并改善混凝土的水稳定性、抗裂性、综合而言对于路面耐久性有显著提高，是车辙病害最有效的解决方案。",
+          "description": "简介：复合高聚合物沥青混凝土改性剂通过集料表面增强、沥青改性以及弹性恢复等多重作用大幅度提高沥青混凝土的强度、高温稳定性、并改善混凝土的水稳定性、抗裂性、综合而言对于路面耐久性有显著提高，是车辙病害最有效的解决方案。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218101741_2812.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218101741_8281.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218101742_3906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218101743_3281.jpg"
+          ],
+          "subgroup": {
+            "zh": "沥青基解决方案",
+            "en": "Asphalt solutions"
+          }
+        },
+        {
+          "title": "桥梁结构安全健康监测系统",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=235&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "1. 抗强电磁干扰，稳定性高，能在恶劣的自然环境中长期稳定工作 2. 避免了电信号传感器的零点漂移和电阻误差，精度高，响应速度快； 3. 实现综合实时在线监测，可以大面积长距离布点，易组成一套完整的智能传感网络，且布线工作量大大减少。 4. 远程传输，桥梁现场和控制室直接通过光缆传输，无需中继，易于维护管理。",
+          "description": "KNP桥梁结构健康监测系统——长期稳定经济安全的最佳选择 \n\n桥梁结构在服役期间,不可避免的要受到环境和有害物质等的侵蚀,以及在车辆、地震、风、疲劳、人为等因素,和材料自身性能的不断退化的情况下,必然会产生损伤,导致其结构性能降低,倘若这些损伤不能及时进行检测和维修,在一定程度上会影响到行车的安全以及缩短桥梁的使用寿命,甚至将可能导致桥梁会发生突然间破坏和倒塌情况。 \n\n为确保桥梁结构的结构安全，实现可靠的运行，实施合理的维修计划，建立桥梁结构健康监测系统是非常必要的。通过健康监测发现桥梁早期的病害，既能保障行车安全，又能大大节约桥梁的维修费用。 \n\nn 光纤光栅健康监测技术优势： \n\n1. 抗强电磁干扰，稳定性高，能在恶劣的自然环境中长期稳定工作 \n\n2. 避免了电信号传感器的零点漂移和电阻误差，精度高，响应速度快； \n\n3. 实现综合实时在线监测，可以大面积长距离布点，易组成一套完整的智能传感网络，且布线工作量大大减少。 \n\n4. 远程传输，桥梁现场和控制室直接通过光缆传输，无需中继，易于维护管理。 \n\nn 工程应用案列 \n\n中山市沙港路口跨线桥健康监测系统 \n\n上海奉贤浦南运河桥安全监测系统 \n\n云南麻昭高速16座连续刚构桥健康监测系统 \n\n武冈城际铁路预制箱梁应变监测",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126085718_1562.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126085718_4375.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126085823_7968.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126085824_1875.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126085824_2968.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126085910_4843.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126085945_8906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126090009_5937.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150126/20150126090025_4375.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "柔性彩色路面铺装解决方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=201&FId=t3:50056:3",
+          "typeId": "50056",
+          "releaseDate": "2014-12-15",
+          "summary": "彩色沥青混凝土路面是彩色路面的重要组成部分，其具有舒适度高、色彩鲜艳、路用性能优良的特点，目前在路面彩化技术中占据主要地位。",
+          "description": "简介：彩色沥青混凝土路面是彩色路面的重要组成部分，其具有舒适度高、色彩鲜艳、路用性能优良的特点，目前在路面彩化技术中占据主要地位。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095639_3593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095639_9062.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095640_4218.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095640_8593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095641_2812.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095641_6718.jpg"
+          ],
+          "subgroup": {
+            "zh": "沥青基解决方案",
+            "en": "Asphalt solutions"
+          }
+        },
+        {
+          "title": "边坡治理监测整体解决方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=230&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "随着光纤光栅监测技术的不断成熟，光纤光栅已经代替传统技术开始逐步应用于山体边坡的自动化监测中，并取得了很好的效果。",
+          "description": "山体滑坡是一种严重的自然灾害，我国是山体滑坡多发国家，每年因山体滑坡造成的损失非常大。在公路或铁路沿线的山体滑坡会造成长时间的交通中断，有些乡村地区的山体滑坡会造成人民生命财产的严重损失，因此治理山体滑坡一直是我国非常重视的一项工作，我国目前在这方面做了很多有效工作，建立了不少边坡监测系统，随着光纤光栅监测技术的不断成熟，光纤光栅已经代替传统技术开始逐步应用于山体边坡的自动化监测中，并取得了很好的效果。 \n\n光纤光栅边坡监测原理图如下 \n\n如图所示，在潜在滑坡体的适当位置布图中所示的监测仪器，用来监测滑坡体的表面裂缝、深层位移、倾斜变形、地下水位以及锚杆张力，这些监测仪器通过专门的数据采集装置进行自动采集并记录，再通过GPRS 或GSM 无线传输方式将采集的数据发送到远程的中心数据接收站，通过配套的数据采集软件即可实现数据的现场采集、实时监控、异常测值报警的目的。 \n\n光纤光栅在边坡安全监测中的优点： \n\n● 采用光纤传输，传输距离长，适合野外边坡监测区域大，范围广的特点； \n\n●光纤光栅传感器现场无须供电，解决传统传感器野外分布式供电难的缺点； \n\n●光纤光栅信号处理器功耗低，选用太阳能电池的供电的方式可确保长时间工作。 \n\n● 光纤光栅传感器稳定性高，无零漂，适合于长期监测； \n\n●光纤光栅监测系统可进行：边坡裂缝监测、位移监测、倾斜监测、地下水位渗压监测、锚杆张力监测等等，光纤光栅监测点可以串连，可十分容易地构成边坡监测网络。 \n\n● 光纤光栅信号处理器内置一GPRS 模块，在有移动通讯网络覆盖的环境下均可实现远程数据传输。对于现场不具备GSM 移动通讯网络覆盖而选用超短波无线通讯模块。 \n\n分类 \n\n| 传感器名称 \n\n| \n位移监测 \n\n| 光纤光栅土体位移计 \n\n| \n光纤光栅位移计 \n\n| \n光纤光栅倾斜计 \n\n| \n渗流监测 \n\n| 光纤光栅土压计 \n\n| \n光纤光栅渗压计 \n\n| \n应变监测 \n\n| 光纤光栅锚杆（索）压力计 \n\n| \n光纤光栅FRP智能锚杆 \n\n| \n震动监测 \n\n| 光纤光栅加速度计 \n\n| \n温度监测 \n\n| 光纤光栅温度计 \n\n|",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081006_9062.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081035_3125.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081035_5000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081106_5625.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081106_7343.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "海川低温施工温拌解决方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=200&FId=t3:50056:3",
+          "typeId": "50056",
+          "releaseDate": "2014-12-15",
+          "summary": "温拌沥青混合料具有相对较宽的温度范围，同时，由于与环境温度差异减少，降温速度下降，在出料温度明显下降的同时，反而赢得了更多的有效碾压操作时间，对解决沥青路面低温季节施工具有现实意义。",
+          "description": "简介：温拌沥青混合料具有相对较宽的温度范围，同时，由于与环境温度差异减少，降温速度下降，在出料温度明显下降的同时，反而赢得了更多的有效碾压操作时间，对解决沥青路面低温季节施工具有现实意义。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095741_9687.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095742_3593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141218/20141218095742_8750.jpg"
+          ],
+          "subgroup": {
+            "zh": "沥青基解决方案",
+            "en": "Asphalt solutions"
+          }
+        },
+        {
+          "title": "光纤光栅钢构安全健康监测",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=233&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "在建筑钢结构健康监测的应用中，传感器主要采集结构体上关键构件的应力应变、钢结构的振动、温度场、耦合效应的风荷载有关数据；根据采集的数据和有限元模型，获得刚结构的整体受力状况和振动水平，对监测期间的安全状态进行评估和预测",
+          "description": "在大型钢结构设施中，主要有钢结构建筑如体育场馆、厂房、高层建筑，基坑、管道、电力铁塔、起重设备、井架、大型船舶舰艇、高速铁路钢轨等。 \n\n在建筑钢结构健康监测的应用中，传感器主要采集结构体上关键构件的应力应变、钢结构的振动、温度场、耦合效应的风荷载有关数据；根据采集的数据和有限元模型，获得刚结构的整体受力状况和振动水平，对监测期间的安全状态进行评估和预测； \n\n在铁路系统中，光纤光栅除了对铁路桥梁隧道进行安全健康监测外，还可以做其他方面的监测，如铁轨及车轮的健康状况、货车动态称重及偏载、路基边坡安全监测和客运专线安全监测等，通过对实验数据和现有技术应用情况的分析，进行了光纤传感技术在铁路安全监测领域里的应用研究。 \n\n起重架的安全健康监测 \n\n钢管支撑架的健康监测",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081821_8437.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081822_0000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081853_1406.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128081853_5156.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128082209_7812.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128082249_8593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128082345_5156.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128082345_7656.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128082346_0000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128082346_1875.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "快速公交彩色路面解决方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50056&Id=197&FId=t3:50056:3",
+          "typeId": "50056",
+          "releaseDate": "2014-12-15",
+          "summary": "海川新材公司推出的道路彩化综合解决方案（包括改善型、防滑型）来解决BRT快速公交系统中的公交专用道路与其它机动车道路的隔离，标示专用路权并提供美观的道路环境。",
+          "description": "简介：海川新材公司推出的道路彩化综合解决方案（包括改善型、防滑型）来解决BRT快速公交系统中的公交专用道路与其它机动车道路的隔离，标示专用路权并提供美观的道路环境。 \n\n详细介绍：",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217172214_4375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150128/20150128093837_8593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217172215_3750.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217172215_7031.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217172216_3125.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217172217_0000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20141217/20141217172217_4687.jpg"
+          ],
+          "subgroup": {
+            "zh": "沥青基解决方案",
+            "en": "Asphalt solutions"
+          }
+        },
+        {
+          "title": "电力系统温度实时状态监测",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50057&Id=232&FId=t3:50057:3",
+          "typeId": "50057",
+          "releaseDate": "2014-12-15",
+          "summary": "l 电力设备温度实时在线监测 l 高压电缆温度实时在线监测 l 电缆隧道火灾报警 l 电力线路安全监测",
+          "description": "l 电力设备温度实时在线监测 \n\nl 高压电缆温度实时在线监测 \n\nl 电缆隧道火灾报警 \n\nl 电力线路安全监测 \n\n光纤光栅技术是一种先进的光传感技术，也是现代光电科技的前沿技术，由于从数据采集到传输的全过程均实现光传输，因此真正实现了无电检测。光纤光栅传感技术作为一种先进的无源光传感技术在电力系统有着特别的应用优势，由于光纤光栅能够不受任何强电磁干扰的影响，并具有高灵敏度、高精度，高绝缘、耐辐射、耐高温、耐腐蚀等特点，而且我们可以根据不同需要和不同的使用场合，把光纤光栅传感器做成不同的尺寸和形状，能对被测设备无任何影响，因此非常适合电力系统的状态监测的需求。 \n\n一、光纤光栅温度实时在线监测系统功能 \n\n1、光纤光栅可以对电力设备的变压器、高低压开关柜、断路器、刀闸、母线、电电流或电压互感器等实现在线温度监测，可以对高压电缆本体、电缆接头、电缆终端实现精确的温度在线监测，对电缆隧道火灾探测、电缆排温度监测提供了一种更快速（相应时间小于20秒）、更准确、更有效、更先进的探测手段。 \n\n光纤光栅电力综合实时在线温度监测示意图 \n\n2、 光纤光栅技术为电力设备的温度监测提供了一种传统技术难以实现的手段和难以达到的功能和效果，能更安全、更精确、更及时、更全面的反映电力设备在运行中的温度状态。 \n\n变压器 开关柜 \n\n3、 系统对各监测部位能实现准确定位，不管在密闭的设备内部或在开放的环境中，各温度传感器都会显示位置信息和温度信息，为监控和维护提供很大便利。 \n\n4、 对各关键监测区域或部位出现的温度异常能实现早期发现和预警，真正做到早发现、早处置，确保安全。 \n\n5、 系统能够对不同的监测设备、不同的监测区域，不同的监测要求设置不同的监测标准，能实时记录温度数据，根据温度的变化情况、温度的变化趋势、历史数据等形式记录设备的运行状态，为电力系统设备的状态检修提供直接的可靠的参考依据。 \n\n6、 系统具备自检功能，能正确判断是自身故障还是电力设备运行异常，并对异常位置进行定位和报警，不误报，不漏报。 \n\n传感器工作状态显示 \n\n7、 系统维护简单，温度探测器防水、耐腐蚀、防震、防辐射、不受任何电磁干扰，能长期在各类恶劣环境中稳定工作。 \n\n8、 系统具有丰富的数据接口，可通过OPC、MODBUS、TCP/IP等标准接口实现和其他系统的数据共享。 \n\n二、光纤光栅温度在线监测系统的应用 \n\n1、电力设备温度实时在线监测：电力设备主要是开关柜、变压器、互感器、接线排、电机设备、动力设备、电源以及其它有关一次设备等温度监测采用光纤光栅技术可以做到其它传统技术无法实现的技术要求，如开关柜触头直接测温，其它传统技术就很难实施，由于光纤光栅温度传感器可以做的很小，可以直接安装到开关柜的触头以及其它设备的关键测温部位，同时不会影响设备的工作性能。可以快速精确反应设备运行中的温度状况，为设备的状态监测提供了一种先进可靠的技术手段。 \n\n开关柜动触头安装光纤光栅温度探测器 \n\n2、 高压电缆温度在线监测：光纤光栅可以对运行中的高压电缆实现实时在线的温度监测，可以精确测量电缆本体、电缆接头、电缆终端以及有关电缆的其他重点监测部位如弯曲、外部变形部位的温度监测。由于由于光栅技术可以精确测量温度，我们可以通过测量电缆表面温度并经过比对实验可以测出电缆芯层运行温度以及载流量。 \n\n光纤光栅高压电缆温度在线监测 \n\n3、 电缆隧道火灾报警：电缆隧道有大量的电缆，除了对高压电缆以及其他电缆进行单独的温度监测外，还有若干电缆敷设在电缆架上或电缆槽上，因此必须对电缆隧道实行电缆火灾探测，由于隧道内电磁环境复杂，传统技术由于抗电磁干扰能力差，易误报，因此采用光纤光栅技术不仅可以实时监测电缆隧道环境温度，而且对出现可能的电缆火灾能尽早发现并精确定位，大大降低火灾发生概率。 \n\n电缆隧道火灾报警温度监测 \n\n4、 电力线路安全监测:在电网中有大量的电力线路，特别是有220KV、500KV、750KV、1000KV等超高压、特高压线路，这些线路跨度大，特别是大跨越线路跨度更大，因此无论是铁塔或是绝缘子还是线路所承受的力很大，长期的高低温变化、日晒雨露、风雨冰霜容易使如铁塔、绝缘子、线路老化，承受力降低，严重时会导致线路倒塌，因此采用光纤光栅技术可以监测线路的疲劳状况，一旦发现状况可以及时采取措施，避免恶性事故的发生。 \n\n高压铁塔结构安全健康监测",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127154527_0625.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127154527_4531.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127154658_2812.png",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127154926_9687.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127154927_9687.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155025_0312.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155025_2031.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155100_5312.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155144_7343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155144_9531.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155217_0781.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155217_2500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155251_3906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155251_5781.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155327_4687.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150127/20150127155327_6562.jpg"
+          ],
+          "subgroup": {
+            "zh": "安全监测解决方案",
+            "en": "Safety-monitoring solutions"
+          }
+        },
+        {
+          "title": "盾构可切削混凝土技术方案",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50058&Id=188&FId=t3:50058:3",
+          "typeId": "50058",
+          "releaseDate": "2014-12-16",
+          "summary": "技术核心是利用轻质高强、易剪切的玻璃纤维筋代替以往盾构破除的钢筋部分，以达到保护盾构机刀盘、节约盾构时间，减轻施工人员工作的效果。",
+          "description": "背景 \n\n我国城市地铁系统建设发展至今，将近50年的历史，最初只有北京地铁40多公里的运营线路，自20世纪90年代以来，又有上海、广州等城市建成了现代化的新型地铁项目，截至2013年底，我国累计有19个城市建成投运城轨线路87条，运营里程2539公里。在2539公里运营里程中，地铁2074公里，占总里程的81.7%；轻轨192公里，占总里程的7.6%；单轨75公里，占总里程的3.0%；现代有轨电车100公里，占总里程的3.9%；磁浮交通30公里，占总里程的1.2%；市域快轨67公里，占总里程的2.6%。各种轨道交通方式中，地铁造价最高，有轨电车每公里造价2000万元左右，轻轨每公里造价2亿元，地铁每公里造价5亿元甚至更多。据了解，地铁建设总投资的10％～20％的资金都会用于工程设备购买。盾构机是修建地铁所需的主要设备，每台直径11米以上的盾构机价格大概为1亿元左右，而使用寿命一般仅为10公里。大量地下隧道的开挖，需要采用现代先进施工技术的盾构掘进法来完成。然而，当前盾构技术的掘进适用范围，仅局限于地铁站区间隧道的工况条件，当遇到地铁车站同步施工时，盾构将被地铁站周围的钢筋混凝土护壁围护结构所阻挡而无法通过，只能频繁进出竖井，待重新进入区间再行掘进施工。这样不仅增加了工人的劳动强度和降低了工作效率，也带来了施工的危险性，同时也增加了隧道开挖的周期。 \n\n为了克服上述缺陷，达到盾构从线路起点入地后不再多次进出竖井即可全线贯通的目的，就需要对钢筋混凝土围护结构的配筋技术加以创新，满足盾构可直接穿透混凝土墙体而仍能保持车站结构的设计强度要求。有关技术在国外已有成熟应用经验，即采用高性能玻璃纤维增强塑料（GFRP）螺纹筋来代替钢筋，不仅承载力可以满足要求，同时也保证了盾构机在掘进过程中顺利切割穿透而不损坏机器，从而避免了工人频繁进出竖井的机会，提高了施工安全性，有效的降低了工程成本，缩短了整体施工周期，使经济效益明显提升。 \n\n图1（通常一贯的做法～凿除钢砼） 图2（直接穿越GFRP筋连续墙） \n\n设计概况 \n\n截止至2014年5月，已开通地铁的城市有北京、上海、广州、深圳、佛山、武汉、郑州、长沙、成都、重庆、天津、沈阳、大连、长春、哈尔滨、杭州、苏州、南京、西安、昆明，无锡和青岛首条线路计划今年内通车。这些城市在修建地铁的过程中，均有采用高性能玻璃纤维增强塑料（GFRP）螺纹筋部分代替钢筋用于建造盾构进出口连续墙、钢筋笼，且该方法已形成施工惯例。于此同时，相应的行业标准也出台，可参考由深圳海川实业股份有限公司主编的行业标准《盾构可切削混凝土配筋技术规程》CJJ/T 192-2012和行业标准《土木工程用玻璃纤维增强筋》JG/T 406-2013进行设计。 \n\n上图为盾构可切削混凝土技术的原理图。该技术的核心是利用轻质高强、易剪切的玻璃纤维筋代替以往盾构需破除的钢筋部分，以此达到保护盾构机刀盘，节约盾构时间，减轻施工人员工作的效果。在制作GFRP 筋笼以及其吊装构造技术中需要注意的事项有： \n\n（1）受力主（纵）筋间GFRP筋与钢筋、GFRP筋与GFRP筋之间的连接应采用钢制U型卡连接，U型卡应与筋材直径相适应，每根筋材连接端的U型卡数量不得少于两个。 \n\n（2）其余部位间的GFRP筋与钢筋、GFRP筋与GFRP筋之间的连接可以采用铁丝绑丝或者尼龙绳进行绑扎，绑扎应该牢靠。 \n\n（3）玻璃纤维筋笼制作过程中应注意采取增加玻璃纤维筋筋笼刚度的措施（如筋笼两侧采用工字钢包边、筋笼内部采用一些玻璃纤维筋桁架或后期可以去除的钢筋桁架等等），以防止在吊装以及运输过程中出现较大的变形。 \n\n（4）对于需要吊装才能将筋笼放置到位的情况，由于盾构需要在筋笼中间（沿高度方向）穿越，所以筋笼一般会出现两个部位的搭接（受力主筋间GFRP筋与钢筋、GFRP筋与GFRP筋之间），吊装的方式宜采用从上向下（沿高度方向）的三吊点方式起吊，第一吊点一般位于筋笼最上部1米范围之内，第二吊点一般位于第一次连接点位置以上1米内，第三吊点一般位于第二次连接点位置以下合适的位置。 \n\n（5）筋笼吊装的过程中，起吊点均需要放置在钢筋之上，严禁将起吊点放置在玻璃纤维筋上。 \n\n施工流程 \n\n以实例---深圳地铁2号线某标段地连墙（主筋Ф30）---说明盾构可切削混凝土技术施工流程。 \n\n经典案例 \n\n1、成都地铁一期供货情况 \n\n成都地铁1号线一期工程是成都市地铁1号线初期建设线路，北起红花堰，南至孵化园，全长 15.998km，（规划线路全长约31.6km，设23站，其中地下站18座）全部为地下线，共设红花堰、火车北站、人民北路、文武路、骡马市、天府广场、锦江宾馆、小天竺、省体育馆、倪家桥、桐梓林、火车南站、南三环、新益州、孵化园等15座地下车站。 \n\n为了加快建设工期，减少土体加固费用，利用GFRP筋混凝土灌注桩结构代替钢筋混凝土灌注桩作为盾构端头井的围护结构，实际证明具有一定的经济效益，该技术成果已经通过四川省科技厅鉴定，并同意申报四川省科技进步一等奖。 \n\n基本情况如下： \n\n受力主筋采用Ф25、Ф22，长度9m一根；搭接计算按照40d； \n\n箍筋采用Ф12、Ф16布置，搭接计算按照40d； \n\n加筋箍筋直径建议采用Ф22以上，实际采用Ф25； \n\n桩径1.2m； \n\n业主在西南交通大学进行复检，抗拉强度大于600MPa。 \n\n经过建设单位、设计单位、技术专家对我公司FRP复合材料筋产品的前期考察、试验、检测，决定在本次项目中采购我公司材料，在该线路“红花堰、火车北站、人民北路、文武路、小天竺、省体育馆、倪家桥、桐梓林…..”等十三个项目标段的供货任务达40万米。 \n\n2、代表性案例 \n\n我公司的玻璃纤维筋产品近年在地铁盾构穿越项目中一直占有较大的市场份额，累计供货各类玻璃纤维筋百万延米，2006-2014年的代表性工程案例如下： \n\n成都地铁1、2、4号线； \n\n深圳地铁2号线东延线、7、9、11号线； \n\n北京地铁7、14、16号线； \n\n广佛地铁项目； \n\n上海地铁9号线； \n\n南宁轻轨试验段； \n\n沈阳地铁项目； \n\n长沙地铁2号线； \n\n杭州地铁穿越万象城地产项目； \n\n东莞轨道交通； \n\n北京南水北调项目； \n\n长春地铁1、2号线； \n\n青岛地铁项目； \n\n兰州地铁1号线。 \n\n广佛地铁某标段，地连墙（主筋Ф32） \n\n杭州万象城地铁穿越项目 \n\n沈阳地铁项目 \n\n南宁地铁项目 \n\n上海地铁项目 \n\n长沙地铁项目",
+          "sourceImages": [
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205092514_4062.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205092514_5156.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205092840_8281.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205092937_4218.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093022_6406.gif",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093306_8750.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093307_0156.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093307_2343.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093307_3281.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093307_5312.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093307_7187.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093307_8125.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093307_9375.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093308_0468.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093308_2500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093308_3906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093308_6562.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093308_7500.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093308_8593.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093308_9843.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093924_6093.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093924_7968.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093924_8906.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093924_9843.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_0625.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_0156.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_1875.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_3281.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_5000.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_7187.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_8281.jpg",
+            "https://www.opxincai.com/Images/Upload/image/20150205/20150205093925_9218.jpg"
+          ],
+          "subgroup": {
+            "zh": "水泥基解决方案",
+            "en": "Cement-based solutions"
+          }
+        }
+      ]
+    },
+    {
+      "id": "additives",
+      "typeId": 50060,
+      "route": "products/functional-additives",
+      "name": {
+        "zh": "功能助剂产品",
+        "en": "Functional-additive applications"
+      },
+      "entries": [
+        {
+          "title": "建筑涂料领域",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50065&Id=380&FId=t3:50065:3",
+          "typeId": "50065",
+          "releaseDate": "2017-02-24",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g1/M00/9D/79/CgAGS1ivybGAZzm3AAEu-aUCq3k364.jpg"
+          ],
+          "subgroup": {
+            "zh": "建筑涂料领域",
+            "en": "Architectural coatings"
+          },
+          "localImages": [
+            "/assets/official-products/cef723afd3a9472849be.jpg"
+          ]
+        },
+        {
+          "title": "水性工业漆领域",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50066&Id=381&FId=t3:50066:3",
+          "typeId": "50066",
+          "releaseDate": "2017-02-24",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g1/M00/9D/7A/CgAGS1ivzSCAL1FjAAFMhniWvzs664.jpg"
+          ],
+          "subgroup": {
+            "zh": "水性工业漆领域",
+            "en": "Waterborne industrial coatings"
+          },
+          "localImages": [
+            "/assets/official-products/12c26e133aa2060c326f.jpg"
+          ]
+        },
+        {
+          "title": "聚合物砂浆领域",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50067&Id=382&FId=t3:50067:3",
+          "typeId": "50067",
+          "releaseDate": "2017-02-24",
+          "summary": "",
+          "description": "",
+          "sourceImages": [
+            "https://rc0.zihu.com/g1/M00/9D/7A/CgAGS1ivzV2Ae8RPAAEdgj-5tF8658.jpg"
+          ],
+          "subgroup": {
+            "zh": "聚合物砂浆领域",
+            "en": "Polymer mortars"
+          },
+          "localImages": [
+            "/assets/official-products/742b7d7f10695a26b2e8.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colour",
+      "typeId": 50059,
+      "route": "products/colour-systems",
+      "name": {
+        "zh": "色彩系统产品",
+        "en": "Colour-system products"
+      },
+      "entries": [
+        {
+          "title": "【GSB 16-1517-2002 中国建筑色卡】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=330&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "建筑设计、装饰设计、建筑材料、建筑施工、建筑监理 规格（305*71*80mm）",
+          "description": "中华人民共和国GB\\T18922－2002《建筑颜色的表示方法》国家标准的颜色样品，是建筑行业专用色卡，适用于建筑设计、建筑材料、建筑装饰以及建筑监理等建筑领域，是建筑色彩记录、交流、传递和管理的标准工具。",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【240色卡升级版】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=331&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "建筑装饰、建筑材料、涂料经销网络规格（200*50*17mm）",
+          "description": "基于GSB16-1517-2002中国建筑色卡精选的240种室内建筑常用色及流行色，便捷实用，适合于涂料供应商使用。添加了18个颜色，升级为258颜色。",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【建筑外墙色卡】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=332&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "本色卡是依据《中国颜色体系》国家标准开发的一种科学、准确的建筑外墙色彩选择工具，给使用者提供了比较全面而且具体的建筑外墙色彩实样，能够指导人们根据不同的功能建筑、建筑所处的气温带、计划所用颜色的成本等因素进行科学的颜色选择，使其在对应的功能建筑色卡内轻松找到适合于本建筑外墙的颜色，可以解决人们用色的盲目性与被动性，使其选择颜色更加科学、方便、快捷，能够提高了选择颜色的工作效率。",
+          "description": "建筑设计、装饰设计、建筑材料、建筑施工、建筑监理",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【中国建筑颜色标准三件套】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=333&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "中国建筑标准三件套",
+          "description": "科研机构、建筑设计、装饰设计、建筑材料、施工监理等",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【色彩搭配色轮】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=334&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "一种直观、科学的色彩搭配工具，糅合传统色彩风水与现代颜色科学，通过色彩计算公式，轻松实现色彩搭配，解决配色难题。",
+          "description": "装饰设计、建筑涂料、涂料经销网络\n\n规格：半径为:105mm",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL D4】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=335&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "含所有1625种设计颜色的颜色手册 手册尺寸31.5x28.0cm色快尺寸1.7x1.7cm半光",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色。\n\n规格:（31.5*28.0*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【240色卡星座版】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=336&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-22",
+          "summary": "基于GSB16-1517-2002中国建筑色卡精选的240种室内建筑常用色及流行色，便捷实用，适合于涂料供应商使用。添加了18个颜色，升级为258个颜色。",
+          "description": "适用范围 | 建筑装饰、建筑材料、涂料经销网络\n\n| \n规格 | （200*50*17mm）\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL D2】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=337&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "盒装扇形色卡,含1625种设计颜色 单页尺寸24.0x5.0cm色快尺寸5.0x2.5cm半光",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色\n\n规格：（24.0*5.0*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL 841-GL】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=338&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "含196种经典颜色的基本标准 高光A5尺寸(14.8x21.0cm),色快尺寸为A6(10.5x14.8cm)将色卡装起来作匹配控制 含X-Y-Z值,同原始标准的颜色差和反射曲线 可单页供应",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色\n\n规格：（14.8*21.0*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL 840-HR】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=339&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "含213种经典颜色的基本标准 亚光A5尺寸(14.8x21.0cm),色快尺寸为A6(10.5x14.8cm)将色卡装起来作匹配控制 含X-Y-Z值,同原始标准的颜色差和反射曲线 可单页供应",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色\n\n规格：（14.8*21.0*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL F5】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=340&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "含所有210种经典颜色的信息色卡*总体尺寸47.5x29.7cm,折叠后尺寸21.5x29.7cm,每个色快尺寸1.2x2.2cm眼可看到所有颜色 全光*2009年添加了3种经典色卡的颜色.今后的RAL F5版本将有213种颜色.",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色。\n\n规格：（47.5*29.7*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL K1】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=341&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "带有所有210种经典RAL颜色的手册 每页十六种RAL经典颜色，共210种颜色 每张单页尺寸10.4x19.0cm每个色块尺寸1.8x2.8cm有16页颜色 全光*200年添加了3种经典色卡的颜色,今后的RAL K1版本将有213种颜色",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色。\n\n规格：（10.4*19.0*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL K5】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=342&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "RAL K5扇形色卡,含213种经典颜色U型防护封面 全页色快尺寸5.0x15.0cm尤其适合颜色结合和对比 有全光和亚光2种",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色\n\n规格：（5.0*15.0*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL设计系统颜色单页】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=344&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "所有设计颜色的色卡A6尺寸(10.5x14.8cm)可按要求提供光谱数据 所有26种新的清淡粉色,可以盒装并成套供应A4尺寸(21.0x14.8cm)可按要求提供光谱数据 可以圆扣装订成套供应",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色。\n\n规格：（10.5*14.8*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL实效色卡 单页】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=343&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "含490种RAL实效色卡 全部颜色420种纯色和70种金属色 纯色半光,金属色高光A6尺寸(10.5x14.8cm)",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色。\n\n规格（10.5*14.8*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL E3】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=346&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "含490种RAL实效色卡颜色的扇形色卡420种纯色和70种金属色 每页有6种纯色和一相匹配的金属色 纯色基于水性涂料系统,金属色置于树脂涂料 单页尺寸5.0x21.0cm纯色色快5.0x2.0cm金属色快5.0x3.8cm纯色半光,金属色高光",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色。\n\n规格：（5.0*21.0*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL E4】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=345&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "扇形色卡,含70种实效色卡的金属色 单页尺寸5.0x12.8高光",
+          "description": "满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色\n\n规格：（5.0*12.8*0mm）",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL E1】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=347&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "产品名称RAL E1功能简介490种RAL实效色卡颜色的基本标准420种纯色和70种金属色置于一高品质盒内（46.5x25.0.16.0cm） 基于水性涂料系统 每页为A6尺寸(10.5x14.8cm)色快尺寸10.5x14.8cm把色卡装在一起用于颜色对比和质量控制 纯色半光,金属色高光适用范围满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色规格（46.5*25.0*16.0mm） .ueditorTableStyle {margin-bottom:10px;border-collapse:collapse;display:table;}.ueditorTableStyle table.noBorderTable td,.ueditorTableStyle table.noBorderTable th,.ueditorTableStyle table.noBorderTable caption{border:1px dashed #ddd !important}.ueditorTableStyle table.sortEnabled tr.firstRow th,.ueditorTableStyle table.sortEnabled tr.firstRow td{padding-right:20px; background-repeat: no-repeat;background-position: center right; background-image:url(undefinedthemes/default/images/sortable.png);}.ueditorTableStyle table.sortEnabled tr.firstRow th:hover,.ueditorTableStyle table.sortEnabled tr.firstRow td:hover{background-color: #EEE;}.ueditorTableStyle table{margin-bottom:10px;border-collapse:collapse;display:table;}.ueditorTableStyle td,.ueditorTableStyle th{ background:white; padding: 5px 10px;border: 1px solid #DDD;}.ueditorTableStyle caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}.ueditorTableStyle th{border-top:1px solid #BBB;background:#F7F7F7;}.ueditorTableStyle table tr.firstRow th{border-top:2px solid #BBB;background:#F7F7F7;}.ueditorTableStyle tr.ue-table-interlace-color-single td{ background: #fcfcfc; }.ueditorTableStyle tr.ue-table-interlace-color-double td{ background: #f7faff; }.ueditorTableStyle td p{margin:0;padding:0;}",
+          "description": "490种RAL实效色卡颜色的基本标准420种纯色和70种金属色置于一高品质盒内（46.5x25.0.16.0cm） 基于水性涂料系统 每页为A6尺寸(10.5x14.8cm)色快尺寸10.5x14.8cm把色卡装在一起用于颜色对比和质量控制 纯色半光,金属色高光",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL E2】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=348&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "产品名称RAL E2功能简介多功能双扇面色卡 含490种RAL实效色卡颜色420种纯色和70种金色 纯色基于水性涂料系统,金属色置于树脂涂料 单页尺寸5.0x21.0cm,纯色色快尺寸5.0x2.5cm,金属色为全页 纯色和金属色可对照看也可分别看 纯色半光,金属色高光适用范围满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色规格（5.0*21.0*0mm） .ueditorTableStyle {margin-bottom:10px;border-collapse:collapse;display:table;}.ueditorTableStyle table.noBorderTable td,.ueditorTableStyle table.noBorderTable th,.ueditorTableStyle table.noBorderTable caption{border:1px dashed #ddd !important}.ueditorTableStyle table.sortEnabled tr.firstRow th,.ueditorTableStyle table.sortEnabled tr.firstRow td{padding-right:20px; background-repeat: no-repeat;background-position: center right; background-image:url(undefinedthemes/default/images/sortable.png);}.ueditorTableStyle table.sortEnabled tr.firstRow th:hover,.ueditorTableStyle table.sortEnabled tr.firstRow td:hover{background-color: #EEE;}.ueditorTableStyle table{margin-bottom:10px;border-collapse:collapse;display:table;}.ueditorTableStyle td,.ueditorTableStyle th{ background:white; padding: 5px 10px;border: 1px solid #DDD;}.ueditorTableStyle caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}.ueditorTableStyle th{border-top:1px solid #BBB;background:#F7F7F7;}.ueditorTableStyle table tr.firstRow th{border-top:2px solid #BBB;background:#F7F7F7;}.ueditorTableStyle tr.ue-table-interlace-color-single td{ background: #fcfcfc; }.ueditorTableStyle tr.ue-table-interlace-color-double td{ background: #f7faff; }.ueditorTableStyle td p{margin:0;padding:0;}",
+          "description": "多功能双扇面色卡 含490种RAL实效色卡颜色420种纯色和70种金色 纯色基于水性涂料系统,金属色置于树脂涂料 单页尺寸5.0x21.0cm,纯色色快尺寸5.0x2.5cm,金属色为全页 纯色和金属色可对照看也可分别看 纯色半光,金属色高光",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL K6】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=349&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "产品名称RAL K6功能简介含213种经典颜色圆环扣装订A4纸尺寸(21.0x29.7cm)所有210种经典颜色均有单页色卡 亚光适用范围满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色规格（21.0*29.7*0mm） .ueditorTableStyle {margin-bottom:10px;border-collapse:collapse;display:table;}.ueditorTableStyle table.noBorderTable td,.ueditorTableStyle table.noBorderTable th,.ueditorTableStyle table.noBorderTable caption{border:1px dashed #ddd !important}.ueditorTableStyle table.sortEnabled tr.firstRow th,.ueditorTableStyle table.sortEnabled tr.firstRow td{padding-right:20px; background-repeat: no-repeat;background-position: center right; background-image:url(undefinedthemes/default/images/sortable.png);}.ueditorTableStyle table.sortEnabled tr.firstRow th:hover,.ueditorTableStyle table.sortEnabled tr.firstRow td:hover{background-color: #EEE;}.ueditorTableStyle table{margin-bottom:10px;border-collapse:collapse;display:table;}.ueditorTableStyle td,.ueditorTableStyle th{ background:white; padding: 5px 10px;border: 1px solid #DDD;}.ueditorTableStyle caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}.ueditorTableStyle th{border-top:1px solid #BBB;background:#F7F7F7;}.ueditorTableStyle table tr.firstRow th{border-top:2px solid #BBB;background:#F7F7F7;}.ueditorTableStyle tr.ue-table-interlace-color-single td{ background: #fcfcfc; }.ueditorTableStyle tr.ue-table-interlace-color-double td{ background: #f7faff; }.ueditorTableStyle td p{margin:0;padding:0;}",
+          "description": "含213种经典颜色圆环扣装订A4纸尺寸(21.0x29.7cm)所有210种经典颜色均有单页色卡 亚光",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【RAL K7】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=350&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "扇形色卡,含213种经典颜色 每页尺寸5.0x15.0cm,每个色快尺寸2.0x15.0cm每页含5种颜色色快 全光",
+          "description": "产品名称 | RAL K7 | \n功能简介 | 扇形色卡,含213种经典颜色 每页尺寸5.0x15.0cm,每个色快尺寸2.0x15.0cm每页含5种颜色色快 全光 | \n适用范围 | 满足长期大范围的工业需求的颜色样本 注册的应用于设计的颜色样本 他们也同样包含符合DIA标准的安全色及信号色\n\n| \n规格 | （5.0*15.0*0mm）\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【室内色彩设计工具六件套】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=351&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "家居色彩搭配专业配套工具。具有智能化家居色彩设计功能，融合五大家居色彩设计风格，适合于建筑室内装饰设计和涂料经销网络的家居色彩咨询服务，能及时再现色彩方案，并通过电脑进行整体效果预览。",
+          "description": "产品名称 | 室内色彩设计工具六件套 | \n功能简介 | 家居色彩搭配专业配套工具。具有智能化家居色彩设计功能，融合五大家居色彩设计风格，适合于建筑室内装饰设计和涂料经销网络的家居色彩咨询服务，能及时再现色彩方案，并通过电脑进行整体效果预览。 | \n适用范围 | 装饰设计、建筑材料、涂料经销网络\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【GSB 16-2062-2007 中国颜色体系标准样册】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50061&Id=352&FId=t3:50061:3",
+          "typeId": "50061",
+          "releaseDate": "2017-02-23",
+          "summary": "中华人民共和国GB/T15608-2006中国颜色体系国家标准实物样品，按照颜色的三属性排列40个色调，5139个颜色，是目前世界上拥有颜色数量最多的标准样册，适用于教学展示、色彩研究、色彩设计、色彩管理等。",
+          "description": "产品名称 | GSB 16-2062-2007 中国颜色体系标准样册 | \n功能简介 | 中华人民共和国GB/T15608-2006中国颜色体系国家标准实物样品，按照颜色的三属性排列40个色调，5139个颜色，是目前世界上拥有颜色数量最多的标准样册，适用于教学展示、色彩研究、色彩设计、色彩管理等。 | \n适用范围 | 教育、 科研、建筑设计、城市规划与管理、商业设计、工业设计、颜色管理等\n\n| \n规格 | （430*410*30mm）\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "色卡产品系列",
+            "en": "Colour cards"
+          }
+        },
+        {
+          "title": "【HERO A200 全自动调色机123】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50062&Id=353&FId=t3:50062:3",
+          "typeId": "50062",
+          "releaseDate": "2017-02-23",
+          "summary": "HAMER全自动调色机装配了希路集团全新的专利产品步进空腔谐振泵(PCP)。 这种全新泵体设计使希路集团能为用户提供现今市场上第一台真正的低维护， 低成本的调色系统。更换非常简单，在五分钟内不用工具和特别的培训就把能整套色浆配给管道全部更换。",
+          "description": "产品名称 | HERO A200 全自动调色机123 | \n产品特点 | HAMER全自动调色机装配了希路集团全新的专利产品步进空腔谐振泵(PCP)。 这种全新泵体设计使希路集团能为用户提供现今市场上第一台真正的低维护， 低成本的调色系统。更换非常简单，在五分钟内不用工具和特别的培训就把能整套色浆配给管道全部更换。 | \n性能参数 | 性能参数：\n\n配给系统 HAMER A200-连续注入 色浆配给管的数量：最多16到24条\n\nHAMER A250-同时注入\n\n兼容性：水性色浆 色浆桶容量：2L\n\n最大流速：0.2L/min 平均精准度：+/-1%\n\n最小滴入量：1/1000fl.oz.(0.03cc) 喷嘴盖系统：自动保湿喷嘴盖\n\n基础漆桶感应：光电感应 基础漆桶放置：手动搁置板\n\n最大体积：800X1150mm(16罐) 整机重量：145Kg\n\n900X1150mm(24罐) 205Kg\n\n电源：220V,50Hz,16A\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "调色设备系列",
+            "en": "Tinting equipment"
+          }
+        },
+        {
+          "title": "【AT16-L 手动调色机】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50062&Id=354&FId=t3:50062:3",
+          "typeId": "50062",
+          "releaseDate": "2017-02-23",
+          "summary": "AT16-L手动调色机是针对配色中心推出的高精度经济型半自动调色机，具有精度高、稳定性好的特点。 双泵双标尺设计，注出准确。 电动搅拌，斜面喷嘴专利设计。 高品质的陶瓷阀们设计，彻底解决渗漏问题。 独创双层密封保湿盖。",
+          "description": "产品名称 | AT16-L 手动调色机 | \n产品特点 | AT16-L手动调色机是针对配色中心推出的高精度经济型半自动调色机，具有精度高、稳定性好的特点。 双泵双标尺设计，注出准确。 电动搅拌，斜面喷嘴专利设计。 高品质的陶瓷阀们设计，彻底解决渗漏问题。 独创双层密封保湿盖。 | \n性能参数 | 色浆罐数量：16/14/12个 \n色浆罐容量：2升\n最小注入量（精度）：1/384（0.077 毫升）\n外型尺寸（长×宽×高）：1350×880×880mm\n电源：220V/50Hz 200W\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "调色设备系列",
+            "en": "Tinting equipment"
+          }
+        },
+        {
+          "title": "【AT16-LN 手动调色机】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50062&Id=355&FId=t3:50062:3",
+          "typeId": "50062",
+          "releaseDate": "2017-02-23",
+          "summary": "AT16-LN手动调色机是针对配色中心推出的高精度经济型半自动调色机，具有精度高、稳定性好的特点。 双泵双标尺设计，注出准确。高品质的陶瓷阀们设计，彻底解决渗漏问题。",
+          "description": "产品名称 | AT16-LN 手动调色机 | \n产品特点 | AT16-LN手动调色机是针对配色中心推出的高精度经济型半自动调色机，具有精度高、稳定性好的特点。 双泵双标尺设计，注出准确。高品质的陶瓷阀们设计，彻底解决渗漏问题。 | \n性能参数 | 性能参数：\n\n双泵双标尺设计，注出准确\n\n电动定时搅拌，斜面喷嘴专利设计\n\n陶瓷阀门，双层密封盖\n\n16/14/12个色浆罐，容量2.3升\n\n最小/最大注入量：0.077ml（1/384液体盎司）/59.148ml（2液体盎司）\n\n设备尺寸：1350*880*880mm\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "调色设备系列",
+            "en": "Tinting equipment"
+          }
+        },
+        {
+          "title": "【HERO MINI （台式）全自动调色机】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50062&Id=356&FId=t3:50062:3",
+          "typeId": "50062",
+          "releaseDate": "2017-02-23",
+          "summary": "HAMER全自动调色机装配了希路集团全新的专利产品步进空腔谐振泵(PCP)。 这种全新泵体设计使希路集团能为用户提供现今市场上第一台真正的低维护， 低成本的调色系统。更换非常简单，在五分钟内不用工具和特别的培训就把能整套色浆配给管道全部更换。",
+          "description": "产品名称 | HERO MINI （台式）全自动调色机 | \n产品特点 | HAMER全自动调色机装配了希路集团全新的专利产品步进空腔谐振泵(PCP)。 这种全新泵体设计使希路集团能为用户提供现今市场上第一台真正的低维护， 低成本的调色系统。更换非常简单，在五分钟内不用工具和特别的培训就把能整套色浆配给管道全部更换。 | \n性能参数 | 性能参数： \n\n配给系统 HAMER MINI 连续注入 色浆配给管的数量：16罐\n\n兼容性：水性色浆 色浆桶容量：2L\n\n最大流速：0.2L/min 平均精准度：+/-1%\n\n最小滴入量：1/1000fl.oz.(0.03cc) 喷嘴盖系统：手动保湿盖\n\n基础漆桶感应：无 基础漆桶放置：手动搁置板\n\n最大体积：550X840X670 mm 整机重量：65Kg\n\n电源：220V,50Hz,16A\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "调色设备系列",
+            "en": "Tinting equipment"
+          }
+        },
+        {
+          "title": "【HERO MINI(立式) 全自动调色机】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50062&Id=357&FId=t3:50062:3",
+          "typeId": "50062",
+          "releaseDate": "2017-02-23",
+          "summary": "HAMER全自动调色机装配了希路集团全新的专利产品步进空腔谐振泵(PCP)。 这种全新泵体设计使希路集团能为用户提供现今市场上第一台真正的低维护， 低成本的调色系统。更换非常简单，在五分钟内不用工具和特别的培训就把能整套色浆配给管道全部更换。",
+          "description": "产品名称 | HERO MINI(立式) 全自动调色机 | \n产品特点 | HAMER全自动调色机装配了希路集团全新的专利产品步进空腔谐振泵(PCP)。 这种全新泵体设计使希路集团能为用户提供现今市场上第一台真正的低维护， 低成本的调色系统。更换非常简单，在五分钟内不用工具和特别的培训就把能整套色浆配给管道全部更换。 | \n性能参数 | 性能参数：\n\n配给系统 HAMER MINI 连续注入 色浆配给管的数量：16罐\n\n兼容性：水性色浆 色浆桶容量：2L\n\n最大流速：0.2L/min 平均精准度：+/-1%\n\n最小滴入量：1/1000fl.oz.(0.03cc) 喷嘴盖系统：手动保湿盖\n\n基础漆桶感应：无 基础漆桶放置：手动搁置板\n\n最大体积：550X840X670 mm 整机重量：65Kg\n\n电源：220V,50Hz,16A\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "调色设备系列",
+            "en": "Tinting equipment"
+          }
+        },
+        {
+          "title": "【ET16-L 手动调色机】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50062&Id=358&FId=t3:50062:3",
+          "typeId": "50062",
+          "releaseDate": "2017-02-23",
+          "summary": "ET16-L手动调色机适用于水性、溶剂型色浆。连动的保湿装置充分解决色浆在喷嘴处的干涸、堵塞和渗漏问题。改进的把手可以免去“最后一滴“的调色麻烦。 高精度微调的单标尺锁定装置，调色更快捷。 智能化电子定时搅拌装置，搅拌速度：20转/分钟连动保湿装置。",
+          "description": "产品名称 | ET16-L 手动调色机 | \n产品特点 | ET16-L手动调色机适用于水性、溶剂型色浆。连动的保湿装置充分解决色浆在喷嘴处的干涸、堵塞和渗漏问题。改进的把手可以免去“最后一滴“的调色麻烦。 高精度微调的单标尺锁定装置，调色更快捷。 智能化电子定时搅拌装置，搅拌速度：20转/分钟连动保湿装置。 | \n性能参数 | 色浆罐数量：12/16色浆罐 \n色浆罐容量：2.3升 \n最小注入量（精度）：1/384（0.077 毫升）\n外型尺寸（长×宽×高）：1020×1020×1060mm \n电源：220V/50Hz 200W\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "调色设备系列",
+            "en": "Tinting equipment"
+          }
+        },
+        {
+          "title": "【HAMER 系列全自动调色机】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50062&Id=359&FId=t3:50062:3",
+          "typeId": "50062",
+          "releaseDate": "2017-02-23",
+          "summary": "HAMER全自动调色机是采用全球独创性全自动循环不锈钢泵设计，新型双径陶瓷球阀控制的新一代调色机，其拥有5项国家专利。适用于工厂批量自动化生产及色彩中心调色。 全自动化控制，调色操作简单、准确。 软件功能强大，实现配方输入、查询、修改、删除，自动监控色浆存量。 采用体积注入方式，具有超常的性能、低磨损率。 全新的定时自动搅拌装置及罐内循环，防止色浆沉淀。 全自动喷嘴清洗装置防止色浆干涸、堵塞。",
+          "description": "产品名称 | HAMER 系列全自动调色机 | \n产品特点 | HAMER全自动调色机是采用全球独创性全自动循环不锈钢泵设计，新型双径陶瓷球阀控制的新一代调色机，其拥有5项国家专利。适用于工厂批量自动化生产及色彩中心调色。 全自动化控制，调色操作简单、准确。 软件功能强大，实现配方输入、查询、修改、删除，自动监控色浆存量。 采用体积注入方式，具有超常的性能、低磨损率。 全新的定时自动搅拌装置及罐内循环，防止色浆沉淀。 全自动喷嘴清洗装置防止色浆干涸、堵塞。 | \n性能参数 | 色浆罐数量：16个 \n色浆罐容量：3.5立升 \n最小注入量（精度）：1/384（0.077 毫升）\n流量：0.4L/min\n外型尺寸（长×宽×高）：1240×1180×1370mm \n电源：220V/50Hz 200W\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "调色设备系列",
+            "en": "Tinting equipment"
+          }
+        },
+        {
+          "title": "【中国颜色体系色立体模型】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=360&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "基于中国颜色体系的颜色三维空间模型，体现颜色在空间的分布规律，展示十种色调的空间排列，301种标准颜色样片，适用于教学演示、空间展示等。",
+          "description": "产品名称 | 中国颜色体系色立体模型 | \n功能简介 | 基于中国颜色体系的颜色三维空间模型，体现颜色在空间的分布规律，展示十种色调的空间排列，301种标准颜色样片，适用于教学演示、空间展示等。 | \n适用范围 | 教育、 科研、展示等\n\n| \n规格 | （430*300*300mm）\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【中国颜色体系色调环】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=361&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "表示颜色之间的色相关系，适用于教学及空间展示等。",
+          "description": "产品名称 | 中国颜色体系色调环 | \n功能简介 | 表示颜色之间的色相关系，适用于教学及空间展示等。 | \n适用范围 | 教育、 科研、展示等\n\n| \n规格 | （880*580*0mm）\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【中国颜色体系彩度尺】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=362&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "展示颜色彩度的分级关系，适用于教学及空间展示等。",
+          "description": "产品名称 | 中国颜色体系彩度尺 | \n功能简介 | 展示颜色彩度的分级关系，适用于教学及空间展示等。 | \n适用范围 | 教育、 科研、展示等\n\n| \n规格 | （880*580*0mm）\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【《中国颜色体系》电子色卡】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=363&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "《中国颜色体系》电子版本软件，5300个颜色数据库，可做为PHOTOSHOP、CORELDRAW等软件的插件提供给设计师使用，轻松实现实物颜色与电脑显示颜色的对接和转换。",
+          "description": "产品名称 | 《中国颜色体系》电子色卡 | \n功能简介 | 《中国颜色体系》电子版本软件，5300个颜色数据库，可做为PHOTOSHOP、CORELDRAW等软件的插件提供给设计师使用，轻松实现实物颜色与电脑显示颜色的对接和转换。 | \n适用范围 | 教育、 科研、建筑设计、城市规划与管理、商业设计、工业设计、颜色管理等\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【《CBCC电子色卡》】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=364&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "GSB16-1517-2002中国建筑色卡标准电子软件。通过电脑直观显示色卡；转换色卡颜色的各种参数；虚拟其色彩在各种常见色彩空间上的表现。",
+          "description": "产品名称 | 《CBCC电子色卡》 | \n功能简介 | GSB16-1517-2002中国建筑色卡标准电子软件。通过电脑直观显示色卡；转换色卡颜色的各种参数；虚拟其色彩在各种常见色彩空间上的表现。 | \n适用范围 | 建筑设计、涂料生产、科研机构\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【室内色彩设计软件】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=365&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "强大的家居信息数据库；五大家居风格色彩设计模块；家居整体风格设计方案预览；融传统风水色彩于智能化科学应用；解密心理色彩，满足个性需求；颜色搭配公式实现家居色彩DIY。",
+          "description": "产品名称 | 室内色彩设计软件 | \n功能简介 | 强大的家居信息数据库；五大家居风格色彩设计模块；家居整体风格设计方案预览；融传统风水色彩于智能化科学应用；解密心理色彩，满足个性需求；颜色搭配公式实现家居色彩DIY。 | \n适用范围 | 室内装饰设计、建材设计、涂料经销网络\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【ColorDRAWHOUSE—建筑外墙】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=366&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "本软件是依据《中国颜色体系》国家标准开发的一种适用于不同功能建筑外墙的色彩选择以及搭配软件，是对《建筑外墙色卡》相关功能的延续与补充，软件提供一种科学、准确的建筑外墙色彩选择与搭配方式，使用者可以很方便地根据建筑的功能、所处的气温带、颜色成本、搭配风格等因素选用系统所推荐的颜色，并将选择好的推荐色铺设到实际的图片案例中，完成效果再现，当然，使用者也可以根据自己的喜好自行选择颜色进行搭配。软件的高级版本则拥有更为强大的功能，使用者可以将自己所拍摄的建筑图片导入软件，并且使用勾索工具划分、分割主色、辅助色、点缀色区域，然后将颜色铺设到不同的搭配区域中，完成建筑外墙色彩搭配的DIY。",
+          "description": "产品名称 | ColorDRAWHOUSE—建筑外墙 | \n功能简介 | 本软件是依据《中国颜色体系》国家标准开发的一种适用于不同功能建筑外墙的色彩选择以及搭配软件，是对《建筑外墙色卡》相关功能的延续与补充，软件提供一种科学、准确的建筑外墙色彩选择与搭配方式，使用者可以很方便地根据建筑的功能、所处的气温带、颜色成本、搭配风格等因素选用系统所推荐的颜色，并将选择好的推荐色铺设到实际的图片案例中，完成效果再现，当然，使用者也可以根据自己的喜好自行选择颜色进行搭配。软件的高级版本则拥有更为强大的功能，使用者可以将自己所拍摄的建筑图片导入软件，并且使用勾索工具划分、分割主色、辅助色、点缀色区域，然后将颜色铺设到不同的搭配区域中，完成建筑外墙色彩搭配的DIY。 | \n适用范围 | 建筑设计、装饰设计、建筑材料、建筑施工、建筑监理\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【颜色管理软件】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=367&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "全中文界面的颜色管理软件，操作简单、易学易用，使色彩变得有形有名；具有对颜色具体成本核算、价格管理等功能，可根据客户提供涂料中钛白含量的不同配制不同的经济颜色配方。",
+          "description": "产品名称 | 颜色管理软件 | \n功能简介 | 全中文界面的颜色管理软件，操作简单、易学易用，使色彩变得有形有名；具有对颜色具体成本核算、价格管理等功能，可根据客户提供涂料中钛白含量的不同配制不同的经济颜色配方。 | \n适用范围 | 室内装饰设计、建材设计、涂料经销网络\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【中国颜色体系明度尺】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=368&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "展示颜色明度的分级关系，适用于教学及空间展示等。",
+          "description": "产品名称 | 中国颜色体系明度尺 | \n功能简介 | 展示颜色明度的分级关系，适用于教学及空间展示等。 | \n适用范围 | 展示颜色明度的分级关系，适用于教学及空间展示等。\n\n| \n规格 | （880*580*0mm）\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【建筑色彩创意设计软件】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50063&Id=369&FId=t3:50063:3",
+          "typeId": "50063",
+          "releaseDate": "2017-02-24",
+          "summary": "为色彩设计师量身订做的色彩设计软件；帮助设计师针对各种场景设计出丰富多彩的色彩设计方案；在保持原场景真实的基础上显示色卡色彩，视觉效果直观逼真；是城市设计、建筑设计、小区环境规划等方面色彩应用的理想助手。",
+          "description": "产品名称 | 建筑色彩创意设计软件 | \n功能简介 | 为色彩设计师量身订做的色彩设计软件；帮助设计师针对各种场景设计出丰富多彩的色彩设计方案；在保持原场景真实的基础上显示色卡色彩，视觉效果直观逼真；是城市设计、建筑设计、小区环境规划等方面色彩应用的理想助手。 | \n适用范围 | 室内装饰设计、建材设计、涂料经销网络\n\n|",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "配色软件与工具",
+            "en": "Colour software and tools"
+          }
+        },
+        {
+          "title": "【Xfast 速溶颜料】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=370&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "德国BASF化工集团创新型产品，独特的环型球体结构，由多达80％甚至更高的颜料和20％的聚合物组成，远远大于普通有机色浆不足40％的颜料含量。Xfast使用中无需加入树脂、助剂和填料，具有最佳的相容性，可添加到任何水性体系产品中实现快速着色。且无需研磨及高速分散。该产品具有的特别颗粒结构，不起粉尘，且是零VOC产品，绝对的无污染环保颜料，尤其适合高性能环保产品的调色。由于无树脂、水和溶剂，可以在干燥条件下长期保存。 Xfast的特点：快捷、安全、环保",
+          "description": "产品名称 | Xfast 速溶颜料 | \n产品特点 | 德国BASF化工集团创新型产品，独特的环型球体结构，由多达80％甚至更高的颜料和20％的聚合物组成，远远大于普通有机色浆不足40％的颜料含量。Xfast使用中无需加入树脂、助剂和填料，具有最佳的相容性，可添加到任何水性体系产品中实现快速着色。且无需研磨及高速分散。该产品具有的特别颗粒结构，不起粉尘，且是零VOC产品，绝对的无污染环保颜料，尤其适合高性能环保产品的调色。由于无树脂、水和溶剂，可以在干燥条件下长期保存。 Xfast的特点：快捷、安全、环保 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【COLORPOWER® 经典 M.ECO 水性零VOC系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=371&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "COLORPOWER® 经典 M.ECO 水性零VOC系列",
+          "description": "产品名称 | COLORPOWER® 经典 M.ECO 水性零VOC系列 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【EASYCOLOR® 易彩 WOOD溶剂型木器系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=372&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "WOOD系列溶剂型木器漆专用色浆由经过精选的高鲜艳度颜料、环保助剂及专用树脂加工而成，色浆状态均匀，流动性好。专为木器漆设计，适用于PU聚酯漆、NC硝基木器漆产品的着色。",
+          "description": "产品名称 | EASYCOLOR® 易彩 WOOD溶剂型木器系列 | \n产品特点 | WOOD系列溶剂型木器漆专用色浆由经过精选的高鲜艳度颜料、环保助剂及专用树脂加工而成，色浆状态均匀，流动性好。专为木器漆设计，适用于PU聚酯漆、NC硝基木器漆产品的着色。 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【EASYCOLOR® 易彩 BICCS溶剂型通用系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=373&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "溶剂型通用色浆，不含芳香族化合物适合多种体系。",
+          "description": "产品名称 | EASYCOLOR® 易彩 BICCS溶剂型通用系列 | \n产品特点 | 溶剂型通用色浆，不含芳香族化合物适合多种体系。 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【EASYCOLOR® 易彩 AC水性装饰系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=374&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "AC水性色浆由经过精选的高鲜艳度有机颜料、环保助剂与水经过精细研磨加工而成，色浆状态均匀，流动性好",
+          "description": "产品名称 | EASYCOLOR® 易彩 AC水性装饰系列 | \n产品特点 | AC水性色浆由经过精选的高鲜艳度有机颜料、环保助剂与水经过精细研磨加工而成，色浆状态均匀，流动性好 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【EASYCOLOR® 易彩 HC水性高浓系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=375&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "HC高浓度色浆，使用非离子或阴离子润湿分散剂制备而成，色浆状态均匀，流动性良好，专为工程调色开发的高浓度色浆。",
+          "description": "产品名称 | EASYCOLOR® 易彩 HC水性高浓系列 | \n产品特点 | HC高浓度色浆，使用非离子或阴离子润湿分散剂制备而成，色浆状态均匀，流动性良好，专为工程调色开发的高浓度色浆。 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【EASYCOLOR® 易彩 EC水性系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=376&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "EASYCOLOR系统调色色浆，采用非离子或阴离子分散剂制备而成，色浆状态均匀，流动性好，方便体积注入或质量注入，无树酯的色浆体系，与各种水性体系有良好的相溶性。用于乳胶漆及水性建筑涂料、水性木器漆、水性印染等方面，是COLORBASE彩标系列产品配套调色系统色浆，专为涂料配色终端设计。精选的色浆体系，完全符合《中国建筑色卡》国家标准色域要求，今调色无盲区。专为可调色基础漆优化设计的水性环保色浆系统，尤其适用于涂料销售终端的水性基础漆的调色需要。能覆盖目前市场所有流行色卡之调色需要。",
+          "description": "产品名称 | EASYCOLOR® 易彩 EC水性系列 | \n产品特点 | EASYCOLOR系统调色色浆，采用非离子或阴离子分散剂制备而成，色浆状态均匀，流动性好，方便体积注入或质量注入，无树酯的色浆体系，与各种水性体系有良好的相溶性。用于乳胶漆及水性建筑涂料、水性木器漆、水性印染等方面，是COLORBASE彩标系列产品配套调色系统色浆，专为涂料配色终端设计。精选的色浆体系，完全符合《中国建筑色卡》国家标准色域要求，今调色无盲区。专为可调色基础漆优化设计的水性环保色浆系统，尤其适用于涂料销售终端的水性基础漆的调色需要。能覆盖目前市场所有流行色卡之调色需要。不含对人体有害的铅镉等重金属，本产品的应用范围内无危害性结果的报告产生。 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【COLORPOWER® 经典 CP水性系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=377&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "COLORPOWER系列色浆是为水性涂料及其他水性产品调色而推出的高品质、高着色力经济型环保色浆系统，适用于各种乳胶漆、水性建筑涂料、水性木器漆、水性印染及墙纸，具有很好的性价比和产品附加值。良好的耐光性、耐候性和稳定性。不含树酯，采用高性能添加剂，与各种水性体系乳胶漆有良好的相溶性。并提供完备的市场流行色参考配方数据库。",
+          "description": "产品名称 | COLORPOWER® 经典 CP水性系列 | \n产品特点 | COLORPOWER系列色浆是为水性涂料及其他水性产品调色而推出的高品质、高着色力经济型环保色浆系统，适用于各种乳胶漆、水性建筑涂料、水性木器漆、水性印染及墙纸，具有很好的性价比和产品附加值。良好的耐光性、耐候性和稳定性。不含树酯，采用高性能添加剂，与各种水性体系乳胶漆有良好的相溶性。并提供完备的市场流行色参考配方数据库。 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        },
+        {
+          "title": "【COLORPOWER® 经典 CM水性系列】",
+          "sourceUrl": "https://www.opxincai.com/prod_view.aspx?TypeId=50064&Id=378&FId=t3:50064:3",
+          "typeId": "50064",
+          "releaseDate": "2017-02-24",
+          "summary": "COLORMAX调色系统色浆，采用非离子或阴离子分散剂制备而成，色浆状态均匀，流动性好，方便体积注入或质量注入。无树酯的色浆体系，与各种水性体系有良好的相溶性。专为实现涂料调色而设计的水性环保色浆系统，应用于水性建筑涂料、乳胶漆，水性木器漆等所有水性产品，合理的颜料浓度和支数设计，为您度身订造个性化的组合配置，实现性能和价格的最佳搭配，能覆盖目前市场所有流行色卡之调色需要，满足内外墙调色要求。并提供完备的市场流行色参考配方数据库。不含对人体有害的铅镉等重金属，本产品的应用范围内无危害性结果的报告产生。",
+          "description": "产品名称 | COLORPOWER® 经典 CM水性系列 | \n产品特点 | COLORMAX调色系统色浆，采用非离子或阴离子分散剂制备而成，色浆状态均匀，流动性好，方便体积注入或质量注入。无树酯的色浆体系，与各种水性体系有良好的相溶性。专为实现涂料调色而设计的水性环保色浆系统，应用于水性建筑涂料、乳胶漆，水性木器漆等所有水性产品，合理的颜料浓度和支数设计，为您度身订造个性化的组合配置，实现性能和价格的最佳搭配，能覆盖目前市场所有流行色卡之调色需要，满足内外墙调色要求。并提供完备的市场流行色参考配方数据库。不含对人体有害的铅镉等重金属，本产品的应用范围内无危害性结果的报告产生。 |",
+          "sourceImages": [],
+          "subgroup": {
+            "zh": "其他",
+            "en": "Other"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -26,9 +26,17 @@ export async function createPreviewServer() {
   }catch{res.writeHead(500);res.end('Preview error');}
  }));
 }
+
+export function previewListenOptions(argv=process.argv,env=process.env){
+ const at=argv.indexOf('--port');
+ const rawPort=at>=0?argv[at+1]:(env.PORT||'8000');
+ const port=Number(rawPort);
+ if(!Number.isInteger(port)||port<0||port>65535)throw new Error('PORT must be an integer from 0 to 65535.');
+ return {port,host:env.HOST||'127.0.0.1'};
+}
+
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
  const server=await createPreviewServer();
- const at=process.argv.indexOf('--port');
- const port=at>=0?Number(process.argv[at+1]):4321;
- server.listen(port,'127.0.0.1',()=>console.log('Oceanpower preview with AI chat: http://127.0.0.1:'+server.address().port));
+ const {port,host}=previewListenOptions();
+ server.listen(port,host,()=>console.log('Oceanpower preview with AI chat: http://'+host+':'+server.address().port));
 }

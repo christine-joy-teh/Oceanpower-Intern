@@ -56,3 +56,12 @@ CREATE TABLE IF NOT EXISTS cms_product_specs (
   CONSTRAINT cms_specs_entry_fk FOREIGN KEY (entry_id) REFERENCES cms_entries(id) ON DELETE CASCADE,
   INDEX cms_specs_order_idx (entry_id, sort_order)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS cms_entry_revisions (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  entry_id BIGINT UNSIGNED NOT NULL,
+  snapshot JSON NOT NULL,
+  saved_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT cms_revisions_entry_fk FOREIGN KEY (entry_id) REFERENCES cms_entries(id) ON DELETE CASCADE,
+  INDEX cms_revisions_entry_idx (entry_id, saved_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

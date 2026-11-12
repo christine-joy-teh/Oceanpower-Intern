@@ -3,6 +3,11 @@ node_modules/
 npm-debug.log*
 tmp/
 uploads/
+certs/
+*.pem
+# Database dumps can contain sessions, usernames or customer data.
+*.sql
+!cms/schema.sql
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -17,3 +22,6 @@ dist/
 # Public copies are generated from the existing catalogue assets.
 public/assets/
 public/catalogue.pdf
+
+# Generated RAG indexes (regenerate with npm run rag:build -- <kb>)
+rag/knowledge-bases/*/index.json

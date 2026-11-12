@@ -1,0 +1,96 @@
+---
+import officialProducts from '../content/published-official-products';
+import type {Locale} from '../lib/routes';
+interface Props {locale:Locale;route:string;}
+const {locale,route}=Astro.props;
+const category=officialProducts.categories.find(item=>item.route===route);
+const isZh=locale==='zh';
+const groupKey=(entry:any)=>entry.subgroup.zh;
+const groups=category?[...new Map(category.entries.map((entry:any)=>[groupKey(entry),entry.subgroup])).values()]:[];
+const archiveId=`official-${category?.id||'products'}`;
+---
+{category&&<section class="official-archive" id={archiveId} data-official-archive>
+  <header>
+    <div><p class="eyebrow dark"><i></i> {isZh?'官网产品档案':'OFFICIAL-SITE PRODUCT ARCHIVE'}</p><h2>{isZh?category.name.zh:category.name.en}</h2></div>
+    <p>{isZh?'以下内容抓取自海川新材官网，保留官网中文名称、发布日期、说明及原始链接。若与上方新版手册内容冲突，应先由海川工作人员确认现行资料。':'This archive preserves the Chinese product names, dates, descriptions and source links published on Oceanpower New Materials’ official site. Where it conflicts with newer manuals above, staff must confirm which information is current.'}</p>
+  </header>
+
+  <div class="archive-status"><strong>{category.entries.length}</strong><span>{isZh?'条官网记录':'official-site records'}</span><span>{isZh?'资料抓取日期':'Source captured'}: {officialProducts.source.fetchedAt}</span><a href={officialProducts.source.url} target="_blank" rel="noopener noreferrer">{isZh?'访问原官网':'Open official site'} <span aria-hidden="true">↗</span></a></div>
+
+  <div class="archive-controls">
+    <label><span>{isZh?'搜索产品及说明':'Search names and descriptions'}</span><input type="search" data-archive-search placeholder={isZh?'输入产品、型号或用途':'Enter a product, model or application'} autocomplete="off"/></label>
+    <label><span>{isZh?'产品分组':'Product group'}</span><select data-archive-group><option value="">{isZh?'全部分组':'All groups'}</option>{groups.map((group:any)=><option value={group.zh}>{isZh?group.zh:group.en}</option>)}</select></label>
+  </div>
+
+  <p class="archive-result" aria-live="polite"><span data-archive-count>{category.entries.length}</span> {isZh?'条记录':'records'}</p>
+  <div class="archive-list">
+    {category.entries.map((entry:any,index:number)=><article data-archive-entry data-group={groupKey(entry)}>
+      <div class="entry-index">{String(index+1).padStart(2,'0')}</div>
+      <div class="entry-main"><p class="entry-group">{isZh?entry.subgroup.zh:entry.subgroup.en}</p><h3 lang="zh-CN">{entry.title}</h3>{entry.summary&&<p class="entry-summary" lang="zh-CN">{entry.summary}</p>}<div class="entry-meta">{entry.releaseDate&&<span>{isZh?'官网发布日期':'Site date'}: {entry.releaseDate}</span>}<span>{entry.description?isZh?'含官网详细说明':'Official description available':isZh?'官网页面为图片资料':'Official page is image-based'}</span></div></div>
+      <div class="entry-actions"><a href={entry.sourceUrl} target="_blank" rel="noopener noreferrer">{isZh?'官网原文':'Official source'} <span aria-hidden="true">↗</span></a></div>
+      {(entry.description||entry.localImages?.length)&&<details class="entry-details"><summary>{isZh?'查看官网资料':'View archived information'}</summary><div class="entry-detail">{!isZh&&<p class="language-note">The archived source material below is in Chinese. An approved English translation is not available.</p>}{entry.description?<p lang="zh-CN">{entry.description}</p>:entry.localImages?.map((image:string,imageIndex:number)=><figure><img src={image} alt={`${entry.title}，官网资料图片 ${imageIndex+1}`} loading="lazy"/><figcaption>{isZh?'官网资料图片':'Official source image'} {imageIndex+1}</figcaption></figure>)}</div></details>}
+    </article>)}
+  </div>
+  <div class="archive-empty" data-archive-empty hidden><strong>{isZh?'没有匹配记录':'No matching records'}</strong><p>{isZh?'请尝试产品系列、型号或应用关键词。':'Try a product family, model number or application term.'}</p></div>
+</section>}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-official-archive]').forEach(archive=>{
+    const search=archive.querySelector<HTMLInputElement>('[data-archive-search]');
+    const group=archive.querySelector<HTMLSelectElement>('[data-archive-group]');
+    const entries=[...archive.querySelectorAll<HTMLElement>('[data-archive-entry]')];
+    const count=archive.querySelector<HTMLElement>('[data-archive-count]');
+    const empty=archive.querySelector<HTMLElement>('[data-archive-empty]');
+    const update=()=>{
+      const query=(search?.value||'').trim().toLocaleLowerCase();
+      const selected=group?.value||'';
+      let visible=0;
+      entries.forEach(entry=>{const matches=(!query||(entry.textContent||'').toLocaleLowerCase().includes(query))&&(!selected||entry.dataset.group===selected);entry.hidden=!matches;if(matches)visible++;});
+      if(count)count.textContent=String(visible);
+      if(empty)empty.hidden=visible!==0;
+    };
+    search?.addEventListener('input',update);
+    group?.addEventListener('change',update);
+  });
+</script>
+
+<style>
+.official-archive{margin-top:clamp(68px,9vw,128px);padding-top:clamp(38px,5vw,64px);border-top:4px solid var(--ink)}
+.official-archive>header{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:32px 72px;align-items:end}
+.official-archive h2{font-size:clamp(34px,4.5vw,60px);line-height:1.05;letter-spacing:-1.8px;margin:14px 0 0}
+.official-archive>header>p{line-height:1.8;color:#455c73;margin:0;max-width:65ch}
+.archive-status{display:grid;grid-template-columns:auto auto 1fr auto;gap:10px 22px;align-items:baseline;margin:34px 0;padding:20px 0;border-block:1px solid var(--line)}
+.archive-status strong{font:500 32px/1 'DM Mono',monospace;color:var(--blue)}
+.archive-status span{font-size:13px;color:#52677b}
+.archive-status a{font-weight:800;color:var(--blue);min-height:44px;display:flex;align-items:center;gap:7px}
+.archive-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.35fr);gap:18px}
+.archive-controls label{display:grid;gap:8px;font-size:12px;font-weight:800}
+.archive-controls input,.archive-controls select{width:100%;box-sizing:border-box;min-height:50px;border:1px solid #aebbc1;background:#f8faf8;color:var(--ink);padding:0 15px;font:500 16px/1.4 Manrope,sans-serif}
+.archive-controls input:focus-visible,.archive-controls select:focus-visible,.entry-actions a:focus-visible,.entry-details summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.archive-result{font:500 12px/1.5 'DM Mono',monospace;color:#52677b;margin:20px 0 8px}
+.archive-list{border-top:1px solid var(--line)}
+.archive-list article{display:grid;grid-template-columns:50px minmax(0,1fr) minmax(210px,.32fr);gap:18px 22px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+.archive-list article[hidden]{display:none}
+.entry-index{font:500 12px/1.5 'DM Mono',monospace;color:var(--blue)}
+.entry-main,.entry-actions{min-width:0}
+.entry-group{font:500 11px/1.4 'DM Mono',monospace;color:var(--blue);letter-spacing:.04em;margin:0 0 7px}
+.entry-main h3{font-size:clamp(18px,2vw,25px);line-height:1.35;margin:0;overflow-wrap:anywhere}
+.entry-summary{max-width:70ch;line-height:1.7;color:#455c73;margin:10px 0 0;overflow-wrap:anywhere}
+.entry-meta{display:flex;flex-wrap:wrap;gap:7px 16px;margin-top:13px}
+.entry-meta span{font-size:11px;line-height:1.5;color:#667a89}
+.entry-actions>a,.entry-details summary{min-height:44px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:9px 14px;border:1px solid var(--line);font-size:13px;font-weight:800;cursor:pointer}
+.entry-actions>a{color:var(--blue)}
+.entry-details{grid-column:2/-1;min-width:0}
+.entry-details summary{list-style:none;background:#eef3f1;width:210px;margin-left:auto}
+.entry-details summary::-webkit-details-marker{display:none}
+.entry-details[open] summary{background:var(--ink);color:#f5f8f7}
+.entry-detail{margin-top:10px;padding:22px;background:#eef3f1;overflow-wrap:anywhere}
+.entry-detail p{white-space:pre-line;line-height:1.75;margin:0;max-width:90ch}
+.entry-detail .language-note{white-space:normal;font-weight:700;color:#52677b;border-bottom:1px solid #cbd5d5;padding-bottom:14px;margin-bottom:18px}
+.entry-detail img{display:block;max-width:100%;height:auto;margin:0 auto 16px}
+.entry-detail figure{margin:0 0 22px}.entry-detail figcaption{font-size:12px;line-height:1.5;color:#52677b;margin-top:6px;text-align:center}
+.archive-empty{padding:42px 24px;background:#eef3f1;text-align:left}
+.archive-empty strong{font-size:22px}.archive-empty p{margin:8px 0 0;color:#52677b}
+@media(max-width:800px){.official-archive>header,.archive-controls{grid-template-columns:1fr}.archive-status{grid-template-columns:auto 1fr}.archive-status a{grid-column:1/-1}.archive-list article{grid-template-columns:36px minmax(0,1fr)}.entry-actions,.entry-details{grid-column:2}.official-archive h2{letter-spacing:-1px}}
+@media(max-width:520px){.archive-list article{grid-template-columns:1fr;gap:12px}.entry-actions,.entry-details{grid-column:1}.entry-details summary{width:100%;margin-left:0}.entry-index{border-bottom:2px solid var(--aqua);padding-bottom:6px;width:30px}.entry-detail{padding:18px 14px}.archive-status{gap:8px 14px}}
+</style>

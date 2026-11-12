@@ -1,0 +1,64 @@
+---
+import {urlFor,type Locale} from '../lib/routes';
+interface Props {locale:Locale;}
+const {locale}=Astro.props;
+const rows=locale==='zh'?[
+  ['高温车辙、重载或长纵坡','车辙王','气候、交通荷载、结构层、级配、油石比及目标动稳定度'],
+  ['排水、降噪或高黏黏结','SINOTPS','OGFC / SMA 类型、空隙率、层厚、基质沥青及生产路线'],
+  ['隧道阻燃及抑烟','FRMAX™','高效型或环保型、目标氧指数、掺量及适用消防要求'],
+  ['降低拌和及施工温度','EC-120 / EC-130','基质沥青、拌合站工艺、目标温度及施工和易性'],
+  ['旧沥青路面热再生','OP-900 / OP-1100','RAP 比例、回收沥青检测、基质或改性沥青及再生工艺'],
+  ['彩色、防滑或旧彩色路面修复','RoadPower','基层、交通量、颜色、厚度、摩擦要求及开放交通时间'],
+]:[
+  ['High-temperature rutting, heavy load or long grades','Rad Spunrie','Climate, loading, layer, gradation, binder ratio and target dynamic stability'],
+  ['Drainage, noise reduction or high-viscosity bonding','SINOTPS','OGFC / SMA type, voids, layer thickness, base binder and production route'],
+  ['Tunnel flame retardance and smoke suppression','FRMAX™','High-efficiency or eco-friendly type, target oxygen index, dosage and fire requirements'],
+  ['Lower mixing and construction temperature','EC-120 / EC-130','Base binder, plant route, target temperature and workability'],
+  ['Hot recycling of reclaimed asphalt pavement','OP-900 / OP-1100','RAP proportion, recovered-binder test, base or modified asphalt and recycling route'],
+  ['Colour, skid resistance or aged-colour repair','RoadPower','Substrate, traffic, colour, thickness, friction target and opening time'],
+];
+const variants=locale==='zh'?[
+  ['EC-120','聚烯烃降黏改性路线','不可将 EC-130 的 20–35°C 目录降温幅度自动套用'],
+  ['EC-130','含水沸石在约 100°C 释放水分并使沥青发泡','须结合基质沥青及拌合站验证降温幅度'],
+  ['OP-900','用于重交道路沥青再生','先检测 RAP 及回收沥青'],
+  ['OP-1100','用于改性沥青再生','不得与 OP-900 无条件互换'],
+  ['FRMAX™ 高效型','白色粉末；较低掺量对应更高目录氧指数','按目标氧指数及项目消防要求选型'],
+  ['FRMAX™ 环保型','紫红色颗粒；目录称低毒、无腐蚀性气体','产品类型、掺量及试验值必须成套引用'],
+]:[
+  ['EC-120','Polyolefin viscosity-temperature modification','Do not automatically assign EC-130’s 20–35°C catalogue reduction'],
+  ['EC-130','Water-bearing zeolite releases water near 100°C to foam asphalt','Validate the reduction with the selected binder and plant'],
+  ['OP-900','For recycling penetration-grade / heavy-duty road asphalt','Test RAP and recovered binder first'],
+  ['OP-1100','For recycling modified asphalt','Do not substitute it for OP-900 without testing'],
+  ['FRMAX™ high-efficiency','White powder; higher catalogue oxygen index at lower dosage','Select against target oxygen index and project fire requirements'],
+  ['FRMAX™ eco-friendly','Purplish-red granules; manual describes low toxicity and no corrosive gas','Keep product type, dosage and test value together'],
+];
+const brief=locale==='zh'?['主要病害、功能目标及应用位置','新建、维修或再生项目及目标结构层','交通量、轴载、气候和施工季节','基质沥青、集料、级配及现有配合比','拌合站、投料方式、运输距离及施工窗口','目标试验指标、适用标准及审批责任人']:['Primary distress, functional target and application location','New-build, maintenance or recycling project and target layer','Traffic, axle loading, climate and construction season','Base binder, aggregate, gradation and current mix design','Plant, dosing route, haul distance and work window','Target test values, applicable standards and approval owner'];
+---
+<section class="asphalt-detail" aria-labelledby="asphalt-selection-title">
+  <header>
+    <p class="eyebrow dark"><i></i> {locale==='zh'?'项目选型指南':'PROJECT SELECTION GUIDE'}</p>
+    <h2 id="asphalt-selection-title">{locale==='zh'?'先定义路面问题，再筛选材料体系。':'Define the pavement problem before selecting a material.'}</h2>
+    <p>{locale==='zh'?'六类材料解决的是不同问题。下表用于准备首次技术沟通，不代表自动选型、配合比设计或工程批准。':'The six material families address different problems. Use this matrix to prepare an initial technical discussion—not as an automatic selection, mix design or engineering approval.'}</p>
+  </header>
+
+  <p class="scroll-note" id="asphalt-selection-scroll">{locale==='zh'?'小屏幕可左右滑动查看完整表格。':'On smaller screens, swipe sideways to read the full table.'}</p>
+  <div class="matrix-wrap" tabindex="0" role="region" aria-label={locale==='zh'?'沥青材料初步选型表':'Preliminary asphalt material selection table'} aria-describedby="asphalt-selection-scroll">
+    <table><thead><tr><th>{locale==='zh'?'工程需求':'Project need'}</th><th>{locale==='zh'?'初步系列':'Initial family'}</th><th>{locale==='zh'?'必须确认':'Must confirm'}</th></tr></thead><tbody>{rows.map(row=><tr>{row.map((cell,index)=>index===0?<th scope="row">{cell}</th>:<td>{cell}</td>)}</tr>)}</tbody></table>
+  </div>
+
+  <section class="variant-section" aria-labelledby="variant-title">
+    <div><p class="eyebrow dark"><i></i> {locale==='zh'?'型号边界':'VARIANT BOUNDARIES'}</p><h3 id="variant-title">{locale==='zh'?'这些型号不可混用。':'Keep these variants separate.'}</h3><p>{locale==='zh'?'名称相近不代表机理、适用基质或目录数据相同。':'Similar names do not mean the same mechanism, compatible binder or catalogue data.'}</p></div>
+    <div class="variant-list">{variants.map((variant,index)=><article><span>{String(index+1).padStart(2,'0')}</span><div><h4>{variant[0]}</h4><p>{variant[1]}</p><small>{variant[2]}</small></div></article>)}</div>
+  </section>
+
+  <div class="review-grid">
+    <section><span>01</span><h3>{locale==='zh'?'准备项目资料':'Prepare the project brief'}</h3><ol>{brief.map(item=><li>{item}</li>)}</ol></section>
+    <section><span>02</span><h3>{locale==='zh'?'完成验证闭环':'Complete the verification loop'}</h3><ol><li>{locale==='zh'?'确认病害及目标结构层':'Confirm distress and target structural layer'}</li><li>{locale==='zh'?'筛选适用产品及具体型号':'Shortlist the family and exact grade'}</li><li>{locale==='zh'?'完成材料检测、室内配合比及性能试验':'Complete material tests, laboratory mix design and performance testing'}</li><li>{locale==='zh'?'试拌、试铺并由项目责任方审核':'Trial-mix, trial-lay and obtain review from the responsible project parties'}</li></ol></section>
+  </div>
+
+  <aside class="asphalt-enquiry"><div><p class="eyebrow"><i></i> {locale==='zh'?'供工作人员审核':'FOR STAFF REVIEW'}</p><h3>{locale==='zh'?'已有道路项目资料？':'Have a pavement project brief?'}</h3><p>{locale==='zh'?'整理应用、候选产品、结构层或尺寸、数量、地点及期望时间，生成可编辑的询价草稿。草稿不会自动发送，也不构成技术或商务批准。':'Organise the application, candidate family, layer or dimensions, quantity, location and requested timeframe into an editable enquiry draft. Nothing is sent automatically, and the draft is not a technical or commercial approval.'}</p></div><div><button type="button" data-rfq-start>{locale==='zh'?'准备询价草稿':'Prepare enquiry draft'} <span aria-hidden="true">→</span></button><a href={urlFor(locale,'contact')}>{locale==='zh'?'联系技术团队':'Contact the technical team'}</a></div></aside>
+</section>
+
+<style>
+.asphalt-detail{margin-top:clamp(64px,8vw,112px);border-top:4px solid var(--ink);padding-top:clamp(36px,5vw,64px)}.asphalt-detail>header{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:24px 70px;align-items:end}.asphalt-detail>header .eyebrow{grid-column:1/-1}.asphalt-detail h2{font-size:clamp(34px,4.8vw,64px);line-height:1.05;letter-spacing:-2px;margin:0}.asphalt-detail>header>p:last-child{line-height:1.8;color:#455c73;margin:0;max-width:60ch}.scroll-note{font:500 12px/1.6 'DM Mono',monospace;color:#52677b;margin:34px 0 10px}.matrix-wrap{overflow-x:auto;border:1px solid var(--line);background:#fff}.matrix-wrap:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.matrix-wrap table{border-collapse:collapse;width:100%;min-width:780px}.matrix-wrap th,.matrix-wrap td{text-align:left;padding:18px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);line-height:1.55}.matrix-wrap thead th{background:var(--ink);color:#f5f8f7;font:500 12px 'DM Mono',monospace;letter-spacing:.04em}.matrix-wrap tbody th{width:32%;font-size:15px}.matrix-wrap tbody td:nth-child(2){font-weight:800;color:var(--blue);white-space:nowrap}.variant-section{display:grid;grid-template-columns:minmax(240px,.7fr) minmax(0,1.3fr);gap:60px;margin-top:clamp(50px,7vw,88px);align-items:start}.variant-section h3{font-size:clamp(28px,3.5vw,44px);line-height:1.1;margin:16px 0}.variant-section>div:first-child>p:last-child{line-height:1.75;color:#52677b}.variant-list{border-top:1px solid var(--line)}.variant-list article{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}.variant-list article>span{font:500 12px 'DM Mono',monospace;color:var(--aqua)}.variant-list h4{font-size:18px;margin:0 0 6px}.variant-list p{line-height:1.6;margin:0 0 6px}.variant-list small{display:block;color:#52677b;line-height:1.6}.review-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;margin-top:clamp(50px,7vw,88px)}.review-grid>section{border-top:3px solid var(--aqua);background:#eef3f1;padding:30px}.review-grid>section>span{font:500 13px 'DM Mono',monospace;color:var(--blue)}.review-grid h3{font-size:clamp(23px,2.6vw,32px);margin:14px 0 20px}.review-grid ol{margin:0;padding-left:22px;display:grid;gap:12px}.review-grid li{line-height:1.65;padding-left:6px}.asphalt-enquiry{margin-top:32px;padding:clamp(28px,4vw,48px);background:var(--ink);color:#f5f8f7;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:end}.asphalt-enquiry h3{font-size:clamp(26px,3vw,40px);margin:12px 0}.asphalt-enquiry p:not(.eyebrow){line-height:1.75;color:#c9d7de;margin:0;max-width:72ch}.asphalt-enquiry>div:last-child{display:grid;gap:12px;min-width:220px}.asphalt-enquiry button,.asphalt-enquiry a{min-height:46px;display:flex;align-items:center;justify-content:center;padding:0 18px;font-weight:800}.asphalt-enquiry button{border:1px solid var(--aqua);background:var(--aqua);color:var(--ink);cursor:pointer}.asphalt-enquiry a{border:1px solid #6f8795;color:#f5f8f7}.asphalt-enquiry button:focus-visible,.asphalt-enquiry a:focus-visible{outline:3px solid var(--aqua);outline-offset:4px}@media(max-width:800px){.asphalt-detail>header,.variant-section,.review-grid,.asphalt-enquiry{grid-template-columns:1fr}.asphalt-detail>header{gap:24px}.variant-section{gap:28px}.asphalt-enquiry{gap:28px}.asphalt-enquiry>div:last-child{min-width:0}}@media(max-width:520px){.review-grid>section{padding:24px 18px}.asphalt-enquiry{padding-inline:20px}.asphalt-detail h2{letter-spacing:-1.2px}}
+</style>

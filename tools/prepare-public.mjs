@@ -11,7 +11,7 @@ const path=(lang,route)=>'/'+(lang==='zh'?'':lang+'/')+(route?route+'/':'');
 await fs.mkdir('public/assets',{recursive:true});
 const retiredAssets = new Set(['advanced-rebar.jpg','bfrp-product.jpg','catalogue-high-tech.png','catalogue-partners-academic.png','catalogue-partners-industry.png','catalogue-quality.png','catalogue-test-lab.png','cfrp-production.jpg','facility.jpg','gfrp-product.jpg','gfrp-rebar.jpg','metro-project.jpg','oceanpower-cover.jpg','product-example-186.jpg']);
 for (const file of retiredAssets) await fs.rm('public/assets/'+file,{force:true});
-for (const file of await fs.readdir('assets')) if (!retiredAssets.has(file)) await fs.copyFile('assets/'+file,'public/assets/'+file);
+for (const file of await fs.readdir('assets')) if (!retiredAssets.has(file)) await fs.cp('assets/'+file,'public/assets/'+file,{recursive:true});
 await fs.rm('public/catalogue.pdf',{force:true});
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const entries=routes.filter(r=>!pending.has(r)).flatMap(route=>locales.map(lang=>'<url><loc>'+escape(site+path(lang,route))+'</loc>'+locales.map(other=>'<xhtml:link rel="alternate" hreflang="'+(other==='zh'?'zh-CN':other)+'" href="'+escape(site+path(other,route))+'"/>').join('')+'<xhtml:link rel="alternate" hreflang="x-default" href="'+escape(site+path('zh',route))+'"/></url>'));

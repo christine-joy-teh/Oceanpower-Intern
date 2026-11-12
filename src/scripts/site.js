@@ -56,15 +56,16 @@ chatForm.addEventListener('submit',async event=>{
   const data=await response.json();
   if(typeof data.answer!=='string'||!data.answer.trim())throw Error('Invalid assistant response');
   setMode(data.mode);
+  if(data.sourceStatus==='staff-published')chatMode.textContent=label('Published website product information');
   // The original catalogue fallback is bilingual. Use the existing translated
   // catalogue on Spanish/French pages; live AI receives the selected locale.
-  const text=data.mode==='catalogue-demo'&&['es','fr'].includes(locale)?localCatalogue(message):data.answer;
+  const text=data.mode==='catalogue-demo'&&data.sourceStatus!=='staff-published'&&['es','fr'].includes(locale)?localCatalogue(message):data.answer;
   answer.textContent=text;
   if(data.nextQuestion&&!(data.mode==='catalogue-demo'&&['es','fr'].includes(locale)))answer.append(document.createTextNode(' '+data.nextQuestion));
   if(data.notice){const notice=document.createElement('small');notice.textContent=label('The AI service is unavailable. This answer uses the local catalogue.');answer.append(document.createElement('br'),notice);}
   if(Array.isArray(data.sources)&&data.sources.length){
    const sources=document.createElement('small');
-   sources.textContent=label(data.mode==='knowledge-base'?'Provider references are unverified. Engineering review is required.':'Catalogue reference · Engineering review required');
+   sources.textContent=label(data.sourceStatus==='staff-published'?'Staff-published website content · Confirm specifications with staff':data.mode==='knowledge-base'?'Provider references are unverified. Engineering review is required.':'Catalogue reference · Engineering review required');
    for(const source of data.sources.slice(0,4)){const row=document.createElement('span');row.textContent=String(source.label||'')+' — '+String(source.detail||'');sources.append(document.createElement('br'),row);}
    // Spanish/French local answers already contain their own matching sources.
    if(!(data.mode==='catalogue-demo'&&['es','fr'].includes(locale)))answer.append(document.createElement('br'),sources);

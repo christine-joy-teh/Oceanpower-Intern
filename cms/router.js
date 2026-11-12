@@ -4,11 +4,22 @@ const { isRetiredContent } = require('../content-policy');
 const fs = require('node:fs');
 const path = require('node:path');
 const repository = require('./repository');
+const chatKnowledge = require('./chat-knowledge');
 const { constantTimeEqual, newToken, tokenHash, parseCookies } = require('./security');
 
 const COOKIE_NAME = 'oceanpower_admin';
 const loginAttempts = new Map();
-const allowedFileTypes = new Set(['image/jpeg','image/png','image/webp','image/gif','application/pdf']);
+const allowedFileTypes = new Set(['image/jpeg','image/png','image/webp','image/gif','application/pdf','video/mp4','video/webm']);
+function validFileSignature(type, bytes) {
+  if (type === 'image/jpeg') return bytes.subarray(0, 3).equals(Buffer.from([0xff, 0xd8, 0xff]));
+  if (type === 'image/png') return bytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
+  if (type === 'image/gif') return ['GIF87a','GIF89a'].includes(bytes.toString('ascii',0,6));
+  if (type === 'image/webp') return bytes.toString('ascii',0,4) === 'RIFF' && bytes.toString('ascii',8,12) === 'WEBP';
+  if (type === 'application/pdf') return bytes.toString('ascii',0,5) === '%PDF-';
+  if (type === 'video/mp4') return bytes.toString('ascii',4,8) === 'ftyp';
+  if (type === 'video/webm') return bytes.subarray(0,4).equals(Buffer.from([0x1a,0x45,0xdf,0xa3]));
+  return false;
+}
 
 function securityHeaders(response) {
   response.setHeader('X-Content-Type-Options', 'nosniff');
@@ -22,8 +33,15 @@ function json(response, status, body, extraHeaders = {}) {
   response.end(JSON.stringify(body));
 }
 
+// Use the right-most X-Forwarded-For entry: it is appended by the nearest proxy
+// (Render), whereas left-most entries can be supplied by the client.
 function clientAddress(request) {
-  return String(request.headers['x-forwarded-for'] || request.socket?.remoteAddress || 'unknown').split(',')[0].trim();
+  return String(request.headers['x-forwarded-for'] || request.socket?.remoteAddress || 'unknown').split(',').at(-1).trim();
+}
+
+function secureRequest(request) {
+  return process.env.NODE_ENV === 'production' || Boolean(request.socket?.encrypted)
+    || String(request.headers['x-forwarded-proto'] || '').split(',')[0].trim() === 'https';
 }
 
 function sameOrigin(request) {
@@ -79,13 +97,13 @@ async function readJson(request) {
   catch { throw Object.assign(new Error('The request must contain valid JSON.'), { status: 400 }); }
 }
 
-function sessionCookie(token) {
-  const secure = process.env.NODE_ENV === 'production' ? '; Secure' : '';
+function sessionCookie(token, request) {
+  const secure = secureRequest(request) ? '; Secure' : '';
   return `${COOKIE_NAME}=${encodeURIComponent(token)}; Path=/; HttpOnly; SameSite=Strict; Max-Age=28800${secure}`;
 }
 
-function clearCookie() {
-  const secure = process.env.NODE_ENV === 'production' ? '; Secure' : '';
+function clearCookie(request) {
+  const secure = secureRequest(request) ? '; Secure' : '';
   return `${COOKIE_NAME}=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0${secure}`;
 }
 
@@ -101,13 +119,17 @@ function requireCsrf(request, session) {
 }
 
 function publicEntry(entry, locale) {
-  const selected = entry.translations[locale] || entry.translations.en || entry.translations.zh || { title:'', summary:'', body:'' };
+  // Both locale rows always exist, so fall back on an empty title rather than a missing row.
+  const selected = [locale, locale === 'zh' ? 'en' : 'zh'].map((key) => entry.translations[key]).find((value) => value?.title)
+    || entry.translations[locale] || { title:'', summary:'', body:'' };
   return {
     id: entry.id, kind: entry.kind, slug: entry.slug, status: entry.status, sortOrder: entry.sort_order,
     publishedAt: entry.published_at, title: selected.title, summary: selected.summary, body: selected.body,
     metadata: entry.metadata, specs: entry.specs.map((spec) => ({ label: locale === 'zh' ? spec.labelZh || spec.labelEn : spec.labelEn || spec.labelZh, value: spec.value, unit: spec.unit, source: spec.source })),
     image: entry.featured_image_id ? `/api/cms/files/${entry.featured_image_id}` : null,
     attachment: entry.attachment_id ? `/api/cms/files/${entry.attachment_id}` : null,
+    gallery: Array.isArray(entry.metadata?.galleryIds) ? entry.metadata.galleryIds.filter((id) => /^[a-f0-9-]{36}$/i.test(id)).slice(0, 12).map((id) => `/api/cms/files/${id}`) : [],
+    video: /^[a-f0-9-]{36}$/i.test(entry.metadata?.videoId || '') ? `/api/cms/files/${entry.metadata.videoId}` : null,
   };
 }
 
@@ -141,13 +163,29 @@ function createCmsRouter(repo = repository, adminOverride = null) {
       if (request.method === 'GET' && fileMatch) {
         const file = await repo.getFile(fileMatch[1]);
         if (!file || isRetiredContent(file.original_name) || !fs.existsSync(file.path)) { json(response, 404, { error: 'File not found.' }); return true; }
+        if (!await repo.fileIsPublic(fileMatch[1]) && !await authenticate(request, repo)) { json(response, 404, { error: 'File not found.' }); return true; }
         securityHeaders(response);
         response.setHeader('Content-Type', file.mime_type);
-        response.setHeader('Content-Length', file.byte_size);
+        response.setHeader('Accept-Ranges', file.mime_type.startsWith('video/') ? 'bytes' : 'none');
         const downloadName = file.original_name.replace(/[^\x20-\x7E]/g, '_').replace(/["\r\n]/g, '');
         response.setHeader('Content-Disposition', `inline; filename="${downloadName}"`);
-        response.writeHead(200);
-        fs.createReadStream(file.path).pipe(response);
+        const range = file.mime_type.startsWith('video/') ? request.headers.range : null;
+        if (range) {
+          const match = /^bytes=(\d+)-(\d*)$/.exec(range);
+          const start = match ? Number(match[1]) : NaN;
+          const end = match && match[2] ? Number(match[2]) : file.byte_size - 1;
+          if (!Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start > end || end >= file.byte_size) {
+            response.writeHead(416, { 'Content-Range': `bytes */${file.byte_size}` }); response.end(); return true;
+          }
+          response.setHeader('Content-Range', `bytes ${start}-${end}/${file.byte_size}`);
+          response.setHeader('Content-Length', end - start + 1);
+          response.writeHead(206);
+          fs.createReadStream(file.path, { start, end }).pipe(response);
+        } else {
+          response.setHeader('Content-Length', file.byte_size);
+          response.writeHead(200);
+          fs.createReadStream(file.path).pipe(response);
+        }
         return true;
       }
 
@@ -168,7 +206,7 @@ function createCmsRouter(repo = repository, adminOverride = null) {
         const csrf = newToken();
         await repo.createSession(tokenHash(token), admin.username, csrf);
         clearLoginAttempts(request);
-        json(response, 200, { user: { username: admin.username }, csrfToken: csrf }, { 'Set-Cookie': sessionCookie(token) });
+        json(response, 200, { user: { username: admin.username }, csrfToken: csrf }, { 'Set-Cookie': sessionCookie(token, request) });
         return true;
       }
 
@@ -181,7 +219,7 @@ function createCmsRouter(repo = repository, adminOverride = null) {
       if (request.method === 'POST' && url.pathname === '/api/cms/logout') {
         if (!requireCsrf(request, session)) { json(response, 403, { error: 'Your session could not be verified. Refresh and try again.' }); return true; }
         await repo.deleteSession(tokenHash(session.token));
-        json(response, 200, { ok: true }, { 'Set-Cookie': clearCookie() }); return true;
+        json(response, 200, { ok: true }, { 'Set-Cookie': clearCookie(request) }); return true;
       }
 
       if (request.method === 'GET' && url.pathname === '/api/cms/admin/entries') {
@@ -189,13 +227,44 @@ function createCmsRouter(repo = repository, adminOverride = null) {
         json(response, 200, { entries }); return true;
       }
 
+      if (request.method === 'GET' && url.pathname === '/api/cms/admin/files') {
+        json(response, 200, { files: await repo.listFiles() }); return true;
+      }
+      const adminFileMatch = url.pathname.match(/^\/api\/cms\/admin\/files\/([a-f0-9-]{36})$/i);
+      if (request.method === 'DELETE' && adminFileMatch) {
+        if (!requireCsrf(request, session)) { json(response, 403, { error: 'Your session could not be verified. Refresh and try again.' }); return true; }
+        const deleted = await repo.deleteFile(adminFileMatch[1]);
+        json(response, deleted ? 200 : 404, deleted ? { ok: true } : { error: 'File not found.' }); return true;
+      }
+
+      if (request.method === 'GET' && url.pathname === '/api/cms/admin/chat-knowledge') {
+        const products = await repo.listEntries({ kind: 'product', publishedOnly: true });
+        json(response, 200, chatKnowledge.syncStatus(products)); return true;
+      }
+      if (request.method === 'POST' && url.pathname === '/api/cms/admin/chat-knowledge') {
+        if (!requireCsrf(request, session)) { json(response, 403, { error: 'Your session could not be verified. Refresh and try again.' }); return true; }
+        const products = await repo.listEntries({ kind: 'product', publishedOnly: true });
+        await chatKnowledge.writeSnapshot(products);
+        json(response, 200, chatKnowledge.syncStatus(products)); return true;
+      }
+
+      const revisionMatch = url.pathname.match(/^\/api\/cms\/admin\/entries\/(\d+)\/revisions(?:\/(\d+)\/restore)?$/);
+      if (revisionMatch && request.method === 'GET' && !revisionMatch[2]) {
+        json(response, 200, { revisions: await repo.listRevisions(revisionMatch[1]) }); return true;
+      }
+      if (revisionMatch && request.method === 'POST' && revisionMatch[2]) {
+        if (!requireCsrf(request, session)) { json(response, 403, { error: 'Your session could not be verified. Refresh and try again.' }); return true; }
+        json(response, 200, { entry: await repo.restoreRevision(revisionMatch[1], revisionMatch[2]) }); return true;
+      }
+
       if (request.method === 'POST' && url.pathname === '/api/cms/admin/files') {
         if (!requireCsrf(request, session)) { json(response, 403, { error: 'Your session could not be verified. Refresh and try again.' }); return true; }
         const mimeType = String(request.headers['content-type'] || '').split(';')[0].trim().toLowerCase();
-        if (!allowedFileTypes.has(mimeType)) { json(response, 415, { error: 'Upload a JPG, PNG, WebP, GIF or PDF file.' }); return true; }
+        if (!allowedFileTypes.has(mimeType)) { json(response, 415, { error: 'Upload a JPG, PNG, WebP, GIF, PDF, MP4 or WebM file.' }); return true; }
         const originalName = path.basename(decodeURIComponent(String(request.headers['x-file-name'] || 'upload'))).replace(/[^\p{L}\p{N}._ -]/gu, '_').slice(0, 255);
-        const bytes = await readBody(request, 10 * 1024 * 1024);
+        const bytes = await readBody(request, mimeType.startsWith('video/') ? 80 * 1024 * 1024 : 25 * 1024 * 1024);
         if (!bytes.length) { json(response, 400, { error: 'Choose a non-empty file.' }); return true; }
+        if (!validFileSignature(mimeType, bytes)) { json(response, 415, { error: 'File content does not match the selected format.' }); return true; }
         json(response, 201, { file: await repo.saveFile({ originalName, mimeType, bytes }) }); return true;
       }
 
@@ -222,4 +291,4 @@ function createCmsRouter(repo = repository, adminOverride = null) {
   };
 }
 
-module.exports = { createCmsRouter, publicEntry };
+module.exports = { createCmsRouter, publicEntry, validFileSignature };

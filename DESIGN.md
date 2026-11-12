@@ -51,6 +51,12 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 - Split hero with catalogue-derived imagery and technical figures.
 - Product platform cards.
 - Specification table.
+- Catalogue-backed product portfolio sections with source status, in-page product navigation, responsive fact grids and explicit product-family separation.
+- Product-first homepage with a split materials hero, asymmetric three-portfolio directory, catalogue-verification notes, optional CMS news and a clear enquiry handoff.
+- Detailed airport-pavement portfolio with product-specific catalogue references, a requirement-to-product selection matrix, engineering review inputs and staff-review enquiry handoff.
+- Detailed asphalt-material portfolio with product mechanisms, construction notes, variant boundaries, a problem-to-family selection matrix and project-verification workflow.
+- Searchable official-site product archive under each category, with source links, dates, group filters and locally hosted images for entries whose source pages contain no extractable text.
+- Food business catalogue with source-page references, separate machine specifications, powders, cones and mobile product navigation.
 - Sales-assistant capability rows.
 - Buyer-scenario controls.
 - Accessible chatbot with loading, success, source, fallback, and error states.
@@ -65,6 +71,7 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 - File uploads, empty lists, database errors and successful saves have explicit status text.
 - Mobile collapses navigation, records and editor into a single vertical flow.
 - The content manager is always `noindex` and never exposes database or account credentials to browser JavaScript.
+- The media area keeps uploads and reuse in the existing editor, with thumbnail/video previews and explicit remove-association controls. A compact sidebar status and action show whether published products have been copied into the website chatbot's local product snapshot.
 
 ## Enquiry workspace
 
@@ -113,6 +120,12 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-11-04 - Added the Food business product guide from the supplied ice cream catalogue, with model-specific data, PDF page references and catalogue-derived images.
+2026-11-02 - Added a searchable archive of official Oceanpower New Materials product entries under the existing category pages, preserving source attribution and the newer curated manuals above it.
+2026-10-30 - Expanded the asphalt portfolio from summary cards into source-backed product detail, explicit grade boundaries, a preliminary selection matrix and a responsive project-verification flow.
+2026-10-30 - Replaced the thin airport solution summary with the dedicated AM-series products documented in the 2026 manual and added a responsive preliminary-selection workflow.
+2026-10-30 - Reordered the homepage around product discovery, applications, catalogue evidence and staff-reviewed enquiries; removed the AI-sales promotion from the homepage while leaving the assistant implementation unchanged.
+2026-10-30 - Reworked product presentation around the latest Haichuan FRP, asphalt and airport-pavement manuals while preserving the industrial editorial system and mobile reading flow.
 2026-10-14 - Hardened phone and tablet layouts for the public website and Chinese content manager, with automated overflow and touch-target checks.
 2026-10-13 - Switched the content-manager interface and operational messages to Chinese-first copy with a Simplified Chinese typeface.
 2026-10-13 - Added the local MySQL content-manager design for bilingual pages, businesses, products, news and documents.

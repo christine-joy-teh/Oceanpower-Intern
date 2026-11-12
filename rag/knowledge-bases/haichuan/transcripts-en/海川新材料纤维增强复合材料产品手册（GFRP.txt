@@ -1,0 +1,66 @@
+Haichuan New Materials / Oceanpower / Opmaterial
+GFRP Fiber Reinforced Polymer Product Manual
+Shenzhen Haichuan New Materials Technology Co., Ltd. / Shenzhen Oceanpower New Material Technology Co., Ltd.
+
+Company Introduction
+
+Shenzhen Haichuan New Materials Technology Co., Ltd. (also branded Oceanpower / Opmaterial Haichuan New Materials) is a national-level high-tech enterprise long engaged in the R&D, production, and engineering application of glass fiber reinforced polymer (GFRP) composite materials, and one of the earliest Chinese companies to systematically apply GFRP in rail transit, highway guardrails, and slope support.
+
+1 Product Introduction
+
+GFRP (Glass Fiber Reinforced Polymer) is a new composite material reinforced with glass fiber in a resin matrix, produced by a pultrusion process. It offers excellent corrosion resistance, light weight with high strength, electrical and magnetic non-conductivity, and is easy to cut. Haichuan's GFRP product line includes:
+
+1) GFRP rebar (sand-coated glass fiber rebar): used for pavement reinforcement, metro tunnel segment secondary lining, underground foundations, coastal development, and photovoltaic mounting systems — offering corrosion resistance, durability, light weight, and easy construction. It is an alternative to traditional steel rebar in corrosive environments and in projects with special electromagnetic-shielding requirements.
+
+2) GFRP rock bolts/soil nails (solid, all-thread, hollow, self-drilling): used for tunnel and mine roadway support and slope reinforcement; corrosion-resistant, non-magnetic, lightweight, and easy to cut for convenient transport and installation.
+
+3) Glass fiber anchor cable: used for docks, dams, mine roadway support, concrete road/bridge reinforcement, corrosive environments, hospital NMR/CT facilities, fiber-optic cable reinforcement, telecom towers, and substations.
+
+4) GFRP tie rods (structural tie bars): formwork tie connectors for building/construction projects — can be cut, need no secondary removal, and do not rust once left inside the concrete after construction, with no impact on structural durability.
+
+5) GFRP mesh: a geogrid-type product used for pavement reinforcement and slope protection.
+
+6) GFRP concrete guardrail (new glass-fiber-rebar-reinforced concrete guardrail): used as crash barriers on highways and urban roads. Compared with traditional steel-rebar concrete guardrails, it offers corrosion resistance, does not rust, and has a longer service life; the structural design can also eliminate the traditional climb-arresting ledge.
+
+2 Technical Indicators (reference values — confirm exact specification with the project)
+
+GFRP rebar (sand-coated) reference specifications (diameter / guaranteed tensile strength / guaranteed shear strength / elastic modulus):
+- 4-12mm: 700-1000MPa / 120-150MPa / >40GPa
+- 13-16mm: 600-900MPa / 120-150MPa / >40GPa
+- 18-25mm: 550-800MPa / 120-150MPa / >40GPa
+- 26-40mm: 550-700MPa / 120-150MPa / >40GPa
+Applications: pavement reinforcement, metro tunnel segment construction, underground foundations, coastal development, photovoltaic mounting systems, etc.
+
+GFRP rock bolt reference performance: solid glass-fiber rock bolts/soil nails for general geotechnical slope anchoring; all-thread type for mine and tunnel support; hollow and self-drilling types for fast grouted anchoring in complex ground conditions.
+
+3 Product Applications — GFRP Concrete Guardrail Engineering Cases and Crash Testing
+
+The new glass-fiber-rebar concrete guardrail has been verified through real-vehicle crash tests with small cars, large buses, and large trucks:
+
+Small-car crash test: all indicators for the new glass-fiber-rebar concrete guardrail met the evaluation standard, demonstrating good safety protection for small vehicles. The new structure eliminates the traditional climb-arresting ledge compared with the conventional structure; small-car crash results showed no adverse impact from removing the ledge, verifying the structural design's analysis of the ledge's role.
+
+Large-bus crash test: all indicators for the new guardrail met the evaluation standard, demonstrating good safety protection for large buses; results from the bus-crash indicators showed removing the climb-arresting ledge had no adverse impact, further verifying the design analysis from a large-bus perspective.
+
+Large-truck crash test: after a truck collision with the new guardrail, a small amount of concrete spalling appeared at the top of the concrete wall, but no structural overturning failure occurred, showing the new guardrail has good resistance to repeated impacts and good crash performance. During the truck collision, the front bumper and the headlight on the impact side detached, and the truck body on the impact side deformed with the front wheel coming loose; however, the truck's glass remained intact, showing the new guardrail also provides good cushioning protection for large-truck occupants.
+
+GFRP concrete guardrail application cases: Yunnan Changbao Expressway, Meizhou Huayang Expressway, Zhuhai Hegang Expressway, Zhongjiang Reconstruction and Expansion, Jiangmen Zhongkai Expressway, Chaozhou Donglianluo Line, and other expressway guardrail projects.
+
+4 GFRP Rebar Rail-Transit (Metro) Construction Application Cases (selected, by city)
+
+Shenzhen metro construction cases: Shenzhen Metro Line 16, Shenzhen International Convention and Exhibition Center supporting municipal project, Tianjian Garden Station (Longgang District), Shenzhen Metro Line 13, Shiyan Huangfengling Industrial Avenue section (Bao'an District), Shenzhen Urban Rail Transit Line 14, Line 12 civil-works sections I & II, Line 14 Aobei station, Urban Rail Transit Line 16 project, Line 14 project management office, Metro Shahe West Road and S33 Nanguang Expressway entrance section, Songbai Road section (Bao'an District), Qianwan 4th Road deep tunnel project, Nanhai Avenue underpass project GFRP rebar project, Zhoushi Road project (Bao'an District), Xiushan Road/Xiuhe Road intersection (Pingshan District), Dengliang East Station and Baimang Station (Nanshan District), Urban Rail Transit Line 12/16 construction, Rail Transit Line 16 section 4, Metro Line 12 section 3, Shenzhen Bay Port project, Longcheng Middle Road station (Longgang District), Metro Line 10 section 1011, Shen-Da intercity line, Shenzhen-Huizhou intercity line, Metro Line 9 west extension, Qianhai Cooperation Zone China Railway Port Engineering Bureau project (Nanshan District), Metro Line 10, Metro Line 13 section 1, Zhongshui Bureau 8 project (Nanshan District), outer ring expressway bid section 5, Qianhai power tunnel project, Metro Line 11 project management office section 1, Line 11 project, Metro Line 7 sections 7304-1/7305, Metro Line 11 Hongli West Road section, Metro Line 7 Huaqiang North Station, Meilin Road metro project (Futian District), Metro Line 8 phase-1 section 8312, Urban Rail Transit Line 8 section 8132, Longhua New District Meiguan Road Line 6, Dongbin Road and Yueliang Bay Avenue metro project (Nanshan District), Metro Line 10 section 1012-2A, Xili University Town Station (Nanshan District), Metro Line 20, Metro Line 6 section 6102, Suiguanshen intercity line.
+
+Guangzhou and Foshan metro construction cases: Huaguan Road metro project (Tianhe District), Metro Lines 18/22 depot and section 4, Dagang Town Miaoqing Village S111 Provincial Road (Nansha District), Shiliugang Station and Chisha Station on Xinjiao Middle Road (Haizhu District), Tengda Heng Road metro project (Panyu District), central urban area underground utility tunnel project, Rail Transit Line 11 project, Line 11 section 2 bid 3, Nan'an Road Youth Park metro project (Liwan District), Line 22 Rongyao Station, Nansha metro project, Rail Transit Line 7 phase-1 Shunde extension, Line 7 Shunde extension Chencun North Station, Line 21 project management office, Lines 18 & 22 section 5, China Railway 11th Bureau Lines 18 & 22 (Panyu District), central urban area utility-tunnel project management office, Line 8 north extension sections 3/5/7/8/9, Rail Transit Line 21 construction bid 7, Line 14 phase-1 section 2, Line 21 China Railway 4th Bureau; Foshan Urban Rail Transit Line 3 and sections 3202/3203/3205, Foshan West Station integrated transport hub supporting project, Shunde District Xiaqiao Industrial Zone / Beijiao Town G105 project, Foshan Rail Transit Line 2, Pearl River Delta water-resource allocation project, Guangshan Road intersection reconstruction, Guangming Expressway Guangzhou section bid SG06 project management office, Paozhou power tunnel Poly line section project.
+
+Beijing and Chengdu metro construction cases: Beijing Metro project 1609, Sanshan Road metro project (Chaoyang District), Metro Line 16 section 10 Wanquanhe Bridge Station, Line 16 section 5, Line 17 section 18 project management office, South-to-North Water Diversion project, Daxing Yongyuan Road project, Line 12 civil works bid 14, Line 7, Daxing District Xing Beijing City Construction project management office, Line 17 civil works, Tongzhou District Qunfang South Street project, Line 12 civil works bids 03/05, Fangshan Line north-extension civil works bid 01, Line 19 phase-1 civil works bid 09, Mentougou District Yongding Town project, Line 16 civil works bid 21, Batong Line phase-2 (south extension); Chengdu Metro Lines 1/3/4/5/6/11 multiple sections, Rail Transit Line 18 and Line 17 phase-1 projects, Wenjiang/Shuangliu metro project sites.
+
+Shanghai, Hangzhou, Nanjing and Suzhou metro construction cases: Shanghai Metro Line 11, Hangzhou Metro Line 9 phase-1, Gongshu District metro station (Hangzhou), Hangzhou-Lin'an intercity railway project, Dongyang Hengdian Electronics Industrial Park (Zhejiang), Jinhua Metro Wanda Plaza Station, Zhoushan artificial reef construction site, Jiangbei District metro project (Ningbo), Qixia District Maqun Street section (Nanjing), Nanjing Metro Line 7 project, Jiangning District Zhushan Road/Xinting Road intersection (Nanjing), Taizhou Gang District rail-transit project, Science City tram Line 2 (Suzhou), Suzhou Rail Transit Lines 5/7/8/S1 multiple sections, Xuzhou Rail Transit Line 3 phase-2 section 04, Qingdao Rail Transit Line 6 multiple sections, Nanjing Rail Transit Lines 6/9/10 multiple sections.
+
+Fuzhou, Xiamen, Qingdao and Jinan metro construction cases: Fuzhou Metro Line 5 civil works, Metro Line 5 section 1, Pushang Avenue Station (Cangshan District), Metro Line 6 civil works section 2 (multiple areas), Jiangbian Village Station, Metro Line 4 project; Xiamen Metro Line 2, Xinyao Village West Xinyang Street metro project (Haicang District), Huli District metro project, Xiamen North Station municipal tunnel project, Lüling Road metro project, Xiamen Rail Transit Line 1 phase-1, Line 4, Fujian Yong'an Rail Transit project; Qingdao Jiaodong International Airport rail transit, Shibei District metro project, China Railway Bureaus 10 & 9 metro project, Metro Lines 1/4/8 multiple sections, Jiaozhou North Railway Station project; Jinan Lixia District metro station and Rail Transit Line R2 phase-1 civil works project.
+
+Wuhan, Zhengzhou, Suzhou and Nanjing metro construction cases: Wuhan Metro Line 2 south extension / north extension BT project, Line 21 section 1, Line 8 phase-3, Line 5 sections 2/6, Line 7 north extension section 4, Line 19 section 2; Zhengzhou Rail Transit Line 12 phase-1 multiple sections, Lines 6/7/8 multiple sections; Suzhou Rail Transit Line 8 multiple sections, Nanjing Rail Transit Lines 6/9/10 multiple sections, Huizhou Yanzhou Island bridge pier, Shenzhen Chunfeng Road tunnel.
+
+5 Customer Feedback
+
+Haichuan customer feedback forms show that multiple partner organizations (e.g. Beijing Municipal Road & Bridge Building Materials Group, Guangdong Provincial Road & Bridge Construction Development Co.) have given positive feedback on Haichuan's GFRP product and service quality, recognizing stable product performance and timely delivery, and praising the technical support, with recommendations to continue maintaining product quality and service levels.
+
+www.oceanpower.com / www.opmaterial.com
