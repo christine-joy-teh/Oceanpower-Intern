@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import http from 'node:http';
 import { once } from 'node:events';
-Object.assign(process.env,{CHAT_API_URL:'',CHAT_API_KEY:'',CHAT_MODEL:'',CHAT_BACKEND_TOKEN:'',ALLOWED_ORIGINS:''});
+Object.assign(process.env,{CHAT_API_URL:'',CHAT_API_KEY:'',CHAT_MODEL:'',CHAT_BACKEND_TOKEN:'',ALLOWED_ORIGINS:'',ENABLE_LEGACY_CHAT:'true'});
 const {default:chatPlugin}=await import('../tools/chat-plugin.mjs');
 const source=await fs.readFile(new URL('../functions/api/[[path]].js',import.meta.url),'utf8');
 const {onRequest}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));

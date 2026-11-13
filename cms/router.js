@@ -126,11 +126,17 @@ function publicEntry(entry, locale) {
     id: entry.id, kind: entry.kind, slug: entry.slug, status: entry.status, sortOrder: entry.sort_order,
     publishedAt: entry.published_at, title: selected.title, summary: selected.summary, body: selected.body,
     metadata: entry.metadata, specs: entry.specs.map((spec) => ({ label: locale === 'zh' ? spec.labelZh || spec.labelEn : spec.labelEn || spec.labelZh, value: spec.value, unit: spec.unit, source: spec.source })),
-    image: entry.featured_image_id ? `/api/cms/files/${entry.featured_image_id}` : null,
-    attachment: entry.attachment_id ? `/api/cms/files/${entry.attachment_id}` : null,
+    image: entry.featured_image_id && !isRetiredContent(entry.image_name || '') ? `/api/cms/files/${entry.featured_image_id}` : null,
+    attachment: entry.attachment_id && !isRetiredContent(entry.attachment_name || '') ? `/api/cms/files/${entry.attachment_id}` : null,
     gallery: Array.isArray(entry.metadata?.galleryIds) ? entry.metadata.galleryIds.filter((id) => /^[a-f0-9-]{36}$/i.test(id)).slice(0, 12).map((id) => `/api/cms/files/${id}`) : [],
     video: /^[a-f0-9-]{36}$/i.test(entry.metadata?.videoId || '') ? `/api/cms/files/${entry.metadata.videoId}` : null,
   };
+}
+
+function isRetiredEntryContent(entry) {
+  // A legacy attachment filename should hide that file, not an unrelated news
+  // item (and its valid images). Check the entry's own editorial content here.
+  return isRetiredContent({ kind: entry.kind, slug: entry.slug, translations: entry.translations, metadata: entry.metadata, specs: entry.specs });
 }
 
 function createCmsRouter(repo = repository, adminOverride = null) {
@@ -155,7 +161,7 @@ function createCmsRouter(repo = repository, adminOverride = null) {
         const locale = url.searchParams.get('locale') === 'zh' ? 'zh' : 'en';
         const kind = url.searchParams.get('kind') || undefined;
         const entries = await repo.listEntries({ kind, publishedOnly: true });
-        json(response, 200, { entries: entries.filter(entry => !isRetiredContent(entry)).map((entry) => publicEntry(entry, locale)) });
+        json(response, 200, { entries: entries.filter(entry => !isRetiredEntryContent(entry)).map((entry) => publicEntry(entry, locale)) });
         return true;
       }
 
@@ -284,7 +290,11 @@ function createCmsRouter(repo = repository, adminOverride = null) {
       json(response, 404, { error: 'CMS endpoint not found.' });
       return true;
     } catch (error) {
-      console.error('[cms]', error.message);
+      console.error('[cms]', request.method, url.pathname, error.code || error.message);
+      if (['ER_LOCK_DEADLOCK', 'ER_LOCK_WAIT_TIMEOUT'].includes(error.code)) {
+        json(response, 503, { error: 'The content database is busy. Please save again.', code: 'CMS_BUSY' });
+        return true;
+      }
       json(response, error.status || 500, { error: error.status ? error.message : 'The content service could not complete this request.' });
       return true;
     }

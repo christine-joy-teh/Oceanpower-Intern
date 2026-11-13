@@ -5,7 +5,7 @@ import { once } from 'node:events';
 import { createRequire } from 'node:module';
 const require=createRequire(import.meta.url);
 const {isRetiredContent}=require('../content-policy');
-Object.assign(process.env,{CHAT_API_URL:'',CHAT_API_KEY:'',CHAT_MODEL:'',CHAT_BACKEND_TOKEN:'',ALLOWED_ORIGINS:''});
+Object.assign(process.env,{CHAT_API_URL:'',CHAT_API_KEY:'',CHAT_MODEL:'',CHAT_BACKEND_TOKEN:'',ALLOWED_ORIGINS:'',ENABLE_LEGACY_CHAT:'true'});
 
 test('published site excludes reinforcement pages, downloads and product claims',async()=>{
   for (const file of await fs.readdir('dist',{recursive:true})) {

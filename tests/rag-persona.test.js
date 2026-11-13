@@ -33,6 +33,7 @@ async function startApp(overrides = {}) {
       CHAT_API_KEY: '',
       CHAT_BACKEND_TOKEN: '',
       CHAT_MODEL: '',
+      ENABLE_LEGACY_CHAT: 'true',
       CHAT_KNOWLEDGE_FILE: 'knowledge/oceanpower-approved-knowledge.md',
       ALLOWED_ORIGINS: '',
       RAG_FAKE_EMBEDDINGS: '1',

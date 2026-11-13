@@ -63,10 +63,10 @@ import '../styles/admin.css';
           <header><p class="eyebrow">内容编辑</p><h2 id="editor-heading">新增内容</h2><p>本试用版可编辑中文和英文。西班牙语及法语继续使用网站现有内容。</p></header>
           <form id="entry-form">
             <input type="hidden" name="id" />
+            <input type="hidden" name="status" value="draft" />
             <div class="field-row">
               <label>内容类型<select name="kind" required><option value="page">页面</option><option value="business">业务</option><option value="product">产品</option><option value="news">新闻</option><option value="document">资料</option></select></label>
               <label>网址名称<input name="slug" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="asphalt-modifier" /><small>仅使用小写英文字母、数字及连字符。</small></label>
-              <label>发布状态<select name="status"><option value="draft">草稿</option><option value="published">已发布</option></select></label>
               <label>显示顺序<input name="sortOrder" type="number" value="0" /></label>
             </div>
             <div class="translation-grid">
@@ -106,10 +106,12 @@ import '../styles/admin.css';
             </section>
             <input type="hidden" name="featuredImageId" /><input type="hidden" name="attachmentId" />
             <div class="editor-actions">
-              <button id="save-entry" type="submit">保存内容</button>
+              <button id="save-entry" type="submit" data-status="draft" class="secondary-action">保存草稿</button>
+              <button id="publish-entry" type="submit" data-status="published">发布到网站</button>
               <button id="preview-entry" type="button" class="secondary-action">预览内容</button>
               <button id="delete-entry" class="danger" type="button" hidden>删除内容</button>
             </div>
+            <p id="publish-hint" class="form-status" role="status">当前状态：草稿，网站不显示。</p>
             <section id="entry-preview" class="entry-preview" hidden aria-labelledby="preview-heading"><h3 id="preview-heading">内容预览（尚未发布）</h3><div class="preview-grid"><article lang="zh-CN"><h4>中文</h4><strong id="preview-title-zh"></strong><p id="preview-summary-zh"></p><p id="preview-body-zh"></p></article><article lang="en"><h4>English</h4><strong id="preview-title-en"></strong><p id="preview-summary-en"></p><p id="preview-body-en"></p></article></div></section>
             <details id="revision-panel" class="media-picker" hidden><summary>历史版本</summary><p>保存修改前的版本可在这里恢复。恢复后仍可再次编辑。</p><div id="revision-list" class="media-list"></div></details>
             <p id="editor-status" class="form-status" role="status" tabindex="-1"></p>

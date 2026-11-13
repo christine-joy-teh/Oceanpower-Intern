@@ -7,5 +7,7 @@ export const pendingRoutes = new Set(manifest.pending);
 export function urlFor(locale: Locale, key: string = '') { return '/' + (locale === 'zh' ? '' : locale + '/') + (key ? key + '/' : ''); }
 export const languageNames = { zh:'中文', en:'English', es:'Español', fr:'Français' };
 export const htmlLanguages = { zh:'zh-CN',en:'en',es:'es',fr:'fr' };
-const configuredSite = import.meta.env.SITE_URL || 'https://www.oceanpower.com';
+const siteSetting = import.meta.env.SITE_URL;
+const localSite = /^https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?\/?$/.test(siteSetting || '');
+const configuredSite = (localSite && process.env.RENDER_EXTERNAL_URL) || siteSetting || process.env.RENDER_EXTERNAL_URL || 'https://www.oceanpower.com';
 export const siteUrl = configuredSite.endsWith('/') ? configuredSite.slice(0,-1) : configuredSite;

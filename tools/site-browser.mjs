@@ -1,42 +1,94 @@
-import { createRequire } from 'node:module';
-// Offline validation: never call a developer's paid AI provider.
-Object.assign(process.env,{CHAT_API_URL:'',CHAT_API_KEY:'',CHAT_MODEL:'',CHAT_BACKEND_TOKEN:'',ALLOWED_ORIGINS:'',MYSQL_DATABASE:'',MYSQL_USER:''});
-const require=createRequire(import.meta.url);
-const {handleApi}=require('../server.js');
-const cmsRepository=require('../cms/repository.js');
-import manifest from '../src/content/routes.json' with { type: 'json' };
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import http from 'node:http';
 import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import http from 'node:http';
+import path from 'node:path';
 import { chromium } from 'playwright';
-const root=path.resolve('dist');
-const headers=Object.fromEntries((await fs.readFile('dist/_headers','utf8')).split('\n').filter(l=>l.startsWith('  ')).map(l=>{const at=l.indexOf(':');return[l.slice(0,at).trim(),l.slice(at+1).trim()];}));
-const server=http.createServer(async(req,res)=>{if(req.url.startsWith('/api/')){req.url=req.url.replace(/\/$/,'');return handleApi(req,res);}try{const url=new URL(req.url,'http://localhost');let file=path.join(root,decodeURIComponent(url.pathname));if(!file.startsWith(root+path.sep)&&file!==root)throw Error('Invalid path');if(url.pathname.endsWith('/'))file=path.join(file,'index.html');const type={'.html':'text/html','.js':'text/javascript','.css':'text/css','.jpg':'image/jpeg','.png':'image/png','.pdf':'application/pdf','.svg':'image/svg+xml'}[path.extname(file)]||'application/octet-stream';const data=await fs.readFile(file);res.writeHead(200,{'Content-Type':type,...headers});res.end(data);}catch{res.writeHead(404);res.end('Not found');}});
-await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const origin='http://127.0.0.1:'+server.address().port;
-const candidates=[process.env.CHROMIUM_EXECUTABLE_PATH,'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe','C:/Program Files/Microsoft/Edge/Application/msedge.exe','C:/Program Files/Google/Chrome/Application/chrome.exe'].filter(Boolean);let executablePath;for(const p of candidates){if(await fs.access(p).then(()=>true,()=>false)){executablePath=p;break;}}
-let browser;const failures=[];const errors=[];await fs.mkdir('tmp/site-browser',{recursive:true});
-try{browser=await chromium.launch({headless:true,...(executablePath?{executablePath}:{})});const context=await browser.newContext();await context.route('https://fonts.googleapis.com/**',route=>route.fulfill({status:200,contentType:'text/css',body:''}));const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
-const routes=manifest.routes;
-for(const lang of ['zh','en','es','fr']){const prefix=lang==='zh'?'/':'/'+lang+'/';for(const route of routes){await page.setViewportSize({width:1440,height:960});const response=await page.goto(origin+prefix+(route?route+'/':''));assert.equal(response.status(),200);assert.equal(await page.locator('html').getAttribute('lang'),lang==='zh'?'zh-CN':lang);if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1))failures.push(prefix+route+' desktop overflow');}
-for(const width of [360,768])for(const route of routes){await page.setViewportSize({width,height:800});await page.goto(origin+prefix+(route?route+'/':''));if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1))failures.push(prefix+route+' overflow at '+width);if(route==='products'&&width===360){await page.evaluate(async()=>{await Promise.all([...document.images].map(image=>{image.loading='eager';return image.decode().catch(()=>{});}));});await page.screenshot({path:'tmp/site-browser/'+lang+'-product-mobile.png',fullPage:true});}}
-await page.goto(origin+prefix+'products/');await page.locator('.header-cta').isVisible().then(async visible=>{if(!visible)await page.locator('.menu-toggle').click();});const button=page.locator('[data-rfq-start]:visible').first();await button.click();await page.locator('#enquiry-dialog').waitFor({state:'visible'});await page.locator('#rfq-product').fill('Asphalt modifier');await page.locator('#rfq-application').fill('Fictional test project');await page.locator('#rfq-dimensions').fill('16 mm');await page.locator('#rfq-quantity').fill('100 pieces');await page.locator('#rfq-destination').fill('Malaysia');await page.locator('[data-unknown="delivery"]').click();await page.locator('#rfq-name').fill('Demo Tester');await page.locator('#rfq-contact').fill('demo@example.com');await page.locator('#enquiry-form button[type=submit]').click();assert.equal(await page.locator('#enquiry-review').isVisible(),true);if(lang==='en')await page.screenshot({path:'tmp/site-browser/en-enquiry-mobile.png',fullPage:true});await page.locator('[data-edit]').click();assert.equal(await page.locator('#rfq-quantity').inputValue(),'100 pieces');await page.locator('#enquiry-form button[type=submit]').click();await page.locator('[data-complete]').click();assert.ok((await page.locator('#enquiry-status').textContent()).length>10);await page.keyboard.press('Escape');assert.equal(await page.locator('#enquiry-dialog').isVisible(),false);if(await page.locator('.menu-toggle').isVisible())await page.locator('.menu-toggle').click();await page.locator('nav a[href="'+prefix+'business/"]').first().click();assert.ok(page.url().includes(prefix+'business/'));}
-await page.setViewportSize({width:390,height:844});await page.goto(origin+'/products/asphalt-based-products/');assert.equal(await page.locator('[data-archive-entry]').count(),8);await page.locator('[data-archive-search]').fill('SINOTPS');assert.equal(await page.locator('[data-archive-entry]:visible').count(),1);await page.locator('[data-archive-entry]:visible summary').click();assert.equal(await page.locator('[data-archive-entry]:visible details[open]').count(),1);await page.locator('[data-archive-search]').fill('no-match-archive-check');assert.equal(await page.locator('[data-archive-empty]').isVisible(),true);await page.locator('[data-archive-search]').fill('');await page.locator('[data-archive-group]').selectOption('混合料改性剂');assert.ok(await page.locator('[data-archive-entry]:visible').count()>0);assert.ok(await page.locator('[data-archive-entry]:visible').count()<8);
-await page.setViewportSize({width:1440,height:960});await page.goto(origin+'/en/');await page.evaluate(async()=>{await Promise.all([...document.images].map(image=>{image.loading='eager';return image.decode().catch(()=>{});}));});await page.screenshot({path:'tmp/site-browser/en-home-desktop.png',fullPage:true});await page.locator('.language-menu summary').click();await page.locator('.language-menu a[lang=fr]').click();assert.equal(new URL(page.url()).pathname,'/fr/');await page.locator('.chat-launcher').click();await page.locator('#catalogue-question').fill('Products');await page.locator('#catalogue-form button').click();await page.waitForFunction(()=>!document.querySelector('.chat-stream').hasAttribute('aria-busy'));assert.equal(await page.locator('.chat-stream .bot-message').count(),2);assert.match(await page.locator('#chat-mode').textContent(),/catalogue/i);
-// Verify live-answer rendering, selected locale, and follow-up conversation history.
-const chatRequests=[];
-await page.route('**/api/chat/',async route=>{chatRequests.push(route.request().postDataJSON());await route.fulfill({json:{answer:'Test answer <img src=x onerror=alert(1)>',mode:'knowledge-base',sources:[]}});});
-await page.locator('#catalogue-question').fill('Question de test');await page.locator('#catalogue-form button').click();await page.waitForFunction(()=>!document.querySelector('.chat-stream').hasAttribute('aria-busy'));
-assert.equal(chatRequests[0].locale,'fr');assert.equal(chatRequests[0].history.length,2);assert.equal(await page.locator('.chat-stream img').count(),0);assert.match(await page.locator('#chat-mode').textContent(),/IA en ligne/);
-await page.locator('#catalogue-question').fill('Suite');await page.locator('#catalogue-form button').click();await page.waitForFunction(()=>!document.querySelector('.chat-stream').hasAttribute('aria-busy'));assert.equal(chatRequests[1].history.length,4);
+import manifest from '../src/content/routes.json' with { type: 'json' };
 
-// The content manager must remain usable on phone and tablet without a live database.
-await context.route('**/api/cms/session',route=>route.fulfill({json:{user:{username:'admin'},csrfToken:'browser-test'}}));
-await context.route('**/api/cms/admin/entries?kind=*',route=>route.fulfill({json:{entries:[{id:1,kind:'product',slug:'mobile-layout-check',status:'draft',sort_order:1,metadata:{},translations:{en:{title:'Mobile layout check',summary:'',body:''},zh:{title:'移动端布局检查',summary:'',body:''}},specs:[]}]}}));
-await context.route('**/api/cms/admin/files',route=>route.fulfill({json:{files:[]}}));
-await context.route('**/api/cms/admin/chat-knowledge',route=>route.fulfill({json:{current:false,publishedCount:0,productCount:0,builtAt:null}}));
-await context.route('**/api/cms/admin/entries/*/revisions',route=>route.fulfill({json:{revisions:[]}}));
-for(const viewport of [{width:390,height:844,label:'phone'},{width:768,height:1024,label:'tablet'}]){await page.setViewportSize({width:viewport.width,height:viewport.height});await page.goto(origin+'/admin/');await page.locator('#admin-view').waitFor({state:'visible'});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,`admin ${viewport.label} overflow`);const undersized=await page.locator('#admin-view button:visible,#admin-view input:visible,#admin-view select:visible').evaluateAll(elements=>elements.filter(element=>{const box=element.getBoundingClientRect();return box.width>0&&box.height>0&&box.height<44;}).map(element=>element.id||element.name||element.textContent.trim()));assert.deepEqual(undersized,[],`admin ${viewport.label} touch targets`);assert.equal(await page.locator('#entry-form').isVisible(),true);}
-
-assert.deepEqual(failures,[]);assert.deepEqual(errors,[]);console.log('Browser checks passed: '+manifest.locales.length*routes.length+' routes, '+manifest.locales.length*routes.length*2+' public mobile/tablet views, phone/tablet admin layouts, 4-language enquiry journeys, product navigation, language switching, no page or console errors.');
-}catch(e){await fs.writeFile('tmp/site-browser/failures.json',JSON.stringify({message:e.message,failures,errors},null,2));throw e;}finally{await browser?.close();await new Promise(resolve=>server.close(resolve));await cmsRepository.close();}
+const root = path.resolve('dist');
+const server = http.createServer(async (request, response) => {
+  try {
+    const pathname = new URL(request.url, 'http://localhost').pathname;
+    let file = path.resolve(root, '.' + pathname);
+    if (!file.startsWith(root + path.sep) && file !== root) throw Error('Invalid path');
+    if (pathname.endsWith('/')) file = path.join(file, 'index.html');
+    const data = await fs.readFile(file);
+    response.writeHead(200, { 'Content-Type': { '.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.jpg':'image/jpeg', '.webp':'image/webp' }[path.extname(file)] || 'application/octet-stream' });
+    response.end(data);
+  } catch { response.writeHead(404); response.end('Not found'); }
+});
+await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+const origin = `http://127.0.0.1:${server.address().port}`;
+const candidates = [process.env.CHROMIUM_EXECUTABLE_PATH,'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe','C:/Program Files/Microsoft/Edge/Application/msedge.exe','C:/Program Files/Google/Chrome/Application/chrome.exe'].filter(Boolean);
+let executablePath;
+for (const candidate of candidates) if (await fs.access(candidate).then(() => true, () => false)) { executablePath = candidate; break; }
+let browser;
+try {
+  browser = await chromium.launch({headless:true,...(executablePath?{executablePath}:{})});
+  const page = await browser.newPage();
+  const errors = [];
+  page.on('pageerror',error => errors.push(error.message));
+  page.on('console',message => { if (message.type()==='error' && !/Failed to load resource/.test(message.text())) errors.push(message.text()); });
+  await page.route('https://fonts.googleapis.com/**',route => route.fulfill({status:200,contentType:'text/css',body:''}));
+  await page.route('**/api/cms/public?*',route => route.fulfill({json:{entries:[]}}));
+  const forbidden = /\b(?:GFRP|BFRP|CFRP|FRP|rebar|rockbolt)\b|江苏海川/i;
+  for (const locale of manifest.locales) {
+    const prefix = locale==='zh' ? '/' : `/${locale}/`;
+    for (const route of manifest.routes) {
+      for (const width of [1440,390,768]) {
+        await page.setViewportSize({width,height:900});
+        const response = await page.goto(origin+prefix+(route?route+'/':''));
+        assert.equal(response.status(),200,`${locale}/${route}`);
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth<=innerWidth+1),true,`${locale}/${route} overflow at ${width}`);
+        const text = await page.locator('main').innerText();
+        if(route==='' && width===390 && locale==='es')assert.match(text,/Tecnología para la industria y la vida cotidiana/);
+        if(route==='' && width===390 && locale==='fr')assert.match(text,/La technologie au service de l’industrie et du quotidien/);
+        assert.doesNotMatch(text,forbidden,`${locale}/${route} still shows Jiangsu reinforcement`);
+        assert.equal(await page.locator('.chat-launcher,[data-rfq-start]').count(),0,`${locale}/${route} still has the old assistant`);
+      }
+    }
+  }
+  await page.setViewportSize({width:390,height:844});
+  await page.goto(origin+'/');
+  await fs.mkdir('tmp/site-browser',{recursive:true});
+  await page.screenshot({path:'tmp/site-browser/shenzhen-home-phone.png',fullPage:true});
+  assert.equal(await page.locator('.hero-sector').count(),4);
+  await page.locator('.menu-toggle').click();
+  assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'),'true');
+  await page.locator('#site-nav a[href="/business/"]').first().click();
+  assert.equal(new URL(page.url()).pathname,'/business/');
+  assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'),'false');
+  await page.goto(origin+'/business/food/');
+  assert.equal(await page.locator('.company-review-note').count(),1);
+  await page.locator('.language-menu summary').click();
+  await page.locator('.language-menu a[lang="en"]').click();
+  assert.equal(new URL(page.url()).pathname,'/en/business/food/');
+  assert.equal(await page.locator('.company-contact-link').getAttribute('href'),'/en/contact/');
+  // Exercise the public CMS overlay without publishing test records to the shared database.
+  await page.route('**/api/cms/public?*', route => route.fulfill({json:{entries:[
+    {kind:'page',slug:'home',title:'CMS homepage check',summary:'CMS homepage summary'},
+    {kind:'business',slug:'food',title:'CMS food business check',summary:'CMS business summary',image:'/assets/business-environment.jpg'},
+    {kind:'news',slug:'fictional-test-news',title:'Fictional CMS news check',summary:'Demo only',body:'Test article body'},
+  ]}}));
+  await page.goto(origin+'/en/');
+  await page.waitForFunction(() => document.querySelector('.hero h1')?.textContent === 'CMS homepage check');
+  assert.equal(await page.locator('.hero-text').textContent(),'CMS homepage summary');
+  await page.waitForFunction(() => document.querySelector('.business-profile-card[href="/en/business/food/"] img')?.getAttribute('src') === '/assets/business-environment.jpg');
+  await page.goto(origin+'/en/business/food/');
+  await page.waitForFunction(() => document.querySelector('.company-profile h1')?.textContent === 'CMS food business check');
+  assert.equal(await page.locator('.company-profile-lead').textContent(),'CMS business summary');
+  assert.equal(await page.locator('.company-profile-heading img').getAttribute('src'),'/assets/business-environment.jpg');
+  assert.equal(await page.locator('.cms-page-media').count(),0,'Featured image should replace the business image instead of appearing again below the page');
+  await page.goto(origin+'/en/news/');
+  await page.waitForFunction(() => document.querySelector('[data-cms-news] h2')?.textContent === 'Fictional CMS news check');
+  assert.equal(await page.locator('[data-cms-news] .cms-entry-card').count(),1);
+  await page.goto(origin+'/es/');
+  assert.notEqual(await page.locator('.hero h1').textContent(),'CMS homepage check');
+  for(const route of ['products/gfrp','products/bfrp','products/cfrp','products/fibre-reinforced-composites'])assert.equal((await page.goto(origin+'/en/'+route+'/')).status(),404);
+  assert.equal((await page.goto(origin+'/catalogue.pdf')).status(),404);
+  assert.deepEqual(errors,[]);
+  console.log(`Browser checks passed: ${manifest.routes.length*manifest.locales.length} routes at desktop, phone and tablet widths; four Shenzhen business links, mobile navigation, no public FRP pages or old chat controls.`);
+} finally {
+  await browser?.close();
+  await new Promise(resolve => server.close(resolve));
+}

@@ -9,6 +9,24 @@ const path = require('node:path');
 const { createCmsRouter, publicEntry, validFileSignature } = require('../cms/router');
 const { answerFromPublishedProducts } = require('../cms/chat-knowledge');
 const { constantTimeEqual, tokenHash } = require('../cms/security');
+const { retryDeadlockedWrite } = require('../cms/repository');
+
+test('CMS writes retry InnoDB deadlocks but not validation failures', async () => {
+  let attempts = 0;
+  const result = await retryDeadlockedWrite(async () => {
+    attempts += 1;
+    if (attempts < 3) throw Object.assign(new Error('deadlock'), { code: 'ER_LOCK_DEADLOCK' });
+    return 'saved';
+  });
+  assert.equal(result, 'saved');
+  assert.equal(attempts, 3);
+  attempts = 0;
+  await assert.rejects(retryDeadlockedWrite(async () => {
+    attempts += 1;
+    throw Object.assign(new Error('invalid'), { status: 400 });
+  }), /invalid/);
+  assert.equal(attempts, 1);
+});
 
 function fixtureRepository() {
   const sessions = new Map();
@@ -51,6 +69,24 @@ test('public website falls back quietly while admin reports missing MySQL config
     assert.equal(admin.status,503);
     assert.deepEqual(await admin.json(),{error:'The content database is not configured.',code:'CMS_NOT_CONFIGURED'});
   });
+});
+
+test('a saved news draft is hidden until published, then appears in the public API', async () => {
+  await withServer(fixtureRepository(), async (base) => {
+    const login = await fetch(base + '/api/cms/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username: 'editor', password: 'local-demo-password' }) });
+    const session = await login.json();
+    const headers = { Cookie: login.headers.get('set-cookie').split(';')[0], 'X-CSRF-Token': session.csrfToken, 'Content-Type': 'application/json' };
+    const entry = { kind: 'news', slug: 'fictional-test-news', status: 'draft', translations: { en: { title: 'Fictional test news', summary: 'Demo only', body: '' }, zh: { title: '测试新闻', summary: '仅供测试', body: '' } } };
+    const created = await fetch(base + '/api/cms/admin/entries', { method: 'POST', headers, body: JSON.stringify(entry) });
+    assert.equal(created.status, 201);
+    const { entry: saved } = await created.json();
+    const publicNews = async () => (await (await fetch(base + '/api/cms/public?locale=en')).json()).entries.filter(item => item.kind === 'news');
+    assert.equal((await publicNews()).length, 0);
+    entry.status = 'published';
+    const published = await fetch(base + '/api/cms/admin/entries/' + saved.id, { method: 'PUT', headers, body: JSON.stringify(entry) });
+    assert.equal(published.status, 200);
+    assert.equal((await publicNews())[0].title, 'Fictional test news');
+  }, { username: 'editor', password: 'local-demo-password' });
 });
 
 test('revision restore and media deletion require an authenticated CSRF request', async () => {
@@ -193,5 +229,20 @@ test('public CMS omits retired products and catalogues without deleting stored r
       assert.deepEqual(result.entries.map(entry=>entry.slug),['asphalt']);
     }
     assert.equal((await repo.listEntries()).length,3);
+  });
+});
+
+test('a retired attachment does not hide unrelated published news and photos', async () => {
+  const repo = fixtureRepository();
+  const news = await repo.saveEntry(null, { kind: 'news', slug: 'company-update', status: 'published', translations: { en: { title: 'Company update', summary: '', body: '' }, zh: { title: '公司动态', summary: '', body: '' } } });
+  news.featured_image_id = '12345678-1234-1234-1234-123456789012';
+  news.image_name = 'company-photo.png';
+  news.attachment_id = '12345678-1234-1234-1234-123456789013';
+  news.attachment_name = 'old-gfrp-catalogue.pdf';
+  await withServer(repo, async base => {
+    const result = await fetch(base + '/api/cms/public?locale=en').then(response => response.json());
+    assert.equal(result.entries.length, 1);
+    assert.equal(result.entries[0].image, '/api/cms/files/' + news.featured_image_id);
+    assert.equal(result.entries[0].attachment, null);
   });
 });

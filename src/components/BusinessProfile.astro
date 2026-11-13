@@ -5,6 +5,12 @@ import { urlFor, type Locale } from '../lib/routes';
 interface Props {locale:Locale;slug:string;}
 const {locale,slug}=Astro.props;
 const business=businesses.find(item=>item.slug===slug)!;
+const review={
+  zh:{note:'审阅提示：本页为公司资料整理稿。公司名称、业绩数字、资质及联系方式应由对应业务团队确认。',contact:'联系团队'},
+  en:{note:'Review note: this page is a working draft. The relevant business team should confirm company names, figures, credentials and contact details.',contact:'Contact the team'},
+  es:{note:'Nota de revisión: esta página es un borrador. El equipo responsable debe confirmar los nombres de las empresas, las cifras, las acreditaciones y los datos de contacto.',contact:'Contactar con el equipo'},
+  fr:{note:'Note de révision : cette page est un brouillon. L’équipe concernée doit confirmer les noms des sociétés, les chiffres, les certifications et les coordonnées.',contact:'Contacter l’équipe'},
+}[locale];
 ---
 <section class="section company-profile" data-cms-entry={`business:${slug}`}>
   <nav class="business-breadcrumb" aria-label={t('Breadcrumb',locale)}><a href={urlFor(locale)}>{t('Home',locale)}</a><span aria-hidden="true">/</span><a href={urlFor(locale,'business')}>{t('Business',locale)}</a><span aria-hidden="true">/</span><span aria-current="page">{t(business.label,locale)}</span></nav>
@@ -13,8 +19,10 @@ const business=businesses.find(item=>item.slug===slug)!;
     <article>
       <header class="company-profile-heading"><div><p class="eyebrow dark">OCEANPOWER / {t(business.label,locale)}</p><h1>{t(business.name,locale)}</h1></div><img src={slug==='food'?'/assets/food-catalogue/flavour-powders.webp':'/assets/business-'+slug+'.jpg'} alt="" width="334" height="188"/></header>
       <p class="company-profile-lead">{t(business.summary,locale)}</p>
+      <p class="company-review-note">{review.note}</p>
       {business.sections.map(section=><section class="company-profile-section"><h2>{t(section.title,locale)}</h2>{section.paragraphs.map(paragraph=><p>{t(paragraph,locale)}</p>)}</section>)}
-      {slug==='new-material'&&<a class="button" href="#solutions">{t('Browse products',locale)} <span aria-hidden="true">↓</span></a>}
+      {slug==='new-material'&&<a class="button" href={urlFor(locale,'products')}>{t('Browse products',locale)} <span aria-hidden="true">→</span></a>}
+      <a class="company-contact-link" href={urlFor(locale,'contact')}>{review.contact} <span aria-hidden="true">→</span></a>
     </article>
   </div>
 </section>

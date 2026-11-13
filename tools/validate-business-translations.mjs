@@ -31,6 +31,9 @@ for (const locale of ['en','zh','es','fr']) {
     const $=load(await fs.readFile(`dist/${prefix}business/${business.slug}/index.html`,'utf8'));
     assert.equal($('.company-profile h1').text(),translate(business.name));
     assert.equal($('.company-profile-lead').text(),translate(business.summary));
+    assert.equal($('.company-review-note').length,1,`${locale}/${business.slug}: review status missing`);
+    if(locale==='es'||locale==='fr')assert.doesNotMatch($('.company-review-note').text(),/Review note|working draft/);
+    assert.equal($('.company-contact-link').attr('href'),`/${prefix}contact/`);
     assert.equal($('meta[name="description"]').attr('content'),translate(business.summary));
     assert.equal($('.business-breadcrumb').attr('aria-label'),translate('Breadcrumb'));
     if(locale!=='en')assert.equal($('.company-profile [lang="en"]').length,0);
@@ -42,4 +45,4 @@ for (const locale of ['en','zh','es','fr']) {
     });
   }
 }
-console.log('Validated business cards, profiles, links and translated metadata in all four languages.');
+console.log('Validated business cards, profiles, links and translated metadata in Chinese, English, Spanish and French.');

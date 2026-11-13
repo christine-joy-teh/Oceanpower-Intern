@@ -134,7 +134,25 @@ function entryToInput(entry) {
     specs: entry.specs.map((spec) => ({ labelEn: spec.labelEn, labelZh: spec.labelZh, value: spec.value, unit: spec.unit, source: spec.source, sortOrder: spec.sortOrder })) };
 }
 
+// InnoDB may abort one of two concurrent writers to break a deadlock. Retry the
+// complete transaction after rollback; never retry validation errors or a read
+// that happens after commit (which could create a duplicate entry).
+async function retryDeadlockedWrite(write, attempts = 3) {
+  for (let attempt = 1; ; attempt += 1) {
+    try { return await write(); }
+    catch (error) {
+      if (!['ER_LOCK_DEADLOCK', 'ER_LOCK_WAIT_TIMEOUT'].includes(error.code) || attempt >= attempts) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 80 * attempt));
+    }
+  }
+}
+
 async function saveEntry(id, input) {
+  const entryId = await retryDeadlockedWrite(() => saveEntryTransaction(id, input));
+  return getEntry(entryId);
+}
+
+async function saveEntryTransaction(id, input) {
   const data = cleanEntry(input);
   const previous = id ? await getEntry(id) : null;
   if (id && !previous) throw Object.assign(new Error('Content entry not found.'), { status: 404 });
@@ -173,7 +191,7 @@ async function saveEntry(id, input) {
     for (const spec of data.specs) await connection.execute('INSERT INTO cms_product_specs (entry_id,label_en,label_zh,value_text,unit,source_reference,sort_order) VALUES (?,?,?,?,?,?,?)',
       [entryId,spec.labelEn,spec.labelZh,spec.value,spec.unit,spec.source,spec.sortOrder]);
     await connection.commit();
-    return getEntry(entryId);
+    return entryId;
   } catch (error) {
     await connection.rollback();
     if (error.code === 'ER_DUP_ENTRY') throw Object.assign(new Error('That content type already uses this slug.'), { status: 409 });
@@ -201,8 +219,10 @@ async function deleteEntry(id) {
 }
 
 async function createSession(tokenHash, username, csrfToken) {
-  await getPool().execute('DELETE FROM cms_admin_sessions WHERE expires_at < NOW()');
-  await getPool().execute('INSERT INTO cms_admin_sessions (token_hash,username,csrf_token,expires_at) VALUES (?,?,?,DATE_ADD(NOW(), INTERVAL 8 HOUR))', [tokenHash,username,csrfToken]);
+  await retryDeadlockedWrite(async () => {
+    await getPool().execute('DELETE FROM cms_admin_sessions WHERE expires_at < NOW()');
+    await getPool().execute('INSERT INTO cms_admin_sessions (token_hash,username,csrf_token,expires_at) VALUES (?,?,?,DATE_ADD(NOW(), INTERVAL 8 HOUR))', [tokenHash,username,csrfToken]);
+  });
 }
 
 async function findSession(tokenHashValue) {
@@ -266,4 +286,4 @@ async function close() {
   await activePool.end();
 }
 
-module.exports = { configured, migrate, listEntries, getEntry, saveEntry, deleteEntry, listRevisions, restoreRevision, createSession, findSession, deleteSession, saveFile, getFile, fileIsPublic, deleteFile, listFiles, close };
+module.exports = { configured, migrate, listEntries, getEntry, saveEntry, deleteEntry, listRevisions, restoreRevision, createSession, findSession, deleteSession, saveFile, getFile, fileIsPublic, deleteFile, listFiles, close, retryDeadlockedWrite };

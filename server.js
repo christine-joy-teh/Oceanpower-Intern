@@ -383,6 +383,10 @@ function serveStatic(request, response) {
 }
 
 function handleApi(request, response, next = () => sendJson(response, 404, { error: 'Not found' })) {
+  const legacyChatEnabled = process.env.ENABLE_LEGACY_CHAT === 'true';
+  if (/^\/api\/chat\/?(?:\?|$)/.test(request.url || '') && !legacyChatEnabled) {
+    return sendJson(response, 404, { error: 'Not found' });
+  }
   if (/^\/api\/(chat|health)\/?(?:\?|$)/.test(request.url || '') && process.env.CHAT_BACKEND_TOKEN && request.headers.authorization !== 'Bearer ' + process.env.CHAT_BACKEND_TOKEN) {
     return sendJson(response, 401, { error: 'Unauthorized' });
   }
@@ -391,8 +395,8 @@ function handleApi(request, response, next = () => sendJson(response, 404, { err
     const notice = configurationNotice('en');
     return sendJson(response, 200, {
       ok: true,
-      mode: LIVE_AI_READY ? 'knowledge-base' : 'catalogue-demo',
-      ...(notice ? { notice, serviceIssue: 'configuration' } : {}),
+      mode: legacyChatEnabled ? (LIVE_AI_READY ? 'knowledge-base' : 'catalogue-demo') : 'website',
+      ...(legacyChatEnabled && notice ? { notice, serviceIssue: 'configuration' } : {}),
     });
   }
   if (request.method === 'POST' && request.url === '/api/chat') return handleChat(request, response);

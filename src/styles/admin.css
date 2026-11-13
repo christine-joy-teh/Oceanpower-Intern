@@ -28,3 +28,6 @@
 .simple-fields h3{font-size:18px;margin:0 0 8px}
 .simple-fields .field-row{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:700px){.simple-fields .field-row{grid-template-columns:1fr}}
+.editor-actions{justify-content:flex-start;flex-wrap:wrap}
+.editor-actions #publish-entry{background:var(--blue);border-color:var(--blue)}
+#publish-hint{color:var(--muted)}

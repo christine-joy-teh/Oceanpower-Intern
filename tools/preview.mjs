@@ -38,5 +38,5 @@ export function previewListenOptions(argv=process.argv,env=process.env){
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
  const server=await createPreviewServer();
  const {port,host}=previewListenOptions();
- server.listen(port,host,()=>console.log('Oceanpower preview with AI chat: http://'+host+':'+server.address().port));
+ server.listen(port,host,()=>console.log('Oceanpower website: http://'+host+':'+server.address().port));
 }

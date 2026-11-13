@@ -2,7 +2,7 @@
   "name": "oceanpower-ai-sales-assistant",
   "version": "0.1.0",
   "private": true,
-  "description": "Oceanpower international website and catalogue-grounded AI sales assistant pilot",
+  "description": "Shenzhen Oceanpower multilingual website and content manager",
   "scripts": {
     "start": "node tools/preview.mjs",
     "check": "node --check server.js && node --check cms/security.js && node --check cms/repository.js && node --check cms/router.js && node --check src/scripts/admin.js && node --check src/scripts/cms-public.js && node --check script.js && node --check rfq.js && node --check rfq-ui.js && node --check translations.js && node --check specifications.js && node --check navigation.js && node --check tests/server.test.js && node --check tests/rfq.test.js && node --check tests/cms.test.js && node --check tests/rfq.browser.js && node --check tests/browser-rfq.e2e.js",
@@ -29,16 +29,16 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@tailwindcss/postcss": "^4.3.3",
+    "@xenova/transformers": "^2.17.2",
     "astro": "^7.3.8",
     "autoprefixer": "^10.6.1",
     "cheerio": "^1.2.0",
+    "pdf-parse": "^1.1.1",
     "playwright": "^1.64.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@xenova/transformers": "^2.17.2",
-    "mysql2": "^3.24.5",
-    "pdf-parse": "^1.1.1"
+    "mysql2": "^3.24.5"
   }
 }

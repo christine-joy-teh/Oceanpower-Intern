@@ -5,7 +5,7 @@
 
 ## Aesthetic direction
 
-Industrial editorial - an engineering-materials laboratory with precise data presentation, restrained glass surfaces, and catalogue photography.
+Industrial editorial - a Shenzhen group website with restrained technical detailing, clear business navigation, and real product photography.
 
 ## Dials
 
@@ -48,11 +48,11 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 ## Component inventory
 
 - Sticky site header and mobile navigation.
-- Split hero with catalogue-derived imagery and technical figures.
+- Split group hero with four business links and a clear review status.
 - Product platform cards.
 - Specification table.
 - Catalogue-backed product portfolio sections with source status, in-page product navigation, responsive fact grids and explicit product-family separation.
-- Product-first homepage with a split materials hero, asymmetric three-portfolio directory, catalogue-verification notes, optional CMS news and a clear enquiry handoff.
+- Group-first homepage with four business links, optional CMS news and headquarters contact. Product catalogues remain available through the New Materials business and Products navigation.
 - Detailed airport-pavement portfolio with product-specific catalogue references, a requirement-to-product selection matrix, engineering review inputs and staff-review enquiry handoff.
 - Detailed asphalt-material portfolio with product mechanisms, construction notes, variant boundaries, a problem-to-family selection matrix and project-verification workflow.
 - Searchable official-site product archive under each category, with source links, dates, group filters and locally hosted images for entries whose source pages contain no extractable text.
@@ -120,6 +120,7 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-11-12 - Shifted the local review build to Shenzhen Oceanpower's four businesses and removed the old sales assistant and enquiry controls from public pages. Chinese, English, Spanish and French routes remain published; new group-home and business-review copy is localized in all four.
 2026-11-04 - Added the Food business product guide from the supplied ice cream catalogue, with model-specific data, PDF page references and catalogue-derived images.
 2026-11-02 - Added a searchable archive of official Oceanpower New Materials product entries under the existing category pages, preserving source attribution and the newer curated manuals above it.
 2026-10-30 - Expanded the asphalt portfolio from summary cards into source-backed product detail, explicit grade boundaries, a preliminary selection matrix and a responsive project-verification flow.

@@ -63,6 +63,9 @@ footer .footer-links{display:flex;gap:20px;flex-wrap:wrap}
 .company-profile-heading .eyebrow{margin-bottom:18px}
 .company-profile-heading img{width:100%;height:auto;border-radius:4px}
 .company-profile-lead{font-size:20px;line-height:1.7;color:var(--blue);margin:28px 0}
+.company-review-note{max-width:78ch;padding:14px 18px;border-left:3px solid var(--blue);background:#eef3f1;color:#455c73;font-size:14px;line-height:1.7}
+.company-contact-link{display:inline-flex;align-items:center;min-height:44px;margin:18px 0 0 22px;color:var(--blue);font-weight:800}
+.company-contact-link:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
 .company-profile-section{margin:32px 0}
 .company-profile-section h2{font-size:24px;letter-spacing:-.4px;line-height:1.3;max-width:none;margin:0 0 16px}
 .company-profile-section p{font-size:16px;line-height:1.9;margin:0 0 18px;max-width:78ch}
@@ -140,3 +143,16 @@ dialog.chat-panel[open]{opacity:1;visibility:visible;transform:none;pointer-even
 .cms-page-media .cms-media-gallery{padding:0;max-width:1100px}
 .cms-page-media>video{display:block;width:min(100%,900px);max-height:540px;margin:24px 0;background:#061b3d}
 .cms-page-media .cms-attachment{margin:24px 0 0}
+/* Shenzhen group preview: four businesses replace the Jiangsu FRP cover. */
+.hero-visual{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;padding:8px;background:#dce9e8;box-shadow:none;border:1px solid var(--line)}
+.hero-visual::after,.hero-visual::before{display:none}
+.hero-sector{min-width:0;min-height:0;position:relative;display:flex;align-items:end;overflow:hidden;background:var(--ink);color:white;text-decoration:none}
+.hero-sector img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.hero-sector::after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,40,61,.88))}
+.hero-sector span{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:8px;width:100%;padding:16px;font-size:13px;font-weight:800;line-height:1.35}
+.hero-sector b{font-size:18px;font-weight:400}
+.hero-sector:hover img{transform:scale(1.04)}
+.hero-sector:focus-visible{outline:3px solid var(--aqua);outline-offset:-5px}
+@media(max-width:850px){.hero{min-height:0;grid-template-columns:1fr}.hero-copy{padding:56px 7vw 48px}.hero-visual{position:relative;inset:auto;opacity:1;min-height:380px;margin:0 7vw 20px}.hero-stats{position:relative;inset:auto}}
+@media(max-width:520px){.hero-visual{min-height:430px;gap:6px;padding:6px}.hero-sector span{font-size:11px;padding:12px}}
+@media(prefers-reduced-motion:reduce){.hero-sector img{transition:none}.hero-sector:hover img{transform:none}}

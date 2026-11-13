@@ -32,6 +32,7 @@ async function startApp(overrides = {}) {
       CHAT_API_KEY: '',
       CHAT_BACKEND_TOKEN: '',
       CHAT_MODEL: '',
+      ENABLE_LEGACY_CHAT: 'true',
       CHAT_KNOWLEDGE_FILE: 'knowledge/oceanpower-approved-knowledge.md',
       ALLOWED_ORIGINS: '',
       ...overrides,
@@ -82,6 +83,15 @@ test.after(async () => {
   for (const child of runningChildren) {
     if (child.exitCode === null) child.kill();
   }
+});
+
+test('legacy chat API stays unavailable unless explicitly enabled', async (t) => {
+  const app = await startApp({ ENABLE_LEGACY_CHAT: '' });
+  t.after(() => app.stop());
+  const { response } = await postChat(app.baseUrl, 'What products are available?');
+  assert.equal(response.status, 404);
+  const health = await fetch(app.baseUrl + '/api/health').then((result) => result.json());
+  assert.equal(health.mode, 'website');
 });
 
 test('existing website chatbot answers a manually synced CMS product without provider credentials', async (t) => {

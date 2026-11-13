@@ -37,13 +37,16 @@ try {
     else if (pathname === '/api/cms/admin/files' && request.method() === 'POST') body = { file: { id: `00000000-0000-0000-0000-${String(++upload).padStart(12, '0')}`, originalName: decodeURIComponent(request.headers()['x-file-name']), url: `/api/cms/files/${upload}` } };
     else if (pathname === '/api/cms/admin/chat-knowledge' && request.method() === 'GET') body = { current: false, publishedCount: 1, productCount: 0, builtAt: null };
     else if (pathname === '/api/cms/admin/chat-knowledge' && request.method() === 'POST') body = { current: true, publishedCount: 1, productCount: 1, builtAt: new Date().toISOString() };
-    else if (pathname === '/api/cms/admin/entries' && request.method() === 'POST') { saved = request.postDataJSON(); body = { entry: { id: 1, kind: saved.kind, slug: saved.slug, status: saved.status, sort_order: 0, metadata: saved.metadata, translations: saved.translations, specs: saved.specs } }; }
+    else if (/^\/api\/cms\/admin\/entries(?:\/1)?$/.test(pathname) && ['POST','PUT'].includes(request.method())) { saved = request.postDataJSON(); body = { entry: { id: 1, kind: saved.kind, slug: saved.slug, status: saved.status, sort_order: 0, metadata: saved.metadata, translations: saved.translations, specs: saved.specs } }; }
     else if (pathname.endsWith('/revisions')) body = { revisions: [] };
     await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(body) });
   });
   await page.goto(origin + '/admin/');
   await page.locator('#admin-view').waitFor({ state: 'visible' });
   await page.locator('#new-entry').click();
+  assert.equal(await page.locator('[name=status]').isHidden(), true);
+  assert.equal(await page.locator('#save-entry').textContent(), '保存草稿');
+  assert.equal(await page.locator('#publish-entry').textContent(), '发布到网站');
   await page.locator('[name=slug]').fill('demo-food-machine');
   await page.locator('[name=titleZh]').fill('演示冰淇淋机');
   await page.locator('[name=titleEn]').fill('Demo ice cream machine');
@@ -55,22 +58,22 @@ try {
   assert.equal(await page.locator('#preview-title-zh').textContent(), '演示冰淇淋机');
   assert.equal(await page.locator('#preview-title-en').textContent(), 'Demo ice cream machine');
   await page.locator('#save-entry').click();
-  await page.waitForFunction(() => document.querySelector('#editor-status')?.textContent.includes('已保存'));
+  await page.waitForFunction(() => document.querySelector('#editor-status')?.textContent.includes('草稿已保存'));
   assert.equal(saved.metadata.galleryIds.length, 1);
   assert.ok(saved.metadata.videoId);
+  await page.locator('#publish-entry').click();
+  await page.waitForFunction(() => document.querySelector('#editor-status')?.textContent.includes('内容已发布'));
+  assert.equal(saved.status, 'published');
+  assert.equal(await page.locator('#save-entry').textContent(), '撤回为草稿');
+  assert.equal(await page.locator('#publish-entry').textContent(), '保存已发布修改');
   await page.locator('#knowledge-sync').click();
   await page.waitForFunction(() => document.querySelector('#knowledge-status')?.textContent.includes('更新成功'));
   await page.setViewportSize({ width: 390, height: 844 });
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
-  await page.route('**/api/chat/', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ answer: 'OP130: 30 L/h', mode: 'catalogue-demo', sourceStatus: 'staff-published', sources: [{ label: 'Published website product entry', detail: 'op130' }] }) }));
   await page.goto(origin + '/en/products/');
-  await page.locator('.chat-launcher').click();
-  await page.locator('#catalogue-question').fill('OP130 output?');
-  await page.locator('#catalogue-form button').click();
-  await page.waitForFunction(() => document.querySelector('#chat-mode')?.textContent.includes('Published website product information'));
-  assert.match(await page.locator('.chat-stream').textContent(), /OP130: 30 L\/h/);
+  assert.equal(await page.locator('.chat-launcher,[data-rfq-start]').count(), 0);
   assert.deepEqual(errors, []);
-  console.log('Admin browser: gallery, video, bilingual preview, save, manual sync, chat source label and mobile width passed.');
+  console.log('Admin browser: gallery, video, bilingual preview, save, manual sync, public assistant hidden and mobile width passed.');
 } finally {
   await browser?.close();
   await new Promise((resolve) => server.close(resolve));

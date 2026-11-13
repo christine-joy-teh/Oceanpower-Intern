@@ -1,6 +1,6 @@
 # Oceanpower content manager setup
 
-The pilot content manager uses the existing Astro website, the existing Node API process and MySQL 8 or newer. It supports one shared administrator account and editable Chinese and English content. Spanish and French retain their current static content.
+The pilot content manager uses the existing Astro website, the existing Node API process and MySQL 8 or newer. It supports one shared administrator account and editable Chinese and English content. Spanish and French website routes remain published using their translated source content; CMS edits currently cover Chinese and English.
 
 ## 1. Install and prepare MySQL
 
@@ -16,7 +16,7 @@ FLUSH PRIVILEGES;
 
 ## 2. Configure the local environment
 
-Copy `.env.example` to `.env` and set these values:
+Create a local `.env` file and set these values:
 
 ```text
 MYSQL_HOST=127.0.0.1
@@ -44,7 +44,7 @@ npm run cms:migrate
 npm run cms:seed
 ```
 
-The administrator username and password are read only from `CMS_ADMIN_USERNAME` and `CMS_ADMIN_PASSWORD` in `.env`; no administrator password is stored in MySQL. Restart the local website after changing either value. Running `cms:seed` creates draft copies of the current homepage, About, contact, business, product and catalogue content. Review drafts before changing their status to Published.
+The administrator username and password are read from `CMS_ADMIN_USERNAME` and `CMS_ADMIN_PASSWORD` in `.env`. Existing `CMS_BOOTSTRAP_USERNAME` and `CMS_BOOTSTRAP_PASSWORD` variables are also accepted as fallbacks; the `CMS_ADMIN_*` names take precedence. No administrator password is stored in MySQL. Restart the local website after changing either value. Running `cms:seed` creates draft copies of the current homepage, About, contact, business, product and catalogue content. Review drafts before changing their status to Published.
 
 ## 4. Run the pilot
 
@@ -56,7 +56,9 @@ npm start
 
 Uploaded JPG, PNG, WebP, GIF, PDF, MP4 and WebM files are stored in the ignored local `uploads/` folder. Their metadata is stored in MySQL. Back up both the database and this folder. Images and PDFs are limited to 25 MB; videos are limited to 80 MB. The admin can attach up to 12 additional images and one video to a content entry, choose previously uploaded files, preview bilingual text, and restore earlier saved revisions. Run `npm run cms:migrate` again after updating this code so the revision table exists.
 
-After publishing or changing products, press **更新聊天机器人知识** in the Chinese admin. This writes a snapshot of *published CMS products only* to `CMS_UPLOAD_DIR/published-product-chat.json` (or `uploads/published-product-chat.json` locally). The existing website chatbot reads that snapshot for exact product-name or model questions and labels its answer as staff-published website information. Drafts stay out of it. The status beside the button shows when the published products have changed since the last update. Other chatbot questions continue to use the previous catalogue fallback or configured provider. This snapshot is separate from the Haichuan PDF RAG index and does not update Dify.
+On a published business entry, the featured image replaces that business's card image and the image at the top of its detail page in Chinese and English. Gallery images, video and documents appear in a separate media section. Draft uploads do not appear on public pages.
+
+The admin still has a manual **更新聊天机器人知识** control. It writes a snapshot of *published CMS products only* to `CMS_UPLOAD_DIR/published-product-chat.json` (or `uploads/published-product-chat.json` locally). The current public website does not display a chatbot, and `/api/chat` is disabled by default. The snapshot is for the retained legacy assistant only; it does not update Dify or the Haichuan PDF RAG index. Keep `ENABLE_LEGACY_CHAT` unset for this website release.
 
 ## Current boundaries
 
@@ -72,7 +74,7 @@ After publishing or changing products, press **更新聊天机器人知识** in 
 Create a Render **Web Service** from this repository and use:
 
 ```text
-Build command: npm ci && npm run build
+Build command: npm ci && npm run build && npm prune --omit=dev
 Start command: node tools/preview.mjs
 Health check path: /api/health/
 ```
@@ -81,6 +83,10 @@ Set `HOST=0.0.0.0`; Render supplies `PORT` automatically. Add the `MYSQL_*`,
 `CMS_ADMIN_*`, `SITE_URL` and `PUBLIC_INDEXABLE` environment variables in the
 Render dashboard. Do not copy `.env` into Git. Start with
 `PUBLIC_INDEXABLE=false` while the pilot is being reviewed.
+For the current Render preview, set `SITE_URL=https://oceanpower-vfhv.onrender.com`.
+If an old localhost value remains, the build uses Render's `RENDER_EXTERNAL_URL`
+for canonical and sitemap links. Set `SITE_URL` explicitly when the service
+later moves to an approved custom domain.
 
 The current `uploads/` directory is local filesystem storage. Render instances
 can replace that filesystem during deploys, so uploaded images and documents
@@ -95,6 +101,9 @@ Additional Render notes:
 - Do not set `NODE_ENV=production` for the build. `npm ci` would skip the
   development dependencies that `npm run build` needs. The admin cookie is
   marked `Secure` automatically when Render forwards an HTTPS request.
+- The final `npm prune --omit=dev` removes build tools and the disabled legacy
+  RAG dependencies from the running service. Start with `node tools/preview.mjs`,
+  not `npm start`: the latter rebuilds and needs those development dependencies.
 - Set `NODE_VERSION=22.12.0` or newer to match `package.json` `engines`.
 - `MYSQL_SSL_MODE=REQUIRED` encrypts the connection but does not verify the
   server certificate. For verified TLS, upload the Aiven CA certificate as a
