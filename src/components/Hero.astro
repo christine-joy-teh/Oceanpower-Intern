@@ -39,7 +39,6 @@ const areas = [
     <div class="hero-actions"><a class="button primary" href={urlFor(locale,'business')}>{copy.business} <span aria-hidden="true">→</span></a><a class="text-link" href={urlFor(locale,'contact')}>{copy.contact} <span aria-hidden="true">→</span></a></div>
   </div>
   <div class="hero-visual" aria-label={copy.areas}>
-    {areas.map((area,index)=><a class="hero-sector" href={urlFor(locale,'business/'+area.slug)}><img src={area.slug==='food'?'/assets/food-catalogue/flavour-powders.webp':'/assets/business-'+area.slug+'.jpg'} alt="" loading={index===0?'eager':'lazy'}/><span>{String(index+1).padStart(2,'0')} / {area.label[locale]} <b aria-hidden="true">↗</b></span></a>)}
+    {areas.map((area,index)=><a class="hero-sector" href={urlFor(locale,'business/'+area.slug)}><img src={area.slug==='food'?'/assets/food-catalogue/flavour-powders.webp':'/assets/business-'+area.slug+'.jpg'} alt="" loading={index===0?'eager':'lazy'}/><span>{area.label[locale]} <b aria-hidden="true">↗</b></span></a>)}
   </div>
-  <div class="hero-stats"><div><strong>SZ</strong><span>{copy.group}</span></div><div><strong>04</strong><span>{copy.areaCount}</span></div><div><strong>04</strong><span>{copy.languages}</span></div></div>
 </section></div>

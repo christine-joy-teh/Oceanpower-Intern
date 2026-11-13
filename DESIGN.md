@@ -22,9 +22,9 @@ Industrial editorial - a Shenzhen group website with restrained technical detail
 
 ## Color tokens
 
-- Ink: `#061b3d` - engineering navy.
-- Blue: `#0758d5` - functional action color.
-- Aqua: `#19dbc7` - material-science accent.
+- Ink: `#00344f` - engineering navy.
+- Blue: `#0066a6` - functional action color.
+- Aqua: `#00b4d8` - restrained accent for small details.
 - Paper: `#f6f5f0` - warm neutral base.
 - Line: `#d9ddd8` - dividers and table rules.
 
@@ -40,7 +40,8 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 ## Layout
 
 - Split-screen, left-aligned hero.
-- Maximum working width is controlled with section padding rather than a centered narrow column.
+- Public content uses a 1360 px working width with a shared responsive gutter; the split hero is capped at 1440 px.
+- Section spacing follows a 56-88 px responsive range. Headings and controls use consistent sizing across pages.
 - Product and demo grids are intentionally asymmetric on desktop and single-column on mobile.
 - Mobile interactive targets are at least 44 px.
 - Chat is a fixed bottom-right panel with a maximum width of 410 px.
@@ -120,6 +121,7 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-11-13 - Refined the Shenzhen review UI after team feedback: solid editorial surfaces replace the decorative gradient and glass treatments on the current homepage, shared gutters and section spacing constrain wide screens, current navigation gains a visible state, phone controls meet a 44 px target, and decorative hero counters are removed. The public website still has no active chat interface.
 2026-11-12 - Shifted the local review build to Shenzhen Oceanpower's four businesses and removed the old sales assistant and enquiry controls from public pages. Chinese, English, Spanish and French routes remain published; new group-home and business-review copy is localized in all four.
 2026-11-04 - Added the Food business product guide from the supplied ice cream catalogue, with model-specific data, PDF page references and catalogue-derived images.
 2026-11-02 - Added a searchable archive of official Oceanpower New Materials product entries under the existing category pages, preserving source attribution and the newer curated manuals above it.

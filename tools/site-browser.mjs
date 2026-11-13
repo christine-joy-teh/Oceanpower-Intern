@@ -35,7 +35,7 @@ try {
   for (const locale of manifest.locales) {
     const prefix = locale==='zh' ? '/' : `/${locale}/`;
     for (const route of manifest.routes) {
-      for (const width of [1440,390,768]) {
+      for (const width of [1440,768,390,375]) {
         await page.setViewportSize({width,height:900});
         const response = await page.goto(origin+prefix+(route?route+'/':''));
         assert.equal(response.status(),200,`${locale}/${route}`);
@@ -48,11 +48,16 @@ try {
       }
     }
   }
-  await page.setViewportSize({width:390,height:844});
+  await page.setViewportSize({width:375,height:844});
   await page.goto(origin+'/');
   await fs.mkdir('tmp/site-browser',{recursive:true});
   await page.screenshot({path:'tmp/site-browser/shenzhen-home-phone.png',fullPage:true});
   assert.equal(await page.locator('.hero-sector').count(),4);
+  assert.equal(await page.locator('.hero-stats').count(),0);
+  for (const selector of ['.menu-toggle','.language-menu summary']) {
+    const box=await page.locator(selector).boundingBox();
+    assert.ok(box && box.height>=44,`${selector} needs a 44px phone target`);
+  }
   await page.locator('.menu-toggle').click();
   assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'),'true');
   await page.locator('#site-nav a[href="/business/"]').first().click();
