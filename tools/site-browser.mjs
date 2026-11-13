@@ -69,6 +69,32 @@ try {
   await page.locator('.language-menu a[lang="en"]').click();
   assert.equal(new URL(page.url()).pathname,'/en/business/food/');
   assert.equal(await page.locator('.company-contact-link').getAttribute('href'),'/en/contact/');
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto(origin+'/en/');
+  await page.locator('.nav-business-toggle').click();
+  assert.equal(await page.locator('.nav-business-toggle').getAttribute('aria-expanded'),'true');
+  assert.equal(await page.locator('.business-submenu a').count(),4);
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('.business-submenu').isHidden(),true);
+  await page.setViewportSize({width:375,height:844});
+  await page.goto(origin+'/');
+  await page.locator('.menu-toggle').click();
+  await page.locator('.nav-business-toggle').click();
+  assert.equal(await page.locator('.business-submenu a:visible').count(),4);
+  await page.locator('.business-submenu a[href="/business/food/"]').click();
+  assert.equal(new URL(page.url()).pathname,'/business/food/');
+  assert.equal(await page.locator('.business-submenu a[aria-current=page]').count(),1);
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto(origin+'/en/products/');
+  await page.locator('[data-product-search]').fill('Rad Spunrie');
+  assert.equal(await page.locator('.product-examples article:visible').count(),1);
+  await page.locator('[data-product-search]').fill('no-such-product');
+  assert.equal(await page.locator('[data-product-empty]').isVisible(),true);
+  await page.locator('[data-product-search]').fill('');
+  await page.locator('[data-product-category]').selectOption('/en/products/asphalt-based-products/');
+  assert.equal(await page.locator('.product-examples article:visible').count(),1);
+  await page.locator('[data-product-category]').selectOption('');
+  assert.equal(await page.locator('.product-examples article').evaluateAll(cards=>cards.every(card=>getComputedStyle(card).opacity==='1')),true,'Product cards must remain visible before scrolling');
   // Exercise the public CMS overlay without publishing test records to the shared database.
   await page.route('**/api/cms/public?*', route => route.fulfill({json:{entries:[
     {kind:'page',slug:'home',title:'CMS homepage check',summary:'CMS homepage summary'},

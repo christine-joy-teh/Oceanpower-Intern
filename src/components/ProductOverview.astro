@@ -1,30 +1,52 @@
 ---
 import products from '../content/product-examples.json';
 import {categoryPortfolios,local} from '../content/catalogue';
-import officialProducts from '../content/official-products.json';
+import officialProducts from '../content/published-official-products';
 import {t} from '../i18n/ui';
 import {urlFor,type Locale} from '../lib/routes';
 const {locale}=Astro.props as {locale:Locale};
+const filterCopy={
+  zh:{intro:'按材料类别浏览产品。重点产品根据新版手册整理；各分类下方另有可搜索的海川新材官网产品档案。',search:'搜索产品类别',placeholder:'输入材料、型号或用途',category:'产品类别',all:'全部类别',results:'个类别',empty:'没有匹配的类别。请尝试其他关键词。',contact:'咨询产品信息',catalogue:'个目录产品 / 解决方案',archive:'条官网产品档案'},
+  en:{intro:'Browse by material category. Featured products draw on the newer manuals; each category also has a searchable archive of entries from Oceanpower New Materials’ official site.',search:'Search product categories',placeholder:'Material, model or application',category:'Category',all:'All categories',results:'categories',empty:'No matching categories. Try another term.',contact:'Enquire about products',catalogue:'catalogue products / solutions',archive:'official-site archive entries'},
+  es:{intro:'Explore los productos por categoría de material. Los productos destacados proceden de manuales recientes; cada categoría también incluye un archivo consultable del sitio oficial de Oceanpower New Materials.',search:'Buscar categorías de productos',placeholder:'Material, modelo o aplicación',category:'Categoría',all:'Todas las categorías',results:'categorías',empty:'No se encontraron categorías. Pruebe otro término.',contact:'Consultar productos',catalogue:'productos / soluciones del catálogo',archive:'registros del sitio oficial'},
+  fr:{intro:'Parcourez les produits par catégorie de matériaux. Les produits présentés proviennent de manuels récents ; chaque catégorie comprend aussi des archives consultables du site officiel d’Oceanpower New Materials.',search:'Rechercher des catégories',placeholder:'Matériau, modèle ou application',category:'Catégorie',all:'Toutes les catégories',results:'catégories',empty:'Aucune catégorie correspondante. Essayez un autre terme.',contact:'Nous contacter au sujet des produits',catalogue:'produits / solutions du catalogue',archive:'fiches du site officiel'},
+}[locale];
 ---
 <section class="section product-category-overview">
 <p class="eyebrow dark">OCEANPOWER</p><h1>{t('Products',locale)}</h1>
-<p>{locale==='zh'?'按材料类别浏览产品。重点产品根据新版手册整理；各分类下方另有可搜索的海川新材官网产品档案。':'Browse by material category. Featured products draw on the newer manuals; each category also has a searchable archive of entries from Oceanpower New Materials’ official site.'}</p>
+<p>{filterCopy.intro}</p>
 <section class="cms-managed-section" aria-labelledby="cms-products-heading" hidden data-cms-products><h2 id="cms-products-heading">{locale==='zh'?'最新产品':'Latest products'}</h2><div class="cms-entry-grid"></div></section>
-<div class="product-examples">{products.map(product=>{const portfolio=categoryPortfolios[product.route as keyof typeof categoryPortfolios];const archive=officialProducts.categories.find(category=>category.route===product.route);return <article>
+<div class="product-discovery" data-product-discovery>
+  <label><span>{filterCopy.search}</span><input type="search" data-product-search placeholder={filterCopy.placeholder} autocomplete="off" /></label>
+  <label><span>{filterCopy.category}</span><select data-product-category><option value="">{filterCopy.all}</option>{products.map(product=><option value={urlFor(locale,product.route)}>{t(product.category,locale)}</option>)}</select></label>
+  <p class="product-result" role="status" aria-live="polite"><span data-product-count>{products.length}</span> {filterCopy.results}</p>
+</div>
+<div class="product-examples">{products.map(product=>{const portfolio=categoryPortfolios[product.route as keyof typeof categoryPortfolios];const archive=officialProducts.categories.find(category=>category.route===product.route);const searchTerms=[t(product.category,locale),t(product.name,locale),...(portfolio?.products.map((item:any)=>local(item.name,locale))||[]),...(archive?.entries.map(item=>item.title)||[])].join(' ');return <article data-search={searchTerms}>
 {product.image?<img src={product.image} alt={t(product.name,locale)} width="480" height="320" loading="lazy"/>:<div class="category-cover" aria-hidden="true">{t(product.category,locale)}</div>}
 <div class="example-content"><h2 class="category">{t(product.category,locale)}</h2><h3>{portfolio?local(portfolio.products[0].name,locale):t(product.name,locale)}</h3>
-{portfolio&&<p class="catalogue-count">{portfolio.products.length} {locale==='zh'?'个目录产品 / 解决方案':'catalogue products / solutions'}</p>}
-{archive&&<p class="catalogue-count">{archive.entries.length} {locale==='zh'?'条官网产品档案':'official-site archive entries'}</p>}
+{portfolio&&<p class="catalogue-count">{portfolio.products.length} {filterCopy.catalogue}</p>}
+{archive&&<p class="catalogue-count">{archive.entries.length} {filterCopy.archive}</p>}
 <a href={product.route?urlFor(locale,product.route):product.source} target={product.route?undefined:'_blank'} rel={product.route?undefined:'noopener noreferrer'}>{t('View more',locale)} <span aria-hidden="true">{product.route?'→':'↗'}</span></a></div>
 </article>})}</div>
+<p class="product-search-empty" data-product-empty hidden>{filterCopy.empty}</p>
+<a class="product-contact-link" href={urlFor(locale,'contact')}>{filterCopy.contact} <span aria-hidden="true">→</span></a>
 <section class="cms-managed-section" aria-labelledby="cms-documents-heading" hidden data-cms-documents><h2 id="cms-documents-heading">{locale==='zh'?'下载文件':'Downloads'}</h2><div class="cms-document-list"></div></section>
 </section>
+<script src="../scripts/product-discovery.js"></script>
 <style>
 .product-category-overview h1{font-size:clamp(2.5rem,6vw,5rem);margin:1rem 0}.product-category-overview>p{max-width:820px;font-size:18px;line-height:1.75}
-.product-examples{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.product-discovery{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,280px);gap:16px 24px;align-items:end;margin-top:40px;padding:22px;border:1px solid var(--line);background:#edf3f1}
+.product-discovery label{display:grid;gap:8px;min-width:0;font-size:13px;font-weight:700}
+.product-discovery input,.product-discovery select{width:100%;min-height:48px;padding:10px 14px;border:1px solid #8da6b5;border-radius:2px;background:#fbfcfa;color:var(--ink);font:inherit}
+.product-discovery :is(input,select):focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.product-result{grid-column:1/-1;margin:0;color:#455c73;font-size:13px}
+.product-search-empty{padding:24px 0;color:#455c73}
+.product-contact-link{display:inline-flex;align-items:center;gap:14px;min-height:48px;margin-top:32px;padding:10px 18px;border:1px solid var(--blue);border-radius:2px;color:var(--blue);font-size:14px;font-weight:800;text-decoration:none}
+.product-contact-link:hover,.product-contact-link:focus-visible{background:var(--blue);color:#fff}
+.product-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
 article{border:1px solid #d9ddd8;border-top:4px solid #28699d;background:white;display:flex;flex-direction:column;min-width:0}
 img{width:100%;height:230px;object-fit:contain;background:#f5f7f7;padding:16px;box-sizing:border-box}
 .category-cover{height:230px;box-sizing:border-box;display:flex;align-items:center;padding:32px;background:#e1eef3;color:#28699d;font-size:1.75rem;font-weight:700}
 .example-content{padding:24px;display:flex;flex-direction:column;flex:1}.example-content .category{font-size:1.05rem;line-height:1.45;letter-spacing:normal;color:#28699d;margin:0 0 12px}.example-content h3{font-size:1.35rem;line-height:1.45;margin:0 0 18px;overflow-wrap:anywhere}.catalogue-count{font:500 11px/1.5 'DM Mono',monospace;color:#52677b;margin:0 0 24px}.example-content a{margin-top:auto;min-height:44px;display:flex;align-items:center;gap:8px;font-weight:700}.example-content a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-@media(max-width:1000px){.product-examples{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.product-examples{grid-template-columns:1fr}}
+@media(max-width:700px){.product-discovery,.product-examples{grid-template-columns:1fr}.product-discovery{padding:18px}}
 </style>

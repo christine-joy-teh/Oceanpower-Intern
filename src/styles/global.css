@@ -219,3 +219,26 @@ html[lang="zh-CN"] main p{line-height:1.85}
   .contact{gap:36px}
 }
 @media(prefers-reduced-motion:reduce){.site-header nav a,.button,.text-link,.business-card{transition:none}.business-card:hover{transform:none}}
+
+/* Business overview remains a link; the adjacent control opens the four divisions. */
+.nav-business{position:relative;display:flex;align-items:center;min-width:0}
+.site-header nav .nav-business>a[data-active=true]{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-business-toggle{display:grid;place-items:center;min-width:44px;min-height:44px;padding:0;border:0;background:transparent;color:var(--ink);font:700 22px/1 Manrope,sans-serif;cursor:pointer}
+.nav-business-toggle[aria-expanded=true]{color:var(--blue)}
+.nav-business-toggle:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.business-submenu{position:absolute;top:100%;left:0;z-index:30;display:grid;min-width:230px;padding:8px;background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 24px rgb(0 52 79 / .1)}
+.site-header nav .business-submenu a{display:flex;padding:8px 12px;border:0;white-space:normal;line-height:1.4}
+.site-header nav .business-submenu a:hover,.site-header nav .business-submenu a[aria-current=page]{background:#e9efee;color:var(--blue)}
+@media(max-width:1100px){
+  .site-header nav,.site-header .header-cta{display:none}
+  .menu-toggle{display:inline-flex;white-space:nowrap;flex-shrink:0}
+  .site-header.open nav{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;max-height:calc(100dvh - 80px);overflow-y:auto;padding:16px var(--page-gutter);background:var(--paper);border-bottom:1px solid var(--line)}
+  .nav-business{flex-wrap:wrap;width:100%}
+  .nav-business>a{flex:1}
+  .business-submenu{position:static;width:100%;box-shadow:none}
+  .site-header.open nav>a{min-height:44px}
+}
+.scroll-reveal{transform:translateY(8px);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.scroll-reveal.is-visible{opacity:1;transform:none}
+.business-card.scroll-reveal.is-visible:hover{transform:translateY(-2px)}
+@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}}

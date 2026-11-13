@@ -49,11 +49,13 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 ## Component inventory
 
 - Sticky site header and mobile navigation.
+- Business overview link with a separate keyboard-operable menu for the four divisions.
 - Split group hero with four business links and a clear review status.
 - Product platform cards.
 - Specification table.
 - Catalogue-backed product portfolio sections with source status, in-page product navigation, responsive fact grids and explicit product-family separation.
 - Group-first homepage with four business links, optional CMS news and headquarters contact. Product catalogues remain available through the New Materials business and Products navigation.
+- Product overview search and category filter; the detailed official-site archive keeps its own name and group filters.
 - Detailed airport-pavement portfolio with product-specific catalogue references, a requirement-to-product selection matrix, engineering review inputs and staff-review enquiry handoff.
 - Detailed asphalt-material portfolio with product mechanisms, construction notes, variant boundaries, a problem-to-family selection matrix and project-verification workflow.
 - Searchable official-site product archive under each category, with source links, dates, group filters and locally hosted images for entries whose source pages contain no extractable text.
@@ -121,6 +123,7 @@ Use aqua as the single visual accent. Avoid purple gradients, neon effects, and 
 
 ## Last updated
 
+2026-11-13 - Added a business-division dropdown with an always-available overview link, a product category search/filter, and small progressive scroll reveals. Approved company photos and project claims remain pending; the public contact route is the enquiry destination until staff confirm submission handling.
 2026-11-13 - Refined the Shenzhen review UI after team feedback: solid editorial surfaces replace the decorative gradient and glass treatments on the current homepage, shared gutters and section spacing constrain wide screens, current navigation gains a visible state, phone controls meet a 44 px target, and decorative hero counters are removed. The public website still has no active chat interface.
 2026-11-12 - Shifted the local review build to Shenzhen Oceanpower's four businesses and removed the old sales assistant and enquiry controls from public pages. Chinese, English, Spanish and French routes remain published; new group-home and business-review copy is localized in all four.
 2026-11-04 - Added the Food business product guide from the supplied ice cream catalogue, with model-specific data, PDF page references and catalogue-derived images.
